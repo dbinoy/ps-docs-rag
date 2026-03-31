@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AFT Settlement — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_settlement/index.html'>Aft Settlement</a> <span class='sep'>›</span> <span>AFT Settlement</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Settlement</a>
+    <h1>AFT Settlement</h1>
+    <p class="subtitle">AFT › Aft Settlement</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.1.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># AFT Settlement Documentation Summary</p>
+<ul>
+<li><strong>Overview</strong>: Defines settlement mechanics for Automated Funds Transfer (AFT) transactions in Central 1's clearing system, covering posting rules, transaction types (Original, Error Correction, Returned, Offsetting Entry), and settlement timelines for both outgoing and incoming AFT flows.</li>
+</ul>
+<ul>
+<li><strong>Transaction Type Coding System</strong>: Four primary record types with directional variants—C/D records for original transactions (credits/debits), E/F records for error corrections (debit/credit reversals), I/J records for returns (credits/debits). Offsetting entries automatically post to originator accounts for Canadian dollar files; US dollar files require manual posting if banking systems cannot generate them.</li>
+</ul>
+<ul>
+<li><strong>Settlement Timeline & Constraint</strong>: Transactions post on the due date; however, transactions received *after* the due date post on receipt date. This creates variable settlement windows that must be accounted for in reconciliation and reporting logic.</li>
+</ul>
+<ul>
+<li><strong>Error Correction Window</strong>: Members can refuse error corrections (E/F records) within 90 days post via transaction types 915/922 (CPA Standards 005/007). Refusals after 90 days fall outside the clearing system, creating operational handoff points requiring external process handling.</li>
+</ul>
+<ul>
+<li><strong>Dual Account Posting</strong>: All AFT transactions post to both the originator's/sender's Central 1 account AND the recipient's account, creating double-entry accounting requirements. Offsetting entries specifically reverse file totals on originator accounts to balance.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Direct dependencies on Online Return System (ORS), Current Account Services (CAS) Online, File Exchange and Report Distribution, and Automated Transfer System Detailed Listing (CCD/UCD) reporting. Compliance tied to CPA Rule F1 and Payments Canada standards.</li>
+</ul>
+<ul>
+<li><strong>No State Machine Defined</strong>: Documentation does not specify transaction state transitions, idempotency handling, or reconciliation workflows—architects should clarify these before designing settlement processing or audit systems.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

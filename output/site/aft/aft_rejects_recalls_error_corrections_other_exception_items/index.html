@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aft Rejects Recalls Error Corrections Other Exception Items — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Aft Rejects Recalls Error Corrections Other Exception Items</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Aft Rejects Recalls Error Corrections Other Exception Items</h1>
+    <p class="subtitle">AFT › Aft Rejects Recalls Error Corrections Other Exception Items <span class="badge" style="background:#7c3aed">7 pages</span></p>
+    <div class="summary-box md-content"><p># AFT Exception Handling – Architect Brief</p>
+<h2>Overview</h2>
+<p>This document set governs the lifecycle management of Automated Funds Transfer (AFT) exceptions at Central 1, covering Pre-authorized Debits (PADs) and Direct Deposits. It defines handling protocols for rejects, recalls, error corrections, trace requests, and stop payments.</p>
+<h2>Key Architectural Concepts</h2>
+<p><strong>Exception Categories:</strong></p>
+<ul>
+<li><strong>Rejects</strong>: File or transaction-level formatting errors; transaction cannot post</li>
+<li><strong>Recalls</strong>: Pre-posting reversal of unposted transactions/files</li>
+<li><strong>Error Corrections</strong>: Post-posting adjustments to posted transactions</li>
+<li><strong>Trace Requests</strong>: Investigation mechanism for non-receipt at receiving institution</li>
+<li><strong>Stop Payments</strong>: Member-initiated PAD cancellation claims</li>
+</ul>
+<h2>Critical Data Flows</h2>
+<ul>
+<li>Inbound AFT files → validation → reject/recall queues vs. posting pipeline</li>
+<li>Posted transactions → error correction audit trail with legal compliance</li>
+<li>Outbound transactions → trace initiation if non-receipt reported by Due Date</li>
+<li>Stop payment claims → reimbursement processing with member notification</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>Regulatory compliance mandatory (statutes referenced in Part 3)</li>
+<li>Clear distinction between pre-posting (recall) and post-posting (error correction) states</li>
+<li>Audit trail requirements for all exception handling</li>
+<li>Member notification/reimbursement workflows required</li>
+<li>Due Date tracking critical for trace request triggering</li>
+</ul>
+<p><strong>Integration Points</strong>: File validation, posting engine, member communication systems, receiving institution coordination.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="aft_rejects_recalls_error_corrections_and_other_exception_items.html">AFT Rejects, Recalls, Error Corrections, and Other Exception Items</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_aft_rejects_and_unpostable_transactions.html">4 AFT Rejects and Unpostable Transactions</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_aft_recalls_and_error_corrections.html">5 AFT Recalls and Error Corrections</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_aft_trace_requests.html">6 AFT Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_stop_payment_requests_for_pads.html">7 Stop Payment Requests for PADs</a></div>
+            <div class="page-preview">- **Purpose**: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one bus</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

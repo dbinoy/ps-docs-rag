@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interac Etransfer Online Administration System — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Interac Etransfer Online Administration System</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Interac Etransfer Online Administration System</h1>
+    <p class="subtitle">Electronic Transactions › Interac Etransfer Online Administration System <span class="badge" style="background:#be185d">9 pages</span></p>
+    <div class="summary-box md-content"><p># Interac eTransfer OAS - Architecture Brief</p>
+<h2>Purpose</h2>
+<p>Central 1's Interac eTransfer Online Administration System (OAS) is a Client Centre-hosted application for managing eTransfer transactions, customer profiles, fraud incidents, and transaction tracing across a 2-year lookback window.</p>
+<h2>Key Integration Points & Data Flows</h2>
+<ul>
+<li><strong>ANR (Account Number Routing)</strong>: Enables direct ACH-style payments using Institution Number + Transit + Account details vs. email-based transfers</li>
+<li><strong>Customer Profile Management</strong>: Track enabled/disabled states, scrubbed email addresses, and transaction eligibility</li>
+<li><strong>Tracing & Recovery</strong>: Query historical transactions; recover misdirected funds (critical for ANR implementations)</li>
+<li><strong>Fraud Workflows</strong>: Dedicated analyst role for incident management with search/view capabilities</li>
+</ul>
+<h2>Critical Business Rules</h2>
+<ul>
+<li>Two-level access control required (Client Centre User ID + OAS-specific permissions)</li>
+<li>Scrubbed email revocation process prevents legitimate addresses from being permanently blocked</li>
+<li>Profile status (enabled/disabled) gates send/receive capability</li>
+<li>ANR creates misdirection risk requiring recovery procedures</li>
+</ul>
+<h2>Architectural Constraints</h2>
+<ul>
+<li>2-year transaction data retention window</li>
+<li>Client Centre dependency (not standalone system)</li>
+<li>Role-based access (CSR, Fraud Analyst)</li>
+<li>Interac-maintained scrubbed email list integration</li>
+</ul>
+<p><strong>Design Consideration</strong>: Any enhancement touching ANR, profile state changes, or fraud workflows requires careful audit logging and approval workflows.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="interac_e_transfer_online_administration_system_oas.html">Interac eâTransferÂ® Online Administration System (OAS)</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_oas_access_and_administration.html">3 OAS Access and Administration</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_tracing_interac_e_transfer_transactions_via_oas.html">4 Tracing Interac eâTransfer Transactions via OAS</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_viewing_a_customer_s_interac_e_transfer_profile_on_oas.html">5 Viewing a Customerâs Interac eâTransfer Profile on OAS</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_the_oas_fraud_analyst_role.html">6 The OAS Fraud Analyst Role</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_revoking_a_scrubbed_email_address.html">7 Revoking a Scrubbed Email Address</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_misdirected_funds_recovery.html">8 Misdirected Funds Recovery</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_troubleshooting_tracing_requests.html">9 Troubleshooting Tracing Requests</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.9.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology and Frequently Asked Questions — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>2 Terminology and Frequently Asked Questions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>2 Terminology and Frequently Asked Questions</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.02.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Payment Solutions Terminology and FAQ</p>
+<ul>
+<li><strong>Purpose</strong>: Defines 130+ technical terms and concepts for the Electronic Transactions domain, specifically wire transfer operations and regulatory compliance within Central 1's payment infrastructure.</li>
+</ul>
+<ul>
+<li><strong>Core Wire Transfer Concepts</strong>: Distinguishes between outgoing wires (institution-initiated, beneficiary external) and incoming wires (external-initiated, crediting local institution/account holder), with special categorization for large international wires (≥$10,000 CAD equivalent).</li>
+</ul>
+<ul>
+<li><strong>Authorization Framework</strong>: Implements two-tier approval model via MTS (Money Transfer System) using Level 1 and Level 2 authorization limits set at branch level; in-branch wires bypass Level 1 threshold and require minimum one approval, while Level 2 requires two approvals regardless of amount.</li>
+</ul>
+<ul>
+<li><strong>FX Data Structures</strong>: Live rates (not static) used in wire creation with optional spread markup; supports exotic, major, and minor currency classifications; pegged currency handling indicates derivative rate dependencies on external benchmarks.</li>
+</ul>
+<ul>
+<li><strong>Messaging Standards & Compliance</strong>: Wires application is SWIFT-compliant and Lynx-compatible (Canada's real-time ISO 20022 system); supports IBAN validation via check digits for cross-border payments; rich remittance data capability enables invoice/PO travel with transactions.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Integration Points</strong>: Multiple AML/CFT touchpoints—FINTRAC reporting, PCMLTFA/Regulations enforcement, PEP screening (domestic/foreign/HIO), large cash transaction thresholds ($10,000 CAD), and jurisdiction-specific regulators (BCFSA, FSRA, DGCM); Enterprise Fraud Management (EFM) system provides ML-based fraud detection requiring manual investigation workflow.</li>
+</ul>
+<ul>
+<li><strong>User/Access Control Dependencies</strong>: MTS manages wire users and administrators; User Management application handles 2-step security token provisioning; Client Centre serves as digital portal; role separation between Client Centre Users and User Management Security Officers affects operational segregation of duties.</li>
+</ul>
+<ul>
+<li><strong>System Dependencies</strong>: Relies on ServiceNow for ticketing; transit number format (0 + 3-digit institution + 5-digit branch) is hardcoded identifier; branch settings in MTS control authorization logic, indicating tight coupling between branch master data and wire approval rules.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

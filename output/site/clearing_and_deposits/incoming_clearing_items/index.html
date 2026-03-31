@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incoming Clearing Items — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Incoming Clearing Items</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Incoming Clearing Items</h1>
+    <p class="subtitle">Clearing and Deposits › Incoming Clearing Items <span class="badge" style="background:#dc2626">7 pages</span></p>
+    <div class="summary-box md-content"><p># Incoming Clearing Items – Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group defines Central 1's processing framework for Canadian and US dollar incoming clearing items (cheques and similar instruments) received by credit unions. It covers the complete lifecycle: receipt, processing, settlement, and reporting.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<p><strong>Inbound:</strong> Items drawn on credit unions or members enter the clearing cycle post-deposit/cash.</p>
+<p><strong>Processing:</strong> Items move through clearing with validation against branch/institution identifiers (5-digit branch number + institution number = transit routing).</p>
+<p><strong>Settlement:</strong> Item totals (including chargebacks) are debited to the credit union's Central 1 account; settlement reconciliation is core to the process.</p>
+<p><strong>Reporting:</strong> Multi-report outputs available via MERG file downloads and ORS (Online Reporting System) for search, viewing, and tracing.</p>
+<h2>Critical Architecture Considerations</h2>
+<ul>
+<li><strong>Regulatory compliance</strong> is mandatory—document references applicable statutes (Chapter 3)</li>
+<li><strong>Dual currency support</strong> (CAD/USD) with distinct processing paths</li>
+<li><strong>Chargeback handling</strong> integrated into settlement logic</li>
+<li><strong>Audit trail requirements</strong> via ORS querying and print capabilities</li>
+<li><strong>Reconciliation criticality</strong>—settlement accuracy directly impacts member accounts</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>Use ORS as primary inquiry/resolution tool (avoid parallel systems)</li>
+<li>Maintain audit-grade traceability for compliance</li>
+<li>Support real-time and batch reporting modes</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="incoming_clearing_items.html">Incoming Clearing Items</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_processing_incoming_clearing_items.html">4 Processing Incoming Clearing Items</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_viewing_and_tracing_incoming_clearing_items.html">5 Viewing and Tracing Incoming Clearing Items</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_settlement_of_incoming_clearing_items.html">6 Settlement of Incoming Clearing Items</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_incoming_clearing_reports.html">7 Incoming Clearing Reports</a></div>
+            <div class="page-preview">- **Purpose**: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with repo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

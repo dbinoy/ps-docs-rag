@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wwparcel.html — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <span>wwparcel.html</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
+    <h1>wwparcel.html</h1>
+    <p class="subtitle">Central 1 Banking Services › Central 1 Banking Services</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Payment Solutions Documentation Portal - wwparcel.html</p>
+<ul>
+<li><strong>Purpose</strong>: Documentation covering four distinct banking service modules—CEBA loan administration, Central 1 current/savings accounts, CAS Online portal functionality, and AgriInvest program operations—with emphasis on reporting, settlement, reconciliation, and user access management.</li>
+</ul>
+<ul>
+<li><strong>Key Processes</strong>:</li>
+<li>CEBA: loan repayment reporting, administration fee tracking, EDC fund returns, and settlement/reconciliation workflows via ServiceNow</li>
+<li>Central 1: account funding, inter-branch transfers, transaction settlement with standardized transaction/charge codes, and account reconciliation services</li>
+<li>CAS Online: user provisioning/access control, account summary/activity queries, account grouping, and statement/report viewing</li>
+<li>AgriInvest: account lifecycle management, deposit/withdrawal/transfer processing, and activity file uploads with Central 1 validation</li>
+</ul>
+<ul>
+<li><strong>Critical Data Structures</strong>: Transaction and charge codes (Section 5.2 Central 1), repayment/fee categories for reporting (Section 6.2-6.3), AgriInvest activity file format (Excel template-based, Section 7.2), and CEBA form submissions in ServiceNow with categorized transaction types.</li>
+</ul>
+<ul>
+<li><strong>Integration Points</strong>: ServiceNow as primary workflow engine (CEBA reporting), Central 1 as settlement/clearing hub, CAS Online as read-only query portal with account grouping capabilities, Client Centre for AgriInvest file uploads, and Treasury Connect for HISA fund operations.</li>
+</ul>
+<ul>
+<li><strong>Access Control & Compliance</strong>: CAS Online enforces user role management (create/modify/delete), password policies, and internal control policies (Sections 3.1-3.3); AgriInvest requires recordkeeping and fund-freezing policies with estate/divorce handling procedures.</li>
+</ul>
+<ul>
+<li><strong>Validation & Error Handling</strong>: Central 1 performs automated validation on AgriInvest activity files with notification workflows; submitted reports are reviewable pre-settlement; returned EDC funds have distinct settlement path requiring reconciliation.</li>
+</ul>
+<ul>
+<li><strong>Architectural Constraint</strong>: Four largely independent service modules share Central 1 as common settlement backend but have distinct intake channels (ServiceNow, direct file upload, web portal) and reporting cadences—design must support isolated scaling and rollback per module.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

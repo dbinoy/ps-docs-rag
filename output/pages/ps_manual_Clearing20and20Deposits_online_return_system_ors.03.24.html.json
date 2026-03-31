@@ -1,0 +1,11 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.24.html",
+  "title": "Appendix #A-9 ORS Cheque on Deposit Search Results Grid",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "Appendix #A-9\tORS Cheque on Deposit Search Results Grid\nColumn Name\nColumn Description\nFormat\nA\nAction\nP â Print image of item\nT â View transactions (deposit slip and other cheques) associated with cheque\nV\nView\nCheckbox\nTransit\nRoute and Transit Number of deposit slip\nExample: 12340809\nDate\nDate deposit is credited to financial institution account at Central 1\nMmm dd yyyy, Example: Jan 05 2005\nCheque #\nSerial # of cheque\n1â12 digits\nCheque Transit #\nRoute and Transit Number of cheque\nExample: 12340002\nAccount\nMICR account number encoded on cheque\n1â14 digits\nAmount\nDollar amount of cheque\n1â8 digit dollar amount + â.â + 2 digit cents\nCurrency\nCurrency\nCAD â Canadian Dollar\nUSD â US Dollar\nXXX â Foreign currency\nTrace #\n10 digit item trace number\nTranCode\nTransaction Code\nSee\nAppendix #A-10\n, ORS Transaction Codes",
+  "links": [
+    "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.25.html"
+  ],
+  "content_length": 845
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bill Payments — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Bill Payments</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>🧾 Bill Payments</h1>
+    <p class="subtitle"><span class="badge" style="background:#059669">48 pages</span></p>
+    <div class="summary-box md-content"><p># Bill Payments Section Overview</p>
+<h2>Purpose</h2>
+<p>This section covers Central 1's bill payment ecosystem, enabling financial institutions to process customer-initiated bill payments and corporate remittance consolidation. It encompasses three primary capabilities: the Electronic Bill Payments System (customer-facing bill payment distribution), Bill Payment Remittance Processing (BPRP—corporate consolidation and settlement), and CRA Business Taxes (regulatory filing and payment submission). Together, these form the operational backbone for bill payment origination, routing, settlement, and reconciliation.</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Biller Identification & Management</strong>: Billers are entities registered on Central 1's system identified by Biller Identification Number (BID). Each biller has transaction limits, cut-off times, and non-standard pricing rules that must be enforced at origination.</p>
+<p>2. <strong>BPRP (Bill Payment Remittance Processing)</strong>: A consolidation service where business members (Corporate Creditors) submit aggregated payments via a designated lead bank. Uses Corporate Creditor Identification Number (CCIN) for routing and settlement. Requires signed provincial agreements and member enrollment policies.</p>
+<p>3. <strong>Transaction Limits</strong>: Two enforcement layers—Financial Institution limits (aggregate throughput caps) and Biller limits (per-biller transaction caps). Both must be validated pre-submission.</p>
+<p>4. <strong>Settlement & Cut-Off Times</strong>: Payments submitted by published cut-off times settle T+1 by 5:30 am PT (8:30 am ET). Non-standard pricing billers have custom cut-off rules. Settlement posts to the originating institution's Central 1 account.</p>
+<p>5. <strong>Trace & Reversal Framework</strong>: Post-submission payment tracing via Online Tracing System (OLT). Reversals available for incorrect payments, corrections, or disputes. OLT supports role-based access (Tracer, SuperTracer) with audit requirements.</p>
+<p>6. <strong>CRA Remittance Integration</strong>: Business Taxes application on PaymentStream™ Direct handles electronic CRA filings and tax payments. Supports both single-workflow (front-line submission) and dual-workflow (verification layer) processing. Manual fallback for unsupported voucher types.</p>
+<h2>How It Works</h2>
+<p>1. <strong>Origination</strong>: Customer or business member initiates payment; FI validates against biller/institution limits and cut-off times.</p>
+<p>2. <strong>Submission</strong>: Payment submitted via file transmission or direct eCommSwitch connection; BPRP requests routed through provincial centrals.</p>
+<p>3. <strong>Settlement</strong>: Central 1 consolidates and settles T+1; funds debit/credit originating institution's account.</p>
+<p>4. <strong>Reconciliation</strong>: FI reconciles posted settlements against internal records using BPRP and EBP reports.</p>
+<p>5. <strong>Tracing</strong>: If payment status unknown or disputes arise, tracer initiates OLT request; biller-initiated traces also flow inbound.</p>
+<p>6. <strong>Reversal</strong>: Authorized users request reversal; Central 1 processes and settles correction.</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>eCommSwitch</strong>: Direct connection alternative to file transmission for real-time EBP submission.</li>
+<li><strong>PaymentStream™ Direct</strong>: CRA Business Taxes application; user management and environment separation (test/prod).</li>
+<li><strong>Provincial Centrals</strong>: BPRP service request routing; settlement coordination for non-BC/Ontario FIs.</li>
+<li><strong>Client Centre</strong>: Secured portal for accessing reports, tracing, and data files.</li>
+<li><strong>CPA Rules & Regulatory Framework</strong>: Payment validation, due diligence (restricted entities), and compliance reporting.</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>Regional Variance</strong>: BPRP settlement, reporting, and tracing procedures differ by province. Non-BC/Ontario FIs coordinate directly with provincial centrals—design multi-regional support carefully.</li>
+<li><strong>Enrollment Governance</strong>: FIs must establish internal policies for BPRP business member enrollment; Central 1 does not pre-screen. Audit trails required.</li>
+<li><strong>Cut-Off Enforcement</strong>: Non-standard</li>
+</ul></div>
+    <h2>Document Groups</h2>
+    
+            <div class="group-card">
+              <h3><a href="bill_payment_remittance_processing/index.html">Bill Payment Remittance Processing</a></h3>
+              <div class="group-count">11 pages</div>
+              <p>BPRP Architecture Brief Overview Bill Payment Remittance Processing (BPRP) is Central 1's electronic payment consolidation system enabling business members (Billers) to aggregate and process payments through a lead…</p>
+              <a href="bill_payment_remittance_processing/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="bill_payments/index.html">Bill Payments</a></h3>
+              <div class="group-count">1 pages</div>
+              <p>Bill Payments System Brief Overview The Electronic Bill Payments System enables credit union members to pay bills electronically through Central 1's infrastructure. The document outlines operational frameworks,…</p>
+              <a href="bill_payments/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="cra_business_taxes/index.html">Cra Business Taxes</a></h3>
+              <div class="group-count">12 pages</div>
+              <p>CRA Business Taxes – Architecture Brief Overview CRA Business Taxes is a PaymentStream Direct application enabling authorized users to submit Canada Revenue Agency remittance vouchers and business tax payments through…</p>
+              <a href="cra_business_taxes/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="electronic_bill_payments_system/index.html">Electronic Bill Payments System</a></h3>
+              <div class="group-count">12 pages</div>
+              <p>Electronic Bill Payments System – Architecture Brief Overview Central 1's Electronic Bill Payments System enables financial institutions to submit customer-initiated bill payments through a shared infrastructure, with…</p>
+              <a href="electronic_bill_payments_system/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="online_tracing_system/index.html">Online Tracing System</a></h3>
+              <div class="group-count">12 pages</div>
+              <p>Online Tracing System (OLT) – Architecture Brief Purpose The Online Tracing System enables financial institutions to create and manage trace requests for bill payments processed through Central 1's Electronic Bill…</p>
+              <a href="online_tracing_system/index.html">View pages →</a>
+            </div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

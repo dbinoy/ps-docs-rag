@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Data Hub User Management — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <a href='../../data_hub/data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <span>4 Data Hub User Management</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Data Hub</a>
+    <h1>4 Data Hub User Management</h1>
+    <p class="subtitle">Data Hub › Data Hub</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Data Hub User Management Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Defines the process for requesting, managing, and removing Data Hub access via ServiceNow; Central 1 (not local admins) is the sole provisioning authority for Data Hub user accounts.</li>
+</ul>
+<ul>
+<li><strong>Key Constraint</strong>: Data Hub access cannot be assigned through CPS Admin or User Management applications—all provisioning flows through ServiceNow Service Catalogue, creating a hard dependency on Central 1's manual intervention and ticket-based workflow.</li>
+</ul>
+<ul>
+<li><strong>Prerequisite</strong>: Users must have an existing Client Centre ID (as either a Client Centre User or User Management Security Officer) before Data Hub access can be requested; this creates a two-system identity dependency.</li>
+</ul>
+<ul>
+<li><strong>Access Request Data Flow</strong>: ServiceNow captures User ID, Email Address, Department (dropdown), Job Role (free text), and Objectives (dropdown), then routes to Central 1 for approval and associates the access to the Client Centre user ID—architect should expect this form schema as a contract for provisioning integrations.</li>
+</ul>
+<ul>
+<li><strong>Access Revocation</strong>: Uses a separate "Make a Request" form in ServiceNow requiring narrative description including user name and Client Centre username, indicating no standardized deletion workflow—risk of manual error and inconsistent removal.</li>
+</ul>
+<ul>
+<li><strong>Dormant User Auto-Removal</strong>: 180-day inactivity triggers warning email; 240-day inactivity auto-removes access with notification—architect must account for this automatic lifecycle management when designing retention or audit features.</li>
+</ul>
+<ul>
+<li><strong>Integration Point</strong>: ServiceNow acts as the single integration touchpoint for Data Hub user lifecycle; no API mentioned, suggesting manual Central 1 back-office processing and potential bottleneck for bulk operations.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

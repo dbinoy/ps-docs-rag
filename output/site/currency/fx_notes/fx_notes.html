@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FX Notes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>FX Notes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>FX Notes</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.01.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># FX Notes Documentation Summary</p>
+<ul>
+<li><strong>Purpose</strong>: FX Notes enables authorized financial institution users to transact foreign currency bank notes (excluding coins and CAD notes) via Central 1's Client Centre, partnered with Globex 2000 as the fulfillment provider.</li>
+</ul>
+<ul>
+<li><strong>Key Operational Constraints</strong>: Service operates 7:30 AM–9 PM ET daily with live exchange rates; orders placed after 3 PM ET (12 PM PT) process the next business day; Globex 2000 support unavailable on Quebec provincial holidays, creating potential SLA gaps.</li>
+</ul>
+<ul>
+<li><strong>Exchange Rate Management</strong>: Users can download daily rate pages, but rates are locked at order time; organizations must manage FX risk internally via configured spreads—this implies a retail rate modifier system (referenced in Section 7.1) that requires architectural support for rate distribution and modification workflows.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: System integrates with Current Account Services (CAS) Online, CPS Admin Application, File Exchange and Report Distribution, and User Management modules; depends on external Globex 2000 systems for delivery logistics, settlement processing, and technical support; FINTRAC integration required for compliance reporting (Large Cash Transaction Reports, Suspicious Transaction Reports).</li>
+</ul>
+<ul>
+<li><strong>Access Control & Enrollment</strong>: Role-based authorization required; enrollment managed by Central 1 Client Support Services; architecture must support CPS Admin Appointment Certificate (form 1918) for role assignment and CPS Admin Modification/Deletion Request (form 2035) for lifecycle management.</li>
+</ul>
+<ul>
+<li><strong>Regulatory & Compliance Touch Points</strong>: PCMLTFA compliance requirements differ by province (BC/ON); Operations Manual Program subscription model affects documentation visibility and creates potential architecture friction for form/template management across subscriber/non-subscriber tiers.</li>
+</ul>
+<ul>
+<li><strong>Multi-Tenant Considerations</strong>: Separate procedures for BC/Ontario credit unions vs. non-member institutions; Fee Schedule (form 2725) available only to Class A credit unions, indicating tiered product offerings that require segmentation logic in data models and access controls.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

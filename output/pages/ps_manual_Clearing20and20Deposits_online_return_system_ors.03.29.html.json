@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.29.html",
+  "title": "Appendix #A-14 ORS Cheque Report Fields",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "Appendix #A-14\tORS Cheque Report Fields\nColumn Name\nColumn Description\nFormat\nA\nAction taken on item\nRI â Return\nRS â Reinstate\nRC\nReason Code\n3-digit cheque return reason code\nDate\nDate item is charged to financial institution account at Central 1\nMmm dd yyyy, Example: Jan 05 2005\nCheq #\nCheque serial #\n1â12 digits\nTran\nRoute and Transit Number\nExample: 12340809\nAcct\nMICR account number\n1â14 digits\nAmount\nDollar amount of item\n1â8 digit dollar amount + â.â + 2 digit cents\nTrace #\nTrace #\n1â10 digits\nRS Tran\nReinstated route and Transit Number\nExample: 54320809\nRS Acct\nReinstated MICR account number\n1â14 digits\nRS Cheq #\nReinstated cheque serial #\n1â12 digits\nUser ID\nName of user that created item\n1â8 characters\nO/U\nOnline or Upload\nO â Indicates item was created online via ORS\nU â Indicates item was uploaded to ORS via RI file",
+  "links": [],
+  "content_length": 865
+}

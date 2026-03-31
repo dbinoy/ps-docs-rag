@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Continuity Program — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <a href='../../access_and_administration/business_continuity_program/index.html'>Business Continuity Program</a> <span class='sep'>›</span> <span>Business Continuity Program</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Business Continuity Program</a>
+    <h1>Business Continuity Program</h1>
+    <p class="subtitle">Access and Administration › Business Continuity Program</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/business_continuity_program.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Business Continuity Program Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documents Central 1's comprehensive Business Continuity Program (BCP) framework addressing system, site, and regional disaster recovery with four primary operational plans (CMC, IRP, TRP, PRP).</li>
+</ul>
+<ul>
+<li><strong>Service Classification System</strong>: Four service tiers with defined Recovery Time Objectives (RTOs) determine disaster response:</li>
+<li>Mission Critical (0–4 hrs): Auto-failover via DNS load balancing; minimal manual intervention</li>
+<li>Business Critical (15 min–48 hrs): Manual intervention required</li>
+<li>Business Important (4 hrs–30 days): Manual intervention required</li>
+<li>Business Supporting (48 hrs–30+ days): Requires system recreation from backup</li>
+</ul>
+<ul>
+<li><strong>Dual Data Center Architecture</strong>: Active/passive deployment across Vancouver and Toronto data centers with redundant internet connectivity, UPS, and generators; single point of failure if both centers fail simultaneously (documented as never occurred).</li>
+</ul>
+<ul>
+<li><strong>Critical Integration Dependencies</strong>: Clients must maintain direct connections to *both* data centers to enable automatic failover; DNS-based load balancing and client browser settings are load distribution mechanisms.</li>
+</ul>
+<ul>
+<li><strong>Communication Flow During Disasters</strong>: Central 1 switchboard (1-800-661-6813) remains active via out-of-region virtual switch; status updates to clients occur within 48 hours post-declaration via ServiceNow, phone (1-888-889-7878), or email (support@central1.com).</li>
+</ul>
+<ul>
+<li><strong>Auxiliary Recovery Resources</strong>: Mobile backup trailer deployment within 48 hours provides satellite-based voice/data connectivity and operational facilities; used only after primary recovery attempts.</li>
+</ul>
+<ul>
+<li><strong>Service Degradation Pattern</strong>: Non-critical operational services (Change Requests, administrative functions) degrade during disasters until alternative staffing arrangements are made; core transaction processing prioritized.</li>
+</ul>
+<ul>
+<li><strong>Architect Constraint</strong>: Design must assume RTO variance based on disaster magnitude and staff availability; cannot guarantee deterministic recovery windows within stated ranges.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

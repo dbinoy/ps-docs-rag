@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2036.html",
+  "title": "20:36 â October 1, 2020",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "20:36 â October 1, 2020\nUpdate to the EMTC/EMFC File Specifications\nWe updated the EMTC/EMFC File Specifications, Form 6195, which is used to reconcile\nInterac\ne-Transfer\nÂ®\ntransactions. We clarified the descriptions of certain fields, but we did not change the file format.\nDocument Library\nStatus\nEMTC/EMFC File Specifications\n6195\nWe updated Table 2, âCâ or âDâ Record â Detailed Record. Specifically, records 7 through 14 now include a more detailed description and note that the content in each differs depending on whether the transaction is a credit or debit.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 684
+}

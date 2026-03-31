@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>28 Inter-Branch Transfers in Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>28 Inter-Branch Transfers in Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>28 Inter-Branch Transfers in Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.28.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Inter-Branch Transfers in Wires</p>
+<p><strong>Overview:</strong> Documents the wire system's capability to facilitate same-currency fund transfers between branches, with associated fee structures and routing logic.</p>
+<p><strong>Key Concepts & Rules:</strong></p>
+<ul>
+<li>Inter-branch transfers via wires require <strong>currency parity</strong> between sending and receiving accounts; cross-currency transfers must be routed through provincial central Treasury Departments</li>
+<li>Standard wire fees apply to inter-branch transfers; sender branch is debited, receiver branch is credited</li>
+<li><strong>Real-time settlement</strong> available for authorized users at BC/Ontario credit unions and other Central 1 clients via Treasury Connect (not standard wire processing)</li>
+</ul>
+<p><strong>Integration Points & Dependencies:</strong></p>
+<ul>
+<li><strong>Treasury Connect application</strong> (Form 6444) provides near-real-time alternative for eligible institutions; integrates with Central 1 account infrastructure</li>
+<li><strong>ServiceNow platform</strong> serves as secondary integration path for inter-branch transfers for certain client classes</li>
+<li><strong>Provincial central Treasury Departments</strong> act as intermediaries for cross-currency and out-of-scope transfer requests</li>
+<li>References Central 1 Current Accounts and High Interest Savings Accounts product documentation for procedural details</li>
+</ul>
+<p><strong>Architectural Constraints:</strong></p>
+<ul>
+<li>Wire system lacks native cross-currency transfer capability—requires external routing</li>
+<li>Access to Treasury Connect/ServiceNow pathways is role-based and institution-type dependent (BC/Ontario credit unions, Central 1 clients, corporate clients have access; others must contact provincial central)</li>
+<li>Fee calculation logic must account for inter-branch wire classification vs. standard wires</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

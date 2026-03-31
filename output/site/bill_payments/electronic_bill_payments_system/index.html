@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electronic Bill Payments System — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <span>Electronic Bill Payments System</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
+    <h1>🧾 Electronic Bill Payments System</h1>
+    <p class="subtitle">Bill Payments › Electronic Bill Payments System <span class="badge" style="background:#059669">12 pages</span></p>
+    <div class="summary-box md-content"><p># Electronic Bill Payments System – Architecture Brief</p>
+<h2>Overview</h2>
+<p>Central 1's Electronic Bill Payments System enables financial institutions to submit customer-initiated bill payments through a shared infrastructure, with settlement and reconciliation managed centrally.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<ul>
+<li><strong>Submission</strong>: Two integration paths—file transmission or direct connection to eCommSwitch</li>
+<li><strong>Settlement</strong>: Posted to institution accounts by 5:30 am PT (8:30 am ET) next business day</li>
+<li><strong>Core Database</strong>: Maintains biller registry (with Biller Identification Numbers), customer biller accounts, and payment records</li>
+</ul>
+<h2>Critical Architecture Elements</h2>
+<ul>
+<li><strong>Biller Onboarding</strong>: Institutions perform enhanced due diligence on restricted entities; BID assignment gates biller participation</li>
+<li><strong>Reconciliation Responsibility</strong>: Institutions must reconcile posted customer charges against Central 1 settlement totals</li>
+<li><strong>Reversals & Trace</strong>: System supports payment cancellations and trace requests for discrepancies (Section 12)</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>Fixed settlement window (overnight batch)</li>
+<li>Multi-institution shared system—isolation and audit trail critical</li>
+<li>Reconciliation logic must handle timing mismatches between customer-facing and settlement systems</li>
+<li>Report generation required for multiple institution types</li>
+</ul>
+<h2>Before Designing Enhancements</h2>
+<p>Clarify: real-time vs. batch settlement requirements, biller onboarding workflow automation scope, and reconciliation exception handling depth.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="electronic_bill_payments_system.html">Electronic Bill Payments System</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_setting_up_billers_on_the_electronic_bill_payments_system.html">4 Setting up Billers on the Electronic Bill Payments System</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_viewing_biller_information.html">5 Viewing Biller Information</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_managing_the_electronic_bill_payments_database.html">6 Managing the Electronic Bill Payments Database</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_submitting_electronic_bill_payments_to_central_1_via_file_transmission.html">7 Submitting Electronic Bill Payments to Central 1 via File Transmission</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_submitting_bill_payments_to_central_1_via_a_direct_connection_to_the_ecommswitch.html">8 Submitting Bill Payments to Central 1 via a Direct Connection to the eCommSwitch</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_electronic_bill_payment_reports.html">9 Electronic Bill Payment Reports</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_settlement_of_electronic_bill_payments.html">10 Settlement of Electronic Bill Payments</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_reconciliation_of_electronic_bill_payments.html">11 Reconciliation of Electronic Bill Payments</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_electronic_bill_payment_reversals_and_trace_requests.html">12 Electronic Bill Payment Reversals and Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

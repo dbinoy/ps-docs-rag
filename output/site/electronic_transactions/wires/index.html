@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires <span class="badge" style="background:#be185d">29 pages</span></p>
+    <div class="summary-box md-content"><p># Wires Application - Architectural Summary</p>
+<h2>Overview</h2>
+<p>The <strong>Wires</strong> application on PaymentStream Direct™ enables domestic and international wire transfers for authorized credit union users. It manages the full lifecycle: creation, approval, settlement, and reconciliation of outgoing and incoming wires.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<ul>
+<li><strong>Outgoing wires</strong>: User creation → MTS-based approval workflow (1-2 step) → settlement to Central 1 current account (near real-time)</li>
+<li><strong>Incoming wires</strong>: External FI uploads processed every ~10 minutes; real-time for participating institutions</li>
+<li><strong>FX operations</strong>: Live rate feeds; spreads and fees configurable per user permission</li>
+<li><strong>Settlement</strong>: Processed within minutes of approval to Central 1 current account</li>
+</ul>
+<h2>Critical Business Rules</h2>
+<ul>
+<li>Approval tiers defined by branch settings (amount-based)</li>
+<li>Editable only pre-approval; post-approval requires recall/trace/amend procedures</li>
+<li>IBAN/country-specific validation for international wires</li>
+<li>2-step security authentication required</li>
+<li>Templates support recurring wire patterns</li>
+</ul>
+<h2>Architectural Constraints</h2>
+<ul>
+<li>MTS (Money Transfer System) is the permission/admin control plane—essential dependency</li>
+<li>Three processing models available; selection affects workflow design</li>
+<li>Contingency procedures require designated backup processors</li>
+<li>Inter-branch transfers require currency alignment</li>
+<li>Legal/regulatory compliance mandatory per jurisdiction</li>
+</ul>
+<h2>Key Integration Points</h2>
+<p>Client Centre authentication → MTS admin/permissions → Wires application → Settlement backend</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="wires.html">Wires</a></div>
+            <div class="page-preview">- **Overview**: Introduces the Wires application on PaymentStream Direct™ platform for creating/receiving domestic and international wire transfers with advanced SWIFT lookup, 2-Step Security token su</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Defines 130+ technical terms and concepts for the Electronic Transactions domain, specifically wire transfer operations and regulatory compliance within Central 1's payment infrastructu</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_and_policies_for_incoming_and_outgoing_wires.html">3 Legal Considerations and Policies for Incoming and Outgoing Wires</a></div>
+            <div class="page-preview">- **Overview**: Documents regulatory compliance requirements and mandatory internal control policies for wire transfer operations (incoming/outgoing) under Canadian financial services law. - **Regulat</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_customizing_wires_elements.html">4 Customizing Wires Elements</a></div>
+            <div class="page-preview">- **Overview**: Chapter 4 documents customizable configuration elements within the Wires application for electronic fund transfers, including regulatory compliance fields, fee structures, and user-fac</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_selecting_a_wires_processing_model.html">5 Selecting a Wires Processing Model</a></div>
+            <div class="page-preview">- **Purpose**: Documents three configurable wires processing architectures (Centralized, Partially Centralized, Decentralized) for multi-branch and single-branch financial institutions, with setup pro</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_logging_in_to_mts_for_mts_administrators.html">6 Logging in to MTS for MTS Administrators</a></div>
+            <div class="page-preview">- **Purpose**: Documents the authentication and access flow for MTS (Money Transfer System) administrators to manage Wires User permissions, MTS Administrators, and branch information. - **Authenticat</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_mts_administrator_management_for_wires.html">7 MTS Administrator Management for Wires</a></div>
+            <div class="page-preview">- **Purpose**: Defines role-based administration framework for managing Wires Users, MTS Administrators, and branch settings through the Money Transfer System (MTS), with dual-system setup requirement</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_wires_user_management.html">8 Wires User Management</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for MTS Administrators to create, modify, and delete Wires Users with granular permission management and transaction approval limits. - **Dual-system requirement**: W</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_mts_branch_management_for_wires.html">9 MTS Branch Management for Wires</a></div>
+            <div class="page-preview">- **Purpose**: MTS Administrators configure wire authorization thresholds at the branch level to enforce single or dual-approval requirements based on transaction amount and processing model (centrali</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_logging_in_to_wires.html">10 Logging in to Wires</a></div>
+            <div class="page-preview">**Overview:** This page documents the authentication flow and navigation sequence for users to access the Wires application through the Client Centre portal. **Key Concepts & Process Flow:**</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_managing_outgoing_wire_fees.html">11 Managing Outgoing Wire Fees</a></div>
+            <div class="page-preview">- **Purpose**: Provides operational guidance for authorized Wires Users to configure, view, modify, and delete outgoing wire fees that financial institutions charge customers; fees can be manually ent</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_managing_foreign_exchange_spreads_in_wires.html">12 Managing Foreign Exchange Spreads in Wires</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for authorized Wires Users to view, add, modify, and delete foreign exchange (FX) spreads that are automatically calculated into outgoing wire transfers in foreign </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_viewing_live_rates_in_wires.html">13 Viewing Live Rates in Wires</a></div>
+            <div class="page-preview">- **Purpose**: Documents the foreign exchange rate viewing functionality within the Wires electronic transactions module, enabling users to access current FX rates with applied spreads in real-time. -</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_considerations_for_outgoing_wires.html">14 Considerations for Outgoing Wires</a></div>
+            <div class="page-preview">**Overview:** Documentation of requirements, constraints, and compliance controls for international outgoing wire processing through Central 1's Wires application, covering IBAN validation, country-sp</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="15_preparing_outgoing_wires.html">15 Preparing Outgoing Wires</a></div>
+            <div class="page-preview">- **Purpose**: Defines regulatory compliance procedures and data collection requirements for outgoing wire processing in the Wires application, using Form 1171 as the primary data capture instrument. </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.15.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="16_creating_a_regular_wire.html">16 Creating a Regular Wire</a></div>
+            <div class="page-preview">- **Purpose**: Procedural documentation for creating outgoing wires in the Wires application, covering branch selection, beneficiary institution lookup, amount/currency configuration, intermediary rou</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.16.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="17_creating_a_bank_to_bank_wire.html">17 Creating a Bank to Bank Wire</a></div>
+            <div class="page-preview">- **Scope**: Step-by-step procedural documentation for creating outgoing wires that credit receiving financial institutions (not individual customers) via the Wires application, covering field complet</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.17.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="18_managing_wire_templates.html">18 Managing Wire Templates</a></div>
+            <div class="page-preview">- **Purpose**: Enables creation, management, and reuse of wire transaction templates (Regular and Bank-to-Bank types) to streamline recurring wire transmission workflows within the Wires application. </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.18.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="19_navigating_wires_and_viewing_wire_details.html">19 Navigating Wires and Viewing Wire Details</a></div>
+            <div class="page-preview">- **Purpose**: Defines the Wires application's four primary views for managing outgoing and incoming wire transfers, their status lifecycles, and user interaction patterns for viewing wire details. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.19.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="20_searching_for_wires_and_exporting_wire_information.html">20 Searching for Wires and Exporting Wire Information</a></div>
+            <div class="page-preview">- **Core functionality**: Users can search, filter, and export wire transaction records (both incoming via Received Wires and outgoing via Submitted Wires) with a rolling 7-year historical data window</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.20.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="21_editing_an_outgoing_wire.html">21 Editing an Outgoing Wire</a></div>
+            <div class="page-preview">- **Purpose**: Defines the workflow and constraints for modifying outgoing wire transfers prior to approval, with role-based access controls and audit logging. - **Editable vs. Locked Fields**: Users </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.21.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="22_approving_outgoing_wires.html">22 Approving Outgoing Wires</a></div>
+            <div class="page-preview">**Overview:** This section defines the authorization workflow and approval requirements for outgoing wire transfers based on wire amount, creation source, and MTS branch-level configuration settings. </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.22.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="23_cancelling_outgoing_wires.html">23 Cancelling Outgoing Wires</a></div>
+            <div class="page-preview">**Overview:** This page documents the wire cancellation workflows in the Wires application, distinguishing between cancellations of pending vs. approved wires, with different processes and guarantees </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.23.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="24_receiving_incoming_wires.html">24 Receiving Incoming Wires</a></div>
+            <div class="page-preview">- **Overview**: Document defines the operational and compliance workflow for inbound wire receipt through Central 1's Wires platform, including acceptance/return logic, sanctions screening, and FINTRA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.24.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="25_recalling_tracing_and_amending_wires.html">25 Recalling, Tracing, and Amending Wires</a></div>
+            <div class="page-preview">- **Overview**: Documents the post-approval lifecycle for outgoing wires—specifically trace, recall, and amendment request workflows for approved wires (including future-dated) that cannot be directly</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.25.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="26_wires_settlement.html">26 Wires Settlement</a></div>
+            <div class="page-preview">- **Purpose**: Defines settlement account flows and timing for incoming and outgoing wire transactions across Central 1's payment network, with regional variations for BC/Ontario vs. other provinces. </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.26.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="27_contingency_procedures_for_incoming_and_outgoing_wires.html">27 Contingency Procedures for Incoming and Outgoing Wires</a></div>
+            <div class="page-preview">- **Purpose**: Defines fallback procedures for wire processing when a financial institution loses access to the Wires application; the designated contingency processor acts as intermediary to send/rec</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.27.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="28_inter_branch_transfers_in_wires.html">28 Inter-Branch Transfers in Wires</a></div>
+            <div class="page-preview">**Overview:** Documents the wire system's capability to facilitate same-currency fund transfers between branches, with associated fee structures and routing logic. **Key Concepts & Rules:**</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.28.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="29_using_memberdirect_business_mdb_forge_commercial_to_create_wires.html">29 Using MemberDirectÂ® Business (MDB) / Forge Commercial to Create Wires</a></div>
+            <div class="page-preview">- **Purpose**: Enables business customers to initiate domestic and international wire transfers through MDB/Forge Commercial (FX or USD/CAD options), with wires routed to the Wires application for fin</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.29.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

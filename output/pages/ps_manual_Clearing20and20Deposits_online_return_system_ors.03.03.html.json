@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.03.html",
+  "title": "3 Policies and Recommendations for ORS",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "3\tPolicies and Recommendations for ORS\n3.1\tPolicy on Restricting Access to ORS\nMake sure that the ORS user type assigned to each ORS user accurately reflects the individualâs current job responsibilities and authorization levels. Since users access ORS through the Client Centre, each ORS user must have a Client Centre username. Your financial institution is responsible for setting up ORS.\nIf an ORS user no longer requires access to ORS, delete their access to ORS.\n3.2\tPolicy on Client Centre Passwords\nORS users access the system through a password login to the Client Centre. Once theyâre successfully authenticated, the ORS option appears in the userâs application list. Secure passwords are necessary to prevent unauthorized access to the computer network.\nEND",
+  "links": [],
+  "content_length": 774
+}

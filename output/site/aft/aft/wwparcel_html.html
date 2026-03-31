@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wwparcel.html — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft/index.html'>Aft</a> <span class='sep'>›</span> <span>wwparcel.html</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft</a>
+    <h1>wwparcel.html</h1>
+    <p class="subtitle">AFT › Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: AFT (Automated Funds Transfer) Documentation Portal</p>
+<ul>
+<li><strong>Purpose</strong>: Comprehensive reference documentation for originating, processing, settling, and managing Automated Funds Transfer transactions across Canadian credit unions, covering PADs (Pre-authorized Debits), Direct Deposits, recalls, returns, and error corrections.</li>
+</ul>
+<ul>
+<li><strong>Core Process Flows</strong>: Three origination methods—PaymentStream AFT (web-based), File Transmission (FTP-based for BC), and manual processing—feed into Central 1's clearing and settlement infrastructure with defined file delivery deadlines and record entry limits per transaction type.</li>
+</ul>
+<ul>
+<li><strong>Key Data Structures</strong>: AFT transactions include originator/payor/payee records, transaction codes (CPA-defined), serviceability codes for posting status, and offsetting entry options; PaymentStream requires 2-step security and permission-based user management for transaction release.</li>
+</ul>
+<ul>
+<li><strong>Critical Constraints</strong>: Recall deadlines and recourse periods vary by transaction type (business vs. consumer PADs); unpostable transactions require re-routing; rejected files trigger exception handling workflows; dormant periods and service cancellation have defined procedures.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Central 1's clearing settlement system, File and Report Exchange (BC), ServiceNow for recalls/trace requests, FINTRAC reporting for suspicious transactions/terrorist financing, and CPA rules governance; bi-directional data flow includes incoming returns, NOC (Notice of Change) transactions, and batch return services.</li>
+</ul>
+<ul>
+<li><strong>Reporting and Compliance</strong>: 25+ standardized reports (ICPS settlement, CCD/UCS summaries, PADB business PAD listings) track transaction volumes, billing, and exception items; PCMLTFA compliance and restricted entity screening required at enrollment.</li>
+</ul>
+<ul>
+<li><strong>Architect Considerations</strong>: Dual approval workflows for high-risk transactions, configurable originator limits, data purge schedules for PaymentStream, and contingency procedures (email fallback, manual submission) indicate need for robust reconciliation, audit logging, and failover mechanisms in any enhancement.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

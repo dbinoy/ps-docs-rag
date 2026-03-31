@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.8.html",
+  "title": "8 Exporting Dashboard Data",
+  "section_path": "ps_manual > Data%20Hub",
+  "breadcrumb": [],
+  "body_text": "8\tExporting Dashboard Data\n8.1\tExporting Dashboard to PowerPoint\nTo export an image of the Payments Dashboard to PowerPoint:\nSelect\nExport\n, then\nPowerPoint\non the top menu bar. See Figure 1.\nFigure 1: Select âExportâ, then âPowerPointâ\nTo export live data to PowerPoint:\nUse the drop-down menu to select\nEmbed live data\n(this is the default selection), then select\nCopy\n. Paste the URL into your existing PowerPoint presentation. See Figure 2.\nFigure 2: Embed Live Data\nAlternatively, select\nOpen in PowerPoint\nto create a new PowerPoint presentation. See Figure 2 above. Follow the on-screen prompts.\nTo export an image of the dashboard to PowerPoint:\nUse the drop-down menu to select\nExport as image\n, choose your export options, then select\nExport\n. The export process may take a few minutes. See Figure 3.\nFigure 3: Export Image\nA new PowerPoint presentation is generated that includes a title page and an image of the Payments Dashboard. See Figure 4 for a sample.\nFigure 4: Payments Dashboard in PowerPoint\n8.2 \tExporting Dashboard Data to PDF\nTo export an image of the Payments Dashboard to PDF:\nSelect\nExport\n, then\nPDF\non the top menu bar. See Figure 5.\nFigure 5: Select âExportâ, then âPDFâ\nChoose your export options, then select\nExport\n. The export process may take a few minutes. See Figure 6.\nFigure 6: Export Image\nView an image of the dashboard as a PDF in your browser, then save or download it using your browserâs functionality. This process may differ depending on your computerâs setting and the browser you use. See Figure 7 for a sample.\nFigure 7: View PDF\nEND",
+  "links": [],
+  "content_length": 1604
+}

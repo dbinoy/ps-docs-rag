@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2110.html",
+  "title": "21:10 â March 23, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:10 â March 23, 2021\nUpdate to Central 1âs File Specifications Part\nWe added XML file specifications for qualified debit clearing items to Central 1âs File Specifications Part. The new file specification documents are available on the secure site. Please see the tables below for details.\nAccess and Administration Volume\nCentral 1âs File Specifications Part\nSection 1.4, File Specifications Document Library\nSection 5.3, Qualified Debit Clearing Items\nWe added XML file specification documents for CAD and USD cheques.\nDocument Library\nNumber\nStatus\nXDREC Qualified Debit Clearing Items File Specifications â CAD Cheques\n9319\nNew\nXQREC Qualified Debit Clearing Items File Specifications â USD Cheques\n9320\nNew\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 821
+}

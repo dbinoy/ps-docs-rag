@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.12.html",
+  "title": "12 Card Capture",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "12\tCard Capture\n12.1\tRequested Capture\nFinancial institutions with ATMs linked to the\nInterac\nÂ®\nor THE EXCHANGE\nÂ®\nnetworks are required to capture any card requested by the issuer.\nDestroy all captured credit cards, chip cards, and debit (ATM) cards in dual custody.\nKeep a log of all destroyed cards for audit purposes, according to your financial institutionâs internal policy.\nNote:\tDonât send captured cards to Central 1.\n12.2\tAccidental Capture\nIf your financial institutionâs ATM accidentally captures cards for any reason, you can return the cards to cardholders upon satisfactory proof of identification.\nIf the cardholder doesnât request the cardâs return during the business day following the day of capture,\nDestroy all captured credit cards, chip cards, and debit (ATM) cards.\nKeep a log of all destroyed cards for audit purposes, according to your financial institutionâs internal policy.\nNote:\tDonât send captured cards to Central 1.\nEND",
+  "links": [],
+  "content_length": 967
+}

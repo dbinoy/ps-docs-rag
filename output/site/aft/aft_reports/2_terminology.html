@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_reports/index.html'>Aft Reports</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Reports</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">AFT › Aft Reports</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_reports.7.2.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Payment Solutions AFT Terminology Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Defines 50+ standard terms and concepts for Automated Funds Transfer (AFT) operations, establishing a shared vocabulary for debit transactions (PADs), credit transactions (Direct Deposits), and related processing workflows across Canadian financial institutions.</li>
+</ul>
+<ul>
+<li><strong>Core Transaction Types</strong>: AFT supports two primary transaction classes—debit transactions (PADs drawn on payor accounts) and credit transactions (direct deposits to payee accounts)—with special handling for Business PADs, AFT Re-presentments (return codes 901/908), and US dollar transactions between Canadian institutions.</li>
+</ul>
+<ul>
+<li><strong>Clearing and Settlement Architecture</strong>: Central 1 acts as the originating direct clearer for BC/Ontario institutions, processing Canadian AFT up to 4 runs/day (BC) or 3 runs/day (Ontario) and USD AFT in single daily/business-day runs; settlement occurs via Bank of Canada accounts with sequential file creation numbers required for verification.</li>
+</ul>
+<ul>
+<li><strong>Error Handling and Reversals</strong>: System supports Error Corrections (transaction-level fixes), File Error Corrections/Mass Reversals (file-level corrections generating offsetting entries), File Recalls (unprocessed file returns), and Transaction Recalls (individual credit recall before posting)—all critical for reconciliation and dispute resolution.</li>
+</ul>
+<ul>
+<li><strong>Routing and Identification</strong>: Transit numbers (5-digit branch + 3-digit institution code), 10-digit Originator IDs, and Notice of Change (NOC) transactions maintain routing accuracy; receiving institutions can reject transactions that cannot be processed.</li>
+</ul>
+<ul>
+<li><strong>File Exchange Infrastructure</strong>: Two integration points—SFTP direct connection or Client Centre portal—for File and Report Exchange; ORS (Online Return System) provides web-based AFT return and NOC transaction creation; PaymentStream AFT enables transaction creation and file uploads.</li>
+</ul>
+<ul>
+<li><strong>Architectural Constraints</strong>: Files must arrive in sequential order (file creation number validation); offsetting transactions must equal sum of individual items; Business PADs, Member Payees, and Processing Direct Clearers require specialized handling in the origination chain.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

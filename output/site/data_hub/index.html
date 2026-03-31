@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Hub — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Data Hub</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>📊 Data Hub</h1>
+    <p class="subtitle"><span class="badge" style="background:#4f46e5">9 pages</span></p>
+    <div class="summary-box md-content"><p># Data Hub Section Overview</p>
+<h2>Purpose</h2>
+<p>The Data Hub section documents Central 1's analytics platform—a Microsoft Power BI-based dashboard system that enables financial institutions to monitor payment performance, consumption patterns, and KPIs. This section covers platform access, user provisioning, navigation, and data export capabilities. It establishes the foundational architecture for delivering analytics-as-a-service to credit union members.</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Data Hub Platform</strong>: A multi-tenant, cloud-hosted analytics environment accessed through the Client Centre portal. Provides interactive visualization, filtering, and benchmarking against anonymized peer cohorts.</p>
+<p>2. <strong>Payments Dashboard</strong>: The primary analytics interface within Data Hub. Supports multi-level filtering, chart/table views, performance comparison to peers of similar size, and structured data export.</p>
+<p>3. <strong>Client Centre Authentication</strong>: Centralized identity management portal (https://clients.central1.com) serving as the single entry point. First-time users receive username prompts before credential entry.</p>
+<p>4. <strong>User Provisioning Model</strong>: Central 1 owns all user lifecycle management. Member institutions cannot self-serve via CPS Admin or User Management applications; all requests route through ServiceNow.</p>
+<p>5. <strong>Data Export</strong>: Two pathways—static image export to PowerPoint and live data export using dropdown menus. Export scope and format determined by user role and dashboard design.</p>
+<p>6. <strong>Vendor Stack</strong>: Underlying platform is Microsoft Power BI. Standard Power BI features are accessible but unsupported by Central 1 engineering.</p>
+<h2>How It Works</h2>
+<p>1. User authenticates via Client Centre portal with Central 1-managed credentials.</p>
+<p>2. User navigates to Data Hub application within authenticated session.</p>
+<p>3. User applies multi-level filters to Payments Dashboard (institution-scoped data).</p>
+<p>4. Dashboard renders visualizations with peer benchmarking context.</p>
+<p>5. User exports results via PowerPoint (image) or live data dropdown (raw export).</p>
+<p>6. Central 1 retains analytics data; member institution receives derived insights only.</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>Client Centre Portal</strong>: Identity provider and application launcher for all Data Hub access.</li>
+<li><strong>ServiceNow</strong>: User provisioning request intake system; Central 1 backend provisioning system.</li>
+<li><strong>Microsoft Power BI</strong>: Underlying visualization and analytics engine; not directly managed by member institutions.</li>
+<li><strong>Payment Transaction Data</strong>: Implicit upstream connection (not detailed in this section); Payments Dashboard consumes aggregated, institution-scoped transaction data.</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>User Management Constraint</strong>: No federated identity or self-service provisioning. All requests create operational dependency on Central 1 ServiceNow queue—plan for provisioning lead times.</li>
+<li><strong>Vendor Lock-in</strong>: Power BI is embedded. Custom dashboards or API-driven integrations are not mentioned; confirm Power BI extensibility SLAs before designing downstream analytics pipelines.</li>
+<li><strong>Data Residency & Export Controls</strong>: Section does not specify data residency, encryption in transit/rest, or export audit trails. Clarify compliance posture before handling regulated datasets.</li>
+<li><strong>Unsupported Features</strong>: Power BI's native features are explicitly unsupported. Scope Data Hub as read-only analytics only; avoid custom calculations or advanced Power BI features in production designs.</li>
+</ul></div>
+    <h2>Pages</h2>
+    <div class="page-list">
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/wwparcel_html.html">wwparcel.html</a></div>
+                <div class="page-preview">Data Hub 1 Introduction to Data Hub 1.1 Overview of Data Hub 1.2 Data Hub Availability 1.3 Contacts, Websites, and Other Resources 2 Terminology and Frequently Asked Questions 2.1…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/data_hub.html">Data Hub</a></div>
+                <div class="page-preview">Data Hub 1 Introduction to Data Hub 1.1 Overview of Data Hub The Data Hub platform provides interactive analytics capabilities that transform data into clear, actionable visuals.…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+                <div class="page-preview">2 Terminology and Frequently Asked Questions 2.1 Definitions Client Centre The Client Centre is a digital portal that provides secured access to Central 1âs applications and to…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/3_legal_considerations_and_policies_for_data_hub.html">3 Legal Considerations and Policies for Data Hub</a></div>
+                <div class="page-preview">3 Legal Considerations and Policies for Data Hub 3.1 Agreements for Data Hub To participate in the Data Hub platform, your financial institution must enter into an agreement with…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/4_data_hub_user_management.html">4 Data Hub User Management</a></div>
+                <div class="page-preview">4 Data Hub User Management 4.1 Overview of Data Hub User Management You canât assign users access to Data Hub via the CPS Admin or User Management applications. Central 1…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/5_logging_in_to_data_hub.html">5 Logging in to Data Hub</a></div>
+                <div class="page-preview">5 Logging in to Data Hub 5.1 Logging in to Data Hub To log in to Data Hub: Go to https://clients.central1.com . Enter your username and password, then select Sign in . See Figure…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/6_data_hub_navigation_and_tools.html">6 Data Hub Navigation and Tools</a></div>
+                <div class="page-preview">6 Data Hub Navigation and Tools 6.1 Home Page Navigation The Data Hub home page is structured as follows. See Figure 1. Note: Data Hub is provided through Microsoft Power BI and…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/7_payments_dashboard.html">7 Payments Dashboard</a></div>
+                <div class="page-preview">7 Payments Dashboard 7.1 Overview of the Payments Dashboard The Payments Dashboard allows authorized users to apply multi-level filtering, view the results as charts or tables,…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div>
+            <div class="page-item">
+              <div>
+                <div class="page-title"><a href="data_hub/8_exporting_dashboard_data.html">8 Exporting Dashboard Data</a></div>
+                <div class="page-preview">8 Exporting Dashboard Data 8.1 Exporting Dashboard to PowerPoint To export an image of the Payments Dashboard to PowerPoint: Select Export , then PowerPoint on the top menu bar.…</div>
+              </div>
+              <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+            </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

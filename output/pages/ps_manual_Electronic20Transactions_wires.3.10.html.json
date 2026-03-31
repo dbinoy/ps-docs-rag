@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.10.html",
+  "title": "10 Logging in to Wires",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "10\tLogging in to Wires\n10.1\tLogging in to Wires\nTo log in to Wires:\nGo to\nhttps://clients.central1.com\n. Enter your username and password, then select Sign in. See Figure 1.\nNote: \tYouâll be prompted to enter your username before this page appears if itâs your first login to the Client Centre, youâve deleted your cookies, or youâre using incognito/private browsing.\nFigure 1: Client Centre Login\nSelect\nApplications\n.\nSee Figure 2.\nFigure 2: Accessing Applications on the Client Centre\nSelect\nPaymentStream Direct\n. See Figure 3.\nNote: \tApplications are grouped by type (e.g., Admin & Support, Payments). If needed, scroll down the page to find the application. If youâve saved the application as a favourite, it will also appear under âMy Favouritesâ.\nFigure 3: Accessing Wires\nThe Wires home page displays if youâre successfully authenticated.\nImportant\n:\tAlways log off the Client Centre and close the browser when you step away from your desk or when youâre finished using the system.\nSelect\nTransfers\n, then select\nWires\n. See Figure 4.\nFigure 4: Wires Application\nEND",
+  "links": [],
+  "content_length": 1093
+}

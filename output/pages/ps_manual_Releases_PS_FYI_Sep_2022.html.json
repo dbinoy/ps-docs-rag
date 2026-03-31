@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_FYI_Sep_2022.html",
+  "title": "FYI â September 2022",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "FYI â September 2022\nFYI â September 2022\nThe following updates were made to the Payment Solutions Manual.\nDocument Library\nStatus\nFTP User Request\n2010\nWe clarified that IP addresses provided in the Direct Connection (SFTP) section must be static.\nRevised\nBill Payment Remittance Processing Data Files â Flat File Specifications\n2665\nWe changed âC1CU plus 5 spacesâ to âC1CU plus 6 spacesâ in the Description for Data Element 3 in Table 1.\nRevised\nQuestions\nCentral 1, Client Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 570
+}

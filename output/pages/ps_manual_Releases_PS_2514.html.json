@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2514.html",
+  "title": "25:14 â June 24, 2025",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "25:14 â June 24, 2025\nUpdate to the Enterprise Fraud Management Part\nWe updated information in the Enterprise Fraud Management (EFM) Part. This update is related to the\nannouncement\nregarding monitoring mode for mobile deposits in EFM.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nMinor edits throughout\nSection 8.2, Identifying a Transaction as Fraudulent\nWe added descriptions for the newly added risk reasons related to mobile deposits.\nSection 8.9, Mobile Deposits in EFM\nWe added information about email notifications for mobile transactions and when or how to mark transactions as Risk or No-risk since monitor mode became live.\nSection 8.11, Recovery of Funds\nWe updated this section to include mobile deposit transactions.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 847
+}

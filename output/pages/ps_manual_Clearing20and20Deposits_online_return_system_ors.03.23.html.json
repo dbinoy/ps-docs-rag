@@ -1,0 +1,11 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.23.html",
+  "title": "Appendix #A-8 ORS Deposit Search Results Grid",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "Appendix #A-8\tORS Deposit Search Results Grid\nColumn Name\nColumn Description\nFormat\nA\nAction\nP â Print image of item\nT â View transactions (cheques) within deposit\nS â Search for cheques within deposit\nV\nView\nCheckbox\nTransit\nRoute and Transit Number\nExample: 12340809\nDate\nDate deposit is credited to financial institution account at Central 1\nMmm dd yyyy, Example: Jan 05 2005\nAmount\nDollar amount of deposit\n1â8 digit dollar amount + â.â + 2 digit cents\nCurrency\nCurrency\nCAD â Canadian Dollar\nUSD â US Dollar\nTrace #\nDeposit Trace Number\n10 digits\nTranCode\nTransaction Code\nSee\nAppendix #A-10\n, ORS Transaction Codes",
+  "links": [
+    "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.25.html"
+  ],
+  "content_length": 636
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9 Contingency Procedures for Returning Cheques — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/dishonour_and_return_of_cheques/index.html'>Dishonour And Return Of Cheques</a> <span class='sep'>›</span> <span>9 Contingency Procedures for Returning Cheques</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Dishonour And Return Of Cheques</a>
+    <h1>9 Contingency Procedures for Returning Cheques</h1>
+    <p class="subtitle">Clearing and Deposits › Dishonour And Return Of Cheques</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.09.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement and Reports - Technical Summary</p>
+<ul>
+<li><strong>Overview</strong>: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity across CAD/USD currencies and regional jurisdictions (BC/Ontario).</li>
+</ul>
+<ul>
+<li><strong>Settlement Logic</strong>: Return items are credited to currency-specific current accounts (CAD or USD); government reimbursements follow separate timing (upon receipt from provincial/federal sources), introducing asynchronous settlement flows that require reconciliation handling.</li>
+</ul>
+<ul>
+<li><strong>ORPI/ORUI Report Structure</strong> (Daily):</li>
+<li>Three-tiered layout: individual cheque returns (including reinstated/image-excluded variants), aggregated totals by item type, settlement posting summary</li>
+<li>Distributed via MERG files in root directory; PDFs organized by currency subfolder (CAD/USD)</li>
+<li>Critical for daily verification; discrepancies require immediate Central 1 notification—indicates SLA enforcement on downstream processing</li>
+</ul>
+<ul>
+<li><strong>AIBC/AIOU/AIOC/AIOU Report Structure</strong> (Business Days only):</li>
+<li>Four report variants by region/currency; multi-charter branching support (separate pages per charter)</li>
+<li>Returns identified by Transaction Code "RI"; tracks opening/closing balances, net activity, debit/credit postings by branch</li>
+<li>Serves as reconciliation tool; also mirrored in CAS Online system—indicates dual-channel data availability</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Reports extracted from MERG files (File and Report Exchange) and CAS Online; Ontario data requires ONDL file extraction; tight coupling to current account posting mechanisms and currency routing logic.</li>
+</ul>
+<ul>
+<li><strong>Architectural Constraints</strong>: Currency-aware settlement (CAD/USD routes), jurisdiction-specific reporting (BC/Ontario variants), multi-charter branch aggregation, and asynchronous government reimbursement settlement requiring eventual consistency handling.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

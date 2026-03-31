@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2403.html",
+  "title": "24:03 â January 4, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:03 â January 4, 2024\nEnterprise Fraud Management Update\nWe updated information in the EFM Part as described in the table below.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nSection 2.2, Frequently Asked Questions\nWe reordered this section.\nWe updated select questions. Question 12 was updated to clarify that alerts canât be created on paymentNRT events, Question 14 has provides information on what an alert and an Auto Risk flag are, and how they differ from each other. Question 16 provides clarification on handling Auto Risk transactions and certain scenarios.\nWe added Questions 9, 12, 17, 18, 19, 20, 21, 22.\nChapter 8, Managing Transaction Alerts\nThroughout the chapter, we added notes regarding comments having a 420-character limitation.\nSection 8.1, Overview of Managing Transaction Alerts\nWe clarified that no action is required for legitimate Auto Risk flagged transactions.\nSection 8.2, Identifying a Transaction as Fraudulent\nWe added a note to clarify  that once alerted transactions are identified as Risk or No risk and fraudulent Auto Risk flagged transactions are identified as Risk, customers will be able to send transactions again.\nSection 8.5, Adding Manual Alerts to Unalerted Transactions\nWe clarified that manual alerts can only be added to paymentRT events.\nSection 8.8, Recovery of Funds\nNew section on how to request a recovery of funds.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.\nEFM, email\nefm@central1.com\n.",
+  "links": [],
+  "content_length": 1519
+}

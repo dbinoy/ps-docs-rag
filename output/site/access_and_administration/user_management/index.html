@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Management — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <span>User Management</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
+    <h1>🔐 User Management</h1>
+    <p class="subtitle">Access and Administration › User Management <span class="badge" style="background:#2563eb">12 pages</span></p>
+    <div class="summary-box md-content"><p># User Management Document Group - Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group covers the Client Centre's user lifecycle management system, including authentication, authorization, user provisioning/deprovisioning, and access control for high-security applications (e.g., Wires).</p>
+<h2>Key Architectural Components</h2>
+<p><strong>Authentication & Security:</strong></p>
+<ul>
+<li>2-step security tokens required for Security Officers; used for accessing high-risk applications</li>
+<li>Password registration integrated with Client Centre login</li>
+<li>Token assignment/management is a critical data flow</li>
+</ul>
+<p><strong>Access Control Model:</strong></p>
+<ul>
+<li>Role-based: Client Centre Users vs. User Management Security Officers (privileged users)</li>
+<li>Application-level permissions assigned by Security Officers</li>
+<li>Policy enforcement restricts access based on application sensitivity</li>
+</ul>
+<p><strong>User Lifecycle:</strong></p>
+<ul>
+<li>Creation, modification, deletion of users by Security Officers only</li>
+<li>Approval workflow required for sensitive changes (name, contact info, permissions)</li>
+<li>2-step token lifecycle management (assignment, reset, revocation)</li>
+</ul>
+<p><strong>Data Flows:</strong></p>
+<ul>
+<li>User provisioning → Permission assignment → Application access</li>
+<li>Audit trail required (CSV reporting capability)</li>
+<li>Request approval gates for high-impact changes</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<ul>
+<li>All Security Officer actions must be auditable</li>
+<li>2-step security integration is non-negotiable for privileged access</li>
+<li>Approval workflows required for user/permission modifications</li>
+<li>CSV export capability for compliance/reporting</li>
+</ul>
+<p><strong>Key Integration Point:</strong> User Management is upstream to all Client Centre applications.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="user_management.html">User Management</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_client_centre_user_management.html">3 Establishing Policies for Client Centre User Management</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_managing_a_user_management_security_officer.html">4 Managing a User Management Security Officer</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_accessing_and_navigating_user_management.html">5 Accessing and Navigating User Management</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_managing_and_deleting_users.html">6 Managing and Deleting Users</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_managing_2_step_security_tokens.html">7 Managing 2-Step Security Tokens</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_managing_application_access_and_permissions.html">8 Managing Application Access and Permissions</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_managing_requests.html">9 Managing Requests</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_generating_reports.html">10 Generating Reports</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_password_registration_and_client_centre_login_process.html">11 Password Registration and Client Centre Login Process</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_troubleshooting_and_best_practices_for_client_centre_users.html">12 Troubleshooting and Best Practices for Client Centre Users</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

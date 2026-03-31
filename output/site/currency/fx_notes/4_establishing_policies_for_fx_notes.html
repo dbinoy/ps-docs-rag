@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Establishing Policies for FX Notes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>4 Establishing Policies for FX Notes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>4 Establishing Policies for FX Notes</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.04.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Establishing Policies for FX Notes</p>
+<p><strong>Purpose:</strong> Defines mandatory and recommended security, access control, and operational policies that financial institutions must implement when deploying FX Notes for foreign currency transaction management.</p>
+<p>---</p>
+<h2>Key Points for Architects</h2>
+<ul>
+<li><strong>Access Control Model:</strong> FX Notes uses role-based user provisioning with segregated duties; institutions designate users and must restrict administrative access based on job responsibilities and authorization levels. User types are defined in Section 5.2.</li>
+</ul>
+<ul>
+<li><strong>Authentication & Identity Management:</strong> FX Notes integrates with Client Centre for password-based authentication; one-time passwords must be delivered securely for new users or password resets. See User Management Part for detailed specifications.</li>
+</ul>
+<ul>
+<li><strong>User Lifecycle Management:</strong> System must support user profile creation, review cycles, and deletion workflows; deletion triggers include one-year inactivity, role changes, or employment termination. No user ID sharing is permitted (unique IDs required).</li>
+</ul>
+<ul>
+<li><strong>Audit & Monitoring Requirements:</strong> Institutions must implement logging and monitoring controls for FX Notes access activity; external/internal auditors require audit trail visibility. No specific logging schema defined on this page.</li>
+</ul>
+<ul>
+<li><strong>Inventory Control Integration:</strong> FX Notes interacts with physical foreign currency operations; system must support joint custody workflows, vault register reconciliation, and branch-level distribution logs. Daily reconciliation of orders to shipments/deliveries is required.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Compliance Dependencies:</strong> System must accommodate Globex 2000 transaction screening rules and flag patterns (e.g., same-day, same-beneficiary payments split under $10K CAD) for FINTRAC Suspicious Transaction Report compliance.</li>
+</ul>
+<ul>
+<li><strong>No Technical Architecture Defined:</strong> This page prescribes policy requirements, not system design; architects should expect separate technical specifications documents for API contracts, data schemas, and audit logging structures.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

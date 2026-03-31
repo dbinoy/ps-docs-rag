@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 Managing Outgoing Wire Fees — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>11 Managing Outgoing Wire Fees</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>11 Managing Outgoing Wire Fees</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.11.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Managing Outgoing Wire Fees</p>
+<ul>
+<li><strong>Purpose</strong>: Provides operational guidance for authorized Wires Users to configure, view, modify, and delete outgoing wire fees that financial institutions charge customers; fees can be manually entered or pre-populated based on defined criteria.</li>
+</ul>
+<ul>
+<li><strong>Fee Configuration Model</strong>: Two fee types are configurable—regular outgoing wire fees and add-on fees (for future-dated/priority wires)—with two application modes: manual entry (no pre-configuration) or pre-populated (auto-filled based on user-defined rules, overridable by users).</li>
+</ul>
+<ul>
+<li><strong>Fee Matching Criteria</strong>: Fees are defined by three hierarchical/combinatorial dimensions—maximum settlement amount (tiered up to $1,000,000, nullable for "any" amount), wire currency (CAD, USD, ANY), and destination country (Canada, United States, ANY)—with fee currency dynamically determined by transfer currency selection.</li>
+</ul>
+<ul>
+<li><strong>Permission & Access Model</strong>: Access requires MTS "Spreads and Fees" permission assignment; only authorized Wires Users can perform all CRUD operations on fees via the Fees function in the Wires application.</li>
+</ul>
+<ul>
+<li><strong>External Cost Pass-Through Constraint</strong>: Central 1 charges monthly processing fees per wire (with surcharges for priority/future-dated wires); the documentation requires configured customer fees to meet or exceed Central 1's processing fees to ensure cost recovery—this establishes a business rule dependency on external pricing data.</li>
+</ul>
+<ul>
+<li><strong>Field Immutability Rule</strong>: Maximum Settlement Amount, Transfer Currency, Destination Country, and Fee Currency fields are read-only after creation; modifications require deletion and recreation, creating a potential operational friction point for architects designing audit/change workflows.</li>
+</ul>
+<ul>
+<li><strong>Customization Exception Path</strong>: Form 6493 (Wires Customization Request) exists for contingency-only updates to pre-populated fees, indicating out-of-band fee adjustments bypass the standard UI—architects should understand this escape hatch's governance implications.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

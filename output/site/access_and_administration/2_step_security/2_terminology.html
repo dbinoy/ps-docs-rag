@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <a href='../../access_and_administration/2_step_security/index.html'>2 Step Security</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to 2 Step Security</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">Access and Administration › 2 Step Security</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.2.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># 2-Step Security Token Troubleshooting Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login</li>
+</ul>
+<ul>
+<li><strong>Token Assignment Model</strong>: Tokens are profile-specific, not user-specific; users with multiple profiles cannot reuse the same token across profiles, creating a 1:1 mapping constraint between tokens and individual user profiles</li>
+</ul>
+<ul>
+<li><strong>Token Types</strong>: System supports both soft tokens (software-based) and hard tokens (physical devices), with different validation approaches per type</li>
+</ul>
+<ul>
+<li><strong>Code Reuse Constraint</strong>: System prevents replay attacks by rejecting token codes from failed login attempts; users must wait for token refresh cycle before retrying, implying time-based or counter-based token generation</li>
+</ul>
+<ul>
+<li><strong>Serial Number Validation</strong>: Hard token verification requires cross-referencing the physical device serial number (on token back) against the serial number stored in the User Management system's 2-step security summary, indicating a critical data sync dependency</li>
+</ul>
+<ul>
+<li><strong>Integration Dependency</strong>: 2-step security token configuration and validation is tightly coupled with User Management module; token lifecycle and profile assignment is managed there</li>
+</ul>
+<ul>
+<li><strong>Troubleshooting Logic</strong>: Three-step diagnostic flow (profile verification → code reuse check → serial number validation for hard tokens) suggests architects must design for token state tracking and profile-aware token context in authentication workflows</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

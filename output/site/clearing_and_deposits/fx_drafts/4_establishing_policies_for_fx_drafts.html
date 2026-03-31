@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Establishing Policies for FX Drafts — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/fx_drafts/index.html'>Fx Drafts</a> <span class='sep'>›</span> <span>4 Establishing Policies for FX Drafts</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Drafts</a>
+    <h1>4 Establishing Policies for FX Drafts</h1>
+    <p class="subtitle">Clearing and Deposits › Fx Drafts</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: FX Drafts Policy Establishment</p>
+<ul>
+<li><strong>Purpose</strong>: Defines mandatory and recommended policies for financial institutions issuing Foreign Exchange (FX) Drafts, covering compliance, risk management, and system access controls.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Compliance Requirements</strong>: Institutions must establish staff training policies for PCMLTFA (Proceeds of Crime Money Laundering and Terrorist Financing Act) and PCMLTF Regulations; non-compliance requires escalation to AML Compliance Officer or FINTRAC.</li>
+</ul>
+<ul>
+<li><strong>Non-Member Transaction Data Capture</strong>: For FX drafts ≥$3,000 CAD equivalent to non-members, institutions must record and maintain: individual identity, name, address, transaction date, amount received, payment instrument type (cash/cheque/traveler's cheque/money order), and issuer identification; aggregation rule applies to multiple drafts totaling ≥$3,000 CAD on same transaction.</li>
+</ul>
+<ul>
+<li><strong>Convera Integration Constraints</strong>: External payment processor (Convera) enforces blocking rules requiring downstream compliance validation before draft honoring; drafts cannot be negotiated until Convera releases clearance message; system prevents: multiple sub-$10,000 USD drafts per beneficiary/day, money service business issuance, and financial institution beneficiaries.</li>
+</ul>
+<ul>
+<li><strong>Access Control Model</strong>: User management is institution-defined; requires unique user IDs per employee, no ID sharing, secure password delivery via Client Centre, and annual inactive user purging (≥1 year inactivity triggers deletion).</li>
+</ul>
+<ul>
+<li><strong>Architecture Dependencies</strong>: FX Drafts integrates with Central 1's Client Centre authentication layer (password-based SSO); links to Operations Manual Program and User Management modules; reporting obligations tie to FINTRAC reporting workflows (Suspicious Transaction Reports).</li>
+</ul>
+<ul>
+<li><strong>Risk Governance</strong>: Institutions may implement stricter policies than minimums (e.g., blanket identity verification for all non-members regardless of amount), establishing policy-as-code enforcement points in transaction processing.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

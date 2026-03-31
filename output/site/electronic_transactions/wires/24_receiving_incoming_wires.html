@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>24 Receiving Incoming Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>24 Receiving Incoming Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>24 Receiving Incoming Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.24.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Chapter 24 - Receiving Incoming Wires</p>
+<ul>
+<li><strong>Overview</strong>: Document defines the operational and compliance workflow for inbound wire receipt through Central 1's Wires platform, including acceptance/return logic, sanctions screening, and FINTRAC reporting requirements.</li>
+</ul>
+<ul>
+<li><strong>Wire Processing Flow</strong>: Non-participating institution wires upload ~10-minute intervals; participating institution wires display immediately in "Pending Incoming" status. Only business days (Mon-Fri, excluding statutory holidays) supported.</li>
+</ul>
+<ul>
+<li><strong>User Access Control</strong>: Requires MTS "Update Incoming Transfers" permission + 2-step security token assigned to Client Centre ID; visibility scoped to user's assigned branches via MTS configuration (Chapter 9).</li>
+</ul>
+<ul>
+<li><strong>Sanctions Screening Integration</strong>: Central 1 scans all inbound wires against government sanctions lists; wire status transitions: Frozen → Under Investigation (if match confirmed) or Frozen → Pending (if cleared). Funds held in Central 1 escrow account during investigation; financial institution responsible for secondary screening, FINTRAC reporting, and PEP/HIO determination.</li>
+</ul>
+<ul>
+<li><strong>Routing Instructions</strong>: Currency-specific forms (10 currencies supported: CAD domestic/international, USD, EUR, GBP, AUD, CHF, JPY, MXN, PLN, NZD) define required fields for beneficiary/correspondent financial institution identification; missing/incorrect routing causes wire rejection or unfavorable FX conversion.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Compliance Touchpoints</strong>: Mandatory FINTRAC EFT reporting for international wires ≥$10,000 CAD equivalent (5-business-day submission window); suspicious transaction reporting; CPA By-law No. 7 section 49 name-account matching logic; PCMLTFA prohibition on disclosure of reported transactions.</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint - Frozen/Under Investigation Wires</strong>: Cannot be accepted or returned while in either status; requires Central 1 Compliance + financial institution's corporate security + government agencies for resolution; staff must never disclose investigation status to parties.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

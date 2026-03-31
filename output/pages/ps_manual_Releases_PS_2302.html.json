@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2302.html",
+  "title": "23:02 â January 18, 2023",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "23:02 â January 18, 2023\nNew ISO 20022 Return Code Definitions Form\nWe created ISO 20022 Return Code Definitions, Form 9610. For wires returned with a return code, financial institutions can use the form to find the return code definition. Return codes and/or reasons display in the Sender FI to Receiver FI Information section on the Pending Incoming Wires â Details page and Received Wires â Details page in Wires.\nDocument Library\nForm\nStatus\nISO 20022 Return Code Definitions\n9610\nNote: Return codes and definitions are extracted from the ISO20022.ORG\nExternal Code Sets\nand are published in this form for convenience.\nNew\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 728
+}

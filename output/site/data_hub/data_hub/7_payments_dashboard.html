@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7 Payments Dashboard — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <a href='../../data_hub/data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <span>7 Payments Dashboard</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Data Hub</a>
+    <h1>7 Payments Dashboard</h1>
+    <p class="subtitle">Data Hub › Data Hub</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.7.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Payments Dashboard Documentation Summary</p>
+<ul>
+<li><strong>Overview</strong>: The Payments Dashboard is a multi-tenant analytics portal enabling authorized users to filter, visualize, and export Interac e-Transfer transaction data with peer benchmarking capabilities; currently supports up to 2 years of historical transaction data provided by Central 1.</li>
+</ul>
+<ul>
+<li><strong>Core Data Model</strong>: Dashboard aggregates transactions across four dimensions—Transaction Type (EMT Receive/Send, MR Fulfill/Send), Feature (Account Number Routed, Auto Deposit, Money Request, Regular Q&A, Unknown), Originating Channel (External API, MD Desktop/Mobile Web, Mobile App, Unattended, Version Agnostic API), and Brand Name—with three measurement types (Transaction Volume, Total Payment Amount, Average Payment Amount).</li>
+</ul>
+<ul>
+<li><strong>Filter Architecture</strong>: Dual-level filtering system where left-hand Filters menu applies globally across all visuals, while visual-specific drop-down menus (Breakdown, Bin Size, Time Period) affect only their respective chart; Date Filters support both pre-defined periods and custom date range selection via calendar or slider interface.</li>
+</ul>
+<ul>
+<li><strong>Data Visualization Engine</strong>: Powered by Microsoft Power BI; seven default chart visuals with toggle capability to render as tables; supports standard Power BI operations (sharing, alerting, comments, data export, sorting) with custom features including cohort comparison against anonymized peer institutions and transaction distribution analysis in configurable increment ranges ($10–$100+).</li>
+</ul>
+<ul>
+<li><strong>Key Integration Dependency</strong>: Relies on Central 1 as the authoritative transaction data provider; financial institutions with multiple brands access brand-filtered data views, implying multi-tenant data isolation requirements at the source system level.</li>
+</ul>
+<ul>
+<li><strong>Critical Architectural Constraint</strong>: Interac e-Transfer is currently the only supported product type; any product expansion requires schema modifications across all seven visuals and filter definitions, suggesting product type as a foundational data partition key.</li>
+</ul>
+<ul>
+<li><strong>Alerting & Monitoring Capability</strong>: Native alert system allows users to configure notifications on trend changes and conditions; alerts are visual-level abstractions likely backed by Power BI's scheduling/notification service, requiring consideration for notification delivery SLAs and alert rule storage/management.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

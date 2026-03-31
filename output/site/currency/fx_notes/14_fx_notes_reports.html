@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>14 FX Notes Reports — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>14 FX Notes Reports</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>14 FX Notes Reports</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.14.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># FX Notes Reports Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documents user workflows for FX Notes Managers and Auditors to access, filter, and export foreign exchange transaction and profitability data through two distinct report types.</li>
+</ul>
+<ul>
+<li><strong>Data Retention Policy</strong>: Report data is retained for 25 months—critical constraint for historical queries and compliance requirements; archived data beyond this window is not accessible.</li>
+</ul>
+<ul>
+<li><strong>Authentication Dependency</strong>: Report access requires prior authentication via FX Notes login process (Section 6.2), indicating role-based access control with at least two permission levels (Manager and Auditor).</li>
+</ul>
+<ul>
+<li><strong>Report Types & Export Formats</strong>:</li>
+<li><strong>Orders Report</strong>: Supports CSV and XLSX downloads; no PDF option mentioned</li>
+<li><strong>Profitability Report</strong>: Supports CSV and PDF downloads (conditional availability); filtering requires explicit "Generate Report" action before export</li>
+</ul>
+<ul>
+<li><strong>Multi-Tenant Filter Architecture</strong>: Both reports implement hierarchical filtering (date range, branches, currency, order type, order status) with branch-level access control, indicating branch isolation is a core data governance model.</li>
+</ul>
+<ul>
+<li><strong>Profitability Report Additional Fields</strong>: Includes rate type and amount filters beyond Orders report—suggests distinct data schemas and calculation logic separate from transactional Orders data.</li>
+</ul>
+<ul>
+<li><strong>Browser-Dependent Print Function</strong>: Print functionality relies on native browser capabilities rather than server-side PDF generation for Orders reports, creating potential rendering inconsistencies across browsers.</li>
+</ul>
+<ul>
+<li><strong>Missing Integration Details</strong>: No mention of API endpoints, scheduled report delivery, alerting mechanisms, or downstream system integrations (accounting, reconciliation platforms).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

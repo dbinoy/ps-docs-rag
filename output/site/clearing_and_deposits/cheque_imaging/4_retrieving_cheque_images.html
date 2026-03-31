@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Retrieving Cheque Images — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/cheque_imaging/index.html'>Cheque Imaging</a> <span class='sep'>›</span> <span>4 Retrieving Cheque Images</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cheque Imaging</a>
+    <h1>4 Retrieving Cheque Images</h1>
+    <p class="subtitle">Clearing and Deposits › Cheque Imaging</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># MICR Cheque Testing Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production use or to diagnose high rejection rates from automated sorting equipment.</li>
+</ul>
+<ul>
+<li><strong>Trigger scenarios</strong>: New cheque stock paper, new printer deployment, new vendor engagement, or persistent high cheque rejection rates from sorting equipment indicating readability issues.</li>
+</ul>
+<ul>
+<li><strong>Process flow</strong>: Credit union submits Form 3600 (MICR Cheque Testing Request) with 10 voided sample cheques per account → Central 1 performs testing → Central 1 emails results confirming pass/fail status; supports batch requests (multiple accounts on single form).</li>
+</ul>
+<ul>
+<li><strong>Critical constraints</strong>:</li>
+<li>MICR must be printed with magnetic ink (not substitute inks)</li>
+<li>MICR encoded area must have no stamps or additional printing that could interfere with readability</li>
+<li>These requirements map directly to CPA Standard 006 compliance validation</li>
+</ul>
+<ul>
+<li><strong>Data handling option</strong>: Form 3600 includes disposition choice—cheques can be returned to credit union or destroyed by Central 1 post-testing (no default implied).</li>
+</ul>
+<ul>
+<li><strong>Integration dependency</strong>: Central 1 operates the automated sorting equipment that rejects unreadable cheques; MICR testing acts as quality gate before cheque stock enters production circulation to prevent downstream rejections.</li>
+</ul>
+<ul>
+<li><strong>Related artifact</strong>: Form 3600 is the sole structured request vehicle; no API or digital submission method mentioned in this documentation section.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fx Notes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <span>Fx Notes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Currency</a>
+    <h1>💱 Fx Notes</h1>
+    <p class="subtitle">Currency › Fx Notes <span class="badge" style="background:#0891b2">14 pages</span></p>
+    <div class="summary-box md-content"><p># FX Notes Architecture Brief</p>
+<h2>Overview</h2>
+<p>FX Notes is a Central 1 platform enabling authorized credit union users to buy/sell foreign currency bank notes (not coins) via partnership with Globex 2000. The system is web-based, accessed through Client Centre authentication.</p>
+<h2>Key Architecture Components</h2>
+<p><strong>Access & Authentication:</strong></p>
+<ul>
+<li>Role-based access (Standard Users, Managers, Auditors, CPS Admin Security Officers)</li>
+<li>Integrated with Client Centre User ID system</li>
+<li>Segregated duty model enforced at policy level</li>
+</ul>
+<p><strong>Core Transactions:</strong></p>
+<ul>
+<li><strong>Sell flow:</strong> User enters order → Globex 2000 receives → fulfillment</li>
+<li><strong>Buy flow:</strong> Authenticity verification required → order entry → settlement</li>
+<li>Net settlement in CAD to institution accounts</li>
+</ul>
+<p><strong>Data & Operations:</strong></p>
+<ul>
+<li>Business day definition: Mon-Fri excluding statutory/Quebec holidays</li>
+<li>5-digit branch identifiers for multi-branch operations</li>
+<li>25-month report retention</li>
+<li>Configurable FX spreads (retail rate modifiers) by institution</li>
+</ul>
+<p><strong>Settlement:</strong></p>
+<ul>
+<li>Centralized net settlement model (BC/Ontario)</li>
+<li>Integration point with institution's general ledger</li>
+</ul>
+<h2>Design Considerations</h2>
+<ul>
+<li>Audit trail requirements (transaction images/shipments viewable)</li>
+<li>Regulatory compliance architecture (financial institution responsibility)</li>
+<li>Multi-currency support with dynamic rate management</li>
+<li>Branch-level transaction segregation and reporting</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="fx_notes.html">FX Notes</a></div>
+            <div class="page-preview">- **Purpose**: FX Notes enables authorized financial institution users to transact foreign currency bank notes (excluding coins and CAD notes) via Central 1's Client Centre, partnered with Globex 2000</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Defines foundational terminology for the FX Notes foreign currency trading system and associated Client Centre portal infrastructure - **User Role Hierarchy**: Four distinct permission </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_for_fx_notes.html">3 Legal Considerations for FX Notes</a></div>
+            <div class="page-preview">**Overview:** This page outlines mandatory regulatory and compliance requirements that financial institutions must satisfy when processing foreign currency note transactions through the Payment Soluti</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_fx_notes.html">4 Establishing Policies for FX Notes</a></div>
+            <div class="page-preview">**Purpose:** Defines mandatory and recommended security, access control, and operational policies that financial institutions must implement when deploying FX Notes for foreign currency transaction ma</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_fx_notes_user_management.html">5 FX Notes User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents user access control and role assignment procedures for FX Notes application within the Payment Solutions platform, spanning Client Centre User setup through CPS Admin Security</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_logging_in_to_fx_notes.html">6 Logging in to FX Notes</a></div>
+            <div class="page-preview">- **Purpose**: Documents the authentication and access workflow for FX Notes, a foreign exchange application within the Client Centre portal ecosystem. - **Authentication prerequisite**: Users must be</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_managing_fx_notes_foreign_exchange_spreads_and_transaction_fees.html">7 Managing FX Notes Foreign Exchange Spreads and Transaction Fees</a></div>
+            <div class="page-preview">- **Purpose**: Authorized FX Notes Managers configure retail rate modifiers (FX spreads) and transaction fees through the Retail Rate Modifiers page to generate institutional income by adjusting excha</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_currency_notices_on_fx_notes.html">8 Currency Notices on FX Notes</a></div>
+            <div class="page-preview">- **Purpose**: Documents the user-facing notice system for FX Notes, enabling admins to communicate currency availability updates and critical information to dashboard users. - **Two operational modes</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_selling_foreign_currency_to_a_customer.html">9 Selling Foreign Currency to a Customer</a></div>
+            <div class="page-preview">- **Scope**: Documents the complete workflow for Standard FX Notes users to sell foreign currency (cash) to customers, from order placement through delivery and receipt verification. - **Order Process</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_buying_foreign_currency_from_a_customer.html">10 Buying Foreign Currency from a Customer</a></div>
+            <div class="page-preview">- **Purpose**: Defines the operational workflow for financial institution staff to purchase foreign currency from customers via FX Notes, including authentication, order processing, and secure shipmen</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_viewing_transactions_images_and_shipments.html">11 Viewing Transactions, Images, and Shipments</a></div>
+            <div class="page-preview">- **Purpose**: Provides user workflows for accessing and filtering FX transaction records, shipment management, and foreign currency denomination images within the FX Notes platform. - **Transaction S</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_branches_on_fx_notes.html">12 Branches on FX Notes</a></div>
+            <div class="page-preview">- **Purpose**: Documents branch location management and viewing procedures for FX Notes, Central 1's multi-branch foreign exchange notes system. - **Primary Data Asset**: Form 5898 (FX Notes Branch Lo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_fx_notes_settlement_and_trace_request.html">13 FX Notes Settlement and Trace Request</a></div>
+            <div class="page-preview">- **Purpose**: Defines settlement mechanics, posting procedures, and reconciliation workflows for FX Notes transactions across BC/Ontario member institutions and non-member financial institutions via </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_fx_notes_reports.html">14 FX Notes Reports</a></div>
+            <div class="page-preview">- **Purpose**: Documents user workflows for FX Notes Managers and Auditors to access, filter, and export foreign exchange transaction and profitability data through two distinct report types. - **Data</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

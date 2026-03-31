@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.6.html",
+  "title": "6 FX Drafts User Management",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "6\tFX Drafts User Management\n6.1\tOverview of FX Drafts User Management\nYour financial institution manages Client Centre user access to the FX Drafts application on User Management. See the User Management Part for procedures on creating or editing Client Centre Users.\nOnce a Client Centre User is assigned access to FX Drafts, an FX Drafts User with admin permissions can set up other users within the FX Drafts application. The external user ID for new FX Drafts Users must match the Client Centre user ID for accessing Central 1âs Client Centre.\n6.2\tGranting FX Drafts Access to a Client Centre User or User Management Security Officer\nSee the User Management Part for procedures on granting FX Drafts access to Client Centre Users and User Management Security Officers.\n6.3\tDefining User Permissions in FX Drafts\nUser permissions are defined within the FX drafts application by an FX Drafts User with admin access. See Figure 1. See the FX Drafts Guide for CU Admin Users, Form 9182, for procedures.\nFigure 1: Defining User Permissions in FX Drafts\nRelated Information\nFX Drafts Guide for CU Admin Users,\nForm 9182\n6.4\tDeleting an FX Drafts User\nIndividuals who no longer require access to FX Drafts must have their Client Centre profile modified or deleted, as applicable. See the User Management Part for procedures.\nEND",
+  "links": [],
+  "content_length": 1327
+}

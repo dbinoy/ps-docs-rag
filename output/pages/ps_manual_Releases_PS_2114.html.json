@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2114.html",
+  "title": "21:14 â May 11, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:14 â May 11, 2021\nCurrency Ordering â Cash Location Update\nWe updated the Currency Ordering Part in the Payment Solutions Manual to clarify that a cash order location must be a branch or ATM address. If your financial institution wants to have cash delivered to a different location (e.g., to a customer), youâll need to make your own arrangements after the cash order from RBC is delivered to your branch.\nCurrency Volume\nCurrency Ordering Part\nSection 4.3, Creating a Cash Order Location\nSection 4.4, Updating a Cash Order Location or Limit\nWe clarified that a cash order location must be a branch or ATM address.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 721
+}

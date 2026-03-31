@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agriinvest Program — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <span>Agriinvest Program</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
+    <h1>🏦 Agriinvest Program</h1>
+    <p class="subtitle">Central 1 Banking Services › Agriinvest Program <span class="badge" style="background:#d97706">7 pages</span></p>
+    <div class="summary-box md-content"><p># AgriInvest Program – Architecture Brief</p>
+<h2>Overview</h2>
+<p>AgriInvest is a government agricultural income-protection program administered by AAFC, with Central 1 Credit Union acting as the hub for member financial institution participation. Member credit unions open and manage AgriInvest accounts for qualified agricultural producers.</p>
+<h2>Key Architectural Data Flows</h2>
+<ul>
+<li><strong>Account Lifecycle</strong>: Member institutions open accounts (subject to AAFC approval); account closure requires AAFC authorization</li>
+<li><strong>Activity Reporting</strong>: All transactions recorded in AgriInvest Activity Files, submitted semi-monthly to Central 1 (reporting periods: 1–15th and 16th–EOM; deadline: 3rd business day of following period)</li>
+<li><strong>Compliance Tracking</strong>: Member institutions choose recordkeeping approach (forms storage or alternative methods)</li>
+</ul>
+<h2>Critical Rules & Constraints</h2>
+<ul>
+<li>Member institutions must execute Participant's Agreement with Central 1 before enrollment</li>
+<li>100% of AgriInvest accounts must be reported; no exceptions</li>
+<li>Semi-monthly cadence is non-negotiable (regulatory requirement)</li>
+<li>AAFC holds approval authority for account openings/closings—member institutions act as service layer only</li>
+</ul>
+<h2>Design Implications</h2>
+<ul>
+<li>Account status transitions depend on external AAFC decisions (async workflows)</li>
+<li>Activity file format and submission mechanism are critical integration points</li>
+<li>Audit trail and recordkeeping flexibility requires configurable storage/metadata strategies</li>
+<li>Plan for reconciliation between member institution records and Central 1 submissions</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="agriinvest_program.html">AgriInvest Program</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_the_agriinvest_program.html">4 Establishing Policies for the AgriInvest Program</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_opening_or_closing_an_agriinvest_account.html">5 Opening or Closing an AgriInvest Account</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_agriinvest_account_activity.html">6 AgriInvest Account Activity</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_reporting_to_central_1.html">7 Reporting to Central 1</a></div>
+            <div class="page-preview">- **Purpose**: Documents the bi-monthly reporting workflow for Financial Institutions to submit AgriInvest Activity Files to Central 1, which aggregates them into regional files for transmission to AA</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/agriinvest_program.4.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

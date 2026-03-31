@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2318.html",
+  "title": "23:18 â July 25, 2023",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "23:18 â July 25, 2023\nUpdate to\nInterac\ne-Transfer\nÂ®\nOnline Administration System (OAS) Part\nWe updated the\nInterac\ne-Transfer\nÂ®\nOnline Administration System (OAS) Part as follows:\nElectronic Transactions Volume\nInterac\ne-Transfer\nÂ®\nOnline Administration System (OAS) Part\nChapter 1, Introduction to\nInterac\neâTransfer Online Administration System (OAS)\nWe replaced links to secure site documents with links to Client Centre documents and removed any references to obsolete\nInterac\ne-Transfer Fraud Management documentation.\nChapter 2, Terminology and Frequently Asked Questions\nWe changed any references to secure site with references to Client Centre and added a new definition for Interrupted Transfers.\nChapter 3, OAS Access and Administration\nWe changed any references to secure site with references to Client Centre and changed the workflow for logging in to OAS from logging in through the secure site to logging in through Client Centre.\nChapter 4, Tracing\nInterac\neâTransfer Transactions via OAS\nWe changed any references to secure site with references to Client Centre and we added a new Section 4.8, Archived Data Searches. We removed any references to obsolete\nInterac\ne-Transfer Fraud Management documentation.\nChapter 5, Viewing a Customerâs\nInterac\neâTransfer Profile on OAS\nWe changed any references to secure site with references to Client Centre.\nChapter 8, Troubleshooting Tracing Requests\nWe updated the description of interrupted transfers as a potential reason for failed transfers.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1614
+}

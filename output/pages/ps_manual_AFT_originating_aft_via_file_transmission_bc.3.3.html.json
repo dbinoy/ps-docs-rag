@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.3.html",
+  "title": "3 Processing AFT File Transactions",
+  "section_path": "ps_manual > AFT",
+  "breadcrumb": [],
+  "body_text": "3\tProcessing AFT File Transactions\n3.1\tSummary of Processing AFT File Transactions\nThe rules and guidelines pertaining to AFT transactions are the same regardless of how the transactions are created or how the file is transmitted to Central 1. These rules are addressed in the Introduction to AFT Part. Additional information is also provided in the AFT Rejects, Recalls, Error Corrections, and Other Exception Items Part, the AFT Settlement Part, and the AFT Reports Part.\nEND",
+  "links": [],
+  "content_length": 477
+}

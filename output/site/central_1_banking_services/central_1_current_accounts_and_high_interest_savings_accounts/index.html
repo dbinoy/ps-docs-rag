@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central 1 Current Accounts And High Interest Savings Accounts — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <span>Central 1 Current Accounts And High Interest Savings Accounts</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
+    <h1>🏦 Central 1 Current Accounts And High Interest Savings Accounts</h1>
+    <p class="subtitle">Central 1 Banking Services › Central 1 Current Accounts And High Interest Savings Accounts <span class="badge" style="background:#d97706">7 pages</span></p>
+    <div class="summary-box md-content"><p># Brief Summary: Central 1 Current Accounts & HISA</p>
+<h2>Overview</h2>
+<p>This document set covers operational management of Central 1 deposit accounts used by BC/Ontario credit unions: Current Accounts (settlement vehicles) and High Interest Savings Accounts (investment products).</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Current Accounts:</strong></p>
+<ul>
+<li>Settlement hub for all financial activity and service fees across Central 1 products</li>
+<li>Funding sources: cheques, AFT file credits, internal transfers</li>
+<li>Inter-branch and corporate client transfers via ServiceNow integration</li>
+<li>Multi-branch reconciliation via OREC file (Account Reconciliation Service—subscription-based)</li>
+</ul>
+<p><strong>HISA:</strong></p>
+<ul>
+<li>Low-risk deposit investment option generating yield</li>
+<li>Separate product line from operational current accounts</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<p>1. <strong>Data Flows:</strong> AFT files, OREC reconciliation files, ServiceNow transfers—batch and potentially real-time</p>
+<p>2. <strong>Settlement Rules:</strong> All product activity and fees must flow through current accounts; tight coupling between products and settlement</p>
+<p>3. <strong>Reconciliation:</strong> Multi-branch institutions require automated matching (OREC); assumes daily/periodic batch cycles</p>
+<p>4. <strong>Integration Points:</strong> ServiceNow (transfers), legacy banking systems (cheques, AFT), Central 1 backend</p>
+<p>5. <strong>Regulatory Context:</strong> BC/Ontario credit union requirements; multi-institution coordination</p>
+<p><strong>For enhancement design:</strong> Assume batch-first architecture with file-based interfaces; clarify OREC reconciliation SLAs and AFT processing windows.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="central_1_current_accounts_and_high_interest_savings_accounts.html">Central 1 Current Accounts and High Interest Savings Accounts</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_managing_your_central_1_current_accounts.html">3 Managing Your Central 1 Current Accounts</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_inter_branch_and_central_1_corporate_client_transfers.html">4 Inter-Branch and Central 1 Corporate Client Transfers</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_settlement_to_current_accounts.html">5 Settlement to Current Accounts</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_account_reconciliation_service.html">6 Account Reconciliation Service</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_central_1_high_interest_savings_accounts.html">7 Central 1 High Interest Savings Accounts</a></div>
+            <div class="page-preview">- **Overview**: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history). - **Acc</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

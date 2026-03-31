@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introduction To Aft — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Introduction To Aft</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Introduction To Aft</h1>
+    <p class="subtitle">AFT › Introduction To Aft <span class="badge" style="background:#7c3aed">8 pages</span></p>
+    <div class="summary-box md-content"><p># AFT Introduction Summary for Solutions Architects</p>
+<h2>Overview</h2>
+<p>This document group covers <strong>Originating Automated Funds Transfers (AFT)</strong> — the operational and compliance framework for electronic credit/debit transactions authorized by account holders. Central 1 acts as the AFT service provider for member financial institutions.</p>
+<h2>Key Architectural Considerations</h2>
+<p><strong>Service Lifecycle:</strong></p>
+<ul>
+<li>Enrollment takes ~2 weeks; involves policy establishment, legal/regulatory compliance, and credential provisioning</li>
+<li>Service can be dormant or cancelled via formal request processes</li>
+</ul>
+<p><strong>Transaction Types & Rules:</strong></p>
+<ul>
+<li>Primary focus: Pre-authorized Debits (PADs) with four defined categories (Business, Consumer, Healthcare, Utility)</li>
+<li>Governed by CPA Rule H1 and applicable financial legislation</li>
+<li>Strict file delivery deadlines tied to Pacific Time zone</li>
+<li>Record entry limits per submission window</li>
+</ul>
+<p><strong>Integration Points:</strong></p>
+<ul>
+<li>File-based submission model with deadline-driven processing</li>
+<li>Form-based administrative requests (e.g., dormant period via Form 2044)</li>
+<li>Payor/Payee/Originator three-party interactions</li>
+</ul>
+<p><strong>Security & Compliance:</strong></p>
+<ul>
+<li>2-step authentication required for application access</li>
+<li>Member institutions must enforce KYC, AML, and transaction policies</li>
+<li>Legal accountability resides with originating institutions</li>
+</ul>
+<h2>Design Implications</h2>
+<p>Expect regulatory-driven constraints, deadline-critical processing windows, and need for audit trails. Plan for multi-tenant isolation and strict policy enforcement at origination points.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="introduction_to_aft.html">Introduction to AFT</a></div>
+            <div class="page-preview">- **Purpose**: Defines Central 1's Automated Funds Transfer (AFT) system for electronic credit/debit transactions, processing workflows, and the optional AFT Re-presentment service for Canadian/USD tr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Defines 90+ core terms and concepts for the Automated Funds Transfer (AFT) system, establishing shared vocabulary for payment processing operations. - **Core AFT Transaction Types**: </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Page Purpose**: Outlines mandatory compliance frameworks and operational rules governing Automated Funds Transfer (AFT) transactions within the Canadian payment ecosystem. - **CPA Rules Architectu</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_originating_aft_transactions.html">4 Establishing Policies for Originating AFT Transactions</a></div>
+            <div class="page-preview">- **Purpose**: Defines mandatory policies for financial institutions to establish before enabling business members to originate Automated Funds Transfer (AFT) transactions, with focus on regulatory co</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_enrolling_in_the_aft_service.html">5 Enrolling in the AFT Service</a></div>
+            <div class="page-preview">- **Purpose**: Documents the 11-step enrollment workflow for financial institutions and business member Originators to establish AFT (Automated Funds Transfer) service capabilities, with typical provi</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_processing_pads.html">6 Processing PADs</a></div>
+            <div class="page-preview">- **Purpose**: Defines Pre-authorized Debit (PAD) types, notification requirements, and authorization workflows governed by CPA Rule H1 - **Four PAD Types**: Business PAD, Cash Management PAD, Funds T</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_aft_deadlines_and_record_entry_limits.html">7 AFT Deadlines and Record Entry Limits</a></div>
+            <div class="page-preview">- **Purpose**: Defines file delivery deadlines and record entry (backdating/future-dating) limits for Automated Funds Transfer (AFT) transactions processed through Central 1. - **File Delivery Deadlin</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_requesting_a_dormant_period_and_cancelling_aft_service.html">8 Requesting a Dormant Period and Cancelling AFT Service</a></div>
+            <div class="page-preview">- **Purpose**: Documents procedures for placing AFT transactions into dormant status and completely cancelling AFT originator services through multiple channels (PaymentStream UI and FTP). - **Dormant</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7 Logging in to FX Drafts — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/fx_drafts/index.html'>Fx Drafts</a> <span class='sep'>›</span> <span>7 Logging in to FX Drafts</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Drafts</a>
+    <h1>7 Logging in to FX Drafts</h1>
+    <p class="subtitle">Clearing and Deposits › Fx Drafts</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.7.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># FX Drafts Login Process - Architecture Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Defines user authentication and access control procedures for the FX Drafts application, a foreign exchange draft management system integrated with the Client Centre portal.</li>
+</ul>
+<ul>
+<li><strong>Dual-System Permission Model</strong>: Users require setup in both Client Centre (as Security Officer with FX Drafts application access) and FX Drafts (with role-based admin or order creator permissions), establishing a two-tier access control requirement that must be synchronized during onboarding.</li>
+</ul>
+<ul>
+<li><strong>Integration Point - Client Centre</strong>: FX Drafts is accessed as a discrete application within the https://clients.central1.com portal, accessed via Applications menu with category-based grouping and favorites functionality, indicating federated identity/SSO architecture.</li>
+</ul>
+<ul>
+<li><strong>Branch Segregation Field</strong>: "Act on Behalf of" branch name field enforces organizational compartmentalization at login time, suggesting FX Drafts supports multi-branch operations with isolated data contexts per branch session.</li>
+</ul>
+<ul>
+<li><strong>Role-Based Admin Functions</strong>: Admin users manage other users' permissions within FX Drafts via Form 9182 guide, implying internal permission matrix management separate from Client Centre provisioning—potential data consistency risk between systems.</li>
+</ul>
+<ul>
+<li><strong>Session Security Constraint</strong>: Mandatory logout requirement when stepping away suggests session state sensitivity; architecture should consider auto-logout timeouts and session invalidation mechanisms.</li>
+</ul>
+<ul>
+<li><strong>Documentation Dependency</strong>: Procedures for admin and order creator workflows documented in separate user guides (Forms 9182, 9183), distributed via Payment Solutions Manual—indicates functional complexity warranting clear API documentation if designing programmatic access.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

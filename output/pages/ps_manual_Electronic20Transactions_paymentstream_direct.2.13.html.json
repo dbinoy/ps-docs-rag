@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.13.html",
+  "title": "13 PaymentStreamâ¢ AFT",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "13\tPaymentStreamâ¢ AFT\n13.1\tOverview of PaymentStream AFT\nPaymentStream\nAFT is a product on the\nPaymentStream\nDirect platform that allows you and your business customers to initiate Canadian or US dollar AFT transactions using one of the following service types:\nFile Upload\nâ An originator creates AFT files using in-house or third-party software and then uploads the files to\nPaymentStream\nAFT. See\nPaymentStream\nAFT â Guide for File Upload, Form 5600, and Central 1âs AFT File Specifications, Form 2726.\nData Entry Automatic Release\nâ An originator enters AFT transactions on\nPaymentStream\nAFT, and the system releases them automatically. See\nPaymentStream\nAFT â Guide for Automatic Release, Form 5598.\nData Entry Manual Release\nâ An originator enters AFT transactions on\nPaymentStream\nAFT and then releases the transactions manually. See\nPaymentStream\nAFT â Guide for Manual Release, Form 5599.\nSee additional information in the Originating AFT via\nPaymentStream\nAFT Part:\nLegal and policy considerations\nUser management\nEnrollment process\nOriginator information\nApproval process\nPurge schedules\nReleasing/uploading AFT files\nRisk Management\nReports\nRelated Information\nCentral 1âs AFT File Specifications,\nForm 2726\nPaymentStream\nAFT â Guide for Automatic Release,\nForm 5598\nPaymentStream\nAFT â Guide for Manual Release,\nForm 5599\nPaymentStream\nAFT â Guide for File Upload,\nForm 5600\nEND",
+  "links": [],
+  "content_length": 1415
+}

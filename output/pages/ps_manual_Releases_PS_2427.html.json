@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2427.html",
+  "title": "24:27 â August 2, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:27 â August 2, 2024\nUpdate to the Enterprise Fraud Management Part\nWe added content to the EFM part regarding wires in Decision Mode. The newly added content is based off of the recently released\njob aid\nthat assists with the various scenarios wires experience in Decision Mode.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nSection 8.1, Overview of Managing Transaction Alerts\nWe updated some images to coincide better with the provided information. We also removed any Monitor Mode wire information that is no longer relevant.\nSection 8.3, Identifying a Transaction as Legitimate\nWe added clarification to the No-risk Reason,\nâe-Transfer: Confirmed Legitimate â Customer Wants to Cancelâ. This No-risk reason canât be used as a no-risk reason for a wire.\nSection 8.4, Identifying Alerts in Auto Risk Transactions\nWe removed any Monitor Mode wire information that is no longer relevant.\nSection 8.7, Wires in EFM and the Wires Application\nWe added a new section to discuss wires in the EFM and Wires application environments.\nQuestions\nEFM Support, email\nefm@central1.com\n.",
+  "links": [],
+  "content_length": 1105
+}

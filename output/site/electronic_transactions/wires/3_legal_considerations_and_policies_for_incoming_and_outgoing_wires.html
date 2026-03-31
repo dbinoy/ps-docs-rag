@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 Legal Considerations and Policies for Incoming and Outgoing Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>3 Legal Considerations and Policies for Incoming and Outgoing Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>3 Legal Considerations and Policies for Incoming and Outgoing Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.03.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Legal Considerations and Policies for Incoming and Outgoing Wires</p>
+<ul>
+<li><strong>Overview</strong>: Documents regulatory compliance requirements and mandatory internal control policies for wire transfer operations (incoming/outgoing) under Canadian financial services law.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Compliance Framework</strong>: Financial institutions must adhere to PCMLTFA/PCMLTF Regulations, Criminal Code, PIPEDA/PIPA, Freezing Assets of Corrupt Foreign Officials Act, Human Rights Code, and Economic Sanctions—with FINTRAC as primary enforcement/guidance body.</li>
+</ul>
+<ul>
+<li><strong>Mandatory Policy Domains</strong>: Staff must be trained on identity verification, suspicious transaction reporting, record-keeping/FINTRAC reporting, terrorist property reporting, split transaction monitoring, PEP/HIO determinations, foreign currency exchange processing, and non-account holder transactions.</li>
+</ul>
+<ul>
+<li><strong>Enterprise Fraud Management (EFM) Integration</strong>: Outgoing wires are monitored asynchronously in EFM; wire status in the Wires application updates to "Pending" (investigation) or "Cancelled" (fraud identified) with no user-visible reason codes—only authorized EFM users see investigation details. <strong>Critical constraint</strong>: Wires application is not connected to the banking system; settlement must be reconciled via internal procedures.</li>
+</ul>
+<ul>
+<li><strong>Wire Status Semantics</strong>: Understand status transitions—"Pending" indicates EFM fraud investigation in progress; "Cancelled" indicates EFM fraud determination—but no status reason field is exposed to Wires application users.</li>
+</ul>
+<ul>
+<li><strong>Access Control Requirements</strong>: Implement role-based access restrictions, one-time secure password distribution, inactive user deactivation, transaction/daily limits per user, two-approval authorization thresholds for high-value outgoing wires (institution-defined), and audit trails for compliance review.</li>
+</ul>
+<ul>
+<li><strong>Data Isolation Risk</strong>: Wires application operates as isolated system from core banking; architects must design reconciliation/settlement workflows to close the gap between fraud decisions in EFM and actual transaction reversal/customer communication.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>25 Recalling, Tracing, and Amending Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>25 Recalling, Tracing, and Amending Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>25 Recalling, Tracing, and Amending Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.25.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Recalling, Tracing, and Amending Wires</p>
+<ul>
+<li><strong>Overview</strong>: Documents the post-approval lifecycle for outgoing wires—specifically trace, recall, and amendment request workflows for approved wires (including future-dated) that cannot be directly cancelled in the Wires application.</li>
+</ul>
+<ul>
+<li><strong>Key Constraint</strong>: All wire operations (trace, recall, amendment) are processed on a best-efforts basis and are non-guaranteed. Once released by Central 1, success depends on receiving institution voluntary cooperation; some foreign jurisdictions have non-return policies. This must be communicated prominently in any UX enhancements.</li>
+</ul>
+<ul>
+<li><strong>Request Types</strong>: Four distinct request types with different outcomes—Trace (status/cancellation), Recall (fund return), Amendment (metadata correction), Compliance (documentation hold), and Fraud Recall—each with unique processing logic and fee structures.</li>
+</ul>
+<ul>
+<li><strong>Two-Path Request Architecture</strong>: Requests to participating Wires institutions are resolved peer-to-peer (direct contact between FIs); requests to non-participating institutions route through ServiceNow or Form 1917 submission to Central 1 as intermediary. This dual-path design requires conditional routing logic.</li>
+</ul>
+<ul>
+<li><strong>ServiceNow Integration</strong>: Primary submission channel via Client Centre → Applications → ServiceNow → Service Catalogue → Electronic Payments. System generates ticket numbers, tracks request state, and Central 1 updates tickets with results. Manual Form 1917 fallback only when ServiceNow unavailable.</li>
+</ul>
+<ul>
+<li><strong>Financial & FX Impact</strong>: Recalled funds return less fees; subject to foreign exchange gains/losses (FX rate at recall date for non-participating institution wires). Fees charged regardless of recall success. Different fee schedules for Class A credit unions (Form 2725) vs. other clients (via Account Executive).</li>
+</ul>
+<ul>
+<li><strong>Data Fields & State Transitions</strong>: Wire Details section captures common metadata across all request types; "Reason for Trace or Recall" field used for future-dated cancellation indication. Approved future-dated wires can only be cancelled via trace request. Amendment requests fail silently if receiving institution rejects or already processed wire.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

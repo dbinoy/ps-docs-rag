@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deposit Processing — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Deposit Processing</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Deposit Processing</h1>
+    <p class="subtitle">Clearing and Deposits › Deposit Processing <span class="badge" style="background:#dc2626">19 pages</span></p>
+    <div class="summary-box md-content"><p># Deposit Processing - Architecture Brief</p>
+<h2>Overview</h2>
+<p>Central 1's Deposit Processing documentation covers end-to-end handling of paper and remote deposit items (cheques, drafts, money orders, warrants) through three channels: Branch Capture, Corporate Capture, and Mobile Deposits.</p>
+<h2>Key Data Flows</h2>
+<p>1. <strong>Capture → Review → Approval → Transmission</strong> (Branch/Corporate)</p>
+<p>2. <strong>Mobile deposit</strong> → Customer submission → Central 1 processing</p>
+<p>3. <strong>Settlement</strong> → T+0 or T+1 credit to institution account based on cut-off times</p>
+<p>4. <strong>Aged deposits</strong> → Auto-escalation for deposits >24 hours untransmitted</p>
+<h2>Critical Architecture Elements</h2>
+<ul>
+<li><strong>Image capture & storage</strong>: MICR-encoded items (Canadian/US dollars); deposit slip images retained</li>
+<li><strong>Multi-user workflow</strong>: Role-based access (Capture Users, Reviewers, Supervisors, Admins) via Client Centre</li>
+<li><strong>Integration points</strong>: Paystation (scanner procurement portal), Online Return portal (image retrieval)</li>
+<li><strong>Regulatory compliance</strong>: Legal holds, identification verification, record retention</li>
+<li><strong>Research capability</strong>: Deposit tracing, reconciliation, reporting against Central 1 account</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>24-hour transmission SLA (triggers aged deposit workflows)</li>
+<li>Staging environment required for testing</li>
+<li>Settlement reconciliation dependency on Central 1's backend</li>
+<li>Collection-only items (foreign non-USD) require manual handling</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="deposit_processing.html">Deposit Processing</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_deposit_processing.html">4 Establishing Policies for Deposit Processing</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_determining_if_items_are_acceptable_for_deposit.html">5 Determining if Items Are Acceptable for Deposit</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_branch_capture_and_corporate_capture_scanner_procurement.html">6 Branch Capture and Corporate Capture Scanner Procurement</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_branch_capture_scanner_testing_maintenance_and_troubleshooting.html">7 Branch Capture Scanner Testing, Maintenance, and Troubleshooting</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_branch_capture_user_management.html">8 Branch Capture User Management</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_depositing_cheques_in_branch_capture.html">9 Depositing Cheques in Branch Capture</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_disapproving_or_approving_a_branch_capture_deposit.html">10 Disapproving or Approving a Branch Capture Deposit</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_transmitting_a_branch_capture_deposit.html">11 Transmitting a Branch Capture Deposit</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_assigning_a_branch_capture_deposit_and_managing_aged_old_deposits.html">12 Assigning a Branch Capture Deposit and Managing Aged Old Deposits</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_branch_capture_reports_and_research.html">13 Branch Capture Reports and Research</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_mobile_deposits.html">14 Mobile Deposits</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="15_depositing_cheques_in_corporate_capture.html">15 Depositing Cheques in Corporate Capture</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.15.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="16_viewing_deposits_online_and_tracing_deposits.html">16 Viewing Deposits Online and Tracing Deposits</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.16.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="17_settlement_and_adjustments_of_deposits.html">17 Settlement and Adjustments of Deposits</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.17.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="18_deposit_reports.html">18 Deposit Reports</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.18.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="19_accepting_cheques_on_collection.html">19 Accepting Cheques on Collection</a></div>
+            <div class="page-preview">**Overview:** This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.19.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

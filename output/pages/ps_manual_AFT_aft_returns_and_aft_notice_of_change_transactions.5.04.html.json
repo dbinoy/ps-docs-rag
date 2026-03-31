@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/AFT/aft_returns_and_aft_notice_of_change_transactions.5.04.html",
+  "title": "4 Receiving AFT Returns",
+  "section_path": "ps_manual > AFT",
+  "breadcrumb": [],
+  "body_text": "4\tReceiving AFT Returns\n4.1\tReceiving AFT Returns\nThe Receiving Financial Institution can return an AFT Transaction that the financial institution or its business member originated if the payment is NSF, the account number is invalid/incorrect, or the account is closed. The Receiving Financial Institution generates a return within the permissible time frames and in accordance with CPA Rule H1, Pre-authorized Debits, and CPA Rule F1, Rules Applicable to Automated Funds Transfer (AFT) Transactions.\nIncoming returned transactions are reported on the Automated Transfer System Detailed Listing (CCD/UCD) and on the Consolidated Returns, Recalls, Rejects, and Error Corrections (ICRR/UCRR). The CCD/UCD reports are only available to the financial institution. The ICRR/UCRR reports are available to both the financial institution and the Originator.\nThe Originator proceeds as follows each Business Day:\nSee the Consolidated Returns, Recalls, Rejects, and Error Corrections (ICRR/UCRR) to determine if any transactions were returned. Items appearing on this report are automatically posted to the Originatorâs account. The Tran CD column displays the CPA transaction type followed by the logical record type (I, or J). For credits, the transaction type will be followed by logical record type I. For debits, the transaction type will be followed by the logical record type J. See CPA Standard 007 for a list of AFT return reason codes.\nInvestigate the reason for return and take appropriate action.\nEND",
+  "links": [],
+  "content_length": 1505
+}

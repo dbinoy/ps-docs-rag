@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.5.html",
+  "title": "5 Logging in to an Application Protected by 2-Step Security",
+  "section_path": "ps_manual > Access%20and%20Administration",
+  "breadcrumb": [],
+  "body_text": "5\tLogging in to an Application Protected by 2-Step Security\n5.1\tLogging in to an Application Protected by 2-Step Security\nUsers must have a 2-step security token assigned to their Client Centre User ID to access certain applications (e.g., User Management), or functionality within an application (e.g., approving outgoing wires in the Wires application) thatâs protected by 2-step security. A User Management Security Officer (Security Officer) assigns a 2-step security token to a user via User Management. See the User Management Part for procedures.\nLog in to an application protected by 2-step security as follows:\nGo to\nhttps://clients.central1.com\n. Enter your username and password, then select\nSign in\n. See Figure 1.\nNote: \tYouâll be prompted to enter your username before this page appears if itâs your first login to the Client Centre, youâve deleted your cookies, or youâre using incognito/private browsing.\nFigure 1: Entering Credentials\nSelect\nApplications\n. See Figure 2.\nFigure 2: Accessing Applications on the Client Centre\nSelect the appropriate application from the displayed list (e.g., User Management).\nEnter the code thatâs generated on your registered 2-step security token, then select\nDone\n. See Figure 3.\nNote: \tSome applications (e.g., Wires) allow you to login with your password, but will prompt you to enter a 2-step security code when you access certain functionality within an application (e.g., approving outgoing wires) thatâs protected by 2-step security.\nFigure 3: Entering the Code from the 2-Step Security Token\nEND",
+  "links": [],
+  "content_length": 1569
+}

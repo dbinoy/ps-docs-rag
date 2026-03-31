@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Processing Incoming Clearing Items — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/incoming_clearing_items/index.html'>Incoming Clearing Items</a> <span class='sep'>›</span> <span>4 Processing Incoming Clearing Items</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Incoming Clearing Items</a>
+    <h1>4 Processing Incoming Clearing Items</h1>
+    <p class="subtitle">Clearing and Deposits › Incoming Clearing Items</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/incoming_clearing_items.01.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Incoming Clearing Reports Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documents seven clearing report types (CHQ4, CLI, CLO, CLSR, CLUS, PADB, SUSC, UADB) that provide credit unions visibility into incoming clearing items processed by Central 1, with reports available within 24 hours of processing.</li>
+</ul>
+<ul>
+<li><strong>Report Distribution Model</strong>: All reports delivered via MERG files in File and Report Exchange with currency-based folder hierarchy (CAD/USD subfolders); PDF formats stored in Banking (CHQ4), Clearing (CLI/CLO/CLSR/CLUS/SQC/SUSC), and AFT (PADB/UADB) folders.</li>
+</ul>
+<ul>
+<li><strong>Item Classification Hierarchy</strong>: Incoming items categorized as Qualified/Unqualified, In-Province (Vancouver/Toronto/Montreal/Halifax) vs. Out-of-Province (Calgary/Winnipeg), with separate Canadian dollar (CAD) and US dollar (USD) processing tracks and distinct handling for Business PADs vs. standard cheques/drafts/chargebacks.</li>
+</ul>
+<ul>
+<li><strong>Postability Logic</strong>: CLI/CLO reports segment items into Unpostables (unreadable/missing account numbers) and Postables (readable by Central 1 equipment), with special marking for paper business pre-authorized debits; Unqualified Items excluded from all clearing list reports.</li>
+</ul>
+<ul>
+<li><strong>Branch-Level Debiting</strong>: Summary reports (SQC, SUSC, CLSR) organize debits by branch rather than posting grand totals to master accounts; this branch-level granularity is critical for reconciliation workflows and account posting logic.</li>
+</ul>
+<ul>
+<li><strong>Cross-Border and Currency Rules</strong>: CLUS report handles three item types: US dollar account draws, Canadian dollar account draws marked "US Funds," and foreign chargebacks; US Non-Account 6404 section specifically supports manual member account debiting for cross-currency scenarios.</li>
+</ul>
+<ul>
+<li><strong>Business PAD Recourse Differentiation</strong>: PADB and UADB reports separately distinguish paper vs. electronic Business PADs because recourse periods differ from standard PAD types; reports generated even when zero electronic transactions exist (forcing downstream consumption logic to handle empty datasets).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

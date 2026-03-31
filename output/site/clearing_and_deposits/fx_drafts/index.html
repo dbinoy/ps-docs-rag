@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fx Drafts — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Fx Drafts</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Fx Drafts</h1>
+    <p class="subtitle">Clearing and Deposits › Fx Drafts <span class="badge" style="background:#dc2626">9 pages</span></p>
+    <div class="summary-box md-content"><p># FX Drafts System Architecture Brief</p>
+<h2>Overview</h2>
+<p>FX Drafts is a Central 1–managed, in-branch draft issuance platform supporting 20+ foreign currencies (including USD). Users create and print negotiable drafts for beneficiaries through a web-based application integrated with Client Centre.</p>
+<h2>Key Architectural Components</h2>
+<p><strong>Participants:</strong></p>
+<ul>
+<li>Central 1 (operator/settlement hub)</li>
+<li>Convera (technology/processing partner)</li>
+<li>Member financial institutions (issuers)</li>
+<li>Client Centre (authentication/authorization layer)</li>
+</ul>
+<p><strong>Data Flows:</strong></p>
+<ul>
+<li>User access provisioned via Client Centre user management (role-based: Security Officer minimum)</li>
+<li>Draft creation → in-branch printing</li>
+<li>End-of-day settlement: Convera generates settlement file → Central 1 debits institution's CAD account</li>
+<li>Stop payments and stock orders route to Convera directly (with contingency contact procedure)</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<p>1. <strong>Compliance-heavy:</strong> PCMLTFA/PCMLTF regulations mandate staff training policies; AML officer involvement required</p>
+<p>2. <strong>Multi-party agreements:</strong> Institutions must sign agreements with both Convera and Central 1 before enrollment</p>
+<p>3. <strong>Settlement dependency:</strong> Daily file-based reconciliation; no real-time settlement</p>
+<p>4. <strong>Contingency requirement:</strong> System downtime protocol mandates direct Convera contact</p>
+<p>5. <strong>Authentication:</strong> Dual-layer (Client Centre + FX Drafts) access control</p>
+<p><strong>Before designing enhancements, clarify:</strong> settlement SLA, file format specifications, failover escalation workflows, and AML integration touch-points.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="fx_drafts.html">FX Drafts</a></div>
+            <div class="page-preview">- **Overview**: FX Drafts is a Payment Solutions application enabling authorized in-branch creation and printing of negotiable instruments drawn on Convera partner bank accounts, supporting 20+ foreig</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** This page defines core terminology for the FX Drafts application and supporting Central 1 infrastructure used in foreign currency draft processing and user/file management. **Key Concept</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_for_fx_drafts.html">3 Legal Considerations for FX Drafts</a></div>
+            <div class="page-preview">- **Scope**: Documents legal and compliance requirements for FX Draft offerings, with emphasis on AML/CFT obligations under Canadian federal legislation and OFAC compliance. - **Key Regulatory Framewo</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_fx_drafts.html">4 Establishing Policies for FX Drafts</a></div>
+            <div class="page-preview">- **Purpose**: Defines mandatory and recommended policies for financial institutions issuing Foreign Exchange (FX) Drafts, covering compliance, risk management, and system access controls. - **Regulat</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_enrolling_in_fx_drafts.html">5 Enrolling in FX Drafts</a></div>
+            <div class="page-preview">- **Purpose**: Documents the enrollment process and setup configuration for financial institutions participating in Central 1's FX Drafts product, managed in partnership with Convera. - **Enrollment w</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_fx_drafts_user_management.html">6 FX Drafts User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents the two-tier user access model for the FX Drafts application—Client Centre user provisioning followed by FX Drafts-specific permission assignment - **Two-layer access control </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_logging_in_to_fx_drafts.html">7 Logging in to FX Drafts</a></div>
+            <div class="page-preview">- **Purpose**: Defines user authentication and access control procedures for the FX Drafts application, a foreign exchange draft management system integrated with the Client Centre portal. - **Dual-Sy</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_contingency_procedures_for_stop_payment_requests_and_desktop_draft_stock_orders.html">8 Contingency Procedures for Stop Payment Requests and Desktop Draft Stock Orders</a></div>
+            <div class="page-preview">- **Purpose**: Defines fallback procedures when the FX Drafts system is unavailable for processing stop payment requests and managing desktop draft stock orders. - **Primary System Dependency**: FX Dr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_fx_drafts_settlement.html">9 FX Drafts Settlement</a></div>
+            <div class="page-preview">- **Purpose**: Documents the settlement flow for foreign exchange drafts between Central 1, member financial institutions, and their customers, including posting mechanics and revenue retention. - **S</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/fx_drafts.07.9.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

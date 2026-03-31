@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>22 Approving Outgoing Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>22 Approving Outgoing Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>22 Approving Outgoing Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.22.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Approving Outgoing Wires</p>
+<p><strong>Overview:</strong> This section defines the authorization workflow and approval requirements for outgoing wire transfers based on wire amount, creation source, and MTS branch-level configuration settings.</p>
+<p><strong>Key Concepts & Rules:</strong></p>
+<ul>
+<li><strong>Two-tier approval model</strong> based on MTS authorization levels (Level 1 and Level 2) with different requirements for in-branch vs. MDB/Forge Commercial wires</li>
+<li><strong>In-branch wires:</strong> require 1 approval if amount ≤ Level 2; require 2 approvals if amount > Level 2 (Level 1 field ignored)</li>
+<li><strong>MDB/Forge Commercial wires:</strong> require 0 approvals if amount ≤ Level 1; require 1 approval if Level 1 < amount ≤ Level 2; require 2 approvals if amount > Level 2</li>
+<li><strong>Authorization limits are user-agnostic</strong>—all Wires users are subject to the same MTS-defined thresholds regardless of individual role permissions</li>
+</ul>
+<p><strong>Critical Constraints & Permissions:</strong></p>
+<ul>
+<li>Approvers must hold "Authorize Outgoing Transfers" permission in MTS and have a 2-step security token assigned to their Client Centre ID</li>
+<li>Users cannot approve wires they created or edited; self-approval is blocked</li>
+<li>Wire visibility is scoped to branches assigned to the user in MTS</li>
+<li>Approved wires cannot be cancelled in-application; only recalls, amendments, or traces (future-dated only) are available on best-efforts basis</li>
+</ul>
+<p><strong>Integration Points & Data Dependencies:</strong></p>
+<ul>
+<li><strong>MTS branch settings</strong> drive all authorization logic (Section 9.5)—MTS is the source of truth for Level 1 and Level 2 authorization thresholds</li>
+<li><strong>Source System field</strong> tracks wire origin (PSD, MDB, Forge Commercial) to determine approval pathway</li>
+<li><strong>Disconnected settlement:</strong> Wires application is not integrated with institution's banking system; manual internal settlement procedures required post-approval</li>
+<li><strong>Central 1 as clearing intermediary:</strong> once approved, funds are released by Central 1 to receiving institution; no real-time recall capability</li>
+</ul>
+<p><strong>Architect Must Know:</strong></p>
+<ul>
+<li>Approval workflows are stateful (status field tracks "1 Approval Required" vs. fully approved)</li>
+<li>2-step security token is a hard requirement for approval operations, not optional</li>
+<li>Wire release is irreversible at the Wires application layer—design must account for post-send settlement reconciliation outside this system</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

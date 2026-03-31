@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aft Settlement — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Aft Settlement</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Aft Settlement</h1>
+    <p class="subtitle">AFT › Aft Settlement <span class="badge" style="background:#7c3aed">6 pages</span></p>
+    <div class="summary-box md-content"><p># AFT Settlement - Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document set defines Automated Funds Transfer (AFT) settlement operations at Central 1, covering both <strong>outgoing</strong> (PADs/debits and direct deposits/credits) and <strong>incoming</strong> transaction flows.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Transaction Types:</strong></p>
+<ul>
+<li>Outgoing: Pre-authorized debits (PADs) and direct deposits initiated by institutions/businesses</li>
+<li>Incoming: Transactions received and posted to Central 1 accounts</li>
+</ul>
+<p><strong>Settlement Processing:</strong></p>
+<ul>
+<li>Outgoing files posted per lead time and due date; offsetting transactions applied as applicable</li>
+<li>Incoming transactions posted by: run, net settlement, branch, and currency</li>
+<li>Service charges assessed separately on outgoing transactions (CAD/USD)</li>
+</ul>
+<p><strong>Critical Data Flows:</strong></p>
+<ul>
+<li>File submission → validation → posting to Central 1 accounts</li>
+<li>Multi-dimensional posting logic (branch, currency, settlement method)</li>
+<li>Charge calculation and application</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>Regulatory compliance required (legal chapter references statutes/regulations—review before building)</li>
+<li>Currency-specific handling (CAD/USD minimum)</li>
+<li>Settlement timing tied to lead times and due dates</li>
+<li>Net settlement calculations required</li>
+</ul>
+<p><strong>Pre-Design Actions:</strong> Review section 3 (Legal Considerations) for regulatory obligations affecting validation, posting, and audit requirements.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="aft_settlement.html">AFT Settlement</a></div>
+            <div class="page-preview">- **Overview**: Defines settlement mechanics for Automated Funds Transfer (AFT) transactions in Central 1's clearing system, covering posting rules, transaction types (Original, Error Correction, Retu</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** Defines core terminology and concepts for Central 1's Automated Funds Transfer (AFT) system, covering transaction types, processing infrastructure, and key operational parameters. - **Tr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Provides a reference summary of statutes and regulations governing Automated Funds Transfer (AFT) processing and settlement between Canadian financial institutions; explicitly not a sub</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_posting_outgoing_aft_files.html">4 Posting Outgoing AFT Files</a></div>
+            <div class="page-preview">- **Scope**: Defines settlement posting rules for outgoing AFT (Automated Funds Transfer) files submitted by financial institutions and business member originators to Central 1, covering both CAD and </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_posting_incoming_aft_files.html">5 Posting Incoming AFT Files</a></div>
+            <div class="page-preview">- **Overview**: Defines how incoming Automated Funds Transfer (AFT) transactions are posted to financial institutions' Central 1 accounts and member accounts, with different processing rules for Canad</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_posting_aft_service_charges.html">6 Posting AFT Service Charges</a></div>
+            <div class="page-preview">**Overview:** This page defines the process for posting three types of AFT charges—transaction fees, service fees, and setup fees—to financial institutions' Central 1 accounts and downstream to origin</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

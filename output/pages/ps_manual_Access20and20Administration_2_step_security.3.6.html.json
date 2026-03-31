@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.6.html",
+  "title": "6 2-Step Security Token Troubleshooting",
+  "section_path": "ps_manual > Access%20and%20Administration",
+  "breadcrumb": [],
+  "body_text": "6\t2-Step Security Token Troubleshooting\n6.1\t2-Step Security Token Troubleshooting\nIf a user is having trouble logging in with their 2-step security token, confirm the following:\nThey are using the 2-step security token thatâs assigned to their user profile.\nNote:\t If they have multiple profiles, the 2-step security token applies only to the profile it was set up on. Soft tokens arenât interchangeable between profiles.\nTheyâre reusing a code used during a failed login attempt. Instruct them to wait for their token to refresh, then try again.\nIf the user is assigned a hard token, compare the serial number on the back of the token to the serial number listed in their 2-step security summary in User Management to confirm they match. See the User Management Part for more information.\nEND",
+  "links": [],
+  "content_length": 799
+}

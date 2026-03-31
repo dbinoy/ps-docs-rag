@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Processing PADs — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/introduction_to_aft/index.html'>Introduction To Aft</a> <span class='sep'>›</span> <span>6 Processing PADs</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Introduction To Aft</a>
+    <h1>6 Processing PADs</h1>
+    <p class="subtitle">AFT › Introduction To Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.6.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Processing PADs (Section 6, AFT Manual)</p>
+<ul>
+<li><strong>Purpose</strong>: Defines Pre-authorized Debit (PAD) types, notification requirements, and authorization workflows governed by CPA Rule H1</li>
+</ul>
+<ul>
+<li><strong>Four PAD Types</strong>: Business PAD, Cash Management PAD, Funds Transfer PAD (same payor/payee), and Personal PAD—each with distinct use cases and regulatory treatment; system must classify and track PAD type as a required data attribute</li>
+</ul>
+<ul>
+<li><strong>Notification Logic</strong>: Fixed-amount PADs require 10-calendar-day advance notice before first debit, annual top-ups, and any amount/date changes; variable-amount PADs require 10-day notice per transaction—unless waived in the PAD Agreement; system must enforce notification timing rules and track waiver status per agreement</li>
+</ul>
+<ul>
+<li><strong>Authorization & Record Retention</strong>: All PADs require documented authorization (written or recorded); records must be retained minimum 12 months post-termination; sporadic PADs require per-transaction authorization with password/code validation; architect should plan for audit trail storage and long-term record archival</li>
+</ul>
+<ul>
+<li><strong>Sporadic PAD Handling</strong>: One-time or non-scheduled PADs need explicit per-transaction authorization; PAD Agreement must flag transactions as "sporadic" type; consider separate authorization workflow and telephone recording capability for this classification</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Depends on CPA Rule H1 compliance framework; PAD Agreement data model must support waiver flags, amount/date change tracking, and sporadic designation; notification system must be event-driven and calendar-aware</li>
+</ul>
+<ul>
+<li><strong>Key Data Constraints</strong>: Authorization records and PAD Agreement terms are legal artifacts with statutory retention periods; document retention requirements may extend beyond 12 months per other regulations—architect should implement flexible retention policies and compliance reporting</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

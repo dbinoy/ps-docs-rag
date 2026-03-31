@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2402.html",
+  "title": "24:02 â January 4, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:02 â January 4, 2024\nUpdate to Originating AFT via\nPaymentStream\nAFT Part\nWe updated the hours of availability and purge schedule times.\nPaymentStream\nAFT services are not available on Sundays from 1:00 am PT to 3:00 am PT. The Purge Schedule for\nPaymentStream\nAFT transactions now occurs on Sundays from 1:00 am to 3:00 am PT.\nAFT Volume\nOriginating AFT via\nPaymentStream\nAFT Part\nSection 1.3, PaymentStream AFT Availability and Hours of Support\nChanged time that\nPaymentStream\nAFT services are not available. They are not available on Sundays from 1:00 am to 3:00 am PT.\nSection 13.2, Purge Schedule for PaymentStream AFT Transactions\nChanged time of the Purge Schedule for\nPaymentStream AFT\n. It now occurs on Sundays from 1:00 am to 3:00 am PT.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 849
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receiver General Concentrator Account Deposits — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Receiver General Concentrator Account Deposits</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Receiver General Concentrator Account Deposits</h1>
+    <p class="subtitle">Clearing and Deposits › Receiver General Concentrator Account Deposits <span class="badge" style="background:#dc2626">7 pages</span></p>
+    <div class="summary-box md-content"><p># Receiver General Concentrator Account Deposits – Architecture Brief</p>
+<h2>Purpose</h2>
+<p>This document group defines Central 1's procedures for managing federal department and agency deposits to the Receiver General of Canada through concentrator holding accounts. It covers the complete lifecycle: account opening, deposit preparation, processing, error/chargeback management, and settlement.</p>
+<h2>Key Data Flows</h2>
+<p>1. <strong>Account Setup</strong>: Central 1 → preferred FI (on behalf of federal entity)</p>
+<p>2. <strong>Deposit Submission</strong>: Federal departments/agencies → concentrator account</p>
+<p>3. <strong>Processing</strong>: FI processes deposits; Central 1 manages PAD creation and settlement</p>
+<p>4. <strong>Error Handling</strong>: Dishonoured PADs, deposit errors, chargebacks routed through defined procedures</p>
+<p>5. <strong>Settlement</strong>: Central 1 credits the FI; cheques processed via branch capture</p>
+<h2>Critical Architecture Considerations</h2>
+<ul>
+<li><strong>Transit identifiers</strong>: Branch number (5-digit) + institution number required for routing</li>
+<li><strong>PAD management</strong>: Central 1 creates and manages pre-authorized debits; dishonour scenarios must be handled</li>
+<li><strong>Multi-party reconciliation</strong>: Federal agencies, FIs, and Central 1 require coordinated settlement</li>
+<li><strong>Error states</strong>: Chargeback and deposit error handling procedures must integrate with core processing</li>
+<li><strong>Regulatory compliance</strong>: Receiver General settlement requires audit trails and precise account mapping</li>
+</ul>
+<h2>Integration Points</h2>
+<p>Transit number composition, PAD processing systems, branch capture, settlement engines.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="receiver_general_concentrator_account_deposits.html">Receiver General Concentrator Account Deposits</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_opening_and_operating_a_receiver_general_concentrator_holding_account.html">3 Opening and Operating a Receiver General Concentrator Holding Account</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_preparing_receiver_general_deposits_federal_department_and_agency_instructions.html">4 Preparing Receiver General Deposits (Federal Department and Agency Instructions)</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_processing_a_receiver_general_deposit.html">5 Processing a Receiver General Deposit</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_managing_dishonoured_pads_deposit_errors_and_chargebacks_for_a_receiver_general_concentrator_holding_account.html">6 Managing Dishonoured PADS, Deposit Errors, and Chargebacks for a Receiver General Concentrator Holding Account</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_settlement_of_a_receiver_general_concentrator_holding_account.html">7 Settlement of a Receiver General Concentrator Holding Account</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

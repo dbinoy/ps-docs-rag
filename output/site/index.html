@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Solutions Manual — PS Manual</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <span>Overview</span>
+  </div>
+  <div class="container">
+    
+    <h1>Payment Solutions Manual</h1>
+    <p class="subtitle">Central 1 Credit Union — Solutions Architect Reference</p>
+    <div class="summary-box md-content"><p># Payment Solutions: Master Architecture Overview</p>
+<h2>What is Payment Solutions?</h2>
+<p>Payment Solutions is Central 1's integrated payment processing platform serving member credit unions across Canada. It orchestrates all electronic and cheque-based fund transfers, settlements, and reconciliations—from bill payments and AFT (Automated Funds Transfer) to clearing, deposits, and government-backed lending programs. The platform connects financial institutions to Central 1's settlement infrastructure, regulatory frameworks, and external partners (EDC, AAFC, provincial centrals, clearing houses), enabling members to originate, route, and reconcile payments at scale.</p>
+<p>---</p>
+<h2>Domain Map</h2>
+<p>| Section | Core Function |</p>
+<p>|---------|---------------|</p>
+<p>| <strong>Access and Administration</strong> | Identity and access management (RBAC, 2-step MFA, file exchange, audit governance). Single authentication gateway via Client Centre Portal. |</p>
+<p>| <strong>AFT</strong> | Batch and real-time processing of Pre-authorized Debits and Direct Deposits; settlement, exception handling (rejects, returns, recalls, NOCs), and service charge billing. |</p>
+<p>| <strong>Bill Payments</strong> | Customer-initiated bill payment origination, BPRP (corporate consolidation), CRA remittance filing, payment tracing, and reversal workflows. |</p>
+<p>| <strong>Central 1 Banking Services</strong> | Settlement accounts, semi-monthly reporting for government programs (AgriInvest, CEBA), fund reconciliation, and activity file submission. |</p>
+<p>| <strong>Clearing and Deposits</strong> | Cheque and deposit item capture (branch, corporate, mobile channels), imaging, online retrieval (ORS), dishonour handling, and same-day settlement. |</p>
+<p>| <strong>Wires</strong> | High-value electronic fund transfers with real-time settlement, wire approval workflows, and compliance checks. *(Summarized in documentation)* |</p>
+<p>| <strong>Online Services</strong> | Member-facing portal for payment initiation, balance inquiry, transaction history, and reporting access. *(Summarized in documentation)* |</p>
+<p>| <strong>PaymentStream</strong> | Real-time AFT entry UI, CRA Business Taxes filing, and modern API-first payment origination interface for future extensibility. |</p>
+<p>---</p>
+<h2>Core End-to-End Flows</h2>
+<p>1. <strong>AFT Settlement (Outgoing)</strong></p>
+<p>Member initiates PAD or Direct Deposit → File submission or PaymentStream UI entry → Central 1 validation and posting (dual-entry: originator account + offset) → Clearing house delivery → Settlement T+1 or per due date → Reconciliation via MERG reports.</p>
+<p>2. <strong>Bill Payment Processing</strong></p>
+<p>Customer or business member selects biller → Originating FI validates against biller and institution limits → Payment submitted via file or eCommSwitch → Central 1 consolidation → T+1 settlement by 5:30 am PT → Tracer initiates OLT for status/disputes → Reversal if required.</p>
+<p>3. <strong>Clearing and Deposit Settlement</strong></p>
+<p>Deposit items captured (branch/corporate/mobile) → Central 1 receives, images, and validates → Same-day credit to member account → Incoming clearing items processed and settled → ORS portal enables chargeback and reconciliation without physical retrieval.</p>
+<p>4. <strong>Government Lending Cycle (AgriInvest / CEBA)</strong></p>
+<p>Member opens participant account; AAFC/EDC validates eligibility → Institution submits Activity Files or repayment data (semi-monthly windows) within three business days → Central 1 posts to current account → Settlement advices generated → Institution reconciles via CAS Online or automated OREC matching.</p>
+<p>5. <strong>User Onboarding & Wire Approval</strong></p>
+<p>Institution appoints Security Officers → Officers create Client Centre users (batch or individual) → Users register passwords and provision 2-step tokens (hardware or soft) → Upon wire initiation, user performs step-up authentication → Wire approval and settlement with audit trail.</p>
+<p>---</p>
+<h2>Platform-Wide Integration Points</h2>
+<ul>
+<li><strong>Client Centre Portal</strong>: Primary identity provider and session manager; downstream applications delegate authentication.</li>
+<li><strong>ServiceNow</strong>: Hard token ordering, user requests, CEBA/AgriInvest administration submissions.</li>
+<li><strong>File Exchange (SFTP + Web UI)</strong>: Bidirectional file transport supporting AFT, bill payment, clearing reports, and reconciliation data.</li>
+<li><strong>Settlement System (GL Posting)</strong>: Central 1 internal engine posting all transactions, offsets, fees, and adjustments to member current accounts.</li>
+<li><strong>CAS Online</strong>: Real-time balance and transaction queries; Account Group–based role filtering; 12-month history and statement delivery.</li>
+<li><strong>External Partners</strong>: EDC (CEBA funding), AAFC (AgriInvest eligibility), provincial centrals (BPRP routing), clearing houses (cheque exchange), eCommSwitch (bill payment alternative channel).</li>
+<li><strong>PaymentStream Platform</strong>: Modern UI/API layer for real-time AFT entry, CRA filing, and future payment origination extensibility.</li>
+<li><strong>Regulatory Framework</strong>: CPA rules, FINTRAC compliance, provincial legislation (BC vs. Ontario), dispute/recourse procedures.</li>
+</ul>
+<p>---</p>
+<h2>Architect Priorities</h2>
+<p>1. <strong>Understand Deadline and Timing Constraints</strong></p>
+<p>AFT deadlines, bill payment cut-offs (T+1 by 5:30 am PT), semi-monthly reporting windows,</p></div>
+    <h2>Sections</h2>
+    <div class="section-grid">
+        <div class="section-card" style="--accent:#2563eb">
+          <div class="icon">🔐</div>
+          <h3><a href="access_and_administration/index.html">Access and Administration</a></h3>
+          <div class="count">41 pages</div>
+          <p>Access and Administration – Section Overview Purpose This section defines the operational framework for user provisioning, authentication, and system access…</p>
+        </div>
+        <div class="section-card" style="--accent:#7c3aed">
+          <div class="icon">💸</div>
+          <h3><a href="aft/index.html">AFT</a></h3>
+          <div class="count">54 pages</div>
+          <p>AFT Section Overview Purpose The AFT section establishes the complete operational framework for Automated Funds Transfer processing within Central 1's payment…</p>
+        </div>
+        <div class="section-card" style="--accent:#059669">
+          <div class="icon">🧾</div>
+          <h3><a href="bill_payments/index.html">Bill Payments</a></h3>
+          <div class="count">48 pages</div>
+          <p>Bill Payments Section Overview Purpose This section covers Central 1's bill payment ecosystem, enabling financial institutions to process customer-initiated…</p>
+        </div>
+        <div class="section-card" style="--accent:#d97706">
+          <div class="icon">🏦</div>
+          <h3><a href="central_1_banking_services/index.html">Central 1 Banking Services</a></h3>
+          <div class="count">32 pages</div>
+          <p>Central 1 Banking Services – Section Overview Purpose This section documents Central 1's settlement, account management, and reporting infrastructure for…</p>
+        </div>
+        <div class="section-card" style="--accent:#dc2626">
+          <div class="icon">📥</div>
+          <h3><a href="clearing_and_deposits/index.html">Clearing and Deposits</a></h3>
+          <div class="count">124 pages</div>
+          <p>Clearing and Deposits – Section Overview Purpose This section covers Central 1's end-to-end payment clearing and deposit processing workflows for member credit…</p>
+        </div>
+        <div class="section-card" style="--accent:#0891b2">
+          <div class="icon">💱</div>
+          <h3><a href="currency/index.html">Currency</a></h3>
+          <div class="count">29 pages</div>
+          <p>Currency Section Overview Purpose This section documents Central 1's currency management capabilities, encompassing both domestic currency ordering/returns and…</p>
+        </div>
+        <div class="section-card" style="--accent:#4f46e5">
+          <div class="icon">📊</div>
+          <h3><a href="data_hub/index.html">Data Hub</a></h3>
+          <div class="count">9 pages</div>
+          <p>Data Hub Section Overview Purpose The Data Hub section documents Central 1's analytics platform—a Microsoft Power BI-based dashboard system that enables…</p>
+        </div>
+        <div class="section-card" style="--accent:#be185d">
+          <div class="icon">⚡</div>
+          <h3><a href="electronic_transactions/index.html">Electronic Transactions</a></h3>
+          <div class="count">90 pages</div>
+          <p>Electronic Transactions: Solutions Architect Brief Purpose This section covers Central 1's transaction processing architecture for ATM, POS, and Interac…</p>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

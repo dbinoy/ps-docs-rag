@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Tracing System — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <span>Online Tracing System</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
+    <h1>🧾 Online Tracing System</h1>
+    <p class="subtitle">Bill Payments › Online Tracing System <span class="badge" style="background:#059669">12 pages</span></p>
+    <div class="summary-box md-content"><p># Online Tracing System (OLT) – Architecture Brief</p>
+<h2>Purpose</h2>
+<p>The Online Tracing System enables financial institutions to create and manage trace requests for bill payments processed through Central 1's Electronic Bill Payments System. It supports both member-initiated and biller-initiated trace workflows.</p>
+<h2>Key Data Flows</h2>
+<ul>
+<li><strong>Inbound</strong>: Trace requests from Tracers/SuperTracers; biller-initiated requests from Central 1</li>
+<li><strong>Outbound</strong>: Trace status notifications; settlement postings to Current Account Services (CAS)</li>
+<li><strong>Lifecycle</strong>: Created → Processed → Closed → Auto-archived (7 days) → Settled</li>
+</ul>
+<h2>Critical Rules & Design Constraints</h2>
+<ul>
+<li><strong>User roles</strong>: Tracers and SuperTracers (via Client Centre credentials); CPS Admin Security Officers manage security</li>
+<li><strong>Archival</strong>: Automatic after 7 days; manual initiation permitted</li>
+<li><strong>Settlement</strong>: Adjustments and service charges reconciled against CAS postings</li>
+<li><strong>Reporting</strong>: CSV/PDF exports required; used for daily reconciliation</li>
+<li><strong>Legacy path</strong>: Transactions >1 year old bypass OLT (alternate submission mechanism)</li>
+</ul>
+<h2>Architecture Considerations</h2>
+<ul>
+<li>Multi-environment support (three models offered)</li>
+<li>Email notification integration</li>
+<li>Role-based access control tied to Client Centre User Management</li>
+<li>State-machine workflow (status determines Inbox/Outbox visibility)</li>
+<li>Reporting and archival as critical operational flows</li>
+<li>Integration touchpoint: Current Account Services (CAS) for settlement</li>
+</ul>
+<p><strong>Key integration dependency</strong>: Central 1's Electronic Bill Payments System and CAS.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="online_tracing_system.html">Online Tracing System</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_processing_trace_requests_on_olt.html">3 Establishing Policies for Processing Trace Requests on OLT</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_choosing_an_olt_environment.html">4 Choosing an OLT Environment</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_olt_user_management.html">5 OLT User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_logging_in_to_olt_and_setting_up_email_notifications.html">6 Logging in to OLT and Setting up Email Notifications</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_viewing_downloading_and_searching_for_trace_requests.html">7 Viewing, Downloading, and Searching for Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_creating_modifying_deleting_and_receiving_trace_requests_on_olt.html">8 Creating, Modifying, Deleting, and Receiving Trace Requests on OLT</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_archiving_closed_trace_requests.html">9 Archiving Closed Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival af</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_olt_reports.html">10 OLT Reports</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for electronic bill payment trace request adjustments and service charges, including dual settlement pathways to both financial institutions and membe</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_creating_electronic_bill_payment_trace_requests_outside_of_olt.html">11 Creating Electronic Bill Payment Trace Requests Outside of OLT</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for electronic bill payment trace request adjustments and service charges, including dual settlement pathways to both financial institutions and membe</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_settlement_of_trace_request_adjustments_and_service_charges.html">12 Settlement of Trace Request Adjustments and Service Charges</a></div>
+            <div class="page-preview">- **Overview**: Documents the settlement workflow for electronic bill payment trace request adjustments and service charges, including dual settlement pathways to both financial institutions and membe</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

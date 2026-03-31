@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2132.html",
+  "title": "21:32 â September 15, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:32 â September 15, 2021\nDecommission of CAFT\nWe completed the migration of all Originators from Customer Automated Funds Transfer (CAFT) to\nPaymentStream\nAFT and removed CAFT-related information from the Payment Solutions Manual and the document library. We also added clarity to the two forms for AFT service via FTP to indicate that this service applies to BC and the Atlantic region, not just BC.\nAFT Volume\nCAFT Procedures (Ontario) Part\nIs obsolete and has been removed from the Manual.\nOriginating AFT via CAFT (BC) Part\nIs obsolete and has been removed from the Manual.\nDocument Library\nStatus\nApplication for AFT Service via FTP\n1378\nRevised\nFile Limit Change Request AFT Service via FTP\n1641\nRevised\nCAFT User Request\n1797\nObsolete\nCAFT Originator ID and User Access Request\n2473\nObsolete\nCAFT System Access Agreement\n2642\nObsolete\nCAFT User Guide\n2762\nObsolete\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 972
+}

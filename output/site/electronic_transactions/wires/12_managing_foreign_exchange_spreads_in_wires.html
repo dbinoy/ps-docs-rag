@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 Managing Foreign Exchange Spreads in Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>12 Managing Foreign Exchange Spreads in Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>12 Managing Foreign Exchange Spreads in Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.12.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Managing Foreign Exchange Spreads in Wires</p>
+<ul>
+<li><strong>Purpose</strong>: Documents procedures for authorized Wires Users to view, add, modify, and delete foreign exchange (FX) spreads that are automatically calculated into outgoing wire transfers in foreign currencies.</li>
+</ul>
+<ul>
+<li><strong>Access Control</strong>: FX spread management requires MTS "Spreads and Fees" permission assignment; user provisioning is defined in Section 8.6 of the documentation.</li>
+</ul>
+<ul>
+<li><strong>Spread Classification Hierarchy</strong>: Spreads can be set at two levels—by currency classification (major, minor, exotic, pegged) or by individual currency—with individual currency spreads overriding classification-level spreads, establishing a precedence rule for configuration resolution.</li>
+</ul>
+<ul>
+<li><strong>Automatic Calculation</strong>: FX spreads are automatically injected into outgoing wire transfer amounts; no manual intervention required post-configuration, indicating real-time integration at wire processing/calculation layer.</li>
+</ul>
+<ul>
+<li><strong>Data Operations</strong>: Four CRUD operations are supported: view (Organization Spreads page), create, update (spread value and type field), and delete, with confirmation workflows (green checkmark to confirm, red X to cancel).</li>
+</ul>
+<ul>
+<li><strong>Spread Type Field</strong>: A "Type" dropdown exists for spread classification, but the documentation does not enumerate valid values—clarification needed on whether this maps to spread methodology (e.g., percentage, basis points, fixed amount).</li>
+</ul>
+<ul>
+<li><strong>Dependencies</strong>: Integration with MTS user management system for permission enforcement; wire processing system must consume configured spreads at transaction time; no data export, audit logging, or version control procedures are documented.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

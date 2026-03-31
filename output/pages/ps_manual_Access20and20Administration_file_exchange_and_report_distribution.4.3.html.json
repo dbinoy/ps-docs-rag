@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.3.html",
+  "title": "3 Establishing Policies for File Exchange and Report Distribution",
+  "section_path": "ps_manual > Access%20and%20Administration",
+  "breadcrumb": [],
+  "body_text": "3\tEstablishing Policies for File Exchange and Report Distribution\n3.1\tPolicy on Internal Controls and User Management for the File and Report Exchange\nYour financial institution is responsible for File and Report Exchange security practices and internal controls. It is recommended that policies relating to the use of the File and Report Exchange be established to prevent or detect errors in a timely manner and to restrict access to the File and Report Exchange. Such policies can include but arenât limited to\nidentifying and deactivating inactive File and Report Exchange users;\nlimiting File and Report Exchange access to individuals who require the File and Report Exchange to complete their job requirements;\ntraining individuals not to share user IDs; and\nprohibiting the use of multiple user IDs for an individual.\n3.2\tPolicy on Downloading and Saving Files\nFiles are available on Central 1âs File and Report Exchange for 30 calendar days. The reports from the CRF* and ICR1 files will be purged after seven calendar days since these are advance versions of existing Canadian AFT clearing reports. Establish a policy and internal procedure for downloading and saving files to a separate storage location. Itâs a good practice to download files daily.\nEND",
+  "links": [],
+  "content_length": 1270
+}

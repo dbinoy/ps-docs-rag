@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Tracing Interac eâTransfer Transactions via OAS — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/interac_etransfer_online_administration_system/index.html'>Interac Etransfer Online Administration System</a> <span class='sep'>›</span> <span>4 Tracing Interac eâTransfer Transactions via OAS</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Interac Etransfer Online Administration System</a>
+    <h1>4 Tracing Interac eâTransfer Transactions via OAS</h1>
+    <p class="subtitle">Electronic Transactions › Interac Etransfer Online Administration System</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_online_administration_system.7.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Troubleshooting Tracing Requests for Interac e-Transfer</p>
+<p><strong>Overview:</strong> Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service availability, and transaction status tracking.</p>
+<p><strong>Key Concepts & Rules:</strong></p>
+<ul>
+<li><strong>Account eligibility gates:</strong> Customer profile status (Disabled flag), email scrubbing (Scrubbed Email list), and notification channel blocking (Fraud Analyst-maintained lists) prevent transaction initiation</li>
+<li><strong>Transfer limits enforcement:</strong> Per-transaction maximums and rolling limits (1/7/30-day windows calculated to the minute) apply to outgoing transfers only; global $25,000 hard cap on incoming transfers set by Interac (not visible in OAS)</li>
+<li><strong>Open transfer exclusivity:</strong> Only one active transfer can exist between sender-recipient pair at a time</li>
+<li><strong>Transfer lifecycle states:</strong> Open, Completed, Blocked (by Interac or Fraud Analyst), Cancelled (by Fraud Analyst), Interrupted (inconsistent state from comms breakdown/timeout/abandonment), Failed (post-settlement review via ECCX reports)</li>
+</ul>
+<p><strong>Data Structures & Search Integration:</strong></p>
+<ul>
+<li>OAS Customer Details page houses: Disabled indicator, Profile Summary tab (Scrubbed Email field + Revoke option, transfer limits), Transfer History with memo field for fraud analyst annotations</li>
+<li>Transfer Details page tracks: blocked status, cancellation records, Transfer History audit trail</li>
+<li>ECCX Failed Transactions report (daily cadence) uses two search keys: `Interac Ref No` (case-sensitive, no wildcards, search category: "Interac Payment Reference") and `C1 Retrieval Reference No` (case-insensitive, wildcard-compatible, search category: "FI Reference Number")</li>
+</ul>
+<p><strong>Critical Dependencies & Integration Points:</strong></p>
+<ul>
+<li><strong>Interac Services health check:</strong> Heartbeat signal on Transfer Parameters tab indicates service availability; maintenance windows block all transactions</li>
+<li><strong>Central 1 backend:</strong> Manages interrupted transfer remediation (automated cleanup, rollback/completion decisions post-investigation); handles misdirected funds recovery requests via OAS Misdirected Funds Recovery tab</li>
+<li><strong>Banking host integration:</strong> Interrupted transfers arise from banking host comms failures; manual account adjustments required when transactions show Completed in OAS but failed on bank settlement side</li>
+</ul>
+<p><strong>Architectural Constraints for Enhancement:</strong></p>
+<ul>
+<li>Scrubbed email blocking applies retroactively to pending transfers sent *before* scrubbing occurred</li>
+<li>Rolling limit calculations are precise to the minute; architectural designs must support sub-minute granularity in windowing logic</li>
+<li>Interac blocked lists (email/phone) are opaque</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.28.html",
+  "title": "28 Inter-Branch Transfers in Wires",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "28\tInter-Branch Transfers in Wires\n28.1\tProcessing Inter-Branch Transfers in Wires\nWires can facilitate transfers between branches if the currency of the sending and receiving accounts is the same. The sending branch is debited for the outgoing wire and the receiving branch is credited. Standard wire fees apply. Contact your provincial centralâs Treasury Department to transfer funds between accounts of different currencies.\nNote:\tAuthorized users at BC and Ontario credit unions, other Central 1 clients, and Central 1âs corporate clients can transfer funds between your Central 1 accounts in near real-time via the Treasury Connect application. See the Treasury Connect User Guide, Form 6444, for more information. Alternatively, you can also use ServiceNow. See the Central 1 Current Accounts and High Interest Savings Accounts Part for procedures. All other financial institutions must contact their provincial central for information on making inter-branch transfers outside of Wires or, if applicable, transferring funds to corporate accounts at their central credit union.\nEND",
+  "links": [],
+  "content_length": 1090
+}

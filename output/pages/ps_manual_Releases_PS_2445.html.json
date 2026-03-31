@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2445.html",
+  "title": "24:45 â December 17, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:45 â December 17, 2024\nUpdate to Wires Data Extract Service Request, Form 2592\nWe updated the Wires Data Extract Service Request, Form 2592.\nDocument Library\nStatus\nWires Data Extract Service Request\n2592\nWe removed the Setup Information as it doesnât apply. Financial institutions canât elect to only include cross-border wires in the extract. All incoming and outgoing wires are included in the Wire data extract. We also refreshed the form look (e.g., larger font size, improved readability) and added e-signatures. (\nSee the Central 1 e-Signature Process and Approval Statement\n).\nImportant\n: Confirm your financial institutionâs e-signing policy before implementing any e-signatures.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 804
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/FYI_June_2023.html",
+  "title": "FYI â June 2023",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "FYI â June 2023\nFYI â June 2023\nThe following updates were made to the Payment Solutions Manual.\nBill Payments Volume\nOnline Tracing Part\nSection 12.1, Settlement of Adjustments and Service Charges\nWe clarified that the âClosed â Settledâ report on OLT is used to reconcile the transactions to the postings on Central 1 Banking System (CBS) Online.\nCurrency Volume\nFX Notes Plus Part\nSection 1.4, Contacts, Websites, and Other Resources\nWe clarified that the Exchange Bank of Canada (EBC) contact for settlement inquiries is the same as for draft and cheque clearing inquiries:\npayments@ebcfx.com\nor\n1-877-786-3084\n.\nDocument Library\nStatus\nInterac\ne-Transfer\nÂ®\nLimit Groups\n9369\nWe added âLimit Group 18â. This group is similar to Group 2 with the addition of no delay transfers for lower dollar amounts ($250 for the maximum amount per no delay transfer).\nRevised\nQuestions\nCentral 1, Client Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 988
+}

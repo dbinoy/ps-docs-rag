@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2013.html",
+  "title": "20:13 â April 30, 2020",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "20:13 â April 30, 2020\nUpdate to Corporate Capture User Management Information\nWe provided enhanced procedures on setting up Corporate Capture users.\nClearing and Deposits Volume\nDeposit Processing Part\nSection 9.6, Corporate Capture User Management\nWe clarified where to find more information on user setup. Specifically:\nIf using CPS Admin to manage your users, refer to Corporate Capture User Role Combinations, Form 5936. Also refer to this document for information on setting up CPS Admin Security Officers with Corporate Capture access.\nIf using User Management to manage your users, refer to the User Management Part.\nWe also removed duplicate user management information from this section.\nAccess and Administration Volume\nUser Management Part\nSection 9.6, Corporate Capture\nWe added significant details to this section to assist you in setting up Corporate Capture users via the User Management application. We better correlated the workflow options with the user role fields on User Management.\nDocument Library\nStatus\nCorporate Capture, User Role Combinations\n5936\nWe added clarity throughout the document on how to set up Corporate Capture users. We better correlated the workflow options with the user role fields on CPS Admin and User Management. We clarified where to find more information on user setup.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1426
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <span>Currency</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Currency</a>
+    <h1>💱 Currency</h1>
+    <p class="subtitle">Currency › Currency <span class="badge" style="background:#0891b2">1 pages</span></p>
+    <div class="summary-box md-content"><p># Currency Document Group Summary</p>
+<h2>Overview</h2>
+<p>The <strong>FX Notes</strong> document collection provides foundational guidance on foreign exchange (FX) operations within Central 1's payment solutions ecosystem. It covers FX terminology, availability frameworks, exchange rate mechanics, and legal/regulatory considerations.</p>
+<h2>Key Architectural Considerations</h2>
+<p><strong>Data Flows:</strong></p>
+<ul>
+<li>Exchange rate acquisition and distribution to dependent systems</li>
+<li>FX transaction classification and routing logic</li>
+</ul>
+<p><strong>Integration Points:</strong></p>
+<ul>
+<li>Rate provider feeds (real-time/batch)</li>
+<li>Downstream payment processing systems consuming FX data</li>
+<li>Compliance/audit logging systems</li>
+</ul>
+<p><strong>Critical Rules:</strong></p>
+<ul>
+<li>Exchange rate availability windows and cutoff times</li>
+<li>Currency pair support matrix and limitations</li>
+<li>Legal/regulatory constraints on FX pricing and disclosures</li>
+</ul>
+<p><strong>Design Constraints:</strong></p>
+<ul>
+<li>Rate freshness requirements (impacts caching strategy)</li>
+<li>Multi-currency transaction atomicity and settlement timing</li>
+<li>Regulatory reporting obligations for cross-border transactions</li>
+</ul>
+<h2>Pre-Enhancement Checklist</h2>
+<p>Before designing changes:</p>
+<p>1. Confirm scope: Which currency pairs and markets are in-scope?</p>
+<p>2. Identify rate source dependencies and SLAs</p>
+<p>3. Review legal constraints affecting rate calculations or display</p>
+<p>4. Map all downstream systems consuming FX data</p>
+<p>5. Verify regulatory reporting impacts</p>
+<p><strong>Recommendation:</strong> Reference complete FX Notes documentation for terminology definitions and current contact/resource details before architecture decisions.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="wwparcel_html.html">wwparcel.html</a></div>
+            <div class="page-preview">- **Page Purpose**: Comprehensive documentation for two primary payment solutions modules—FX Notes (foreign currency exchange management) and Currency Ordering & Precious Metals (cash services operati</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

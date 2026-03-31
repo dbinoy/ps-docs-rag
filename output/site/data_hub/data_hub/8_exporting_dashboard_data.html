@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Exporting Dashboard Data — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <a href='../../data_hub/data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <span>8 Exporting Dashboard Data</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Data Hub</a>
+    <h1>8 Exporting Dashboard Data</h1>
+    <p class="subtitle">Data Hub › Data Hub</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.8.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Dashboard Export Functionality</p>
+<ul>
+<li><strong>Purpose</strong>: Documents two export pathways for Payments Dashboard visualizations—PowerPoint and PDF formats—enabling stakeholders to extract and share dashboard snapshots and live data.</li>
+</ul>
+<ul>
+<li><strong>PowerPoint Export Modes</strong>: Supports three distinct workflows: (1) embedding live data via URL copy-paste into existing presentations, (2) creating new presentations via "Open in PowerPoint" with on-screen guidance, and (3) static image export with configurable options. Live data embedding is the default selection.</li>
+</ul>
+<ul>
+<li><strong>PDF Export Process</strong>: Single workflow—select export options, initiate export, and render dashboard image as browser-viewable PDF. Export rendering is asynchronous (multi-minute processing time) and relies on browser-native save/download functionality, introducing OS and browser-dependent variability.</li>
+</ul>
+<ul>
+<li><strong>Export Artifacts & Output</strong>: PowerPoint exports auto-generate presentations with title page plus dashboard image; PDF exports produce browser-rendered documents. Both support configurable export options but documentation does not specify what those options include (resolution, date ranges, metric filters, etc.).</li>
+</ul>
+<ul>
+<li><strong>Live Data Integration Point</strong>: PowerPoint's "Embed live data" feature generates URLs that reference live dashboard state, implying a data binding mechanism between exported presentations and backend dashboard service. Architecture must clarify URL lifecycle, refresh semantics, and access control for embedded links.</li>
+</ul>
+<ul>
+<li><strong>Processing Constraints</strong>: Multi-minute export latency suggests server-side rendering or image generation pipeline. Architects should validate capacity planning for concurrent exports and identify whether this blocks user interactions or runs async.</li>
+</ul>
+<ul>
+<li><strong>Browser Dependency & UX Risk</strong>: PDF save behavior is delegated entirely to client-side browser controls, creating potential support friction around download paths, naming conventions, and cross-browser inconsistency.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

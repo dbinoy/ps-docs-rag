@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 Establishing Policies for Redeeming or Transferring Bonds — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/redeeming_or_transferring_bonds/index.html'>Redeeming Or Transferring Bonds</a> <span class='sep'>›</span> <span>3 Establishing Policies for Redeeming or Transferring Bonds</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Redeeming Or Transferring Bonds</a>
+    <h1>3 Establishing Policies for Redeeming or Transferring Bonds</h1>
+    <p class="subtitle">Clearing and Deposits › Redeeming Or Transferring Bonds</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/redeeming_or_transferring_bonds.09.03.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Selling Unmatured Marketable Bonds</p>
+<p><strong>Overview:</strong> This page documents the process for Canadian credit unions to submit Government of Canada bonds and Treasury Bills for sale through Central 1 on a collection (consignment) basis at market value.</p>
+<p><strong>Key Processes & Rules:</strong></p>
+<ul>
+<li>Three-step workflow: (1) obtain bondholder signature on redemption application; (2) secure Power of Attorney (Form 3788) with guaranteed signatures; (3) package and courier to Central 1 Payment Services</li>
+<li>Bearer bonds exempt from Power of Attorney requirement; registered bonds require signatures to match registration exactly or face rejection</li>
+<li>Deceased bondholder transactions require executor/administrator signatures with specific authentication phrase ("Signature of transferor and authority to sign guaranteed") in guarantor space</li>
+<li>Coupons cannot be sold separately; only intact bonds accepted</li>
+<li>Signature guarantee must be from credit union officer authorized per Central 1's maintained list; bonds require over-guarantee per Section 4.4</li>
+</ul>
+<p><strong>Key Data Structures & Forms:</strong></p>
+<ul>
+<li>Form 3788: Power of Attorney to Sell and Transfer Securities</li>
+<li>Form 1323: Notification of Bond Sale (describes bond details; original copy required with submission)</li>
+<li>Critical field: "redemption value box" — incorrect entries delay credit settlement up to one month via Bank of Canada adjustment process</li>
+</ul>
+<p><strong>Integration Points & Dependencies:</strong></p>
+<ul>
+<li>Central 1 Canadian Dollar current account receives settlement proceeds daily (upon settlement receipt)</li>
+<li>Bank of Canada processes adjustments; minimum threshold $6.99 (amounts ≤$6.99 not processed)</li>
+<li>Central 1 returns photocopy of transaction to credit union for member CRA income reporting</li>
+<li><strong>Key constraint:</strong> Central 1 cannot predict receiving credit amount for marketable bonds (market-dependent); settlement routing differs from Canada Savings Bonds</li>
+</ul>
+<p><strong>Critical Architectural Consideration:</strong></p>
+<ul>
+<li>Settlement timing and amount unpredictability for marketable bonds creates asynchronous reconciliation workflow distinct from standard bond redemption processes</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

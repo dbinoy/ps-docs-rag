@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interac Etransfer Limits Settlement Tracing Reports — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Interac Etransfer Limits Settlement Tracing Reports</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Interac Etransfer Limits Settlement Tracing Reports</h1>
+    <p class="subtitle">Electronic Transactions › Interac Etransfer Limits Settlement Tracing Reports <span class="badge" style="background:#be185d">9 pages</span></p>
+    <div class="summary-box md-content"><p># Interac e-Transfer: Architecture Brief</p>
+<h2>Purpose</h2>
+<p>This document set governs transaction limits, settlement mechanics, reconciliation, remediation, and reporting for Interac e-Transfer® operations at Central 1 Credit Union.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Limit Framework:</strong></p>
+<ul>
+<li>Per-transaction, 24-hour, and 7-day maximums applied via limit groups</li>
+<li>Autodeposit capability bypasses manual acceptance but subject to compliance controls</li>
+</ul>
+<p><strong>Settlement & Reconciliation:</strong></p>
+<ul>
+<li>All completed transactions post to Central 1's account with separate totals (sends vs. receives)</li>
+<li>Daily reconciliation required; failures trigger remediation workflows</li>
+<li>Timeout errors between Central 1 and banking hosts require asynchronous recovery mechanisms</li>
+</ul>
+<p><strong>Critical Data Flows:</strong></p>
+<p>1. Transaction → Central 1 → Banking Host (with response code mapping)</p>
+<p>2. Settlement batches → Daily reporting (EMCU, EMCD, ECCX)</p>
+<p>3. Failed transactions → Remediation queue → Host retry/reversal</p>
+<p><strong>Compliance Integration:</strong></p>
+<ul>
+<li>PCMLTFA/PCMLTF regulations embedded in transaction validation</li>
+<li>Tracing workflow requires pre-consultation of settlement reports</li>
+</ul>
+<p><strong>Design Constraints:</strong></p>
+<ul>
+<li>Response code translation layer required between Interac and banking systems</li>
+<li>Idempotency critical for timeout recovery</li>
+<li>Daily report generation and monthly billing reconciliation are dependencies</li>
+</ul>
+<p><strong>Key Consideration:</strong> Remediation process is asynchronous; design for eventual consistency with audit trail preservation.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="interac_e_transfer_limits_settlement_tracing_and_reports.html">Interac e-TransferÂ® Limits, Settlement, Tracing, and Reports</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_and_policy_considerations.html">3 Legal and Policy Considerations</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_interac_e_transfer_limits_and_central_1_limit_groups.html">4 Interac e-TransferÂ® Limits and Central 1 Limit Groups</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_interac_e_transfer_settlement_and_reconciliation.html">5 Interac e-TransferÂ® Settlement and Reconciliation</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_interac_e_transfer_banking_host_remediation_process.html">6 Interac e-TransferÂ® Banking Host Remediation Process</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_tracing_interac_e_transfer_transactions.html">7 Tracing Interac e-TransferÂ® Transactions</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_interac_e_transfer_reports.html">8 Interac e-TransferÂ® Reports</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_interac_e_transfer_response_codes.html">9 Interac e-TransferÂ® Response Codes</a></div>
+            <div class="page-preview">**Overview:** Diagnostic guide for resolving customer inability to send/receive Interac e-Transfer transactions through the OAS (Online Administration System), with focus on account states, service av</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/interac_etransfer_limits_settlement_tracing_reports.5.9.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.13.html",
+  "title": "13 Viewing Live Rates in Wires",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "13\tViewing Live Rates in Wires\n13.1\tViewing Live Rates in Wires\nThe Rates page displays a snapshot of live foreign exchange rates in effect at the time you view the rates. Exchange rates change frequently and move according to the market. All Wires Users can view live rates.\nNote: \tRates include your foreign exchange spread (if applicable).\nTo view live rates:\nLog in to Wires as described in Chapter 10, Logging in to Wires.\nSelect\nView Rates\n. See Figure 1.\nFigure 1: Select âView Ratesâ\nView the Rates page. See Figure 2.\nâ\nSelect the Refresh icon to refresh the rates.\nâ\nSelect the CSV icon to download a CSV file of the rates.\nFigure 2: Viewing the Rates Page\nNote:\tRates arenât live on Saturday, they are held from Friday through to Sunday.\nEND",
+  "links": [],
+  "content_length": 762
+}

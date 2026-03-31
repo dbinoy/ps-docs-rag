@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cra Business Taxes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <span>Cra Business Taxes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
+    <h1>🧾 Cra Business Taxes</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes <span class="badge" style="background:#059669">12 pages</span></p>
+    <div class="summary-box md-content"><p># CRA Business Taxes – Architecture Brief</p>
+<h2>Overview</h2>
+<p>CRA Business Taxes is a PaymentStream Direct application enabling authorized users to submit Canada Revenue Agency remittance vouchers and business tax payments through Central 1. Supports GST/HST, Excise, Taxation, and Customs Programs per CPA Rule G4.</p>
+<h2>Key Architectural Data Flows</h2>
+<p>1. <strong>Dual Workflow Options</strong>: Single workflow (front-line staff only) or multi-stage workflow with segregated roles</p>
+<p>2. <strong>Payment Processing</strong>: Electronic submission of CRA business tax payments and filings; manual processing fallback for unsupported voucher types</p>
+<p>3. <strong>Settlement</strong>: Direct settlement between Central 1 and member FIs (BC/Ontario specific rules; separate handling for other regions)</p>
+<p>4. <strong>Reconciliation & Reporting</strong>: Mandatory reporting and reconciliation outputs for financial institutions</p>
+<h2>Critical Integration Points</h2>
+<ul>
+<li><strong>User Management</strong>: Role-based access control tied to PaymentStream Direct authentication</li>
+<li><strong>Remittance Voucher Validation</strong>: Electronic vs. manual processing determination per voucher type</li>
+<li><strong>CRA File Submission</strong>: Direct integration with CRA acceptance protocols</li>
+<li><strong>Bundle Reconstruction</strong>: Handling for lost/unprocessable voucher bundles (mail/courier fallback)</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>CPA Rule G4 compliance mandatory</li>
+<li>Environment separation (test/production)</li>
+<li>Regional variance (BC/Ontario vs. external FIs)</li>
+<li>Settlement and reconciliation processes are region-dependent</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="cra_business_taxes.html">CRA Business Taxes</a></div>
+            <div class="page-preview">- **Overview**: Business Taxes is a PaymentStream™ Direct product enabling financial institutions to electronically submit CRA business tax payments and filings, with capability to view filing and rem</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** This section defines core terminology for the Business Taxes and Client Centre ecosystem within the PaymentStream® Direct platform.</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_and_policy_considerations_for_business_taxes.html">3 Legal and Policy Considerations for Business Taxes</a></div>
+            <div class="page-preview">**Overview:** Documentation of CPA Rule G4 compliance requirements and internal control policies governing CRA payment acceptance for GST/HST, Excise, Taxation, and Customs remittances. - **CPA Rule G</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_workflow_options_for_business_taxes.html">4 Workflow Options for Business Taxes</a></div>
+            <div class="page-preview">- **Purpose**: Documents two operational workflows for financial institutions to process CRA (Canada Revenue Agency) remittance vouchers through the Business Taxes system—Single Workflow (front-line s</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_business_taxes_user_management.html">5 Business Taxes User Management</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for provisioning user access to the Business Taxes module within the Client Centre, including test and production environment segregation. - **Dual User Management Sy</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_examining_remittance_vouchers.html">6 Examining Remittance Vouchers</a></div>
+            <div class="page-preview">- **Purpose**: Describes how to identify CRA remittance voucher types and determine eligibility for electronic processing via Business Taxes; vouchers not supported must be processed manually or via m</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_accessing_business_taxes_in_paymentstream_direct.html">7 Accessing Business Taxes in PaymentStream Direct</a></div>
+            <div class="page-preview">- **Scope**: Documents login procedures and environment access for Business Taxes functionality in PaymentStream Direct, covering both test and production pathways through the Client Centre portal. - </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_processing_business_tax_payments_and_filings_electronically.html">8 Processing Business Tax Payments and Filings Electronically</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for submitting CRA (Canada Revenue Agency) business tax payments and filings electronically through Central 1's Business Taxes system, targeting front-line and back-o</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_processing_remittance_vouchers_manually.html">9 Processing Remittance Vouchers Manually</a></div>
+            <div class="page-preview">- **Purpose**: Defines manual processing procedures for CRA remittance vouchers that lack electronic availability, requiring same-day completion by front-line staff upon receipt from customers. - **Co</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_reconstructing_lost_cra_remittance_voucher_bundles.html">10 Reconstructing Lost CRA Remittance Voucher Bundles</a></div>
+            <div class="page-preview">- **Purpose**: Documents the process for resubmitting CRA (Canada Revenue Agency) remittance voucher bundles that were lost in mail transit when the original draft remains uncashed after one month or </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_settlement_for_cra_business_tax_transactions.html">11 Settlement for CRA Business Tax Transactions</a></div>
+            <div class="page-preview">- **Scope**: Defines settlement mechanics for CRA business tax payments between Central 1 and FIs in BC/Ontario, and between FIs and their customers; FIs outside BC/Ontario settle through provincial c</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_reports_and_reconciliation_for_cra_business_taxes.html">12 Reports and Reconciliation for CRA Business Taxes</a></div>
+            <div class="page-preview">- **Overview**: Financial institutions in BC and Ontario reconcile CRA business tax bill payments against Central 1 settlement amounts using standardized daily and monthly reports; institutions outsid</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

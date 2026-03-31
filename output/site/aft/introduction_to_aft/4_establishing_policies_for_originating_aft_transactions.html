@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Establishing Policies for Originating AFT Transactions — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/introduction_to_aft/index.html'>Introduction To Aft</a> <span class='sep'>›</span> <span>4 Establishing Policies for Originating AFT Transactions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Introduction To Aft</a>
+    <h1>4 Establishing Policies for Originating AFT Transactions</h1>
+    <p class="subtitle">AFT › Introduction To Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Establishing Policies for Originating AFT Transactions</p>
+<ul>
+<li><strong>Purpose</strong>: Defines mandatory policies for financial institutions to establish before enabling business members to originate Automated Funds Transfer (AFT) transactions, with focus on regulatory compliance, risk mitigation, and internal controls.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Compliance Requirements</strong>: Financial institutions must implement policies for FINTRAC reporting—specifically Suspicious Transaction Reports and Terrorist Property Reports—covering AFT transactions of any amount at any stage (negotiation, approval, or post-cancellation/decline). References FINTRACâs Guidelines 2 and 3 as normative requirements.</li>
+</ul>
+<ul>
+<li><strong>PAD Agreement Framework</strong>: Originators must use CPA Rule H1-compliant Payorâs PAD Agreements (Form 1696); financial institutions must audit business member compliance by sampling signed payor agreements annually. Related service agreements include Form 1904 (pre-authorized debits), Form 2007 (cash management PADs), and Form 2043 (direct deposits).</li>
+</ul>
+<ul>
+<li><strong>Risk Mitigation Controls</strong>: Requires implementation of transaction/file limits (monitored by Central 1 based on FI asset size), confirmation emails, chargeback monitoring, frequency tracking, and collateral/line of credit requests. Specific risks flagged: overdrafts from offsetting entries, 90-day PAD return windows, unauthorized software access, and credential compromise exposing multiple Originator IDs.</li>
+</ul>
+<ul>
+<li><strong>User Access & Security Model</strong>: Each user requires unique user ID + password (8+ characters, mixed case/numbers/symbols); third-party service providers maintaining multiple unaffiliated company Originator IDs must have separate user IDs per company to isolate damage. 2-Step Security tokens apply to business members on PaymentStream AFT. Central 1 auto-deletes inactive Originator IDs after 12 months.</li>
+</ul>
+<ul>
+<li><strong>PaymentStream AFT Integration Points</strong>: File upload/release triggers confirmation emails; file limit exceptions require Central 1 review; transaction and file limits are enforced at system level. Platform manages business member and financial institution originator tracking with associated permission levels.</li>
+</ul>
+<ul>
+<li><strong>Staffing & Audit Requirements</strong>: Financial institution staff must understand due diligence, credit approval, collateral assessment, and ongoing monitoring; internal controls require management reviews, internal audits of accessibility/activity, and documented procedures for secure credential delivery and access restriction.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

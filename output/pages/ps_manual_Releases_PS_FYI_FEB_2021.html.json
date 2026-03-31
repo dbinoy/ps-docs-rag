@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_FYI_FEB_2021.html",
+  "title": "FYI â February 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "FYI â February 2021\nFYI â February 2021\nThe following updates were made to the Payment Solutions Manual.\nBill Payments Volume\nElectronic Bill Payments System Part\nSection 1.2, Financiaul Institution Transaction Limit\nWe updated the Electronic Bill Payments System Part with a new image of Financial Institution Transaction Limit Modification Request, Form 2424, and moved the instructions on completing it to Section 1.2, Financial Institution Transaction Limit.\nClearing and Deposits Volume\nFX Notes Plus Part\nSection 11.3, Entering Foreign Cheques in FX Notes Plus\nWe added text to clarify that when the system identifies an item as a cash letter, your financial institution can choose whether to process it as a cash letter or as a cheque collection. When the system identifies an item as a cheque collection, your only option is to put it on collection.\nCurrency Volume\nProvincial Concentrator Account Deposits Part\nSection 3.3, Chargebacks\nWe corrected the CIBC transit number where dishonoured items should be returned to (00090-010).\nDocument Library\nStatus\nFinancial Institution Transaction Limit Modification Request\n2424\nWe updated the Financial Institution Transaction Limit Modification Request, Form 2424, with space to record the transit number you want debited for transaction limit changes. We also noted that changes to your financial institutionâs bill payment transaction limit does not affect any unique biller limits you may have established (maximum of ten billers and applicable to real-time clients only).\nRevised\nQuestions\nCentral 1, Client Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1651
+}

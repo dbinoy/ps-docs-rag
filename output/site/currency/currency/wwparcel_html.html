@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wwparcel.html — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/currency/index.html'>Currency</a> <span class='sep'>›</span> <span>wwparcel.html</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Currency</a>
+    <h1>wwparcel.html</h1>
+    <p class="subtitle">Currency › Currency</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># wwparcel.html Summary for Solutions Architect</p>
+<ul>
+<li><strong>Page Purpose</strong>: Comprehensive documentation for two primary payment solutions modules—FX Notes (foreign currency exchange management) and Currency Ordering & Precious Metals (cash services operations)—covering user access, transaction processing, settlement, and compliance frameworks.</li>
+</ul>
+<ul>
+<li><strong>Key Concepts & Processes</strong>:</li>
+<li>FX Notes: Foreign exchange spreads, transaction fees, retail rate modifiers, currency buying/selling workflows, and authentication via image verification</li>
+<li>Cash Services: Standing orders, late orders, contingency orders, currency order lifecycle management, and counterfeit/discrepancy handling procedures</li>
+<li>Both modules include strict legal/compliance layers (AML/CFT, economic sanctions, Globex 2000 rules)</li>
+</ul>
+<ul>
+<li><strong>Critical Data Flows</strong>:</li>
+<li>FX Notes: Customer ↔ FX Notes system → Globex 2000 (shipping/settlement); includes order editing, cancellation, and reconciliation workflows</li>
+<li>Cash Services: Order creation → delivery verification → return processing (with deposit slip adjustments); separate settlement tracks for orders vs. returns</li>
+<li>Precious Metals: Integrated buy/sell-back cycle with incoming parcel verification and settlement</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>:</li>
+<li><strong>ServiceNow</strong>: External system for managing cash order locations, limits, standing/late/contingency orders</li>
+<li><strong>Globex 2000</strong>: Foreign currency clearinghouse (validates spreads, receives shipments, processes settlement)</li>
+<li><strong>Client Centre</strong>: User authentication and access gateway</li>
+<li><strong>Central 1</strong>: Password/account reset backend</li>
+</ul>
+<ul>
+<li><strong>User Management & Access Control</strong>:</li>
+<li>Role-based access: Client Centre Users, CPS Admin Security Officers, Cash Services user types with granular location-based permissions</li>
+<li>Separate password policies for Client Centre; account unlock/reset workflows tied to Central 1</li>
+<li>Audit trails via User Audit Reports</li>
+</ul>
+<ul>
+<li><strong>Constraints & Compliance Requirements</strong>:</li>
+<li>Order deadlines and delivery windows are fixed (not configurable per transaction)</li>
+<li>Mandatory counterfeit/discrepancy handling procedures with documented workflows</li>
+<li>Settlement processes differ by institution type (BC/Ontario members vs. non-member financial institutions)</li>
+<li>Unfit, contaminated, and mutilated currency have dedicated return procedures</li>
+</ul>
+<ul>
+<li><strong>Architect Must Know</strong>:</li>
+<li>Two largely independent but parallel operational modules (FX Notes and Cash Services) with different settlement logic</li>
+<li>Heavy reliance on external systems (ServiceNow, Globex 2000) means enhancement scope must account for inter-system dependencies</li>
+<li>Regulatory/compliance burden is substantial—any process changes require legal review (AML/CFT, sanctions,</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

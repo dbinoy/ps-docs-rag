@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 Reports and Reconciliation for CRA Business Taxes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>12 Reports and Reconciliation for CRA Business Taxes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>12 Reports and Reconciliation for CRA Business Taxes</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.12.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: CRA Business Tax Reports and Reconciliation</p>
+<ul>
+<li><strong>Overview</strong>: Financial institutions in BC and Ontario reconcile CRA business tax bill payments against Central 1 settlement amounts using standardized daily and monthly reports; institutions outside these provinces follow provincial central procedures.</li>
+</ul>
+<ul>
+<li><strong>Daily reconciliation workflow</strong>: FIs must match BPRS (Bill Payments Remitted Summary) transaction totals to Central 1 settlement amounts, cross-reference rejected items in BPRT (Bill Payments Rejected Transactions) reports, and verify posted amounts in CAS Online align with BPRE/BPRS totals.</li>
+</ul>
+<ul>
+<li><strong>Key reports and data structures</strong>:</li>
+<li><strong>TPRE</strong> (Tax Payment Remitted Transactions): Daily report isolating CRA business tax transactions from general bill payments; sorted by customer account number with item counts and dollar totals</li>
+<li><strong>TXMC</strong> (Tax Payments Monthly Billing): Monthly vendor-level billing report showing charges, transaction counts, and dollar amounts per CRA/Hydro-Quebec vendor; sorted by vendor number</li>
+</ul>
+<ul>
+<li><strong>System dependencies</strong>: TPRE totals roll into BPRS summary figures; settlement data flows from Central 1 via File and Report Exchange; posting verification occurs in CAS Online; BPRT exceptions must be cross-referenced for reconciliation accuracy.</li>
+</ul>
+<ul>
+<li><strong>Distribution channels</strong>: BC institutions access TPRE via current Bill Payment report file (Bill file); Ontario institutions access via dedicated FTP folder (Bill_Pmt/TPRE_In_Branch_Tax_Remitted); reports generated daily (next business day) and monthly respectively.</li>
+</ul>
+<ul>
+<li><strong>Critical constraint</strong>: Rejected transactions at Central 1 are excluded from settlement amounts, requiring exception handling logic that cannot assume all submitted items post successfully.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

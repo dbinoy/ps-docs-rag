@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2415.html",
+  "title": "24:15 â April 11, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:15 â April 11, 2024\nUpdate to Enterprise Fraud Management Part\nThe Enterprise Fraud Management Part was updated to accommodate Monitor Mode going live for wire transactions.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nSection 1.1, Introduction to Enterprise Fraud Management\nWe updated this section to include direct references to wire transactions.\nSection 2.2, Frequently Asked Questions\nWe updated the FAQ with direct references to\nInterac\ne-Transfer\nÂ®\ntransactions.\nSection 7.2, Overview of Incidents on the Incidents Page\nSection 7.6, Viewing Incidents in the Open List\nWe updated these sections with new screenshots and updated explanations of the navigation points of the Incidents page and Open List.\nSection 8.1, Overview of Managing Transaction Alerts\nWe added a new screenshot of the email notification sent out for alerted or Auto Risk flagged wire transactions. We also added information about wire transactions and a new screenshot of what activity timelines look like now that Monitor Mode is available for wire transactions.\nSection 8.5, Adding Manual Alerts to Unalerted Transactions\nWe updated this section with explanations regarding wire transactions and creating manual alerts on them.\nSection 8.7, Using the Search Function\nWe added information to be aware of when searching for specific wire transactions.\nSection 8.8, Recovery of Funds\nWe updated this section to include instructions for how to request for recovery of funds for wire transactions.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.\nEnterprise Fraud Management\nefm@central1.com",
+  "links": [],
+  "content_length": 1638
+}

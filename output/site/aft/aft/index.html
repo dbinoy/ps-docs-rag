@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aft — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Aft</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Aft</h1>
+    <p class="subtitle">AFT › Aft <span class="badge" style="background:#7c3aed">1 pages</span></p>
+    <div class="summary-box md-content"><p># AFT Documentation Summary</p>
+<h2>Overview</h2>
+<p>This document group covers <strong>Originating Automated Funds Transfer (AFT)</strong> operations—the core process for initiating electronic fund transfers within the Canadian Payments Association (CPA) framework.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Core Processes:</strong></p>
+<ul>
+<li>Originating AFT transaction initiation and submission</li>
+<li>AFT re-presentment handling (retry/dispute logic)</li>
+<li>CPA transaction code mappings and validation</li>
+</ul>
+<p><strong>Critical Data Flows:</strong></p>
+<ul>
+<li>Member institution → Central 1 → CPA network</li>
+<li>Transaction metadata includes CPA codes, amounts, accounts, and settlement instructions</li>
+<li>Re-presentment triggers and state management for failed transfers</li>
+</ul>
+<p><strong>Business Rules:</strong></p>
+<ul>
+<li>CPA-defined transaction codes govern transfer types and processing rules</li>
+<li>Service charge application (timing and calculation)</li>
+<li>Settlement and clearing windows tied to CPA batch schedules</li>
+</ul>
+<h2>Design Considerations</h2>
+<ul>
+<li><strong>Integration Points:</strong> CPA submission format/timing, member bank APIs, clearing/settlement systems</li>
+<li><strong>Constraints:</strong> CPA operational hours, batch processing windows, compliance with payment regulations</li>
+<li><strong>State Management:</strong> Track original vs. re-presented transactions for reconciliation</li>
+</ul>
+<p><strong>Before designing enhancements</strong>, confirm current transaction volume, SLA requirements, re-presentment failure rates, and whether changes affect CPA submission formats or member bank integrations.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="wwparcel_html.html">wwparcel.html</a></div>
+            <div class="page-preview">- **Purpose**: Comprehensive reference documentation for originating, processing, settling, and managing Automated Funds Transfer transactions across Canadian credit unions, covering PADs (Pre-authori</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

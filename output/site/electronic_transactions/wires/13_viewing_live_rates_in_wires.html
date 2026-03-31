@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 Viewing Live Rates in Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>13 Viewing Live Rates in Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>13 Viewing Live Rates in Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.13.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Viewing Live Rates in Wires</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the foreign exchange rate viewing functionality within the Wires electronic transactions module, enabling users to access current FX rates with applied spreads in real-time.</li>
+</ul>
+<ul>
+<li><strong>Core Functionality</strong>: The Rates page displays a live snapshot of FX rates at time of access; rates are dynamically updated and reflect market movements. All Wires users have read-only access to this feature.</li>
+</ul>
+<ul>
+<li><strong>FX Spread Application</strong>: Displayed rates include the institution's configured foreign exchange spread (variable per institution), meaning rates shown are not raw market rates but retail-quoted rates.</li>
+</ul>
+<ul>
+<li><strong>Rate Refresh Mechanism</strong>: Rates can be manually refreshed via UI control; no automatic real-time polling is documented—manual refresh implies either on-demand data fetching or cached rates with user-triggered updates.</li>
+</ul>
+<ul>
+<li><strong>Data Export Capability</strong>: CSV export functionality available, suggesting the system maintains exportable rate datasets and interfaces with file generation/download services.</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint - Weekend Stasis</strong>: Rates held static Friday through Sunday (no updates Saturday); Saturday rates are Friday's closing rates. This affects any integration expecting continuous 24/7 rate currency and impacts trading/settlement windows.</li>
+</ul>
+<ul>
+<li><strong>Dependency</strong>: Requires successful authentication via Wires login (Chapter 10), indicating dependency on identity/session management subsystem and role-based access control.</li>
+</ul>
+<ul>
+<li><strong>No Integration Details</strong>: Page omits upstream data sources (market feeds, rate calculation engines, or reference systems), suggesting rates are provisioned/maintained externally to this UI component.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

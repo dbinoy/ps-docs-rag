@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central 1  File Specifications — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <span>Central 1  File Specifications</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
+    <h1>🔐 Central 1  File Specifications</h1>
+    <p class="subtitle">Access and Administration › Central 1  File Specifications <span class="badge" style="background:#2563eb">5 pages</span></p>
+    <div class="summary-box md-content"><p># Central 1 File Specifications - Architecture Brief</p>
+<h2>Document Scope</h2>
+<p>This specification set defines the file format standards and operational procedures for clearing files exchanged between Central 1 and member financial institutions via the File and Report Exchange platform. It covers both inbound and outbound file processing.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>File Structure:</strong></p>
+<ul>
+<li>Files organized in batches (A header record → detail records → Z trailer record)</li>
+<li>Multiple batches supported per file</li>
+<li>Business day dating rules apply (excludes weekends, statutory holidays)</li>
+</ul>
+<p><strong>Data Flow:</strong></p>
+<ul>
+<li><strong>Inbound:</strong> Member institutions → File and Report Exchange → Central 1 processing</li>
+<li><strong>Outbound:</strong> Central 1 → File and Report Exchange → Member institutions</li>
+<li>Files retrieved/posted via Client Centre folders</li>
+</ul>
+<p><strong>Critical Design Constraints:</strong></p>
+<ul>
+<li>Strict record formatting (header/detail/trailer structure)</li>
+<li>Business day calendar compliance for transaction dating</li>
+<li>File retrieval and posting timing guidelines (Chapter 3)</li>
+<li>Integration point: File and Report Exchange (platform dependency)</li>
+</ul>
+<h2>For Architecture Planning</h2>
+<p>Before designing enhancements, confirm:</p>
+<p>1. Current file format version and batch processing rules</p>
+<p>2. Posting/retrieval SLAs and timing dependencies</p>
+<p>3. Client Centre folder access patterns and authentication</p>
+<p>4. Clearing file availability windows and schedules</p>
+<p>Reference detailed specs in Chapters 3-5 for specific format requirements.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="central_1_s_file_specifications.html">Central 1âs File Specifications</a></div>
+            <div class="page-preview">**Overview:** This page documents all file types that Central 1 generates and posts to financial institutions' File and Report Exchange folders for downstream processing (reconciliation, posting, sett</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/central_1_%20file_specifications.7.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** This page documents all file types that Central 1 generates and posts to financial institutions' File and Report Exchange folders for downstream processing (reconciliation, posting, sett</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/central_1_%20file_specifications.7.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_technical_specifications_for_clearing_files.html">3 Technical Specifications for Clearing Files</a></div>
+            <div class="page-preview">**Overview:** This page documents all file types that Central 1 generates and posts to financial institutions' File and Report Exchange folders for downstream processing (reconciliation, posting, sett</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/central_1_%20file_specifications.7.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_files_incoming_to_central_1.html">4 Files Incoming to Central 1</a></div>
+            <div class="page-preview">**Overview:** This page documents all file types that Central 1 generates and posts to financial institutions' File and Report Exchange folders for downstream processing (reconciliation, posting, sett</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/central_1_%20file_specifications.7.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_files_outgoing_from_central_1.html">5 Files Outgoing from Central 1</a></div>
+            <div class="page-preview">**Overview:** This page documents all file types that Central 1 generates and posts to financial institutions' File and Report Exchange folders for downstream processing (reconciliation, posting, sett</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/central_1_%20file_specifications.7.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Currency Notices on FX Notes — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>8 Currency Notices on FX Notes</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>8 Currency Notices on FX Notes</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.08.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Currency Notices on FX Notes</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the user-facing notice system for FX Notes, enabling admins to communicate currency availability updates and critical information to dashboard users.</li>
+</ul>
+<ul>
+<li><strong>Two operational modes</strong>:</li>
+<li><strong>View mode</strong>: End users see notices in the "Important Information" section on FX Notes home page (passive consumption)</li>
+<li><strong>Post mode</strong>: FX Notes Managers access Administration > Important Posts to create and publish notices (active management)</li>
+</ul>
+<ul>
+<li><strong>Notice scope</strong>: Notices can be institution-specific (optional filtering by institution entity) or broadcast system-wide, suggesting a multi-tenant architecture where notices may apply to a subset of institutions.</li>
+</ul>
+<ul>
+<li><strong>Data flow</strong>: Admin creates notice via form input (institution selection + content) → Save action persists to backend → Notice renders on Dashboard and home page Important Information section (no apparent approval workflow).</li>
+</ul>
+<ul>
+<li><strong>Access control dependency</strong>: Role-based access restricted to "FX Notes Managers" for posting; implies authentication/authorization layer validates permissions before exposing Administration menu.</li>
+</ul>
+<ul>
+<li><strong>No versioning or audit trail mentioned</strong>: Current documentation does not specify notice edit/delete capabilities, expiration logic, or historical tracking of posted notices—potential gaps for compliance or rollback scenarios.</li>
+</ul>
+<ul>
+<li><strong>Integration constraint</strong>: Notice system appears isolated to FX Notes dashboard UI; no mention of notification channels (email, API webhooks) or downstream system impacts, limiting reach beyond active application users.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 AFT Reports — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_reports/index.html'>Aft Reports</a> <span class='sep'>›</span> <span>3 AFT Reports</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Reports</a>
+    <h1>3 AFT Reports</h1>
+    <p class="subtitle">AFT › Aft Reports</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_reports.7.3.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># AFT Reports Summary</p>
+<ul>
+<li><strong>Overview</strong>: Documents six core AFT reporting types (AIBC/AIBU/AIOC/AIOU, AFTD/UFTD, AFMS/UFMS, L003/U003, AFTM/UFTM, CCD/UCD) that provide transaction visibility, fee tracking, and reconciliation for financial institutions and originators across CAD and USD currencies.</li>
+</ul>
+<ul>
+<li><strong>Currency & Regional Segregation</strong>: All reports dual-report by currency (Canadian on primary code, US on secondary code) and by charter/branch; AFMS/UFMS and L003/U003 are BC-only; CCD/UCD reports per CR file in BC and per ON file in Ontario—architecture must support parallel report streams per currency and region.</li>
+</ul>
+<ul>
+<li><strong>Fee Processing Models</strong>: Two distinct billing patterns exist—daily (AFTD/UFTD, next business day distribution) vs. monthly (AFMS/UFMS, AFTM/UFTM)—with setup fees always charged in CAD regardless of file currency; financial institutions manually post charges to originator accounts, requiring integration with GL/billing systems.</li>
+</ul>
+<ul>
+<li><strong>Key Data Structures</strong>: Reports organize around Originator ID, branch/charter hierarchy, file creation numbers, and transaction record types (C/D/E/F/I/J records per ATS standard); AIBC/AIOU report opening/closing balances and net activity; CCD/UCD report offsetting entries and return codes (e.g., 903 for recalls).</li>
+</ul>
+<ul>
+<li><strong>Reconciliation & Offsetting Logic</strong>: Net AFT activity of zero prevents posting; non-zero activity posts debit or credit entry; offsetting entries are system-generated except in specific return scenarios (ORS/Batch Return Service) where financial institutions may submit manual offsets—architects must handle conditional offsetting logic.</li>
+</ul>
+<ul>
+<li><strong>System Dependencies</strong>: Reports reference CAS Online for account data access, PaymentStream AFT for file uploads, ORS (Outbound Return Service) and Batch Return Service for returns, and the File and Report Exchange; CCD/UCD is optional/request-enabled and requires tracing integration for manual posting workflows.</li>
+</ul>
+<ul>
+<li><strong>Distribution Schedule & Constraints</strong>: AIBC/AIOU produced daily (available next business day); AFTD/UFTD produced only if activity exists; L003/U003 monthly on last business day; AFMS/UFMS and AFTM/UFTM monthly—distribution timing impacts downstream reconciliation windows and settlement cycles.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

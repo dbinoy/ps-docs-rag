@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 FX Notes Settlement and Trace Request — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>13 FX Notes Settlement and Trace Request</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>13 FX Notes Settlement and Trace Request</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.13.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># FX Notes Settlement and Trace Request - Architecture Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Defines settlement mechanics, posting procedures, and reconciliation workflows for FX Notes transactions across BC/Ontario member institutions and non-member financial institutions via AFT channels.</li>
+</ul>
+<ul>
+<li><strong>Settlement Architecture</strong>: Net settlement model posts to financial institution Canadian dollar current accounts using transaction code <strong>FC</strong> (wholesale value inclusive of fees); amount can be credit or debit; posted next business day after Globex 2000 settlement file receipt by Central 1.</li>
+</ul>
+<ul>
+<li><strong>Posting Routing</strong>: Member institutions receive postings by branch or designated transit number (e.g., head office) to Canadian dollar current accounts; non-members receive settlements via AFT with expected processing within two business days of Globex delivery.</li>
+</ul>
+<ul>
+<li><strong>External System Dependencies</strong>: Globex 2000 (settlement file source), Central 1 Banking System (Current Account Services for viewing postings), File and Report Exchange (AIBC/AIOC report distribution for BC/Ontario respectively).</li>
+</ul>
+<ul>
+<li><strong>Key Data Fields & Codes</strong>: Transaction code <strong>FC</strong> (identifies FX Notes postings), wholesale value (settlement basis, excludes institution spread/fees), AIBC (BC) and AIOC (Ontario) account activity reports; non-members reference Provincial Central reports.</li>
+</ul>
+<ul>
+<li><strong>Reconciliation Integration</strong>: Profitability report (Manager/Auditor roles only) displays revenue by transaction with wholesale and customer details; reconciles against AIBC/AIOC reports (member institutions) or Provincial Central reports (non-members) using FC transaction code filtering.</li>
+</ul>
+<ul>
+<li><strong>Operational Constraint</strong>: Non-business-day transactions (e.g., Saturday) delay processing to next business day; settlement posting lag is minimum one business day from file receipt.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

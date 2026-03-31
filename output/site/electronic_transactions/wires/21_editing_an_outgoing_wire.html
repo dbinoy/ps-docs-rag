@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>21 Editing an Outgoing Wire — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>21 Editing an Outgoing Wire</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>21 Editing an Outgoing Wire</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.21.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Editing an Outgoing Wire</p>
+<ul>
+<li><strong>Purpose</strong>: Defines the workflow and constraints for modifying outgoing wire transfers prior to approval, with role-based access controls and audit logging.</li>
+</ul>
+<ul>
+<li><strong>Editable vs. Locked Fields</strong>: Users can modify Sender, Beneficiary, Payment Details, Sender FI to Receiver FI Information, and Regulatory information fields. Immutable fields (Sending FI, Beneficiary FI, Amount, Currency, Fees, Sender FI Details, Receiver FI Details, Intermediary) require wire cancellation and recreation if changes are needed.</li>
+</ul>
+<ul>
+<li><strong>Role-Based Access Control</strong>: Three user categories have edit permissions—(1) wire creator until full approval, (2) users with "Authorize Outgoing Transfers" permission until second-level approval, and (3) subsequent editors are restricted to creator and initial editor only. Critical constraint: users cannot approve wires they edit.</li>
+</ul>
+<ul>
+<li><strong>Two-Factor Authentication</strong>: Required only for users with approval permissions accessing the "Pending Outgoing" queue; creators accessing "Submitted Wires" bypass 2FA, indicating differential security posture based on authorization level.</li>
+</ul>
+<ul>
+<li><strong>Audit Trail</strong>: System records transaction modification metadata (timestamp and user ID of most recent edit) in the Transaction Information section, essential for compliance and reconciliation.</li>
+</ul>
+<ul>
+<li><strong>State Management Dependencies</strong>: Wire editability depends on approval workflow state (single vs. two-step approval paths); editing resets approval gates, requiring re-authorization by secondary approvers.</li>
+</ul>
+<ul>
+<li><strong>UI/Process Flow</strong>: Edit workflow involves authentication → queue selection → wire selection → field modification → confirmation review → receipt generation, with no explicit API endpoints or system integration points documented.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

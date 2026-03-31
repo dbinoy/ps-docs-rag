@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Logging in to Data Hub — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <a href='../../data_hub/data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <span>5 Logging in to Data Hub</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Data Hub</a>
+    <h1>5 Logging in to Data Hub</h1>
+    <p class="subtitle">Data Hub › Data Hub</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.5.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Data Hub Login Process Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Provides step-by-step authentication procedures for accessing the Data Hub Payments Dashboard through the Client Centre portal at https://clients.central1.com</li>
+</ul>
+<ul>
+<li><strong>Authentication Architecture</strong>: Multi-step federated login requiring Client Centre credentials with mandatory Microsoft Online Services authentication using Client Centre ID with @central1client.com domain suffix (e.g., testuser@central1client.com)</li>
+</ul>
+<ul>
+<li><strong>Key Integration Point</strong>: Data Hub depends on Client Centre as the identity provider and gateway; users cannot access Data Hub directly but must route through Client Centre's Applications menu (Applications > Payments Dashboard)</li>
+</ul>
+<ul>
+<li><strong>Session Management & Constraints</strong>:</li>
+<li>Login experience varies based on browser history, cookies, and previous authentication state</li>
+<li>Initial logins, cookie deletion, or incognito/private browsing modes trigger username pre-prompts</li>
+<li>System supports account selection from previous sessions on "Pick an account" page for returning users</li>
+</ul>
+<ul>
+<li><strong>Two Documented Login Scenarios</strong>: Scenario 1 requires "Use another account" selection before credential entry; Scenario 2 uses direct Client Centre ID submission—both conclude with "Stay signed in" confirmation, indicating persistent session capability</li>
+</ul>
+<ul>
+<li><strong>Troubleshooting Pattern</strong>: Documentation explicitly recommends private/incognito sessions and strict adherence to @central1client.com domain format as primary diagnostic steps, suggesting credential format mismatches are common failure points</li>
+</ul>
+<ul>
+<li><strong>Application Grouping Model</strong>: Applications are categorized by type (Admin & Support, Payments) with favorite-starring capability, indicating a hierarchical application discovery model architects should account for when adding new integrations</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

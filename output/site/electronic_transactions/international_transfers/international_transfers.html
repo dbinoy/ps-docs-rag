@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>International Transfers — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/international_transfers/index.html'>International Transfers</a> <span class='sep'>›</span> <span>International Transfers</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to International Transfers</a>
+    <h1>International Transfers</h1>
+    <p class="subtitle">Electronic Transactions › International Transfers</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/international_transfers.6.1.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Traces and Reversal Requests for International Transfers</p>
+<ul>
+<li><strong>Purpose</strong>: Documents trace and reversal request procedures for international transfers within the Payment Solutions platform, specifically addressing how to investigate and resolve transfer issues.</li>
+</ul>
+<ul>
+<li><strong>Trace Management</strong>: International transfer traces follow the same operational model as electronic bill payment traces; operators use BPCV (Bill Payment Confirmation Verification) and BPRE (Bill Payment Reversal/Exception) reports to audit transfer timing, receiving biller identification, and credited account numbers.</li>
+</ul>
+<ul>
+<li><strong>Online Tracing System Integration</strong>: Trace investigations require escalation to the Online Tracing System (referenced as "Part" in documentation); this is a dependency for root-cause analysis of failed or delayed transfers.</li>
+</ul>
+<ul>
+<li><strong>Reversal Request Constraint</strong>: Reversal requests are explicitly <strong>prohibited</strong> for international transfers as a fraud prevention control—this is a hard business rule that architects must enforce at the API and workflow layer.</li>
+</ul>
+<ul>
+<li><strong>Third-Party Dependency</strong>: Agility Forex is the operational partner responsible for issue remediation when problems occur; there is no automated reversal pathway, only manual reconciliation through Agility Forex support channels (contact details in Section 1.3).</li>
+</ul>
+<ul>
+<li><strong>Data Structure Dependencies</strong>: BPCV and BPRE reports imply structured logging of: transfer timestamp, destination biller entity, credited account identifier, and transfer status—these fields must be queryable and auditable.</li>
+</ul>
+<ul>
+<li><strong>Design Constraint for Enhancement</strong>: Any new international transfer features must prevent reversal initiation at all system touchpoints (UI, API, batch processes) and route all exception handling through Agility Forex escalation workflows rather than automated reversals.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

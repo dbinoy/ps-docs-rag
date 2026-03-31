@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Processing ICBC Agentsâ Deposits — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/icbc_agents_deposits_bc/index.html'>Icbc Agents Deposits Bc</a> <span class='sep'>›</span> <span>5 Processing ICBC Agentsâ Deposits</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Icbc Agents Deposits Bc</a>
+    <h1>5 Processing ICBC Agentsâ Deposits</h1>
+    <p class="subtitle">Clearing and Deposits › Icbc Agents Deposits Bc</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.5.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement of ICBC Agents' Accounts - Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1.</li>
+</ul>
+<ul>
+<li><strong>Branch Capture Settlement Flow</strong>: Central 1 credits the financial institution's Central 1 account for cheques processed via Branch Capture; deposits flagged with code "BC" on statements (AIBC/AIBU for BC; AIOC/AIOU for Ontario).</li>
+</ul>
+<ul>
+<li><strong>Deposit Adjustment Triggers</strong>: Central 1 issues adjustments for unprocessable items (image quality, piggybacks), keying errors with force-balanced deposits, or ineligible items (currency mismatch, non-clearing eligible).</li>
+</ul>
+<ul>
+<li><strong>ICBC Agent Account Sweep Mechanism</strong>: Central 1 initiates a sweep that debits the agent account via PAD the following day based on deposit totals reported on the ICBC Deposit Slip in ServiceNow; transactions appear on the Automated Transfer System Detailed Listing (CCD) report with expected zero balance per cycle.</li>
+</ul>
+<ul>
+<li><strong>Reconciliation Requirement</strong>: Financial institutions must monitor and reconcile ICBC agent accounts daily; PAD failures must not be returned through clearing and require a Paper Payments and Cash Returns Trace Request form submission in ServiceNow (referenced in Section 6.2).</li>
+</ul>
+<ul>
+<li><strong>Key Integration Points</strong>: ServiceNow (deposit slip reporting), Branch Capture system, Automated Transfer System (CCD reporting), and PAD processing infrastructure.</li>
+</ul>
+<ul>
+<li><strong>Architectural Constraint</strong>: Zero-balance expectation at cycle end requires precise reconciliation logic and error handling outside standard clearing return mechanisms.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

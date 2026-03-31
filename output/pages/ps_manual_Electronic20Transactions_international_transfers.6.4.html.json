@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/international_transfers.6.4.html",
+  "title": "4 Traces and Reversal Requests for International Transfers",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "4\tTraces and Reversal Requests for International Transfers\n4.1\tOverview of Traces and Reversal Requests for International Transfers\nInternational transfers traces are managed like electronic bill payment traces. Use the BPCV or BPRE reports to determine when a bill payment was sent, which biller was credited, and which biller account number was paid. See the Online Tracing System Part if a trace is required.\nReversal requests arenât permitted for international transfers to help prevent fraudulent transactions. However, Agility Forex works with your client to rectify issues if they arise during the international transfer. See Section 1.3, Contacts, Websites, and Other Resources, for contact information.\nEND",
+  "links": [],
+  "content_length": 717
+}

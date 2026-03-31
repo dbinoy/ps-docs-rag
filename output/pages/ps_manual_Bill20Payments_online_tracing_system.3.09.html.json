@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.09.html",
+  "title": "9 Archiving Closed Trace Requests",
+  "section_path": "ps_manual > Bill%20Payments",
+  "breadcrumb": [],
+  "body_text": "9\tArchiving Closed Trace Requests\n9.1\tArchiving Closed Trace Requests\nClosed trace requests are automatically archived after seven calendar days, but Tracers and SuperTracers can initiate the archive process any time before this deadline. Archived trace requests are removed from the OLT Inbox but are accessible through the Search Trace Request function.\nA Tracer or SuperTracer proceeds as follows to archive a trace request:\nLog in to OLT, as described in Section 6.2, Logging in to OLT.\nSelect the closed trace in the Inbox that you want to archive. See Figure 1.\nNote:\tClosed traces with a status of âclosed â pending adjustmentâ canât be archived.\nFigure 1: Select Trace\nSelect\nArchive this Trace Request\n. See Figure 2.\nFigure 2: Archive Trace\nSelect\nOK\nto confirm the request.\nEND",
+  "links": [],
+  "content_length": 796
+}

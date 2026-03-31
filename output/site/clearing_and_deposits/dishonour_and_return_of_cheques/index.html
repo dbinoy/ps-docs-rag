@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dishonour And Return Of Cheques — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Dishonour And Return Of Cheques</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Dishonour And Return Of Cheques</h1>
+    <p class="subtitle">Clearing and Deposits › Dishonour And Return Of Cheques <span class="badge" style="background:#dc2626">10 pages</span></p>
+    <div class="summary-box md-content"><p># Dishonour and Return of Cheques – Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group defines Central 1's operational procedures for dishonoring and returning cheques, governed by Payments Canada (CPA) rules. It covers the complete lifecycle from dishonour decision through settlement and reporting.</p>
+<h2>Key Architecture Touchpoints</h2>
+<p><strong>Primary Systems:</strong></p>
+<ul>
+<li><strong>ORS (Online Return System)</strong>: Primary channel for cheque dishonour and return processing</li>
+<li><strong>ServiceNow</strong>: Manual return request entry when ORS unavailable</li>
+<li><strong>Clearing System</strong>: Secondary path for re-entered cheques (with restrictions)</li>
+<li><strong>Settlement Accounts</strong>: CAD/USD segregated credit accounts for return item settlement</li>
+</ul>
+<p><strong>Critical Data Flows:</strong></p>
+<p>1. Dishonour trigger → ORS submission or manual ServiceNow entry</p>
+<p>2. Notice generation to Negotiating Financial Institution (postal notification)</p>
+<p>3. Return item processing through clearing system</p>
+<p>4. Settlement posting to member institution accounts</p>
+<p>5. Reimbursement claims (BC government cheques, fraudulent items)</p>
+<p><strong>Key Rules:</strong></p>
+<ul>
+<li>Cheque re-entry through clearing limited; generally discouraged</li>
+<li>Manual procedures required when ORS/ServiceNow unavailable; escalate to Central 1</li>
+<li>Currency-specific settlement routing</li>
+<li>Government cheque reimbursement requires separate claims process</li>
+</ul>
+<p><strong>Design Constraints:</strong></p>
+<ul>
+<li>Compliance with CPA regulations mandatory</li>
+<li>Dual-system redundancy (ORS + ServiceNow + manual contingency)</li>
+<li>Postal notification requirement for NFI communication</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="dishonour_and_return_of_cheques.html">Dishonour and Return of Cheques</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_providing_notice_of_dishonour.html">4 Providing Notice of Dishonour</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_dishonour_and_return_of_cheques_procedures.html">5 Dishonour and Return of Cheques Procedures</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_dishonoured_cheques_that_are_re_entered_through_the_clearing_system_procedures.html">6 Dishonoured Cheques that are Re-entered through the Clearing System Procedures</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_reimbursement_of_government_cheques_and_dishonoured_payments.html">7 Reimbursement of Government Cheques and Dishonoured Payments</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_entering_manual_returns_and_reimbursement_requests_on_servicenow.html">8 Entering Manual Returns and Reimbursement Requests on ServiceNow</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_contingency_procedures_for_returning_cheques.html">9 Contingency Procedures for Returning Cheques</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_settlement_and_reports.html">10 Settlement and Reports</a></div>
+            <div class="page-preview">- **Overview**: Describes settlement mechanics for returned cheques and two primary reporting mechanisms (ORPI/ORUI and AIBC/AIOU/AIOC/AIOU) that track return processing and current account activity a</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/dishonour_and_return_of_cheques.05.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

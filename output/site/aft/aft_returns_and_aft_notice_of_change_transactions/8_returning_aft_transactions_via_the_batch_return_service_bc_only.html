@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Returning AFT Transactions via the Batch Return Service â BC Only — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_returns_and_aft_notice_of_change_transactions/index.html'>Aft Returns And Aft Notice Of Change Transactions</a> <span class='sep'>›</span> <span>8 Returning AFT Transactions via the Batch Return Service â BC Only</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Returns And Aft Notice Of Change Transactions</a>
+    <h1>8 Returning AFT Transactions via the Batch Return Service â BC Only</h1>
+    <p class="subtitle">AFT › Aft Returns And Aft Notice Of Change Transactions</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_returns_and_aft_notice_of_change_transactions.5.08.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># AFT Notice of Change Transactions - Architecture Summary</p>
+<ul>
+<li><strong>Purpose</strong>: AFT NOC transactions are non-financial notification messages that update Transit Number or account number routing information for AFT Originators when changes occur (branch closures, acquisitions, account transfers, or correction of initial routing data).</li>
+</ul>
+<ul>
+<li><strong>Scope Constraint</strong>: NOC transactions are created only for routing updates within the same financial institution; institution-to-institution Payor/Payee migrations do not trigger NOC creation per CPA Rule F1 and H1.</li>
+</ul>
+<ul>
+<li><strong>Creation Flow</strong>: Financial institutions originate AFT NOC transactions via the Online Return System (ORS), with origination tracked in the NOC – Originated by Credit Union (NCOC/NUOC) report.</li>
+</ul>
+<ul>
+<li><strong>Reception & Processing Flow</strong>: Originating Direct Clearers send NOC transactions to AFT Originators; institutions must review the Notice of Change (AFT) Detailed Listing (NCDL/NUDL) report and update their AFT routing databases (either PaymentStream AFT or alternative software) immediately upon receipt—this is a mandated regulatory requirement under CPA Rules F1 and H1.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: System must integrate with ORS for NOC creation, generate/distribute NCDL/NUDL reports to institutions and originators, and synchronize with downstream AFT transaction processing systems (PaymentStream AFT, alternative software) to prevent routing delays.</li>
+</ul>
+<ul>
+<li><strong>Data Accuracy Responsibility</strong>: Originating Direct Clearers are accountable for NOC transaction accuracy; immediate database updates by receiving institutions are required to prevent processing failures in subsequent AFT transactions.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

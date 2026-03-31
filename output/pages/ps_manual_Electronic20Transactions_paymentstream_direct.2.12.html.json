@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.12.html",
+  "title": "12 CRA Business Taxes",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "12\tCRA Business Taxes\n12.1\tOverview of CRA Business Taxes\nBusiness Taxes is a product on the\nPaymentStream\nTM\nDirect platform that allows you to\nsubmit CRA business tax filings and payments electronically, and\nview filings and remittance history in\nPaymentStream\nDirect Administration.\nNote:\tBusiness Taxes isnât connected to your banking system.\nBusiness Taxes has two environments: test and production. The test environment is used for training purposes only. The production environment is used for submitting filings and payments to CRA via Central 1.\nCRA remittance vouchers that are available on Business Taxes are filed electronically along with the payment. CRA remittance vouchers that arenât available on Business Taxes canât be processed electronically and must be sent to CRA by mail or courier.\nSee the CRA Business Taxes Part for the following information:\nLegal and policy considerations\nWorkflow Options\nUser set-up and access to Business Taxes\nProcess of remittance vouchers (manual and electronic filing)\nReconstruction of CRA voucher bundles lost in transit\nSettlement, reports, and reconciliation\nEND",
+  "links": [],
+  "content_length": 1125
+}

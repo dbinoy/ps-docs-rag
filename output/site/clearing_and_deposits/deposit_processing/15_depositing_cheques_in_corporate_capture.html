@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15 Depositing Cheques in Corporate Capture — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/deposit_processing/index.html'>Deposit Processing</a> <span class='sep'>›</span> <span>15 Depositing Cheques in Corporate Capture</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Deposit Processing</a>
+    <h1>15 Depositing Cheques in Corporate Capture</h1>
+    <p class="subtitle">Clearing and Deposits › Deposit Processing</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/deposit_processing.02.15.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Accepting Cheques on Collection</p>
+<p><strong>Overview:</strong> This page defines the manual process for collecting cheques ineligible for Central 1 deposit by directly requesting settlement from drawee financial institutions, including eligibility criteria, collection request workflows, and settlement handling.</p>
+<p><strong>Key Concepts & Rules:</strong></p>
+<ul>
+<li>Cheques ineligible for Central 1 deposit (e.g., non-USD foreign currency) can be sent "on collection" directly to the drawee branch, but Central 1 does not process these requests</li>
+<li>Collections are costly (drawee branch charges can exceed item value); Central 1 recommends against collecting items ≤$300 CAD equivalent</li>
+<li>No conventional recourse rights apply; settlement delays are expected and can be lengthy</li>
+<li>Foreign cheques become stale-dated after 6 months; items <1 month from stale-date risk return</li>
+<li>Endorsement requirements vary by drawee jurisdiction (US/foreign banks require payee name + account number; domestic may accept "deposited to account of" stamp)</li>
+</ul>
+<p><strong>Data Structures & Reference Formats:</strong></p>
+<ul>
+<li><strong>Collection Reference Number Format:</strong> `COLL[branch#][YY][sequential#]` (e.g., COLL62002-16-01)</li>
+<li><strong>Tracking Forms:</strong> Outgoing Deposit Collection Items Register (Form 1089, Excel-based); Outgoing Collection Request (Form 1061)</li>
+<li><strong>Required Documentation:</strong> Cheque (front/back copies), completed Form 1061, routing instructions, identification stamp, endorsement guarantee stamp with teller signature</li>
+</ul>
+<p><strong>Process Flow & Integration Points:</strong></p>
+<ul>
+<li>Financial institution initiates collection request directly with drawee branch (no Central 1 involvement in routing)</li>
+<li>Settlement typically received via incoming wire transfer; triggers customer account credit</li>
+<li>Unpaid items returned by drawee branch; institution debits customer for associated charges</li>
+<li>Pending vs. completed collection request folders for lifecycle tracking</li>
+</ul>
+<p><strong>Architectural Constraints:</strong></p>
+<ul>
+<li>No automated Central 1 processing—this is a manual, branch-level workflow with external dependency on drawee branch responsiveness</li>
+<li>Settlement delivery mechanism (wire transfer) requires integration with wire processing system</li>
+<li>Form 1061 may or may not be returned by drawee branch (no guaranteed two-way confirmation)</li>
+<li>Monitoring/follow-up logic relies on institution-defined time limits for payment/non-acceptance response</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.02.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Payment Solutions Terminology (Currency Section)</p>
+<ul>
+<li><strong>Purpose</strong>: Defines foundational terminology for the FX Notes foreign currency trading system and associated Client Centre portal infrastructure</li>
+</ul>
+<ul>
+<li><strong>User Role Hierarchy</strong>: Four distinct permission tiers—FX Notes Standard User (process orders, view branch-specific data), FX Notes Manager (process orders + manage spreads), FX Notes Auditor (view-only across all branches), and User Management Security Officer (administer users/security)—requiring role-based access control implementation</li>
+</ul>
+<ul>
+<li><strong>Transit Number Structure</strong>: Critical 9-digit identifier combining leading zero + 3-digit institution number (CPA-assigned, e.g., 809 for BC credit unions) + 5-digit branch number; must be validated in any currency ordering or transaction lookup workflow</li>
+</ul>
+<ul>
+<li><strong>Transaction Identification</strong>: Reference numbers uniquely identify FX Notes transactions; architects should ensure these persist in audit logs and reconciliation systems for PCMLTFA compliance</li>
+</ul>
+<ul>
+<li><strong>Business Day Definition</strong>: Weekday operations excluding statutory holidays (including Quebec-specific observances); affects settlement timing, cutoff windows, and SLA calculations—requires jurisdiction-aware holiday calendar configuration</li>
+</ul>
+<ul>
+<li><strong>Currency Classification</strong>: System distinguishes Major vs. Minor currencies; likely affects pricing, spreads, order processing logic, and availability constraints that should be parameterized for future currency additions</li>
+</ul>
+<ul>
+<li><strong>Portal Dependencies</strong>: Client Centre is the single access point for all FX Notes operations and user management; CPS Admin and User Management are separate but interconnected subsystems for identity governance—consider authentication federation and session management requirements</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

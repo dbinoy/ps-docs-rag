@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2011.html",
+  "title": "20:11 â April 29, 2020",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "20:11 â April 29, 2020\nElectronic Bill Payment System Part Update\nCentral 1 is offering a biller transaction limit service that allows financial institutions to set a transaction limit on a certain number of billers of your choice. This service is only available to Central 1âs real time clients. It is not compatible for financial institutions that use batch integration, since the biller transaction limit is only verified for electronic bill payments made online, by telephone banking, at an ATM, or in-branch.\nWe updated the Electronic Bill Payments System Part in the Payment Solutions Manual as described in the table below.\nBill Payments Volume\nElectronic Bill Payments System Part\nSection 1.2, Biller Transaction Limits\nWe added this section.\nSection 1.4, Electronic Bill Payments System Document Library\nWe added the Biller Transaction Limit Modification Request â Electronic Bill Payments System, Form 9116.\nDocument Library\nStatus\nFinancial Institution Transaction Limit Modification Request â Electronic Bill Payments System\n2424\nAdded âFinancial Institutionâ to the title.\nRevised\nBiller Transaction Limit Modification Request â Electronic Bill Payments System\n9116\nNew\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1293
+}

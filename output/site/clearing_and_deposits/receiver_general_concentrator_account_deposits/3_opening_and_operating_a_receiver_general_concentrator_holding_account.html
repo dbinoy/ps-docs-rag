@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 Opening and Operating a Receiver General Concentrator Holding Account — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/receiver_general_concentrator_account_deposits/index.html'>Receiver General Concentrator Account Deposits</a> <span class='sep'>›</span> <span>3 Opening and Operating a Receiver General Concentrator Holding Account</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Receiver General Concentrator Account Deposits</a>
+    <h1>3 Opening and Operating a Receiver General Concentrator Holding Account</h1>
+    <p class="subtitle">Clearing and Deposits › Receiver General Concentrator Account Deposits</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/receiver_general_concentrator_account_deposits.11.3.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement of Receiver General Concentrator Holding Account - Summary</p>
+<ul>
+<li><strong>Overview</strong>: Documents the settlement workflow for cheques processed via Branch Capture and the sweep mechanism for Receiver General Concentrator holding accounts, including reconciliation requirements and error handling procedures.</li>
+</ul>
+<ul>
+<li><strong>Branch Capture Settlement</strong>: Central 1 credits institutions' Central 1 accounts for Branch Capture cheque values; deposits appear on statements (AIBC/AIBU for BC, AIOC/AIOU for Ontario) with code "BC". Deposit adjustments are issued for processing failures, keying errors, or ineligible items (currency mismatches, non-clearing eligible items).</li>
+</ul>
+<ul>
+<li><strong>Sweep Mechanism & Data Flow</strong>: Central 1 initiates sweeps that debit Receiver General Concentrator holding accounts based on deposit totals submitted via ServiceNow Receiver General Deposit Request; transactions appear on Automated Transfer System Detailed Listing (CCD) report; holding account balance must zero each cycle.</li>
+</ul>
+<ul>
+<li><strong>Daily Reconciliation Requirement</strong>: Institutions must actively monitor and reconcile Receiver General Concentrator holding accounts daily; this is a critical control point and dependency on institution-side processes.</li>
+</ul>
+<ul>
+<li><strong>PAD Error Handling Constraint</strong>: Pre-authorized debit (PAD) errors must NOT be returned through clearing; instead, errors require submission of "Paper Payments and Cash Returns Trace Request" form in ServiceNow (cross-reference to Section 6.2).</li>
+</ul>
+<ul>
+<li><strong>Downstream Settlement</strong>: Central 1 calculates total value for Receiver General's Concentrator account at Central 1, then initiates wire transfer to Receiver General with deposit summary detail keyed by Routing Authorization Number—represents integration point with external wire transfer and reporting systems.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: ServiceNow (Receiver General Deposit Request, Paper Payments and Cash Returns Trace Request), Deposit Processing system, Automated Transfer System (CCD reporting), and external wire transfer rails.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2109.html",
+  "title": "21:09 â March 23, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:09 â March 23, 2021\nCurrency Ordering Part Update\nWe updated content in the Currency Ordering Part as described in the table below.\nCurrency Volume\nCurrency Ordering Part\nSection 4.4, Updating a Cash Order Location or Limit\nWe added a note indicating that you can contact Central 1âs AFT Desk if you need to inactivate a cash order location.\nSection 6.7, Unlocking a Userâs Account\nWe clarified the Inactive status when itâs related to locked out accounts and updated the procedures accordingly.\nSection 7.2, Creating Currency Orders in Cash Services\nWe updated the procedures to indicate a new field called Carrier Location in the Order Entry form. This field is optional and can be used to enter any relevant information for the employees receiving the parcel at your member location (e.g., âfor ATM 123â).\nSection 7.3, Managing Currency Orders in Cash Services\nWe added a note to clarify that once cash orders are moved to Carrier Check & Released, they canât be edited or deleted.\nSection 8.1, Overview of Standing Orders, Late Orders, Contingency Orders, and New Bank Notes\nWe added a summary of information on new bank notes.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1245
+}

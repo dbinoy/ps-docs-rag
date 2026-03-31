@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clearing and Deposits — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Clearing and Deposits</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>📥 Clearing and Deposits</h1>
+    <p class="subtitle"><span class="badge" style="background:#dc2626">124 pages</span></p>
+    <div class="summary-box md-content"><p># Clearing and Deposits – Section Overview</p>
+<h2>Purpose</h2>
+<p>This section covers Central 1's end-to-end payment clearing and deposit processing workflows for member credit unions. It encompasses the receipt, validation, imaging, and settlement of deposit items (cheques, money orders, drafts, Receiver General Warrants) through multiple capture channels (Branch Capture, Corporate Capture, Mobile Deposit), as well as the handling of incoming clearing items and dishonoured cheques. This is a core operational domain managing daily fund flows and regulatory compliance.</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Clearing Process</strong>: Exchange and reconciliation of payment items between financial institutions, resulting in funds transfer. Central 1 acts as the clearing intermediary for credit union members.</p>
+<p>2. <strong>Deposit Channels</strong>: Three remote deposit mechanisms—Branch Capture (institution-side scanning), Corporate Capture (business customer self-service), and Mobile Deposit (customer mobile app)—plus traditional paper deposits. Physical items are not retained; imaging is authoritative.</p>
+<p>3. <strong>Cheque Imaging & Online Return System (ORS)</strong>: Central 1 captures and stores images of deposit items and incoming clearing items. Credit unions access via ORS portal for retrieval, chargeback handling, and reconciliation rather than requesting physical items.</p>
+<p>4. <strong>Money Orders</strong>: Credit union–drawn instruments requiring dual controls: order-to-stock management (printed on demand by Westkey/D+H), daily reconciliation of issued vs. cleared amounts, and void/refund procedures with audit trails.</p>
+<p>5. <strong>Settlement & Timing</strong>: Deposits credited same-day upon receipt/processing at Central 1. Canadian and US dollar deposits processed through distinct workflows. MERG file and reports confirm receipt and reconciliation status.</p>
+<p>6. <strong>Legal & Compliance</strong>: Institutions must enforce CPA Rules (Payments Canada), FINTRAC reporting, AML/KYC identification requirements, record-keeping mandates, and cheque validity standards (CPA Standard 006 for MICR encoding).</p>
+<h2>How It Works</h2>
+<p>1. <strong>Deposit Capture</strong>: Items scanned via Branch Capture, Corporate Capture, or Mobile Deposit; images transmitted to Central 1.</p>
+<p>2. <strong>Validation & Acceptance</strong>: Central 1 validates MICR, item format, and acceptability; rejects invalid items (returned to originating institution).</p>
+<p>3. <strong>Imaging & Indexing</strong>: Cheque images stored and linked to member accounts; available in ORS for 180 days.</p>
+<p>4. <strong>Settlement</strong>: Credits posted to credit union's Central 1 account same-day; reconciliation via MERG files and deposit reports.</p>
+<p>5. <strong>Returns & Chargebacks</strong>: Dishonoured items identified by drawee institution, returned through ORS or manual entry; notice of dishonour issued per CPA rules.</p>
+<p>6. <strong>Reconciliation</strong>: Daily reconciliation of money orders and deposits; aged deposits (>24 hours open state) escalated for management.</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>Client Centre</strong>: Portal for user access, Branch Capture/Corporate Capture application gateway.</li>
+<li><strong>ORS (Online Return System)</strong>: Image retrieval, return processing, inquiry resolution.</li>
+<li><strong>MERG File</strong>: Batch settlement and reconciliation data delivery.</li>
+<li><strong>Payments Canada (CPA)</strong>: Rule compliance; clearing and return rules.</li>
+<li><strong>Member Core Systems</strong>: Deposit posting, statement generation with images.</li>
+<li><strong>Paystation Portal</strong>: Scanner procurement for Branch/Corporate Capture.</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>No Physical Retention</strong>: Images are definitive; institutions cannot request physical cheques except for unqualified items and chargebacks. Impacts audit trail and dispute resolution design.</li>
+<li><strong>180-Day Image Window</strong>: ORS data availability expires after 6 months; long-term archival strategy required.</li>
+<li><strong>Aged Deposit Escalation</strong>: 24-hour transmission SLA for Branch Capture deposits; violations trigger escalation workflows and reporting overhead.</li>
+<li><strong>User Role Complexity</strong>: Four Branch Capture user types (Capture, Reviewer, Supervisor, Admin) with nested approval workflows</li>
+</ul></div>
+    <h2>Document Groups</h2>
+    
+            <div class="group-card">
+              <h3><a href="canadian_dollar_money_orders/index.html">Canadian Dollar Money Orders</a></h3>
+              <div class="group-count">8 pages</div>
+              <p>Canadian Dollar Money Orders – Architecture Brief Overview This document set covers the operational and compliance framework for Canadian dollar money orders issued directly by credit unions. Money orders function as…</p>
+              <a href="canadian_dollar_money_orders/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="cheque_imaging/index.html">Cheque Imaging</a></h3>
+              <div class="group-count">6 pages</div>
+              <p>Cheque Imaging System – Architecture Brief Overview Central 1's Cheque Imaging system captures and manages digital images of deposit items, chargebacks, and incoming clearing items. Physical cheques are retained only…</p>
+              <a href="cheque_imaging/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="clearing_and_deposits/index.html">Clearing And Deposits</a></h3>
+              <div class="group-count">1 pages</div>
+              <p>Clearing and Deposits Document Group - Architect Brief Purpose This document group covers Incoming Clearing Items — the inbound payment processing workflow for items cleared through Central 1's payment infrastructure.…</p>
+              <a href="clearing_and_deposits/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="deposit_processing/index.html">Deposit Processing</a></h3>
+              <div class="group-count">19 pages</div>
+              <p>Deposit Processing - Architecture Brief Overview Central 1's Deposit Processing documentation covers end-to-end handling of paper and remote deposit items (cheques, drafts, money orders, warrants) through three…</p>
+              <a href="deposit_processing/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="dishonour_and_return_of_cheques/index.html">Dishonour And Return Of Cheques</a></h3>
+              <div class="group-count">10 pages</div>
+              <p>Dishonour and Return of Cheques – Architecture Brief Overview This document group defines Central 1's operational procedures for dishonoring and returning cheques, governed by Payments Canada (CPA) rules. It covers the…</p>
+              <a href="dishonour_and_return_of_cheques/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="fx_drafts/index.html">Fx Drafts</a></h3>
+              <div class="group-count">9 pages</div>
+              <p>FX Drafts System Architecture Brief Overview FX Drafts is a Central 1–managed, in-branch draft issuance platform supporting 20+ foreign currencies (including USD). Users create and print negotiable drafts for…</p>
+              <a href="fx_drafts/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="icbc_agents_deposits_bc/index.html">Icbc Agents Deposits Bc</a></h3>
+              <div class="group-count">7 pages</div>
+              <p>ICBC Agents Deposits (BC) - Architecture Brief Overview This document group defines the operational and settlement framework for deposit accounts held by ICBC insurance agents at member credit unions. Central 1 acts as…</p>
+              <a href="icbc_agents_deposits_bc/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="incoming_clearing_items/index.html">Incoming Clearing Items</a></h3>
+              <div class="group-count">7 pages</div>
+              <p>Incoming Clearing Items – Architecture Brief Overview This document group defines Central 1's processing framework for Canadian and US dollar incoming clearing items (cheques and similar instruments) received by credit…</p>
+              <a href="incoming_clearing_items/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="online_return_system_ors/index.html">Online Return System Ors</a></h3>
+              <div class="group-count">32 pages</div>
+              <p>ORS Brief for Solutions Architect Overview The Online Return System (ORS) is Central 1's platform for processing returns and research of cheques, AFT (Automated Funds Transfer) transactions, and related items…</p>
+              <a href="online_return_system_ors/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="provincial_concentrator_account_deposits/index.html">Provincial Concentrator Account Deposits</a></h3>
+              <div class="group-count">6 pages</div>
+              <p>Provincial Concentrator Account Deposits (BC) – Architecture Brief Overview This document group defines the operational and technical framework for managing BC provincial government deposit concentrator accounts through…</p>
+              <a href="provincial_concentrator_account_deposits/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="receiver_general_concentrator_account_deposits/index.html">Receiver General Concentrator Account Deposits</a></h3>
+              <div class="group-count">7 pages</div>
+              <p>Receiver General Concentrator Account Deposits – Architecture Brief Purpose This document group defines Central 1's procedures for managing federal department and agency deposits to the Receiver General of Canada…</p>
+              <a href="receiver_general_concentrator_account_deposits/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="redeeming_or_transferring_bonds/index.html">Redeeming Or Transferring Bonds</a></h3>
+              <div class="group-count">12 pages</div>
+              <p>Briefing Summary: Bond Redemption & Transfer Operations Overview This document group defines Central 1's operational role as agent for credit unions in redeeming and transferring government and savings bonds. It covers…</p>
+              <a href="redeeming_or_transferring_bonds/index.html">View pages →</a>
+            </div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

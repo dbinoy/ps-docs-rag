@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7 MTS Administrator Management for Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>7 MTS Administrator Management for Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>7 MTS Administrator Management for Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.07.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: MTS Administrator Management for Wires</p>
+<ul>
+<li><strong>Purpose</strong>: Defines role-based administration framework for managing Wires Users, MTS Administrators, and branch settings through the Money Transfer System (MTS), with dual-system setup requirements and mandatory change authorization workflows.</li>
+</ul>
+<ul>
+<li><strong>Dual-System Architecture</strong>: MTS Administrators require Client Centre user profiles (set up in User Management with MTS application access and 2-step security tokens assigned first) plus corresponding MTS Administrator profiles created in MTS—dependency on User Management application for prerequisite credential establishment.</li>
+</ul>
+<ul>
+<li><strong>Permission Model</strong>: Eight granular permission flags control administrator capabilities (Admin U/A, Brn U/A, User U/A, Linked Transit Assignment); first two administrators provisioned by Central 1 via Form 2119 with all permissions; subsequent administrators created within MTS by existing administrators with appropriate "Update Administrator Profile" permission.</li>
+</ul>
+<ul>
+<li><strong>Processing Model Dependency</strong>: MTS Administrator home transit numbers and permission assignments are influenced by selected Wires processing model (centralized, partially centralized, or decentralized environments per Chapter 5), indicating architectural constraints tied to institutional topology.</li>
+</ul>
+<ul>
+<li><strong>Mandatory Authorization Gate</strong>: All User, Administrator, and branch changes require secondary MTS Administrator authorization via Change List queue before activation; architects must account for asynchronous state management (pending vs. active profiles) and cannot modify profiles with pending changes.</li>
+</ul>
+<ul>
+<li><strong>Data Fields & Constraints</strong>: User ID must match Client Centre username (20 character max); transit numbers pulled from dropdown linked to home transit with branch linking permissions; Daily/Transfer Limits (Canadian dollar basis with currency conversion for non-CAD wires) apply to "Authorize Outgoing Transfers" permission only.</li>
+</ul>
+<ul>
+<li><strong>Integration Point</strong>: User Management application is critical upstream dependency—removing MTS application access or deleting Client Centre profiles must be coordinated with MTS Administrator deletion; no standalone MTS user deletion without downstream User Management cleanup.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2204.html",
+  "title": "22:04 â January 31, 2022",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "22:04 â January 31, 2022\nUpdates to Currency Ordering\nWe updated the sections listed below to clarify procedures.\nCurrency Volume\nCurrency Ordering Part\nSection 6.4, Modifying Cash Services User Profiles\nWe added a step to indicate that you should select âAllâ as the status when searching for a userâs profile; otherwise, the results will not include users whose profile is locked.\nSection 9.5, Handling Discrepancies in Incoming Cash Parcels\nWe clarified content to reflect that if a cash parcel is short or over a whole bundle, you must submit the\nparcel tag\nso that RBC can see which financial institution it came from. If a discrepancy doesnât constitute a whole bundle, you must submit the\nbundle strap\nso that RBC can see which financial institution it came from.\nSection 10.11, Handling Counterfeit Bank Notes Received on Deposit\nWe clarified that your local police department (or the RCMP, if you donât have local police) will provide directions on how to proceed if you receive counterfeit bank notes on deposit. The instructions may vary by region.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1168
+}

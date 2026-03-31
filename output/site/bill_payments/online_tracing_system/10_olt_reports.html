@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 OLT Reports — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/online_tracing_system/index.html'>Online Tracing System</a> <span class='sep'>›</span> <span>10 OLT Reports</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Online Tracing System</a>
+    <h1>10 OLT Reports</h1>
+    <p class="subtitle">Bill Payments › Online Tracing System</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.10.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement of Trace Request Adjustments and Service Charges - Summary</p>
+<ul>
+<li><strong>Overview</strong>: Documents the settlement workflow for electronic bill payment trace request adjustments and service charges, including dual settlement pathways to both financial institutions and members.</li>
+</ul>
+<ul>
+<li><strong>Settlement Trigger & Timing</strong>: Settlement posts automatically when trace request status transitions to "Closed - Settled" state; timing is date-dependent on status change event.</li>
+</ul>
+<ul>
+<li><strong>Financial Institution Settlement</strong>: Posted to the FI's central credit union account at the branch level, using either the branch associated with the trace request or a FI-specified transit number as the routing identifier.</li>
+</ul>
+<ul>
+<li><strong>Transit Number as Key Routing Field</strong>: Transit number is the primary routing mechanism for settlement posting; FI-specific transit numbers can be configured via Central 1 Client Support Services—suggests configurable routing rules that must be maintained separately.</li>
+</ul>
+<ul>
+<li><strong>OLT Reports System Integration</strong>: Daily "Closed - Settled" reports (generated via OLT Reports function in Chapter 10) are the operational source of truth; reports must surface adjustment amount, service charge amount, and transit number for reconciliation and posting.</li>
+</ul>
+<ul>
+<li><strong>Member Settlement Conditional Logic</strong>: Requires manual review of each "Closed - Settled" trace request against Additional Comments field to determine if member-level posting is required; settlement amount (adjustment and/or service charge) then posted to member account—introduces human decision point in automated workflow.</li>
+</ul>
+<ul>
+<li><strong>CAS Online Reconciliation Dependency</strong>: Settlement posting must reconcile to Current Account Services (CAS) Online postings; suggests downstream accounting system integration and potential reconciliation gaps if posting fails.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

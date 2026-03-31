@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>20 Searching for Wires and Exporting Wire Information — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>20 Searching for Wires and Exporting Wire Information</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>20 Searching for Wires and Exporting Wire Information</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.20.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Searching for Wires and Exporting Wire Information</p>
+<ul>
+<li><strong>Core functionality</strong>: Users can search, filter, and export wire transaction records (both incoming via Received Wires and outgoing via Submitted Wires) with a rolling 7-year historical data window.</li>
+</ul>
+<ul>
+<li><strong>Search constraints</strong>: Date range filters are capped at a maximum 100 calendar-day span per query, requiring architects to consider pagination or batch processing strategies for larger historical queries.</li>
+</ul>
+<ul>
+<li><strong>Data export mechanism</strong>: Search filters are applied to CSV exports, meaning the export respects all active filter criteria—this implies the export function depends on the filter state rather than querying raw data independently.</li>
+</ul>
+<ul>
+<li><strong>Data retention policy</strong>: 7-year rolling history is maintained; architects should clarify whether this is enforced at the database level or via archival/purge processes, and whether it applies uniformly across both Received and Submitted wire types.</li>
+</ul>
+<ul>
+<li><strong>Dependent process</strong>: Wire searching relies on prior navigation via Section 19.2 (Viewing Wires and Wire Details), indicating a hierarchical UI flow; any API redesign must account for this dependency chain.</li>
+</ul>
+<ul>
+<li><strong>Receipt generation and printability</strong>: Submitted wires support dual-view modes (Details vs. Receipt) and printing; the receipt view strips internal details, suggesting separate data presentation layers or field-level masking logic that architects must preserve.</li>
+</ul>
+<ul>
+<li><strong>No external system integrations mentioned</strong>: The page describes internal wire management only; no third-party payment networks, bank APIs, or settlement systems are referenced—clarify upstream/downstream integrations separately.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

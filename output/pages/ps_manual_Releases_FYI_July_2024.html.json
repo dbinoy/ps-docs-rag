@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/FYI_July_2024.html",
+  "title": "FYI â July 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "FYI â July 2024\nFYI â July 2024\nThe following updates were made to the Payment Solutions Manual and/or our Document Library.\nAFT Volume\nAFT Reports Part\nSection 3.23, Summary of Data Delivered from Batch Returns â ICDR/UCDR\nAdded an example of the ICDR/UCDR report.\nBill Payments Volume\nCRA Business Taxes Part\nSection 12.3, Tax Payments Monthly Billing (TXMC) Report\nAdded an example of the TXMC report.\nDocument Library\nStatus\nResponse Codes ISO 8583 Integration\n9346\nAdded error code 997. This error code means that the transaction timed out because the user did not complete it within a 5-minute time frame.\nRevised\nResponse Codes ISO 20022 Integration\n9347\nAdded error code 997. This error code means that the transaction timed out because the user did not complete it within a 5-minute time frame.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 914
+}

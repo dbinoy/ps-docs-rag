@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.12.html",
+  "title": "12 Settlement of Trace Request Adjustments and Service Charges",
+  "section_path": "ps_manual > Bill%20Payments",
+  "breadcrumb": [],
+  "body_text": "12\tSettlement of Trace Request Adjustments and Service Charges\n12.1\tSettlement of Adjustments and Service Charges\nUse the âClosed-Settledâ report to reconcile the transactions to the postings on Current Account Services (CAS) Online. See Chapter 10, OLT Reports, for additional information.\nSettlement with the Financial Institution\nSettlement for electronic bill payment trace request adjustments and service charges is posted on the date the status of the trace request changes to âClosed â Settledâ. Use the OLT reports function to obtain a daily list of âClosed â Settledâ trace requests. The report provides the adjustment amount, the service charge amount, and the transit number to which settlement is posted.\nSettlement is posted to the financial institutionâs account with its central credit union. Specifically, settlement is posted to the branch associated with the trace request or to the transit number specified by the financial institution.\nTo change the transit number to which settlement is posted, contact Central 1, Client Support Services.\nSettlement with the Member\nAfter the daily OLT report of âClosed â Settledâ trace requests is generated, review each trace request to determine if settlement with the member is required. Read the Additional Comments section to obtain any information from Central 1 or the biller.\nIf settlement with the member is required, post the adjustment amount and/or the service charge to the memberâs account.\nEND",
+  "links": [],
+  "content_length": 1490
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2509.html",
+  "title": "25:09 â April 1, 2025",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "25:09 â April 1, 2025\nUpdate to International Bank Account Number (IBAN) Countries, Form 9252\nWe updated the International Bank Account Number (IBAN) Countries, Form 9252 as described below.\nDocument Library\nStatus\nInternational Bank Account Number (IBAN) Countries\n9252\nWe added Mongolia to the list of IBAN regulated countries.\nCentral 1âs correspondent bank provided the following regulatory mandate issued by the Bank of Mongolia regarding their implementation of International Bank Account Numbers (IBANs). Effective April 1, 2025, an IBAN is mandatory for MNT (Mongolian Tugrik) currency wires to accounts in Mongolia. They recommend reaching out to beneficiaries to obtain and verify IBANs to avoid payments disruption. Wires without a valid IBAN will be rejected.\nThe IBAN for Mongolia consists of 20 characters, composed of: a 2-Character Country Code + 2-Digit Check Digit + 4-Digit Bank Code + 12-Digit Bank Account Number (e.g., MN580050099123456789).\nNote: Most domestic major banks have a 10-digit account number, so insert leading zeros to make the account numbers exactly 12 digits.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1207
+}

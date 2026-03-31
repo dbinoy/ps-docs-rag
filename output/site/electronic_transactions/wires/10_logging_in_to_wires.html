@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 Logging in to Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>10 Logging in to Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>10 Logging in to Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.10.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Logging in to Wires</p>
+<p><strong>Overview:</strong> This page documents the authentication flow and navigation sequence for users to access the Wires application through the Client Centre portal.</p>
+<p><strong>Key Concepts & Process Flow:</strong></p>
+<ul>
+<li>Multi-tier navigation required: Client Centre (https://clients.central1.com) → Applications → PaymentStream Direct → Transfers → Wires</li>
+<li>Authentication dependency on Client Centre; users must enter username/password at initial login or after cookie deletion/incognito session termination</li>
+<li>Applications are categorized by type (Admin & Support, Payments, etc.) with favorites functionality for quick access</li>
+</ul>
+<p><strong>Integration Points & Dependencies:</strong></p>
+<ul>
+<li>Wires module is a child application within the PaymentStream Direct ecosystem, accessed through the Client Centre authentication layer</li>
+<li>Client Centre acts as the identity and access management (IAM) gateway—all Wires access is gated by Client Centre credentials</li>
+<li>No direct URL access to Wires; must traverse the Client Centre portal workflow</li>
+</ul>
+<p><strong>Security Constraints & Operational Rules:</strong></p>
+<ul>
+<li>Mandatory session termination requirement: users must explicitly log off Client Centre and close browser when stepping away or finishing work</li>
+<li>Implicit session context: first-time users, cookie deletion, or private browsing mode triggers upstream username prompt before Client Centre login page</li>
+<li>No persistent authentication across browser sessions</li>
+</ul>
+<p><strong>Architectural Implications:</strong></p>
+<ul>
+<li>Wires inherits Client Centre's session management and authentication state—any enhancement to Wires must respect Client Centre session lifecycle</li>
+<li>Navigation structure suggests potential for streamlining user journeys if favorites are underutilized; consider deep-linking strategy for frequently accessed features</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

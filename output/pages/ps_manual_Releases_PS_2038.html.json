@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2038.html",
+  "title": "20:38 â October 7, 2020",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "20:38 â October 7, 2020\nWires Part Update\nWe updated the Wires Part to reflect new functionality that enables authorized users to create a return wire using the Wires application. Users no longer have to use MTS to return wires. Returned wires display a status of âReturnedâ in Wires and MTS. We also added clarity to the Wires user set up procedures.\nElectronic Transactions Volume\nWires Part\nChapter 5, Wires Access and Administration\nWe clarified the Wires user set up procedures.\nSection 10.1, Overview of Wires Lists\nWe updated the Status Type list to reflect the status type âReturnedâ.\nChapter 17, Returning Incoming Wires\nWe added procedures for creating a return wire in the Wires application. Authorized users can return a wire from the Pending Incoming list and Received Wires list. The status of returned wires displays as âReturnedâ in Wires and MTS.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 974
+}

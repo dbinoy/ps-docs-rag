@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 Viewing Transactions, Images, and Shipments — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>11 Viewing Transactions, Images, and Shipments</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>11 Viewing Transactions, Images, and Shipments</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.11.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Viewing Transactions, Images, and Shipments (FX Notes)</p>
+<ul>
+<li><strong>Purpose</strong>: Provides user workflows for accessing and filtering FX transaction records, shipment management, and foreign currency denomination images within the FX Notes platform.</li>
+</ul>
+<ul>
+<li><strong>Transaction Status Taxonomy</strong>: System defines 13 distinct transaction states (Draft, Pending Compliance/Operational/Financial Approval, Pending Reception, Pending Vault Processing, Ready to Prepare, Ready to Ship, Delayed, Completed, Voided, Cancelled, Adjusted) that represent approval workflows across compliance, operations, and finance teams—critical for multi-stage authorization design.</li>
+</ul>
+<ul>
+<li><strong>Transaction Filtering</strong>: Orders page supports filtering by transaction type (Buy from Client, Sell to Client), status, and date range; Shipments page supports filtering by tracking/waybill number or carrier—filters must support compound queries and be indexed for performance.</li>
+</ul>
+<ul>
+<li><strong>Shipment Label Generation</strong>: Shipping labels are generated from transaction records and retrievable via transaction Reference Number; labels are browser-printable via standard print function—no proprietary label format engine required, but audit trail needed for reprints.</li>
+</ul>
+<ul>
+<li><strong>Currency Image Management</strong>: Foreign currency denominations sourced from external vendor "Globex 2000" and stored with thumbnail/full-resolution image assets accessible via currency → denomination → image hierarchy—indicates external asset repository dependency and potential CDN integration point.</li>
+</ul>
+<ul>
+<li><strong>Dependency on Section 6.2 Authentication</strong>: All workflows require prior login via authentication process defined elsewhere; architecture must ensure session management spans multiple functional areas (Transactional → Orders/Shipments/Denomination).</li>
+</ul>
+<ul>
+<li><strong>Reference Entity Linkage</strong>: Transactions generate "Buying Operation and Client Receipt" documents; shipment tracking tied to transaction Reference Number—core data model requires strong foreign key relationships and denormalization for reporting.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

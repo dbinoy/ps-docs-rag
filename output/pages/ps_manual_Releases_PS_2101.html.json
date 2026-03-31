@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2101.html",
+  "title": "21:01 â January 8, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:01 â January 8, 2021\nUpdates to the Funds Transfers Part and International Bank Account (IBAN) Countries Form\nWe updated the Funds Transfer Part to clarify the deadline for outgoing wires flagged for compliance review. We also explain why wires sent via MTS may not immediately appear in the MTS Outbox.\nWe updated the International Bank Account Number (IBAN) Countries, Form 9252, to add the IBAN information for Libya and describe the IBAN validation process in the Wires application.\nElectronic Transactions Volume\nFunds Transfers Part\nSection 11.6, Deadlines for Outgoing Transfers\nWe added a note to the Outgoing Transfer Deadlines table clarifying that wires sent after 6:00 pm ET requiring a manual compliance review will not be released until the morning of the following business day.\nSection 13.5, Viewing Outgoing Transfers on MTS\nWe added an explanation of why an outgoing wire sent via MTS may not immediately appear in the MTS Outbox.\nDocument Library\nStatus\nInternational Bank Account Number (IBAN) Countries\n9252\nWe added the IBAN information for Libya.\nWe described the IBAN validation process. We also clarified that the Wires application will not prevent wires with incorrectly entered or missing IBANs from being sent.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1348
+}

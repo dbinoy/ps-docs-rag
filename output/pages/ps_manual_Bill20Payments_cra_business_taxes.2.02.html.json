@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.02.html",
+  "title": "2 Terminology",
+  "section_path": "ps_manual > Bill%20Payments",
+  "breadcrumb": [],
+  "body_text": "2\tTerminology\n2.1\tDefinitions\nBusiness Taxes\nBusiness Taxes is an application on the\nPaymentStream\nâ¢ Direct platform that allows authorized users to submit CRA files and business tax payments to Central 1.\nClient Centre\nThe Client Centre is a digital portal that provides secured access to Central 1âs applications and to information and news about our products and services.\nClient Centre Users\nClient Centre Users log in to the Client Centre to access certain applications. Client Centre Users canât manage CPS Admin Security Officers or other Client Centre Users.\nCPS Admin\nThe Central Portal System (CPS) Admin tool is used to add, edit, and delete Client Centre Users and CPS Admin Security Officers.\nCPS Admin Security Officers\nCPS Admin Security Officers use the CPS Admin or the User Management application to add, edit, and delete Client Centre Users. They can also delete and modify other CPS Admin Security Officers (with some exceptions) via the User Management application. CPS Admin Security Officers use the Client Centre to log in to certain applications.\nPaymentStreamâ¢\nDirect\nPaymentStream\nDirect is a user interface that provides access to Payments products,\nMemberDirect\nÂ®\nsystem support features, and related administration functions via a single sign-on to the Client Centre.\nUser Management\nUser Management is an application used to add, edit, and delete Client Centre Users. It is also used to edit and delete other CPS Admin Security Officers and to manage 2-step security tokens. Eventually, User Management will replace CPS Admin.\nEND",
+  "links": [],
+  "content_length": 1570
+}

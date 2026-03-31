@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>16 Creating a Regular Wire — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>16 Creating a Regular Wire</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>16 Creating a Regular Wire</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.16.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Creating a Regular Wire (Page 16)</p>
+<ul>
+<li><strong>Purpose</strong>: Procedural documentation for creating outgoing wires in the Wires application, covering branch selection, beneficiary institution lookup, amount/currency configuration, intermediary routing, and priority/scheduling options.</li>
+</ul>
+<ul>
+<li><strong>Key Data Flow</strong>: Sending Branch → Beneficiary FI (via SWIFT/transit/ABA routing) → Wire Amount/Currency → Intermediary (conditional) → Sender Details → Priority/Schedule → Confirmation, with Central 1 debiting the selected branch and calculating final FX rates at transaction completion.</li>
+</ul>
+<ul>
+<li><strong>Critical Field Dependencies</strong>:</li>
+<li>Wire Priority and Future Date sections only render if beneficiary FI is in Canada AND currency is CAD</li>
+<li>Intermediary Financial Institution field is conditional: required for non-domestic currency pairs (e.g., GBP→France) or when beneficiary FI mandates it; optional for domestic currency routing</li>
+<li>Currency dropdown availability is constrained by beneficiary FI country</li>
+<li>Sender address must be physical (PO Boxes rejected)</li>
+</ul>
+<ul>
+<li><strong>Compliance & Risk Gates</strong>:</li>
+<li>Country-based screening triggers warnings for tax haven/high-risk/sanctioned destinations (best-effort basis)</li>
+<li>Prohibited country destinations block wire progression with error after "Next" action</li>
+<li>FINTRAC reportability logic conditionally prompts for additional sender details; behavior customizable per institution</li>
+<li>Fee validation rule: customer-facing fee must ≥ Central 1 processing fee to recover costs</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>:</li>
+<li>Central 1 correspondent/intermediary banks deduct fees downstream (outside Wires control); FX rates determined post-submission</li>
+<li>High-priority wires route through Payments Canada Lynx system for participating institutions only; requires authorized user approval pre-processing</li>
+<li>Future-dated wires require pre-scheduled approval; cancellation requests must reach Central 1 by 2:15 PM PT/11:15 AM ET prior business day (trace request workflow in Chapter 25)</li>
+<li>Multi-branch access gated by linked transit numbers and permission model</li>
+</ul>
+<ul>
+<li><strong>Architect Must Know</strong>: Fee structure is split-layer (customer fee input → Central 1 debit to FI account month-end); wire recall/amendment/trace operations are post-release and best-effort dependent on receiving bank cooperation; Future Date has 14-day maximum horizon; foreign currency wires include configurable FX spreads per Chapter 12.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

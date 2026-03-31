@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Step Security — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <span>2 Step Security</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
+    <h1>🔐 2 Step Security</h1>
+    <p class="subtitle">Access and Administration › 2 Step Security <span class="badge" style="background:#2563eb">6 pages</span></p>
+    <div class="summary-box md-content"><p># 2-Step Security Brief</p>
+<h2>Overview</h2>
+<p>This document set describes a step-up authentication layer protecting sensitive applications (e.g., User Management) and functionality within Central 1's systems. It's a mandatory second factor for access control.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Authentication Methods:</strong></p>
+<ul>
+<li>Hard tokens (physical devices) – ordered/managed by financial institutions via User Management</li>
+<li>Soft tokens (RFC 6238 compliant authenticator apps) – user-installed on mobile devices</li>
+</ul>
+<p><strong>Data Flow:</strong></p>
+<ul>
+<li>Users must have a 2-step security token assigned to their Client Centre User ID</li>
+<li>Authentication occurs at login or functionality access points</li>
+<li>Token validation is required before granting access</li>
+</ul>
+<p><strong>Business Rules:</strong></p>
+<ul>
+<li>Security Officers manage hard token ordering and replacement</li>
+<li>Soft token registration requires app installation + registration process</li>
+<li>Token assignment is prerequisite for protected resource access</li>
+<li>Troubleshooting assumes token-to-user matching validation</li>
+</ul>
+<h2>Design Constraints for Architects</h2>
+<p>1. <strong>Integration Points:</strong> User Management system handles token assignment and ordering workflows</p>
+<p>2. <strong>Standards Compliance:</strong> Soft tokens must be RFC 6238 compliant (TOTP-based)</p>
+<p>3. <strong>Operational Dependency:</strong> Hard token supply chain involves third parties</p>
+<p>4. <strong>User Friction:</strong> Step-up authentication adds login friction—consider UX in enhanced designs</p>
+<p><strong>Critical Gap:</strong> Document lacks technical details on token generation, validation logic, session management, and API contracts needed for system integration.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_step_security.html">2-Step Security</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_ordering_and_replacing_hard_tokens.html">3 Ordering and Replacing Hard Tokens</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_installing_a_soft_token_authentication_app_and_registering_a_soft_token.html">4 Installing a Soft Token Authentication App and Registering a Soft Token</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_logging_in_to_an_application_protected_by_2_step_security.html">5 Logging in to an Application Protected by 2-Step Security</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_2_step_security_token_troubleshooting.html">6 2-Step Security Token Troubleshooting</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic guide for resolving user authentication failures related to 2-step security token validation during login - **Token Assignment Model**: Tokens are profile-specific, not user-</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/2_step_security.3.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

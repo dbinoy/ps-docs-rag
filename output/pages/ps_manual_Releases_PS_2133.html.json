@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2133.html",
+  "title": "21:33 â September 17, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:33 â September 17, 2021\nUpdate to Outgoing Wire Request, Form 1171\nWe updated the Intermediary Financial Institution Information section instructions to clarify that you must obtain the intermediary information from the sender when sending Canadian dollars to the US. Use Outgoing Wire Request, Form 1171, to record the intermediary details provided by the sender. You must search for and select the specified intermediary when creating the wire on the Wires application.\nFor all other wires sent in the non-domestic currency of the receiving financial institutionâs country (e.g., Euros to the United Kingdom), select from the list of suggested intermediaries on the Wires application. The recommended intermediary is the default.\nFor wires in the domestic currency of the receiving financial institutionâs country (e.g., GBP to the United Kingdom), you are not required to select an intermediary. Central 1âs correspondent bank facilitates the routing of the wire to the receiving financial institution.\nAll international outgoing wires are processed through intermediary financial institutions that can deduct fees from the wire. Central 1 doesnât control the fees charged by other financial institutions.\nDocument Library\nStatus\nOutgoing Wire Request\n1171\nWe updated the Intermediary Financial Institution Information section instructions to clarify that the intermediary details must be obtained from the sender when sending Canadian dollars to the US.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1575
+}

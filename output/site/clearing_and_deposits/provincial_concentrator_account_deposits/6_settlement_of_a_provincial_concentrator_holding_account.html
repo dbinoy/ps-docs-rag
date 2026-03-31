@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Settlement of a Provincial Concentrator Holding Account — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/provincial_concentrator_account_deposits/index.html'>Provincial Concentrator Account Deposits</a> <span class='sep'>›</span> <span>6 Settlement of a Provincial Concentrator Holding Account</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Provincial Concentrator Account Deposits</a>
+    <h1>6 Settlement of a Provincial Concentrator Holding Account</h1>
+    <p class="subtitle">Clearing and Deposits › Provincial Concentrator Account Deposits</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/provincial_concentrator_account_deposits.10.6.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement of Provincial Concentrator Holding Account - Architecture Brief</p>
+<ul>
+<li><strong>Overview</strong>: Documents the settlement mechanics for Provincial Concentrator holding accounts, including credit posting for Branch Capture deposits and PAD-initiated sweep transactions to provincial accounts at Central 1.</li>
+</ul>
+<ul>
+<li><strong>Branch Capture Settlement</strong>: Central 1 credits institution accounts for cheques processed via Branch Capture; deposits flagged with code "BC" on AIBC/AIBU (BC) or AIOC/AIOU (Ontario) statements. Deposit adjustments issued when items fail processing (image quality, ineligible currency/type) or amount keying errors occur.</li>
+</ul>
+<ul>
+<li><strong>PAD Sweep Mechanism</strong>: Provincial Concentrator accounts debited via pre-authorized debit (PAD) based on deposit totals submitted on Province of BC Deposit Slip in ServiceNow; transactions appear on Automated Transfer System Detailed Listing (CCD) report; account must zero-balance at end of each processing cycle.</li>
+</ul>
+<ul>
+<li><strong>Key Data Structures</strong>: Deposit Slip submission in ServiceNow; CCD report for PAD transaction visibility; statement codes (BC) for source identification; reconciliation requirement is daily (not batch-cycle).</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint</strong>: PAD failures must NOT be returned through clearing—errors require Paper Payments and Cash Returns Trace Request form submission in ServiceNow (Section 5.2 referenced for error procedures).</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: ServiceNow (Deposit Slip input, trace request submission); Central 1 account system; Branch Capture processing pipeline; Deposit Processing subsystem (adjustment logic); clearing system (for non-PAD error handling).</li>
+</ul>
+<ul>
+<li><strong>Architect Consideration</strong>: Daily reconciliation requirement and PAD exception routing (out-of-band via ServiceNow form) suggest need for audit trail, exception management, and settlement status monitoring independent of standard clearing return mechanisms.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

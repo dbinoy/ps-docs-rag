@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2442.html",
+  "title": "24:42 â November 28, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:42 â November 28, 2024\nUpdate to the FX Notes Plus Part\nThe FX Notes Plus Part was updated to include more detail about exchange rate updates. Exchange rates are updated on the application once a day at 4:15 am PT / 7:15 am ET. If there is an increase in an exchange rate of 1% or more during the day, the revised rate will be updated on the application.\nInstructions for creating or modifying FX Notes Plus Users were also updated. Security Officers must ensure the CU name field uses the same financial institution name that was recorded in the Financial Institution Name for User Management field of the previously submitted FX Notes Plus Branch Locations, Form 5898.\nAdditionally, a new section was added to provide instructions on how to complete and submit FX Notes Plus Branch Locations, Form 5898.\nCurrency Volume\nFX Notes Plus Part\nSection 1.3, FX Notes Plus Availability and Currency Exchange Rates\nAdded specific timing for daily exchange rate updates.\nChapter 5, Managing FX Notes Plus Branch Locations\nAdded a new chapter.\nSection 6.2 Creating FX Notes Plus Users\nUpdated instructions to address floating privileges. Also added instructions for pulling information from the previously submitted FX Notes Plus Branch Locations, Form 5898.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1351
+}

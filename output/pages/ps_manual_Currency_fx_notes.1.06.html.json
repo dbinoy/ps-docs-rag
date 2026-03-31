@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.06.html",
+  "title": "6 Logging in to FX Notes",
+  "section_path": "ps_manual > Currency",
+  "breadcrumb": [],
+  "body_text": "6\tLogging in to FX Notes\n6.1\tOverview of Logging in to FX Notes\nTo access FX Notes, the individual must be set up on the Client Centre (either as a CPS Admin Security Officer or a Client Centre User) and must be assigned access to the FX Notes application. See Chapter 5, FX Notes User Management.\n6.2\tLogging in to FX Notes\nTo log in to FX Notes:\nGo to\nhttps://clients.central1.com\n. Enter your username and password, then select\nSign in\n. See Figure 1.\nNote: \tYouâll be prompted to enter your username before this page appears if itâs your first login to the Client Centre, youâve deleted your cookies, or youâre using incognito/private browsing.\nFigure 1: Client Centre Login\nSelect\nApplications.\nSee Figure 2.\nFigure 2: Accessing Applications on the Client Centre\nSelect\nFX Notes\n. See Figure 3.\nNote: \tApplications are grouped by type (e.g., Admin & Support, Payments). If needed, scroll down the page to find the application. If youâve saved the application as a favourite, it will also appear under âMy Favouritesâ.\nFigure 3: Accessing FX Notes\nCaution\n:\tAlways log off and close the browser when you step away from your desk or when you are finished using the system.\nEND",
+  "links": [],
+  "content_length": 1193
+}

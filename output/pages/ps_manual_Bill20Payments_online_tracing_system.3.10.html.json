@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.10.html",
+  "title": "10 OLT Reports",
+  "section_path": "ps_manual > Bill%20Payments",
+  "breadcrumb": [],
+  "body_text": "10\tOLT Reports\n10.1\tOverview of OLT Reports\nTracers and SuperTracers can generate OLT trace request reports. Reports can be generated in PDF or CSV format. The OLT reports are used for various purposes including:\nDaily reconciliation of settled trace requests\nâ You can request a report on trace requests with the status âClosed â Settledâ for the previous business day. The report provides the adjustment amount, the service charge amount, and the transit number to which settlement is posted. Review all comments on the trace request before settling with the member.\nIdentification of outstanding trace requests\nâ You can request a report on trace requests with the âOpenâ status.\nIdentification of unauthorized trace requests\nâ You can request a report on trace requests with the âWaiting for Approvalâ status.\nStatistical purposes\nâ You can request a report on all status types within a specified period to determine how many trace requests were processed during that period.\n10.2\tGenerating an OLT Report\nA Tracer or SuperTracer proceeds as follows to generate an OLT trace request report:\nLog in to OLT, as described in Section 6.2, Logging in to OLT.\nSelect\nReports\n. See Figure 1.\nFigure 1: Accessing OLT Reports\nSelect\nCreate your own Report\n. See Figure 2.\nFigure 2: Create Report\nEnter the search criteria and the desired report type. The start and end date fields are mandatory. See Figure 3.\nFigure 3: Enter Search Criteria\nSelect\nGenerate\n.\nReview the report and, if required, print or save the report using your internet browserâs print or save function. See Figure 4.\nFigure 4: Sample Report\nEND",
+  "links": [],
+  "content_length": 1635
+}

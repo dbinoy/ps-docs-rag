@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Managing Enterprise Fraud Management Users — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/enterprise_fraud_management_efm/index.html'>Enterprise Fraud Management Efm</a> <span class='sep'>›</span> <span>4 Managing Enterprise Fraud Management Users</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Enterprise Fraud Management Efm</a>
+    <h1>4 Managing Enterprise Fraud Management Users</h1>
+    <p class="subtitle">Electronic Transactions › Enterprise Fraud Management Efm</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.04.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement Procedures - Technical Summary</p>
+<ul>
+<li><strong>Scope</strong>: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions platform.</li>
+</ul>
+<ul>
+<li><strong>Interac e-Transfer Settlement</strong>: Delegated to separate documentation (Interac e-Transfer Limits, Settlement, Tracing, and Reports Part); settlement logic not detailed here—reference required for full integration understanding.</li>
+</ul>
+<ul>
+<li><strong>Wire Transfer Settlement Constraint</strong>: Wire transactions operate outside banking system integration; cancelled wires require manual intervention and custom internal procedures for customer account crediting—no automatic reversal mechanism exists. This is a critical architectural gap for wire processing workflows.</li>
+</ul>
+<ul>
+<li><strong>EFM Fraud Report Data Structure</strong>: Two-page Excel report containing (1) Aggregated Overview with Operations/Analytics/Losses KPIs for the month, and (2) Alerted Transaction Report with transaction-level details, risk classifications, and institution decisioning on legitimacy. Sorted by transaction date with year-to-date totals.</li>
+</ul>
+<ul>
+<li><strong>Report Distribution Integration</strong>: Report generated and distributed via Central 1's File and Report Exchange on the 15th of each month (or next business day); available in institution root folder. Architects must integrate file polling or webhook mechanisms to consume this data.</li>
+</ul>
+<ul>
+<li><strong>Key Architectural Dependency</strong>: EFM fraud detection system feeds alerted transactions to the reporting pipeline—assumes upstream fraud rules engine and transaction classification logic already in place.</li>
+</ul>
+<ul>
+<li><strong>Multi-tenancy Consideration</strong>: Report distributed to all participating financial institutions; design must support institution-specific folder isolation and access controls on File and Report Exchange.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

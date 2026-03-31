@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Charges — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <span>Service Charges</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
+    <h1>🔐 Service Charges</h1>
+    <p class="subtitle">Access and Administration › Service Charges <span class="badge" style="background:#2563eb">1 pages</span></p>
+    <div class="summary-box md-content"><p># Service Charges - Architect Brief</p>
+<h2>Overview</h2>
+<p>This document defines the Payment Services Class A Fee Schedule (Form 2725), which establishes product and service pricing for Central 1's Technology and Payment Services Department. It applies to Class A credit unions.</p>
+<h2>Key Architectural Considerations</h2>
+<p><strong>Scope & Data Model:</strong></p>
+<ul>
+<li>Pricing configuration across payment products and services</li>
+<li>Fee structure likely includes multiple dimensions: product type, transaction volume, service tier, or usage metrics</li>
+<li>Assumes versioning/effective dating for fee changes across member institutions</li>
+</ul>
+<p><strong>Integration Points:</strong></p>
+<ul>
+<li>Billing/invoicing systems must reference current fee schedules</li>
+<li>Member-facing portals require accessible pricing lookup</li>
+<li>Transaction processing may need real-time fee calculation logic</li>
+</ul>
+<p><strong>Business Rules to Embed:</strong></p>
+<ul>
+<li>Member eligibility filtering (Class A credit unions only)</li>
+<li>Schedule versioning/activation management</li>
+<li>Potential fee tier logic or volume-based pricing</li>
+</ul>
+<p><strong>Design Constraints:</strong></p>
+<ul>
+<li>Single source of truth for pricing across all downstream systems</li>
+<li>Change management process for fee updates (effective dating, communication to members)</li>
+<li>Audit trail requirements for pricing changes</li>
+</ul>
+<h2>Pre-Design Actions</h2>
+<ul>
+<li>Request complete Form 2725 specification</li>
+<li>Clarify fee calculation complexity (simple lookup vs. rule-engine required)</li>
+<li>Identify systems consuming these fees (billing, reporting, member portal)</li>
+<li>Confirm approval/audit workflow for fee changes</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="service_charges.html">Service Charges</a></div>
+            <div class="page-preview">- **Purpose**: Documents the fee structure and billing mechanics for Central 1's Payment Services offerings to Class A credit unions in BC and Ontario, governed by Form 2725. - **Billing Model**: Mont</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/service_charges.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

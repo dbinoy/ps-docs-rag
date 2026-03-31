@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2506.html",
+  "title": "25:06 â March 17, 2025",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "25:06 â March 17, 2025\nUpdate to the Enterprise Fraud Management Part\nWe updated information in the Enterprise Fraud Management (EFM) Part. This update is related to the\nannouncement\nregarding mobile deposits. As of March 16, 2025, EFM captures mobile deposits in Data Ingestion mode. While Data Ingestion mode doesnât trigger alerts for suspicious mobile deposits at this time, EFM users must create a manual alert for suspicious mobile deposits, identify the mobile deposits as Risk, and provide any relevant information to them.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nSection 8.1, Overview of Managing Transaction Alerts\nRemoved instructions referencing how legitimate Auto Risk transactions require no action. Legitimate Auto Risk transactions must be identified as No-risk.\nSection 8.3, Identifying a Transaction as Legitimate\nRemoved instructions referencing how legitimate Auto Risk transactions require no action. Legitimate Auto Risk transactions must be identified as No-risk.\nSection 8.9, Mobile Deposits in EFM\nNew Section\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1159
+}

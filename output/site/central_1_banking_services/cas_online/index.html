@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cas Online — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <span>Cas Online</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
+    <h1>🏦 Cas Online</h1>
+    <p class="subtitle">Central 1 Banking Services › Cas Online <span class="badge" style="background:#d97706">9 pages</span></p>
+    <div class="summary-box md-content"><p># CAS Online Architecture Brief</p>
+<h2>Overview</h2>
+<p>CAS Online is Central 1's near real-time account information portal for member financial institutions. It provides visibility into settlement accounts, transaction history, and posting advices for reconciliation purposes.</p>
+<h2>Key Data Flows & Architecture Points</h2>
+<p><strong>Data Refresh Cadence:</strong></p>
+<ul>
+<li>Account Summary: 20-30 minute refresh interval</li>
+<li>Transaction History: 1-year rolling window</li>
+<li>Real-time access model (not batch-driven)</li>
+</ul>
+<p><strong>Integration Touchpoints:</strong></p>
+<ul>
+<li>Direct web link + Client Centre portal integration</li>
+<li>User management isolated to CAS Online (cannot be provisioned via CPS Admin or User Management systems)</li>
+<li>Account grouping controls what data is surfaced per user</li>
+</ul>
+<p><strong>Critical Business Rules:</strong></p>
+<ul>
+<li>Branch/Institution Number (5-digit + transit) identifies accounts</li>
+<li>Business Day definitions apply to transaction dating</li>
+<li>Access control is institution-managed; Central 1 doesn't enforce per-account restrictions</li>
+<li>Reports (posting advices, statements) are non-transactional but support reconciliation workflows</li>
+</ul>
+<h2>Design Constraints</h2>
+<ul>
+<li>Session management requires cookie support</li>
+<li>User provisioning must be handled independently (no SSO integration documented)</li>
+<li>Account grouping logic drives UI filtering, not data isolation</li>
+<li>Must support multi-institution deployments with consistent UX</li>
+</ul>
+<p><strong>Consideration:</strong> Verify whether "near real-time" has formal SLA requirements before proposing caching or API-based enhancements.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="current_account_services_cas_online.html">Current Account Services (CAS) Online</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_current_account_services_online.html">3 Establishing Policies for Current Account Services Online</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_cas_online_user_management.html">4 CAS Online User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_cas_online_access_and_navigation.html">5 CAS Online Access and Navigation</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_using_the_account_summary_function.html">6 Using the Account Summary Function</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_using_the_account_activity_function.html">7 Using the Account Activity Function</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_using_the_account_groups_function.html">8 Using the Account Groups Function</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_posting_advices_account_statements_and_reports.html">9 Posting Advices, Account Statements, and Reports</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of reconciliation reports (adjustment advices, monthly statements, and billing reports) available via Central 1's File and Report Exchange, not generated with</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/cas_online.3.9.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wwparcel.html — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>wwparcel.html</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>wwparcel.html</h1>
+    <p class="subtitle">Electronic Transactions › Electronic Transactions</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># wwparcel.html Summary for Solutions Architect</p>
+<ul>
+<li><strong>Page Purpose</strong>: Comprehensive table of contents for Payment Solutions manual covering three primary modules: Enterprise Fraud Management (EFM), PaymentStream™ Direct, and Wires, with supporting documentation on user management, policies, and transaction processing.</li>
+</ul>
+<ul>
+<li><strong>Core Modules & Data Flows</strong>:</li>
+<li><strong>EFM</strong>: Incident management (tagging, filtering, referring), transaction alert classification (fraudulent/legitimate/auto-risk), manual alert administration, fund recovery workflows</li>
+<li><strong>PaymentStream Direct</strong>: Customer profile functions, bill payments (including CRA tax payments via Forms RC159/RC160), debit card locking, e-statement delivery</li>
+<li><strong>Wires</strong>: Outgoing/incoming wire processing with multi-model support (centralized/decentralized), foreign exchange spread management, IBAN validation, country-risk assessment (tax haven/sanctioned nations), FINTRAC EFT reporting compliance</li>
+</ul>
+<ul>
+<li><strong>Critical User Management Architecture</strong>: Role-based access control across three user pathways (Client Centre users, existing CPS Admin Security Officers, new CPS Admin Security Officers) with separate permission models for each module; MTS (Management Transaction System) handles Wires administrator/user provisioning with queue-based change authorization workflows</li>
+</ul>
+<ul>
+<li><strong>Key Constraints & Compliance</strong>: Wire cut-off times, PEP/HIO determination requirements, Interac® e-Transfer limits policy enforcement, internal control policies for user segregation, record-keeping mandates for FINTRAC reporting; mobile deposits and bill payments have module-specific alert handling</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Wires application integrates with EFM for transaction monitoring; Bill Payments module handles CRA-specific payment types (GST/HST, corporation taxes, payroll deductions); Lock Your Debit Card and Switch Concierge™ by ClickSWITCH are ancillary functions within PaymentStream Direct</li>
+</ul>
+<ul>
+<li><strong>Data Structures & Processing Models</strong>: Wire templates support creation/editing/restoration; incident filters and internal data lists are customizable; transaction alert revision capability suggests audit trail requirements; settlement procedures differ by transaction type (Interac® e-Transfer vs. Wire)</li>
+</ul>
+<ul>
+<li><strong>Architect Must Know</strong>: This manual covers policy enforcement, not technical APIs—design enhancements require understanding role-based permission hierarchies, multi-stage approval queues (particularly in Wires), and regulatory reporting obligations (FINTRAC). The decoupling of EFM monitoring from transaction origination systems suggests event-driven architecture patterns.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

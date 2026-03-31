@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paymentstream Direct — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Paymentstream Direct</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Paymentstream Direct</h1>
+    <p class="subtitle">Electronic Transactions › Paymentstream Direct <span class="badge" style="background:#be185d">15 pages</span></p>
+    <div class="summary-box md-content"><p># PaymentStream Direct – Architecture Brief</p>
+<h2>Overview</h2>
+<p>PaymentStream Direct is Central 1's unified payment platform UI providing access to core payment products, customer profile management, and MemberDirect system support. It serves as the primary transaction interface for enrolled financial institutions.</p>
+<h2>Key Architectural Components</h2>
+<ul>
+<li><strong>User Management</strong>: Role-based access via CPS Admin/User Management; separate application permissions per function</li>
+<li><strong>Authentication</strong>: 2-step security (OTP-based step-up authentication) required for login</li>
+<li><strong>Core Products</strong>: Bill Payments, AFT (ACH/wire equivalents), Wires (domestic/international), CRA Business Taxes, Lock-n-Block debit card management</li>
+<li><strong>Third-Party Integrations</strong>: ClickSWITCH (Switch Concierge for payment/deposit migration)</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<p>1. <strong>Banking System Dependency</strong>: Customer profile and bill payment functions require active connection to institution's core banking system</p>
+<p>2. <strong>Policy/Controls</strong>: Each institution responsible for implementing internal controls; no shared security model documented</p>
+<p>3. <strong>Data Scope</strong>: Handles financial transactions, archived task audit trails, and CRA filing submissions</p>
+<p>4. <strong>User Classes</strong>: Client Centre Users and CPS Admin Security Officers only</p>
+<h2>Pre-Design Considerations</h2>
+<ul>
+<li>Enrollment process (contact Central 1 Client Support) impacts go-live timelines</li>
+<li>Multi-product architecture suggests loosely coupled microservices; confirm integration patterns</li>
+<li>Clarify data retention for archived tasks and transaction audit requirements</li>
+<li>Verify regulatory compliance scope for cross-border wires and CRA submissions</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="paymentstream_direct.html">PaymentStreamâ¢ Direct</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_paymentstream_direct.html">3 Establishing Policies for PaymentStreamâ¢ Direct</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_enrolling_your_financial_institution_in_paymentstream_direct.html">4 Enrolling Your Financial Institution in PaymentStreamâ¢ Direct</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_managing_paymentstream_direct_users.html">5 Managing PaymentStreamâ¢ Direct Users</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_logging_in_to_paymentstream_direct.html">6 Logging in to PaymentStreamâ¢ Direct</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_paymentstream_direct_customer_profile_functions.html">7 PaymentStreamâ¢ Direct Customer Profile Functions</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_paymentstream_direct_bill_payments_functions.html">8 PaymentStreamâ¢ Direct Bill Payments Functions</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_lock_your_debit_card.html">9 Lock Your Debit Card</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_switch_concierge_by_clickswitch.html">10 Switch Conciergeâ¢ by ClickSWITCH</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_paymentstream_direct_administration_functions.html">11 PaymentStreamâ¢ Direct Administration Functions</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_cra_business_taxes.html">12 CRA Business Taxes</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_paymentstream_aft.html">13 PaymentStreamâ¢ AFT</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_wires.html">14 Wires</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="15_campaign_manager.html">15 Campaign Manager</a></div>
+            <div class="page-preview">- **Overview**: Campaign Manager is a marketing campaign management application for online banking environments, with platform-specific availability constraints. - **Platform Dependency**: Exclusively</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.15.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

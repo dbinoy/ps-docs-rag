@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Requesting a Dormant Period and Cancelling AFT Service — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/introduction_to_aft/index.html'>Introduction To Aft</a> <span class='sep'>›</span> <span>8 Requesting a Dormant Period and Cancelling AFT Service</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Introduction To Aft</a>
+    <h1>8 Requesting a Dormant Period and Cancelling AFT Service</h1>
+    <p class="subtitle">AFT › Introduction To Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.8.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Page Summary: AFT Dormant Period Requests and Service Cancellation</p>
+<ul>
+<li><strong>Purpose</strong>: Documents procedures for placing AFT transactions into dormant status and completely cancelling AFT originator services through multiple channels (PaymentStream UI and FTP).</li>
+</ul>
+<ul>
+<li><strong>Dormant Period Process</strong>: Payor/Payee initiates via Form 2044 → Originator specifies notification requirement days → Originator enters dormant period into PaymentStream AFT system → request retained for audit trail.</li>
+</ul>
+<ul>
+<li><strong>PaymentStream AFT Cancellation</strong>: Requires Form 5329 with dual authorized officer signatures; Originator must supply 10-digit Originator ID (OID), Legal Company Name, and Originator Long Name; Central 1 performs final cancellation upon receipt.</li>
+</ul>
+<ul>
+<li><strong>FTP-based Cancellation</strong>: Regional constraint—Form 1378 limited to BC and Atlantic regions only; parallel process to PaymentStream but requires OID selection as "Delete OID" flag rather than form-based entry.</li>
+</ul>
+<ul>
+<li><strong>Governance Dependencies</strong>: All cancellation flows are bounded by three master agreements (Forms 1904, 2007, 2043) that define underlying service terms; these are prerequisite controls, not enforced within cancellation workflows.</li>
+</ul>
+<ul>
+<li><strong>Key Data Elements</strong>: Originator ID (10-digit identifier), Legal Company Name, Originator Long Name, notification requirement days, and Delete OID flag are critical fields across all forms; no validation rules or format specifications documented.</li>
+</ul>
+<ul>
+<li><strong>Integration Point</strong>: PaymentStream AFT system is the primary state-management system for dormant period entry; FTP channel operates independently, suggesting dual-path processing that may require reconciliation logic or state synchronization.</li>
+</ul>
+<ul>
+<li><strong>Architect Consideration</strong>: No error handling, rollback procedures, or SLA for Central 1 cancellation confirmation documented; dormant vs. cancelled states and transition rules need clarification for system design.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15 Preparing Outgoing Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>15 Preparing Outgoing Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>15 Preparing Outgoing Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.15.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Preparing Outgoing Wires (Section 15)</p>
+<ul>
+<li><strong>Purpose</strong>: Defines regulatory compliance procedures and data collection requirements for outgoing wire processing in the Wires application, using Form 1171 as the primary data capture instrument.</li>
+</ul>
+<ul>
+<li><strong>Regulatory Thresholds & Identification Requirements</strong>:</li>
+<li>Identity verification mandatory for domestic/international wires ≥$1,000 CAD equivalent or foreign exchange wires ≥$3,000 CAD</li>
+<li>PEP/HIO determination required for wires ≥$100,000 CAD within 14 days of transmission</li>
+<li>FINTRAC reporting triggered for aggregated transfers ≥$10,000 CAD within 24 hours</li>
+<li>Suspicious transaction reporting exempt from identification requirements to avoid "tipping off" sender</li>
+</ul>
+<ul>
+<li><strong>Form 1171 Data Structure</strong> (multi-section capture):</li>
+<li>Wire metadata: amount (CAD), currency, priority flag, future-date flag, timestamp</li>
+<li>Sender details: account/customer number, full address, occupation/DOB for non-account holders</li>
+<li>Beneficiary details: account number or IBAN (mandatory for IBAN-regulated countries per Section 14.3)</li>
+<li>Intermediary institution routing: SWIFT ID required; for USD-to-US transfers, sender-provided intermediary must be specified; for non-domestic currency wires, selection from system-suggested intermediary list</li>
+<li>FX transaction details: purchase currency, medium of exchange, exchange rate at time of creation</li>
+<li>Wire funding source and consent acknowledgments (disclosure, privacy, loss liability, accuracy, finality, no-refund guarantees)</li>
+</ul>
+<ul>
+<li><strong>Critical Integration Constraints</strong>:</li>
+<li>Wire recalls/amendments/traces are best-efforts only; receiving bank voluntary cooperation required post-release</li>
+<li>Intermediary fees deducted by third-party institutions outside Central 1 control</li>
+<li>Special characters cannot be entered; form data must be sanitized before Wires application import</li>
+<li>Exchange rates are live/transactional—recorded at creation time, not standardized lookup codes</li>
+</ul>
+<ul>
+<li><strong>Compliance & Risk Dependencies</strong>:</li>
+<li>PCMLTFA regulations govern identification procedures; face-to-face vs. non-face-to-face transaction rules differ (per FINTRAC)</li>
+<li>Non-account holder wires flagged as high-risk; Central 1 discourages this transaction type</li>
+<li>Form 1171 data feeds FINTRAC EFT reporting pipeline; financial institution responsible for aggregation analysis and reporting decision logic</li>
+</ul>
+<ul>
+<li><strong>System-Level Considerations for Architects</strong>:</li>
+<li>Form 1171 is both</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

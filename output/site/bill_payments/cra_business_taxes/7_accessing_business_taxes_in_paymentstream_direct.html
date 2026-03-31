@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7 Accessing Business Taxes in PaymentStream Direct — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>7 Accessing Business Taxes in PaymentStream Direct</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>7 Accessing Business Taxes in PaymentStream Direct</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.07.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># PaymentStream Direct Business Taxes Access - Architecture Summary</p>
+<ul>
+<li><strong>Scope</strong>: Documents login procedures and environment access for Business Taxes functionality in PaymentStream Direct, covering both test and production pathways through the Client Centre portal.</li>
+</ul>
+<ul>
+<li><strong>Dual Environment Architecture</strong>: Two isolated environments—TEST (Prev-Comp mirror and SYS preview) and PRODUCTION—require separate authentication flows but share identical UI/UX patterns; test transactions are not forwarded to CRA, production transactions are automatically relayed to Canada Revenue Agency.</li>
+</ul>
+<ul>
+<li><strong>Access Control Model</strong>: Feature access gated by role-based permissions (CPS Admin Security Officer or Client Centre User with Business Taxes entitlement); see Chapter 5 for user management detail—architectural implication is that access control is enforced upstream in Client Centre before PaymentStream Direct instance access.</li>
+</ul>
+<ul>
+<li><strong>Authentication Integration Point</strong>: Client Centre (https://clients.central1.com) acts as SSO/credential broker for PaymentStream Direct; session cookies persist across application selection; first login, cookie deletion, or incognito mode triggers username re-prompt—relevant for designing federated auth or session handling.</li>
+</ul>
+<ul>
+<li><strong>Application Selection Navigation</strong>: Multi-tier UX (Applications > Environment Selection > Payments module) with application grouping/favorites functionality; applications discoverable via categorization (Admin & Support, Payments)—impacts information architecture for future feature additions.</li>
+</ul>
+<ul>
+<li><strong>CRA Transmission Contract</strong>: Production environment establishes a data flow contract where Central 1 acts as intermediary processor/forwarder to CRA; test environment provides sandbox isolation for training without CRA submission—critical constraint for compliance and audit trails.</li>
+</ul>
+<ul>
+<li><strong>Cross-Reference Dependencies</strong>: Page references Chapter 5 (user management) and Section 8.2 (tax form submission procedures)—suggests Business Taxes is modular component with separate auth, submission, and management workflows that must remain loosely coupled.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ceba Settlement And Reconciliation — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <span>Ceba Settlement And Reconciliation</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
+    <h1>🏦 Ceba Settlement And Reconciliation</h1>
+    <p class="subtitle">Central 1 Banking Services › Ceba Settlement And Reconciliation <span class="badge" style="background:#d97706">8 pages</span></p>
+    <div class="summary-box md-content"><p># CEBA Settlement and Reconciliation – Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group covers the operational workflows for Canada Emergency Business Account (CEBA) loan repayments, administration fees, settlement, and reconciliation. Central 1 acts as intermediary between member financial institutions and Export Development Canada (EDC).</p>
+<h2>Key Data Flows</h2>
+<p>1. <strong>Loan Repayments</strong>: Member institutions report repayments to Central 1 via ServiceNow twice monthly; Central 1 aggregates and submits to EDC</p>
+<p>2. <strong>Admin Fees</strong>: Member institutions report fees end-of-month; Central 1 processes for settlement</p>
+<p>3. <strong>Settlement</strong>: Funds posted in lump sum to member accounts same business day; net reconciliation occurs post-submission</p>
+<p>4. <strong>Returns</strong>: EDC funds returned for duplicates, cancellations, or other exceptions</p>
+<h2>Critical Business Rules</h2>
+<ul>
+<li>Bi-weekly repayment reporting cycle (EDC-mandated)</li>
+<li>Monthly fee reporting deadline</li>
+<li>Same-day settlement posting requirement</li>
+<li>Central 1 acts as clearing house and settlement authority</li>
+</ul>
+<h2>Architecture Considerations</h2>
+<ul>
+<li><strong>Integration points</strong>: ServiceNow portal, EDC submission interface, member institution accounts</li>
+<li><strong>Reconciliation logic</strong>: Must handle fund returns, duplicate detection, and net settlement calculations</li>
+<li><strong>Audit trail</strong>: Track reporting submissions, EDC acknowledgments, settlement transactions</li>
+<li><strong>Idempotency</strong>: Prevent duplicate posting in settlement process</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="ceba_loan_repayments_administration_fees_settlement_and_reconciliation.html">CEBA Loan Repayments, Administration Fees, Settlement, and Reconciliation</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_logging_in_to_servicenow.html">3 Logging in to ServiceNow</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_reporting_ceba_loan_repayments.html">4 Reporting CEBA Loan Repayments</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_reporting_ceba_loan_administration_fees.html">5 Reporting CEBA Loan Administration Fees</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_reviewing_submitted_reports_in_servicenow.html">6 Reviewing Submitted Reports in ServiceNow</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_returning_edc_funds.html">7 Returning EDC Funds</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_ceba_settlement_and_reconciliation.html">8 CEBA Settlement and Reconciliation</a></div>
+            <div class="page-preview">- **Overview**: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee dist</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.8.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

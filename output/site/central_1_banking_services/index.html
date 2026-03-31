@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central 1 Banking Services — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Central 1 Banking Services</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>🏦 Central 1 Banking Services</h1>
+    <p class="subtitle"><span class="badge" style="background:#d97706">32 pages</span></p>
+    <div class="summary-box md-content"><p># Central 1 Banking Services – Section Overview</p>
+<h2>Purpose</h2>
+<p>This section documents Central 1's settlement, account management, and reporting infrastructure for credit unions participating in government-backed lending programs (AgriInvest, CEBA) and daily payment operations. It establishes the operational and technical requirements for maintaining compliant current accounts, executing bi-monthly reconciliations, and integrating with federal fund flows (EDC, AAFC).</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Current Accounts (Settlement Base)</strong>: Every participating financial institution maintains a mandatory Canadian dollar current account at Central 1 serving as the settlement hub for all product activity, fees, and inter-institutional transfers. Balances refresh every 20–30 minutes via CAS Online.</p>
+<p>2. <strong>Semi-Monthly Reporting Cycles</strong>: AgriInvest and CEBA both operate fixed reporting windows (1–15th, 16–end of month for AgriInvest; twice-monthly for CEBA repayments). Reports must be submitted within three business days of period close via ServiceNow.</p>
+<p>3. <strong>Dual Authorization Path</strong>: Credit unions open accounts and manage participants, but Agriculture and Agri-Food Canada (AAFC) validates eligibility; similarly, EDC funds CEBA loans but Central 1 executes settlement.</p>
+<p>4. <strong>Participant Agreements</strong>: Financial institutions must sign Central 1 Participant Agreements to participate; this is a legal gate for system onboarding and determines policy scope (recordkeeping, user access).</p>
+<p>5. <strong>Activity Files & Reconciliation</strong>: All account activity (including zero-activity accounts) flows through standardized Activity Files; multi-branch institutions can subscribe to OREC (Operational Reconciliation) for automated matching against submitted data.</p>
+<p>6. <strong>Fund Flow Timing</strong>: CEBA funds post as lump sums same-day-of-receipt; repayments must be reported twice monthly to meet EDC deadlines; settlement to current accounts is immediate.</p>
+<h2>How It Works</h2>
+<p>1. Financial institution signs Participant Agreement with Central 1 and maintains current account.</p>
+<p>2. Institution opens participant accounts (AgriInvest or CEBA) via application; AAFC/EDC validates eligibility.</p>
+<p>3. Account activity occurs; institution records all transactions on Activity Files.</p>
+<p>4. During reporting period close (within three business days), institution submits Activity Files or repayment/fee forms via ServiceNow or CAS Online.</p>
+<p>5. Central 1 validates submissions, posts funds/fees to current account, and generates settlement advices.</p>
+<p>6. Institution reconciles via CAS Online (near real-time balance view) or OREC (automated multi-branch matching).</p>
+<p>7. Reports become available on Client Centre for audit/compliance review.</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>ServiceNow</strong>: CEBA repayment and administration fee submissions; inter-branch fund transfers.</li>
+<li><strong>CAS Online</strong>: Real-time balance queries, 12-month transaction history, Account Groups for role-based view filtering.</li>
+<li><strong>Client Centre</strong>: Portal authentication hub; posting advices, statements, and downloadable reports.</li>
+<li><strong>EDC (Export Development Canada)</strong>: External fund source; Central 1 is intermediary for CEBA settlement.</li>
+<li><strong>AAFC (Agriculture and Agri-Foods Canada)</strong>: External eligibility authority for AgriInvest participants.</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>No API Published</strong>: This section describes UI-driven and batch file processes only. No REST/SOAP APIs are documented; all integrations assume file-based or portal-mediated submission.</li>
+<li><strong>User Access Isolation</strong>: CAS Online user provisioning is manually managed by Central 1—not self-service via Admin or IMS. Enforce principle of least privilege via Account Groups.</li>
+<li><strong>Recordkeeping Discretion</strong>: Financial institutions may archive forms locally or rely on Central 1 retention; audit trail responsibility is ambiguous—clarify with legal before designing data deletion policies.</li>
+<li><strong>Semi-Monthly Deadlock Risk</strong>: Three business days to submit after period close is tight; delayed submissions may</li>
+</ul></div>
+    <h2>Document Groups</h2>
+    
+            <div class="group-card">
+              <h3><a href="agriinvest_program/index.html">Agriinvest Program</a></h3>
+              <div class="group-count">7 pages</div>
+              <p>AgriInvest Program – Architecture Brief Overview AgriInvest is a government agricultural income-protection program administered by AAFC, with Central 1 Credit Union acting as the hub for member financial institution…</p>
+              <a href="agriinvest_program/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="cas_online/index.html">Cas Online</a></h3>
+              <div class="group-count">9 pages</div>
+              <p>CAS Online Architecture Brief Overview CAS Online is Central 1's near real-time account information portal for member financial institutions. It provides visibility into settlement accounts, transaction history, and…</p>
+              <a href="cas_online/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="ceba_settlement_and_reconciliation/index.html">Ceba Settlement And Reconciliation</a></h3>
+              <div class="group-count">8 pages</div>
+              <p>CEBA Settlement and Reconciliation – Architecture Brief Overview This document group covers the operational workflows for Canada Emergency Business Account (CEBA) loan repayments, administration fees, settlement, and…</p>
+              <a href="ceba_settlement_and_reconciliation/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="central_1_banking_services/index.html">Central 1 Banking Services</a></h3>
+              <div class="group-count">1 pages</div>
+              <p>CEBA Loan Repayments Architecture Brief Document Scope This document set covers the end-to-end lifecycle for Canada Emergency Business Account (CEBA) loan administration within Central 1's payment infrastructure,…</p>
+              <a href="central_1_banking_services/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="central_1_current_accounts_and_high_interest_savings_accounts/index.html">Central 1 Current Accounts And High Interest Savings Accounts</a></h3>
+              <div class="group-count">7 pages</div>
+              <p>Brief Summary: Central 1 Current Accounts & HISA Overview This document set covers operational management of Central 1 deposit accounts used by BC/Ontario credit unions: Current Accounts (settlement vehicles) and High…</p>
+              <a href="central_1_current_accounts_and_high_interest_savings_accounts/index.html">View pages →</a>
+            </div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

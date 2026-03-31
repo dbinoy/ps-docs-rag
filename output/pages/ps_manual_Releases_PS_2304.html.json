@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2304.html",
+  "title": "23:04 â March 3, 2023",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "23:04 â March 3, 2023\nUpdate to the Interac e-Transfer\nÂ®\nOnline Administration System (OAS) Part\nWe updated the\nInterac\ne-Transfer\nÂ®\nOnline Administration System (OAS) Part as follows:\nElectronic Transactions Volume\nInterac\ne-Transfer\nÂ®\nOnline Administration System (OAS) Part\nSection 2.1, Definitions\nWe updated all references to Section 4.2, Using the OAS Search Function, to Section 4.2, Basic Searches in OAS, to reflect that sectionâs name change.\nWe added a new definition for\nInterac\ne-Transfer for Business.\nWe updated definitions for Limit Groups, Rolling Limit, and Rolling Period to reflect changes to\nInterac\nlimits on incoming e-Transfers.\nSection 4.2, Basic Searches in OAS\nWe renamed this section (was âUsing the OAS Search Functionâ) and updated the section with expanded examples and screenshots.\nSection 4.7, Advanced Searches in OAS\nWe updated this section with expanded examples and screenshots.\nSection 6.2, Viewing a Customerâs Profile Summary\nWe updated this section to describe changes to transfer limits.\nChapter 9, Troubleshooting Tracing Requests\n.\nWe added this as a new chapter.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1217
+}

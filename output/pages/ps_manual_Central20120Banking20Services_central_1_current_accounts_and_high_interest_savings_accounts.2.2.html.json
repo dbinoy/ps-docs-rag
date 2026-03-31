@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.2.html",
+  "title": "2 Terminology",
+  "section_path": "ps_manual > Central%201%20Banking%20Services",
+  "breadcrumb": [],
+  "body_text": "2\tTerminology\n2.1\tDefinitions\nAccount Reconciliation Service\nThe Account Reconciliation Service is a process used to compare your banking systemâs data to your Central 1 account activities. This service is intended for multi-branch financial institutions and is available on a subscription basis.\nCAS Online\nCurrent Account Services (CAS) Online provides financial institutions with access to their Central 1 account information.\nClient Centre\nThe Client Centre is a digital portal that provides secured access to Central 1âs applications and to information and news about our products and services.\nFile and Report Exchange\nThe File and Report Exchange allows authorized users to download files from Central 1 and upload files to Central 1. Users can connect to the File and Report Exchange via direct connection (SFTP) or online via the Client Centre.\nIncoming Clearing Item\nAn Incoming Clearing Item is a cheque, draft, or money order that is drawn on the financial institution or member of the financial institution, deposited by the Payee, and sent through the Clearing for debit to the Drawerâs account.\nORS\nOnline Return System (ORS) is a web-based system that facilitates the return of cheques. It allows users to research deposit items and Incoming Clearing Items and to reinstate cheques. ORS also facilitates the return of AFT Transactions and the creation of AFT Notice of Change transactions.\nServiceNow\nServiceNow is the ticketing application used to report service issues, request changes to existing services, or submit questions to Central 1.\nEND",
+  "links": [],
+  "content_length": 1569
+}

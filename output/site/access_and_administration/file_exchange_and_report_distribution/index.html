@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Exchange And Report Distribution — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <span>File Exchange And Report Distribution</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
+    <h1>🔐 File Exchange And Report Distribution</h1>
+    <p class="subtitle">Access and Administration › File Exchange And Report Distribution <span class="badge" style="background:#2563eb">7 pages</span></p>
+    <div class="summary-box md-content"><p># File Exchange and Report Distribution – Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group describes Central 1's File and Report Exchange platform—a dual-channel system for secure file upload/download operations supporting member financial institutions. It encompasses both automated (SFTP/direct connection) and manual (Client Centre portal) exchange mechanisms.</p>
+<h2>Key Architectural Components</h2>
+<p><strong>Access Channels:</strong></p>
+<ul>
+<li>SFTP (direct connection) for automated/scripted integrations</li>
+<li>Client Centre web portal for interactive file management</li>
+<li>User authentication/authorization via CPS Admin or User Management systems</li>
+</ul>
+<p><strong>Critical Design Elements:</strong></p>
+<ul>
+<li>Role-based folder structure with access controls tied to user permissions</li>
+<li>Institutions own responsibility for internal security policies and user management</li>
+<li>No Central 1 support for client-side FTP scripts—implies stateless, standards-compliant SFTP endpoint</li>
+</ul>
+<h2>Architect Considerations</h2>
+<p>1. <strong>Security Boundary:</strong> Each institution manages their own user access policies; Central 1 enforces authentication but trusts institution-level controls</p>
+<p>2. <strong>Integration Pattern:</strong> Asymmetric channels (automated SFTP vs. portal) require consistent authorization logic across both</p>
+<p>3. <strong>Operational Constraint:</strong> Folder structure appears dynamic/role-dependent—likely requires permission-aware directory listing</p>
+<p>4. <strong>Support Scope:</strong> Central 1 doesn't support custom integrations; design for standard SFTP clients only</p>
+<p><strong>Next Steps:</strong> Review sections 4 (user access) and 7 (folder structure) for data model specifics before designing API/portal enhancements.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="file_exchange_and_report_distribution.html">File Exchange and Report Distribution</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_file_exchange_and_report_distribution.html">3 Establishing Policies for File Exchange and Report Distribution</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_managing_user_access_to_the_file_and_report_exchange.html">4 Managing User Access to the File and Report Exchange</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_exchanging_files_on_the_file_and_report_exchange_via_direct_connection_sftp.html">5 Exchanging Files on the File and Report Exchange via Direct Connection (SFTP)</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_exchanging_files_on_the_file_and_report_exchange_online_via_the_client_centre.html">6 Exchanging Files on the File and Report Exchange Online via the Client Centre</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_file_and_report_exchange_folder_structure.html">7 File and Report Exchange Folder Structure</a></div>
+            <div class="page-preview">- **Purpose**: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorizatio</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

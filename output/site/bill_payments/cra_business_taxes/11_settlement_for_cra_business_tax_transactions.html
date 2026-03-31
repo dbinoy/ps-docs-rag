@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 Settlement for CRA Business Tax Transactions — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>11 Settlement for CRA Business Tax Transactions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>11 Settlement for CRA Business Tax Transactions</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.11.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Settlement for CRA Business Tax Transactions - Architecture Summary</p>
+<ul>
+<li><strong>Scope</strong>: Defines settlement mechanics for CRA business tax payments between Central 1 and FIs in BC/Ontario, and between FIs and their customers; FIs outside BC/Ontario settle through provincial centrals.</li>
+</ul>
+<ul>
+<li><strong>Settlement Timing</strong>: Payments posted to FI's Central 1 account on business day following receipt; settlement effective date is receipt date (not backdated). Weekend/statutory holiday receipts settle on next business day. Daily settlement window closes at 23:59:59 PT; post-cutoff transactions roll to next day.</li>
+</ul>
+<ul>
+<li><strong>Settlement Code & GL Mapping</strong>: All CRA business tax payments post as code <strong>"TX" (Bill Payment Tax Settlement)</strong> to FI's Central 1 account; architect must ensure GL reconciliation logic recognizes this distinct transaction code.</li>
+</ul>
+<ul>
+<li><strong>Fund Guarantee Requirement</strong>: CRA business tax transactions are guaranteed funds—FI must debit customer account and transfer to internal GL account <strong>before</strong> submitting to CRA (not after settlement confirmation). This is a critical pre-condition constraint for payment submission.</li>
+</ul>
+<ul>
+<li><strong>Payment Date Determination</strong>: CRA recognizes <strong>processing date in Business Taxes system</strong> as payment date for electronic remittance vouchers, but <strong>date stamp</strong> for paper vouchers—creates dual-track date logic for compliance and customer communication.</li>
+</ul>
+<ul>
+<li><strong>Cheque Dishonour Workflow</strong>: If cheque payment is dishonoured by drawee bank, FI must attempt recovery; if unsuccessful, request reimbursement from federal government (dependency on separate Dishonour/Return of Cheques procedures).</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Process mirrors Electronic Bill Payments settlement workflow; requires coordination with Business Taxes processing system, CRA remittance voucher generation, and dishonour/return procedures.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

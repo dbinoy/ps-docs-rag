@@ -1,0 +1,14 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.1.html",
+  "title": "AFT Rejects, Recalls, Error Corrections, and Other Exception Items",
+  "section_path": "ps_manual > AFT",
+  "breadcrumb": [],
+  "body_text": "AFT Rejects, Recalls, Error Corrections, and Other Exception Items\n1\tIntroduction to AFT Rejects, Recalls, Error Corrections, and Other Exception Items\n1.1\tOverview of AFT Rejects, Recalls, Error Corrections, and Other Exception Items\nThis Part explains how to:\nprocess AFT Rejects, Recalls, Error Corrections, and other exception items,\nhandle rejected AFT files and AFT transactions,\nre-route unpostable transactions,\nreceive offsetting debit transactions for Direct Deposits, and\ninitiate and receive AFT trace requests.\nRelated Payment Solutions Manual Parts\nAFT Reports Part\nFile Exchange and Report Distribution Part\nOnline Return System (ORS) Part\nAFT Returns and AFT Notice of Change Transactions Part\n1.2\tContacts and Websites\nResources/Services\nContact Information\nContact Central 1 for general inquiries and for information on AFT Rejects and other exception items.\nClient Support Services\nPhone:\n1-888-889-7878\n, Option 1\nOnline: ServiceNow (\nhttps://central1.service-now.com\n)\nEmail:\nsupport@central1.com\nContact Central 1 for inquires on:\nRecalls\nError Corrections.\nAFT Desk\nPhone:\n604-737-5962\nor\n1-800-661-6813\next.\n5962\nFax:\n604-730-4422\nEmail:\naftdesk@central1.com\nContact Payments Canada for information on CPA Rules.\nPayments Canada (CPA)\n180 Elgin Street, 12th Floor\nOttawa, ON K2P 2K3\nPhone:\n613-238-4173\nFax:\n613-233-3385\nEmail:\ninfo@payments.ca\nWebsite:\nwww.payments.ca\n1.3\tAFT Rejects, Recalls, Error Corrections, and Other Exception Items Document Library\nName\nNumber\nFormat\nCompletion Instructions\nPayment Services Class A Fee Schedule (available to Class A credit unions in BC and Ontario)\n2725\nPDF\nAFT Recall and Error Correction Request\n3295\nPDF\nAFT Trace Request\n3296\nPDF\nStop Pre-authorized Debit Request\n3386\nUnlocked PDF\n3389\nEND",
+  "links": [
+    "https://psmanual.secure.central1.com/ps_manual/AFT/aft_reports.7.1.html",
+    "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.1.html",
+    "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.01.html",
+    "https://psmanual.secure.central1.com/ps_manual/AFT/aft_returns_and_aft_notice_of_change_transactions.5.01.html"
+  ],
+  "content_length": 1763
+}

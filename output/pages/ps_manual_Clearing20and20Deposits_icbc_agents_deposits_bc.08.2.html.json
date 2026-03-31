@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.2.html",
+  "title": "2 Terminology",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "2\tTerminology\n2.1 \tDefinitions\nBranch Number\nThe Branch Number is a 5-digit number used to identify the branch of a Canadian financial institution. The Branch Number and the Institution Number make up the Transit Number.\nChargeback\nA Chargeback is an item deposited by your financial institution that is subsequently dishonoured by the Drawee financial institution.\nClient Centre\nThe Client Centre is a digital portal that provides secured access to Central 1âs applications and to information and news about our products and services.\nDrawee\nA drawee is the financial institution to which a debit payment item is addressed. The Drawee is directed to pay the specified amount of money.\nIdentification Stamp\nAn Identification Stamp is a stamp affixed to the back of an item by a financial institution that is involved in the exchange of that item.\nInstitution Number\nThe Institution Number is a 3-digit number assigned by the CPA that identifies a financial institution (e.g., 809 for BC credit unions and 828 for Ontario credit unions). The Branch Number and the Institution Number make up the Transit Number. The Institution Number is sometimes known as the route number.\nSweep\nA sweep is the act of aggregating funds from the individual ICBC Agent accounts held at various financial institutions for the purpose of crediting ICBC. Specifically, Central 1 issues a pre-authorized debit (PAD) against each ICBC agentâs account and forwards the funds to ICBCâs Royal Bank account.\nTransit Number\nThe Transit Number is the Institution Number together with the Branch Number (e.g., 80912010).\nEND",
+  "links": [],
+  "content_length": 1599
+}

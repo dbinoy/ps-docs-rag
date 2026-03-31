@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Return System Ors — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Online Return System Ors</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Online Return System Ors</h1>
+    <p class="subtitle">Clearing and Deposits › Online Return System Ors <span class="badge" style="background:#dc2626">32 pages</span></p>
+    <div class="summary-box md-content"><p># ORS Brief for Solutions Architect</p>
+<h2>Overview</h2>
+<p>The Online Return System (ORS) is Central 1's platform for processing returns and research of cheques, AFT (Automated Funds Transfer) transactions, and related items (chargebacks, NOCs). It supports both manual entry and file upload workflows.</p>
+<h2>Key Data Flows</h2>
+<ul>
+<li><strong>Inbound</strong>: Clearing items (cheques, AFTs, chargebacks, suspect duplicates, deposits)</li>
+<li><strong>Outbound</strong>: Return transactions (.RI, .RIU, .RTN files), AFT Notice of Change (NOC) transactions, reports</li>
+<li><strong>Search/Research</strong>: Multi-criteria queries across transit, account, item details; image retrieval</li>
+</ul>
+<h2>Critical Business Rules</h2>
+<ul>
+<li>Four user types with role-based access (Research, Return, Upload, Script)</li>
+<li>Return reason codes standardized per item type (cheque vs. AFT); AFT returns have 1-business-day SLA</li>
+<li>Cheque reinstatement allows correction of transit/account/cheque number post-return</li>
+<li>Suspect duplicates, deposits, and related items linkage require audit trails</li>
+</ul>
+<h2>Architecture Constraints</h2>
+<ul>
+<li>Password authentication via Client Centre integration</li>
+<li>File upload validation with specific error handling (Appendix A-11 to A-13)</li>
+<li>Real-time reporting on daily return summaries</li>
+<li>Multi-currency support (CAD, USD)</li>
+<li>Deposit slip + cheque image correlation for research</li>
+</ul>
+<h2>Design Considerations</h2>
+<ul>
+<li>Access control enforcement per user type and authorization level</li>
+<li>File format validation (.RI, .RIU, .RTN, .NOC) with detailed error messages</li>
+<li>Transaction code mapping (Appendix A-10) for clearing item classification</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="online_return_system_ors.html">Online Return System (ORS)</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_policies_and_recommendations_for_ors.html">3 Policies and Recommendations for ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_requesting_or_modifying_ors_service.html">4 Requesting or Modifying ORS Service</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_ors_user_management.html">5 ORS User Management</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_logging_in_to_ors.html">6 Logging in to ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_searching_for_cheques_suspect_duplicates_chargebacks_and_aft_transactions_on_ors.html">7 Searching for Cheques, Suspect Duplicates, Chargebacks, and AFT Transactions on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_viewing_printing_and_saving_cheque_images_and_aft_transactions_on_ors.html">8 Viewing, Printing, and Saving Cheque Images and AFT Transactions on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_returning_cheques_on_ors.html">9 Returning Cheques on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_returning_aft_transactions_on_ors.html">10 Returning AFT Transactions on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_deposit_research_on_ors.html">11 Deposit Research on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_reinstating_cheques_on_ors.html">12 Reinstating Cheques on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_aft_notice_of_change_transactions_on_ors.html">13 AFT Notice of Change Transactions on ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_uploading_files_to_ors.html">14 Uploading Files to ORS</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="15_ors_reports.html">15 ORS Reports</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.15.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_1_ors_cheque_search_fields.html">Appendix #A-1 ORS Cheque Search Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.16.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_2_ors_aft_search_fields.html">Appendix #A-2 ORS AFT Search Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.17.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_3_ors_combined_search_fields.html">Appendix #A-3 ORS Combined Search Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.18.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_4_ors_search_results_grid.html">Appendix #A-4 ORS Search Results Grid</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.19.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_5_cheque_return_reason_codes.html">Appendix #A-5 Cheque Return Reason Codes</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.20.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_6_aft_return_reason_codes.html">Appendix #A-6 AFT Return Reason Codes</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.21.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_7_ors_search_fields.html">Appendix #A-7 ORS Search Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.22.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_8_ors_deposit_search_results_grid.html">Appendix #A-8 ORS Deposit Search Results Grid</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.23.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_9_ors_cheque_on_deposit_search_results_grid.html">Appendix #A-9 ORS Cheque on Deposit Search Results Grid</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.24.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_10_ors_transaction_codes.html">Appendix #A-10 ORS Transaction Codes</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.25.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_11_ors_ri_file_upload_error_messages.html">Appendix #A-11 ORS RI File Upload Error Messages</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.26.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_12_ors_rtn_file_upload_error_messages.html">Appendix #A-12 ORS RTN File Upload Error Messages</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.27.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_13_ors_noc_file_upload_error_messages.html">Appendix #A-13 ORS NOC File Upload Error Messages</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.28.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_14_ors_cheque_report_fields.html">Appendix #A-14 ORS Cheque Report Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.29.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_15_ors_aft_report_fields.html">Appendix #A-15 ORS AFT Report Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.30.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_16_ors_aft_notice_of_change_report_fields.html">Appendix #A-16 ORS AFT Notice of Change Report Fields</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.31.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="appendix_a_17_ors_troubleshooting_guide.html">Appendix #A-17 ORS Troubleshooting Guide</a></div>
+            <div class="page-preview">- **Purpose**: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure. - **User Perm</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.32.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

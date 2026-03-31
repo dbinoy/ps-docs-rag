@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.09.html",
+  "title": "9 Managing Payor/Payee Records on PaymentStream AFT",
+  "section_path": "ps_manual > AFT",
+  "breadcrumb": [],
+  "body_text": "9\tManaging Payor/Payee Records on PaymentStream AFT\n9.1\tOverview of Managing Payor/Payee Records on PaymentStream AFT\nPayor/payee records contain the data used to create AFT transactions. This information applies to the Data Entry Automatic Release and Data Entry Manual Release service types on\nPaymentStreamâ¢\nAFT.\n9.2\tManaging Payor/Payee Records on PaymentStream AFT\nIn the Data Entry Manual Release and the Data Entry Automatic Release service types, financial institutions use\nPaymentStream\nAFT to add, delete, and modify payor/payee records for their Originators. Business members can add, delete, and modify records for their own Originators. For procedures on managing payor/payee records, see\nPaymentStream\nAFT â Guide for Automatic Release, Form 5598, and\nPaymentStream\nAFT â Guide for Manual Release, Form 5599.\nRelated Information\nPaymentStream\nAFT â Guide for Automatic Release,\nForm 5598\nPaymentStream\nAFT â Guide for Manual Release,\nForm 5599\nEND",
+  "links": [],
+  "content_length": 971
+}

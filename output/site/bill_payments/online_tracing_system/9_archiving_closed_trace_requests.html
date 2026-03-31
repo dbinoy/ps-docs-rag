@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9 Archiving Closed Trace Requests — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/online_tracing_system/index.html'>Online Tracing System</a> <span class='sep'>›</span> <span>9 Archiving Closed Trace Requests</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Online Tracing System</a>
+    <h1>9 Archiving Closed Trace Requests</h1>
+    <p class="subtitle">Bill Payments › Online Tracing System</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.09.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Archiving Closed Trace Requests</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the archival workflow for closed trace requests in the Online Tracing (OLT) system, enabling Tracers and SuperTracers to manually archive traces or allow automatic archival after seven calendar days.</li>
+</ul>
+<ul>
+<li><strong>Automatic Archival Policy</strong>: Closed traces are automatically archived after seven calendar days; manual archival can be initiated anytime before this deadline by authorized users (Tracers/SuperTracers).</li>
+</ul>
+<ul>
+<li><strong>Archive Effect & Data Access</strong>: Archived trace requests are removed from the OLT Inbox but remain accessible via the Search Trace Request function—archived data is not deleted, only relocated from the active inbox view.</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint</strong>: Traces with status "closed - pending adjustment" are explicitly blocked from archival, indicating a business rule that prevents archiving traces awaiting post-closure modifications.</li>
+</ul>
+<ul>
+<li><strong>User Roles & Access Control</strong>: Only Tracers and SuperTracers have permission to initiate manual archival; role-based access control is enforced at the OLT application level.</li>
+</ul>
+<ul>
+<li><strong>Process Integration</strong>: Archival is integrated into the OLT Inbox UI workflow and depends on the Search Trace Request function for retrieving archived records—suggests two distinct data retrieval paths (active inbox vs. search archive).</li>
+</ul>
+<ul>
+<li><strong>Architect Consideration</strong>: Design must account for a time-based archival trigger (seven-day background job), status-based exclusion logic, and dual-state data accessibility (inbox vs. searchable archive) without permanent deletion.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

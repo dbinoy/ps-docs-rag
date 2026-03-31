@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/FYI_Oct%202024.html",
+  "title": "FYI â October 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "FYI â October 2024\nFYI â October 2024\nThe following updates were made to the Payment Solutions Manual.\nDocument Library\nStatus\nResponse Codes ISO 20022 Integration\n9347\nAdded error codes 205, 375, 397, and 446.\nError code 205 means that the transaction was already submitted (committed).\nError code 375 means that the transaction ID doesnât match the value in the corresponding initiate payment.\nError code 397 means that this is a duplicate transaction ID (participant transaction reference number).\nError code 446 means that the transaction was already reversed (rolled back).\nRevised\nCAS Online User Request\n2513\nWe added a new request type to this form. The form now offers a request type for when a CAS Online User requires additional account access due to a merger between financial institutions.\nRevised\nQuestions\nCentral 1, Client Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 924
+}

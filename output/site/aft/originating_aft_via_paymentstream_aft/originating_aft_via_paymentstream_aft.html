@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Originating AFT via PaymentStream AFT — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/originating_aft_via_paymentstream_aft/index.html'>Originating Aft Via Paymentstream Aft</a> <span class='sep'>›</span> <span>Originating AFT via PaymentStream AFT</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Originating Aft Via Paymentstream Aft</a>
+    <h1>Originating AFT via PaymentStream AFT</h1>
+    <p class="subtitle">AFT › Originating Aft Via Paymentstream Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.01.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Section 15 - Reports (PaymentStream AFT)</p>
+<ul>
+<li><strong>Purpose</strong>: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial institution and business member users.</li>
+</ul>
+<ul>
+<li><strong>Report Categories & Data Sources</strong>:</li>
+<li>PaymentStream AFT Reports: generated from user-entered or uploaded transaction data; purged per Section 13.2 schedule (data deletion impacts report availability)</li>
+<li>PaymentStream Direct Reports: authorized FI users only; includes AFT Originator ID Listing, Deleted AFT Originator ID, and AFT Forecast reports</li>
+<li>Central 1 Reports: settlement data, rejections, recalls; downloaded via File and Report Exchange (FIs) or PaymentStream AFT (business members)</li>
+</ul>
+<ul>
+<li><strong>Critical Business Rule</strong>: Originator IDs inactive >12 months are automatically deleted by Central 1; AFT Originator ID Listing Report CSV export includes Last File Creation Date field to identify at-risk IDs approaching deletion threshold.</li>
+</ul>
+<ul>
+<li><strong>Integration Points</strong>:</li>
+<li>PaymentStream Direct accessible via https://clients.central1.com with federated authentication</li>
+<li>File and Report Exchange as distribution channel for Central 1 Reports to financial institutions</li>
+<li>Report generation tied to Originator Type, Currency Type, and Branch organization filters</li>
+</ul>
+<ul>
+<li><strong>Key Data Elements</strong>: Originator ID (financial institution and business member variants), Currency Type, Branch designation, settlement values (debit/credit), Last File Creation Date, and 7-day settlement forecast horizon based on approved + pending transactions.</li>
+</ul>
+<ul>
+<li><strong>Access Control Constraint</strong>: PaymentStream AFT report access controlled by user's assigned Originator ID scope; PaymentStream Direct reports restricted to authorized financial institution users only.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

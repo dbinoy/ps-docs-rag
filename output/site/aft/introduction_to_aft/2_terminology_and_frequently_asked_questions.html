@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology and Frequently Asked Questions — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/introduction_to_aft/index.html'>Introduction To Aft</a> <span class='sep'>›</span> <span>2 Terminology and Frequently Asked Questions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Introduction To Aft</a>
+    <h1>2 Terminology and Frequently Asked Questions</h1>
+    <p class="subtitle">AFT › Introduction To Aft</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/introduction_to_aft.1.2.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Terminology and Frequently Asked Questions (AFT)</p>
+<ul>
+<li><strong>Purpose</strong>: Defines 90+ core terms and concepts for the Automated Funds Transfer (AFT) system, establishing shared vocabulary for payment processing operations.</li>
+</ul>
+<ul>
+<li><strong>Core AFT Transaction Types</strong>:</li>
+<li><strong>Debit</strong>: Pre-authorized Debits (PADs) with three subtypes—Personal, Business, Cash Management, and Funds Transfer</li>
+<li><strong>Credit</strong>: Direct Deposits</li>
+<li><strong>Administrative</strong>: Error Corrections, File Error Corrections, Notice of Change (NOC), Recalls, and Resubmissions (return codes 901 NSF, 908 Funds Not Cleared)</li>
+</ul>
+<ul>
+<li><strong>Critical Identifiers & Data Structures</strong>:</li>
+<li><strong>Customer ID</strong> / <strong>Originator ID</strong>: 10-digit Central 1 assigned identifier (unique per AFT file originator)</li>
+<li><strong>Transit Number</strong>: Composed of 3-digit Institution Number (CPA-assigned) + 5-digit Branch Number</li>
+<li><strong>File Creation Number</strong>: Auto-incremented sequential identifier; files must be received in order</li>
+<li><strong>Due Date</strong>: Payment posting date; Settlement Date typically equals Due Date</li>
+</ul>
+<ul>
+<li><strong>Lead Time & Processing Constraints</strong>: Default 2 business day lead time before Due Date for file receipt at Central 1; shorter lead times possible with Serviceability Code "0"; stale-dated transactions capped at 173 days.</li>
+</ul>
+<ul>
+<li><strong>Key Integration Dependencies</strong>:</li>
+<li><strong>Financial Institutions File (FIF)</strong>: Payments Canada-maintained directory; includes Serviceability Codes determining credit posting timelines</li>
+<li><strong>CPA Standards</strong>: AFT files exchanged per CPA Standard 005; PAD rules governed by CPA Rule H1</li>
+<li><strong>File & Report Exchange</strong>: SFTP or web-based upload/download portal; primary data exchange mechanism</li>
+<li><strong>Online Return System (ORS)</strong>: Web-based transaction returns and NOC creation</li>
+</ul>
+<ul>
+<li><strong>Security & Compliance Framework</strong>:</li>
+<li><strong>2-Step Security Token</strong>: Hard Token or Soft Token (mobile app) required for Client Centre access</li>
+<li><strong>CPS Admin roles</strong>: CPS Admin Security Officers manage user lifecycle; Client Centre Users cannot manage other users</li>
+<li><strong>Restricted Entities</strong>: Defined exclusions (money transmitters, casinos, marijuana providers, virtual currency exchangers) requiring compliance controls</li>
+</ul>
+<ul>
+<li><strong>PAD Authorization Model</strong>: Set Interval PADs require pre-notification once; Sporadic PADs require per-transaction authorization (non-waivable); Cash Management PADs enable inter-institutional fund transfers for same/affiliated businesses.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

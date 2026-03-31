@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Customizing Wires Elements — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>4 Customizing Wires Elements</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>4 Customizing Wires Elements</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.04.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Customizing Wires Elements</p>
+<ul>
+<li><strong>Overview</strong>: Chapter 4 documents customizable configuration elements within the Wires application for electronic fund transfers, including regulatory compliance fields, fee structures, and user-facing messaging—requires completion of Form 6493 to request changes.</li>
+</ul>
+<ul>
+<li><strong>Customizable FINTRAC Details</strong>: Sender/beneficiary information collection can be configured as "Always Show" or "Let Logic Decide" (display triggered on EFT Report detection); field set differs for business/entity vs. individual senders, indicating conditional schema logic.</li>
+</ul>
+<ul>
+<li><strong>Representative/Conductor Details</strong>: Optional section for capturing third-party wire initiator data when sender type = Business/Entity; disabled by default; this is a toggle configuration with no cascading business logic documented.</li>
+</ul>
+<ul>
+<li><strong>PEP/HIO Determination Questions</strong>: Required regulatory control for wires ≥$100,000 CAD equivalent; can be enabled (mandatory completion, displays in Regulatory section) or disabled (requires offline manual recording); represents compliance workflow state management.</li>
+</ul>
+<ul>
+<li><strong>Fee Configuration System</strong>: Supports two modes—manual entry or pre-populated; pre-populated fees use tiered lookup logic based on three criteria (Maximum Wire Amount in tiers up to $50K, Wire Currency [CAD/USD/ANY], Destination Country [CA/US/ANY]) with separate Fee Currency output (CAD/USD); add-on fees apply to future-dated/priority wires; manual override capability exists in both modes; <strong>constraint</strong>: requires US dollar Central 1 account for USD fee currency.</li>
+</ul>
+<ul>
+<li><strong>Message Box Customization</strong>: Four configurable message locations (Create Wire, Confirmation, Receipt pages, and FINTRAC Fields) with unlimited character length but page layout impact; note that printable confirmation/receipt terms & conditions are <strong>non-customizable</strong>, suggesting separate rendering logic for PDF exports.</li>
+</ul>
+<ul>
+<li><strong>Data Extract Service Integration</strong>: Optional XML/report file export to Central 1 File and Report Exchange for FINTRAC reporting; financial institutions own AML analysis responsibility; cross-border field may display "Verify Manually" when status cannot be determined, creating manual reconciliation dependency.</li>
+</ul>
+<ul>
+<li><strong>System Dependencies & Constraints</strong>: Central 1 charges monthly processing fees per wire (separate from customer-charged fees); Wires Data Extract Service requires pre-configured access to File and Report Exchange; all customization requests route through centralized change control (Form 6493), indicating no self-service configuration UI documented.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

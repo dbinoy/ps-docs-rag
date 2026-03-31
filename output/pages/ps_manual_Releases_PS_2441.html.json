@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2441.html",
+  "title": "24:41 â November 22, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:41 â November 22, 2024\nUpdate to the Wires Part\nWe updated the Wires Part to reflect an enhancement to support the receipt of structured remittance information in incoming wires.\nElectronic Transactions Volume\nWires Part\nSection 19.3, Viewing Wire Details\nWe added procedures for verifying if an incoming wire contains structured remittance information and how to request the XML data for your customer.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 505
+}

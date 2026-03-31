@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.2.html",
+  "title": "2 Terminology and Frequently Asked Questions",
+  "section_path": "ps_manual > Data%20Hub",
+  "breadcrumb": [],
+  "body_text": "2\tTerminology and Frequently Asked Questions\n2.1\tDefinitions\nClient Centre\nThe Client Centre is a digital portal that provides secured access to Central 1âs applications and to information and news about our products and services.\nClient Centre Users\nClient Centre Users log in to the Client Centre to access certain applications. Client Centre Users canât manage Security Officers (User Management / CPS Admin Security Officers) or other Client Centre Users.\nCPS Admin\nThe Central Portal System (CPS) Admin application is the legacy application used to add, edit, and delete Client Centre Users and Security Officers.\nUser Management Security Officer\nUser Management Security Officers use the User Management or CPS Admin application to add, modify, and delete Client Centre Users and to modify and delete other User Management Security Officers (in the User Management application). User Management Security Officers are also referred to as CPS Admin Security Officers. Security Officers use the Client Centre to log in to certain applications.\nServiceNow\nServiceNow is the ticketing application used to report service issues, request changes to existing services, or submit questions to Central 1.\nUser Management\nThe User Management application is used to add, edit, and delete Client Centre Users. It is also used to edit and delete Security Officers and to manage 2-step security tokens.\nVisuals\nVisuals are the data displayed in Data Hub in a chart format (default view) or table format.\nEND",
+  "links": [],
+  "content_length": 1502
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Examining Remittance Vouchers — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>6 Examining Remittance Vouchers</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>6 Examining Remittance Vouchers</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.06.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Examining Remittance Vouchers</p>
+<ul>
+<li><strong>Purpose</strong>: Describes how to identify CRA remittance voucher types and determine eligibility for electronic processing via Business Taxes; vouchers not supported must be processed manually or via mail/courier.</li>
+</ul>
+<ul>
+<li><strong>Electronic Processing Workflow</strong>: Form number lookup in Business Taxes determines processing route—supported vouchers proceed to Section 8.2 (file/payment submission), unsupported vouchers follow manual processes (Chapter 9). Language codes (E/F suffix) must be stripped from form numbers during lookup queries.</li>
+</ul>
+<ul>
+<li><strong>Core Data Structure</strong>: Each remittance voucher contains three required fields: tax program identifier, form number, and Business Number/Account Number (e.g., 123456782RT0001). Form numbers follow pattern `[CODE]-[LANGUAGE]` where language character must be filtered.</li>
+</ul>
+<ul>
+<li><strong>Tax Program Classification</strong>: Business Number/Account Number uses 2-4 character alpha prefixes (NR, NW, RC, RD, RE, RG, RN, RP, RT, SL) as deterministic identifiers mapping to specific tax programs; NR92 forms require additional `02` or `08` tax program number suffix (formatted as TT02/TT08) rather than relying solely on alpha prefix.</li>
+</ul>
+<ul>
+<li><strong>Business Rules & Constraints</strong>: System rejects vouchers with zero balance or refund claims; shared form numbers across programs require tax program validation via alpha character lookup table when not explicitly labeled on voucher.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Assumes upstream Business Taxes system maintains authoritative form number registry and electronic processing capability flags; downstream manual processing (Chapter 9) handles unsupported vouchers.</li>
+</ul>
+<ul>
+<li><strong>Data Validation Critical Path</strong>: Form number normalization (language code removal) → Business Number alpha character mapping → tax program determination → availability check in Business Taxes → routing decision (electronic vs. manual).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

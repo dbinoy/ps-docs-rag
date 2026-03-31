@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Business Taxes User Management — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>5 Business Taxes User Management</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>5 Business Taxes User Management</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.05.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Business Taxes User Management Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Defines procedures for provisioning user access to the Business Taxes module within the Client Centre, including test and production environment segregation.</li>
+</ul>
+<ul>
+<li><strong>Dual User Management Systems</strong>: Two parallel applications currently manage access—CPS Admin (legacy) and User Management (future replacement)—with CPS Admin Security Officers encouraged to migrate to User Management; this creates temporary technical debt in the architecture.</li>
+</ul>
+<ul>
+<li><strong>User Type Requirements</strong>: Business Taxes access requires users to be provisioned as either Client Centre Users or CPS Admin Security Officers; CPS Admin changes require Form 1918 (new appointments) or Form 2035 (modifications/deletions).</li>
+</ul>
+<ul>
+<li><strong>Environment-Specific Access Control</strong>: Four permission flags control environment access via CPS Admin:</li>
+<li>`PSD-BusinessTaxes` (grants Business Taxes function access)</li>
+<li>`PSD-Deny` (production blocking flag—must be unchecked to enable production)</li>
+<li>`PSD-Prev-CompTest` (mirrors production test environment)</li>
+<li>`PSD-SYS` (pre-production test environment with two-week deployment lead time)</li>
+</ul>
+<ul>
+<li><strong>Test/Production Segregation Logic</strong>: Test access is optional and independent of production access; removing the `PSD-Deny` flag grants production access while preserving test environment permissions—no flag de-selection required for test-to-prod promotion.</li>
+</ul>
+<ul>
+<li><strong>External Integration Dependencies</strong>: The module integrates with CRA (Canada Revenue Agency) for filing and payment submission; PaymentStream Direct documentation referenced but not detailed here, indicating dependency on separate user management documentation.</li>
+</ul>
+<ul>
+<li><strong>Data Flow Constraint</strong>: Production environment submissions route through Central 1 infrastructure; test environments operate independently with PSD-SYS providing two-week visibility into pending production changes.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

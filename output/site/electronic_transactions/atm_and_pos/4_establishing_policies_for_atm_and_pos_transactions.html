@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Establishing Policies for ATM and POS Transactions — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/atm_and_pos/index.html'>Atm And Pos</a> <span class='sep'>›</span> <span>4 Establishing Policies for ATM and POS Transactions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Atm And Pos</a>
+    <h1>4 Establishing Policies for ATM and POS Transactions</h1>
+    <p class="subtitle">Electronic Transactions › Atm And Pos</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.04.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: ATM and POS Trace Request Management</p>
+<ul>
+<li><strong>Purpose</strong>: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtronics vs. Everlink).</li>
+</ul>
+<ul>
+<li><strong>Routing Logic</strong>: Traces on THE EXCHANGE network bypass Central 1 (direct acquirer-issuer handling); non-EXCHANGE transactions route to Cardtronics directly or to ServiceNow for Everlink, where Central 1 acts as intermediary forwarder.</li>
+</ul>
+<ul>
+<li><strong>Primary Integration Point</strong>: ServiceNow Service Catalogue (https://clients.central1.com) is the operational system of record for Everlink-based trace submissions; manual Form 2465 is fallback-only when ServiceNow is unavailable.</li>
+</ul>
+<ul>
+<li><strong>Data Elements</strong>: Both ATM and POS trace requests capture PAN, transaction date/time, trace/reference/sequence number, amount, ATM ID or Terminal ID, service provider selection, reason code, and switching report attachment—with "Other" reason requiring narrative explanation in Additional Information field.</li>
+</ul>
+<ul>
+<li><strong>Response SLAs</strong>: ATM traces require 10 business day response; POS traces require 30 calendar day response per Interac regulations; overdue requests escalate through existing ServiceNow tickets to Central 1 management.</li>
+</ul>
+<ul>
+<li><strong>Scope Constraints</strong>: Interac exempts customer-initiated POS traces under $20.00 unless duplicate; POS trace submission requires specific conditions (multiple postings, declined-but-posted, no cardholder record) before Central 1 forwards to acquiring institution for adjustment processing.</li>
+</ul>
+<ul>
+<li><strong>Dispute Escalation</strong>: Unresolved disputes reference external operating rules (Canadian Exchange, ACCULINK, Cirrus, Visa, Interac) with tiered escalation paths (Level 1-3 support) varying by network participant type and codes (EXC/ACCULINK/INT/PLS/CIR).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

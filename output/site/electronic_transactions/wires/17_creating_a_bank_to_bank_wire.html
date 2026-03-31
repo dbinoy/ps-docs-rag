@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>17 Creating a Bank to Bank Wire — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>17 Creating a Bank to Bank Wire</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>17 Creating a Bank to Bank Wire</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.17.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Bank to Bank Wire Creation - Technical Summary</p>
+<ul>
+<li><strong>Scope</strong>: Step-by-step procedural documentation for creating outgoing wires that credit receiving financial institutions (not individual customers) via the Wires application, covering field completion, validation, and confirmation workflows.</li>
+</ul>
+<ul>
+<li><strong>Financial Institution Identification</strong>: Wire routing requires SWIFT code, transit number, or ABA number lookup; alternatively, Advanced Search by name/address. Search results must be selected from system database, indicating integration with a Financial Institution Directory or master reference table.</li>
+</ul>
+<ul>
+<li><strong>Multi-Currency Support</strong>: Wire currency selection varies by beneficiary institution; non-CAD/USD currencies trigger real-time foreign exchange rate calculation (including Central 1 rate + customer FX spread) with countdown-expiring quotes requiring explicit confirmation before transaction completion.</li>
+</ul>
+<ul>
+<li><strong>Intermediary Bank Requirement</strong>: Non-domestic currency wires (e.g., GBP to France) or certain beneficiary institutions mandate intermediary bank selection from dropdown or manual search; intermediary selection is mandatory for transaction progression when applicable.</li>
+</ul>
+<ul>
+<li><strong>Geopolitical Compliance Controls</strong>: Destination country validation against prohibited/sanctioned/high-risk lists; prohibited countries block wire progression with error message post-submission, while warning messages for tax havens/high-risk destinations are best-effort (not guaranteed).</li>
+</ul>
+<ul>
+<li><strong>Canadian Domestic Wire Features</strong>: Wire Priority (Regular vs. High for Lynx participants only) and Future Dated scheduling (up to 14 days) are conditional sections displayed only for CAD-denominated wires to Canadian beneficiaries; both require authorized user approval and incur additional processing fees.</li>
+</ul>
+<ul>
+<li><strong>Approval & Cancellation Workflow</strong>: All wires require approval before processing (Chapter 22 dependency); future-dated wires can only be cancelled via trace request to Central 1 by 2:15 PM PT the business day prior; post-release recalls/amendments are best-effort with no guarantee of receiving institution compliance.</li>
+</ul>
+<ul>
+<li><strong>Payment Metadata & Compliance</strong>: Payment Details section (Related Reference Number) and mandatory Sender FI to Receiver FI Line 1 field carry wire metadata through payment rails; architects must reference Prohibited Remittance Content Procedure to enforce content restrictions on remittance information fields.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

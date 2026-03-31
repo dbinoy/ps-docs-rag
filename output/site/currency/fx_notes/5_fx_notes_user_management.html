@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 FX Notes User Management — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <a href='../../currency/fx_notes/index.html'>Fx Notes</a> <span class='sep'>›</span> <span>5 FX Notes User Management</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Fx Notes</a>
+    <h1>5 FX Notes User Management</h1>
+    <p class="subtitle">Currency › Fx Notes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Currency/fx_notes.1.05.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: FX Notes User Management</p>
+<ul>
+<li><strong>Purpose</strong>: Documents user access control and role assignment procedures for FX Notes application within the Payment Solutions platform, spanning Client Centre User setup through CPS Admin Security Officer authorization.</li>
+</ul>
+<ul>
+<li><strong>Three-tier Role Model</strong>: Users assigned to exactly one role per institution level—Standard User (transaction processing), Manager (spread/fee management, reporting), or Auditor (read-only reconciliation access). Role constraint is critical; multiple roles cause access failures.</li>
+</ul>
+<ul>
+<li><strong>Dual System Architecture</strong>: Client Centre Users exist in parallel systems (CPS Admin and User Management); FX Notes access can be assigned in either system, but User Management is recommended as the authoritative system to enforce single-role constraint and reduce configuration errors.</li>
+</ul>
+<ul>
+<li><strong>Branch-Level Access Control</strong>: Standard Users require explicit transit number assignment (comma-separated format, e.g., "080912010,080912011") to restrict access; blank field grants all-branch access. Managers and Auditors have institution-wide visibility.</li>
+</ul>
+<ul>
+<li><strong>Authentication & Authorization Dependencies</strong>: Requires Client Centre User ID with 2-step security token; assignments require CPS Admin Security Officer role with administrative access rights; new Security Officers require Central 1 intervention via Form 1918.</li>
+</ul>
+<ul>
+<li><strong>Multi-Step Approval Workflow</strong>: Task submissions require secondary authorization by another CPS Admin Security Officer; changes to existing Security Officers routed through central credit union to Central 1 via Form 2035 unless two existing administrative officers exist locally.</li>
+</ul>
+<ul>
+<li><strong>Integration Points</strong>: Links to User Management Part, CPS Admin Application Part, and 2-Step Security procedures; dependent on Forms 1918, 2035, and 5898 for administrative workflows and branch location definitions.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

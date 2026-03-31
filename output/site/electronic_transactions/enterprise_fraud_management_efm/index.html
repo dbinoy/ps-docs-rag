@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise Fraud Management Efm — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Enterprise Fraud Management Efm</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Enterprise Fraud Management Efm</h1>
+    <p class="subtitle">Electronic Transactions › Enterprise Fraud Management Efm <span class="badge" style="background:#be185d">11 pages</span></p>
+    <div class="summary-box md-content"><p># Enterprise Fraud Management (EFM) - Architecture Brief</p>
+<h2>Overview</h2>
+<p>EFM is Central 1's real-time fraud detection and incident management system for member financial institutions. It generates alerts on suspicious transactions, enabling fraud teams to investigate and respond.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<ul>
+<li><strong>Transaction input</strong>: Monitored transactions feed into detection rules</li>
+<li><strong>Alert generation</strong>: Suspicious activity triggers alerts grouped within incidents</li>
+<li><strong>Notification</strong>: Email alerts notify configured fraud teams</li>
+<li><strong>Account mapping</strong>: Account Entity ID links customer accounts to FI identifiers (FI ID, Transit #, Account #)</li>
+</ul>
+<h2>Critical Business Rules</h2>
+<ul>
+<li><strong>Limit Groups</strong>: Risk-based transaction limits for Interac® e-Transfer (requires FI risk assessment)</li>
+<li><strong>Incident filtering</strong>: Configurable filters apply across incident lists for triage</li>
+<li><strong>Settlement integration</strong>: e-Transfer and wire settlement flows managed separately (external settlement documents referenced)</li>
+</ul>
+<h2>Architecture Constraints</h2>
+<ul>
+<li><strong>Access control</strong>: Role-based via CPS Admin/User Management; Client Centre authentication required</li>
+<li><strong>Multi-tenant</strong>: Supports multiple FIs with isolated data views</li>
+<li><strong>Reporting</strong>: Multiple report types (transaction alerts, rule triggers, model summaries) for audit/compliance</li>
+<li><strong>User management</strong>: Centralized administration of fraud team access</li>
+</ul>
+<h2>Design Considerations</h2>
+<p>Ensure audit trails on incident status changes, support configurable alert routing, maintain data isolation by FI/Account Entity ID, and plan for high-volume transaction processing at detection layer.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="enterprise_fraud_management.html">Enterprise Fraud Management</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_and_policies_for_enterprise_fraud_management.html">3 Legal Considerations and Policies for Enterprise Fraud Management</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_managing_enterprise_fraud_management_users.html">4 Managing Enterprise Fraud Management Users</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_logging_in_to_enterprise_fraud_management.html">5 Logging in to Enterprise Fraud Management</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_navigating_enterprise_fraud_management.html">6 Navigating Enterprise Fraud Management</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_managing_incidents_in_enterprise_fraud_management.html">7 Managing Incidents in Enterprise Fraud Management</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_managing_transaction_alerts.html">8 Managing Transaction Alerts</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_creating_incident_filters_data_lists_and_teams.html">9 Creating Incident Filters, Data Lists, and Teams</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_enterprise_fraud_management_reports.html">10 Enterprise Fraud Management Reports</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_settlement_procedures.html">11 Settlement Procedures</a></div>
+            <div class="page-preview">- **Scope**: Documents settlement workflows and fraud reporting procedures for three transaction types (Interac e-Transfer, Wire transfers, and EFM-flagged transactions) within the Payment Solutions p</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9 MTS Branch Management for Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>9 MTS Branch Management for Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>9 MTS Branch Management for Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.09.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># MTS Branch Management for Wires - Technical Summary</p>
+<ul>
+<li><strong>Purpose</strong>: MTS Administrators configure wire authorization thresholds at the branch level to enforce single or dual-approval requirements based on transaction amount and processing model (centralized, partially centralized, or decentralized).</li>
+</ul>
+<ul>
+<li><strong>Authorization Threshold Model</strong>: Two mandatory fields (Level 1 and Level 2) define approval requirements—wires ≤ Level 1 may bypass approval (MDB/Forge only), Level 1-to-Level 2 range requires one approval, and amounts > Level 2 require two approvals; in-branch wires always require minimum one approval regardless of Level 1 setting.</li>
+</ul>
+<ul>
+<li><strong>Multi-Transit Architecture</strong>: Supports linked transit numbers where a home transit can be associated with multiple branches; authorization limits are evaluated against the user's home transit, not the transaction origination branch; linked transits require "Use Linked Transits" permission on MTS profile.</li>
+</ul>
+<ul>
+<li><strong>Foreign Currency Conversion Dependency</strong>: Outgoing wires in non-CAD currencies are converted to Canadian dollars at live rates (or last-available rate) to compare against authorization thresholds; conversion is advisory only and does not affect wire settlement currency.</li>
+</ul>
+<ul>
+<li><strong>Change Authorization Workflow</strong>: All branch setting modifications require a two-step authorization—initial entry by one MTS Administrator, then explicit approval by a second MTS Administrator via Change List queue; pending changes block branch visibility in the main Branch queue until resolved.</li>
+</ul>
+<ul>
+<li><strong>Integration with Wires Processing</strong>: Wires processing model selection (Chapter 5) determines whether settings are configured per-branch or head-office-only; wire fee management is decoupled (Chapter 11) and does not reside in MTS; Financial Institution File (FIF) from Payment Canada is the authoritative source for institution/branch data (read-only in MTS).</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint</strong>: Authorization limits must be established before the first wire transaction is created for a branch; due diligence requirement emphasizes ensuring large-value wires receive dual approvals.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.01.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Wires Page Summary</p>
+<ul>
+<li><strong>Overview</strong>: Introduces the Wires application on PaymentStream Direct™ platform for creating/receiving domestic and international wire transfers with advanced SWIFT lookup, 2-Step Security token support, templating, and FX management capabilities.</li>
+</ul>
+<ul>
+<li><strong>Critical Integration Constraint</strong>: Wires application is <strong>not connected to banking systems</strong>—settlement of incoming/outgoing wires must occur outside the application, creating a manual reconciliation dependency that architects must account for in system design.</li>
+</ul>
+<ul>
+<li><strong>Fraud Monitoring Integration</strong>: Outgoing wires are monitored by Central 1's Enterprise Fraud Management (EFM) system; potential fraud alerts are managed in EFM, requiring bidirectional data flow between Wires and EFM systems.</li>
+</ul>
+<ul>
+<li><strong>Regulatory & Compliance Dependencies</strong>: System integrates with multiple external compliance frameworks (PCMLTFA, FINTRAC, OFAC, CSIS, RCMP) and regional regulators (BCFSA, FSRA, DGCM, etc.); architects must understand reporting obligations and data requirements for each jurisdiction.</li>
+</ul>
+<ul>
+<li><strong>Fee Processing Rules</strong>: Incoming and outgoing wires incur multiple deduction points (receiving institution, intermediary institutions, trace/recall/amendment requests); architects must support fee calculation logic where final beneficiary amount may differ from sent amount, plus optional future-dated/priority wire surcharges.</li>
+</ul>
+<ul>
+<li><strong>Cut-off Times & Availability Constraint</strong>: Wire processing subject to cut-off times (details in Section 14.7) with incoming wires limited to business days (Mon-Fri, excluding statutory holidays); system must enforce these temporal constraints.</li>
+</ul>
+<ul>
+<li><strong>Security & Access Requirements</strong>: 2-Step security token mandatory for sensitive operations (approve outgoing wires, accept incoming wires); requires token integration architecture, and Microsoft Edge browser incompatibility noted.</li>
+</ul>
+<ul>
+<li><strong>Data Extraction & Reporting</strong>: Wires Data Extract Service (Form 2592) and ISO 20022 Return Code Definitions (Form 9610) indicate system generates structured extract files; architects should plan for standardized data export mechanisms supporting compliance reporting and integrations.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

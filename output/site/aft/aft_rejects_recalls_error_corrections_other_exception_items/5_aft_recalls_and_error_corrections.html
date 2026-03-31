@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 AFT Recalls and Error Corrections — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_rejects_recalls_error_corrections_other_exception_items/index.html'>Aft Rejects Recalls Error Corrections Other Exception Items</a> <span class='sep'>›</span> <span>5 AFT Recalls and Error Corrections</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Rejects Recalls Error Corrections Other Exception Items</a>
+    <h1>5 AFT Recalls and Error Corrections</h1>
+    <p class="subtitle">AFT › Aft Rejects Recalls Error Corrections Other Exception Items</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_rejects_recalls_error_corrections_other_exception_items.4.5.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Stop Payment Requests for PADs</p>
+<ul>
+<li><strong>Purpose</strong>: Enables Payors to prevent unauthorized PAD debits by requesting financial institutions apply stop payments, with returns processed via code 903 (Payment Stopped/Recalled) within one business day.</li>
+</ul>
+<ul>
+<li><strong>Key Process Flow</strong>: Payor completes Form 3386 (Stop Pre-authorized Debit Request) → Financial institution enters stop payment into banking system → System matches incoming AFT against stop payment register → If matched, returns PAD as code 903 to originating FI.</li>
+</ul>
+<ul>
+<li><strong>Critical Business Rule</strong>: Stop payment is <strong>amount-specific</strong>—only effective if PAD amount exactly matches Form 3386 amount; different amounts bypass the stop payment and post to account. No fuzzy matching logic.</li>
+</ul>
+<ul>
+<li><strong>Stop Payment is Supplementary, Not Replacement</strong>: Cannot substitute for direct Payor-to-Payee agreement cancellation; must be used *in addition to* formal PAD cancellation notification to prevent liability exposure.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>:</li>
+<li>Form 3386 as authoritative stop payment instruction document (must be signed and retained)</li>
+<li>Banking system's PAD stop payment capability is prerequisite (feature not universal)</li>
+<li>Online Return System (ORS) required for processing code 903 returns to originating FI</li>
+<li>Real-time matching against incoming AFT file from Central 1</li>
+</ul>
+<ul>
+<li><strong>Architectural Constraints</strong>: One business day SLA for return processing; stop payment mechanism operates at financial institution banking system layer, not centralized platform layer.</li>
+</ul>
+<ul>
+<li><strong>Data Field of Note</strong>: Code 903 (Payment Stopped/Recalled) is mandatory return code; no alternative codes documented for stop payment scenarios.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

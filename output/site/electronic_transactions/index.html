@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electronic Transactions — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Electronic Transactions</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>⚡ Electronic Transactions</h1>
+    <p class="subtitle"><span class="badge" style="background:#be185d">90 pages</span></p>
+    <div class="summary-box md-content"><p># Electronic Transactions: Solutions Architect Brief</p>
+<h2>Purpose</h2>
+<p>This section covers Central 1's transaction processing architecture for ATM, POS, and Interac e-Transfer channels. It defines settlement mechanics, fraud detection workflows, trace/adjustment procedures, and regulatory compliance requirements that underpin payment clearing and risk management across the credit union network.</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Network Topology</strong>: Three distinct transaction networks—THE EXCHANGE®, ACCULINK®, and Cooperative Node—each with different settlement rules, trace handling, and acquirer/issuer responsibilities. Network choice determines settlement timing and dispute resolution pathways.</p>
+<p>2. <strong>Acquirer vs. Issuer Roles</strong>: Transaction handling diverges based on party role. ATM deposit procedures, trace initiation, and adjustment authority differ significantly between the institution owning the terminal (acquirer) and the one issuing the card (issuer).</p>
+<p>3. <strong>Enterprise Fraud Management (EFM) System</strong>: Real-time transaction monitoring that generates alerts within incidents. Incidents feed operational workflows for fraud teams; alerts correlate to transaction IDs and trigger email notifications for investigation and disposition.</p>
+<p>4. <strong>Settlement and Reconciliation</strong>: Daily net settlement posts to institutional Central 1 accounts with separate debit/credit totals. Currency conversion (USD→CAD) occurs at posting. Interac e-Transfer limits are configurable per Limit Group; settlement includes autodeposit tracking.</p>
+<p>5. <strong>Trace and Adjustment Mechanics</strong>: Manual, direct peer-to-peer, or Central 1-mediated processes depending on network and transaction type. Response codes from banking host and Interac feed remediation workflows; timeout errors trigger Banking Host Remediation processes.</p>
+<p>6. <strong>Regulatory Compliance</strong>: PCMLTFA/PCMLTF training and policies mandatory for ATM staff; card capture in dual custody; response code handling tied to AML/KYC obligations.</p>
+<h2>How It Works</h2>
+<p>1. Transaction initiated at ATM/POS or via Interac e-Transfer channel</p>
+<p>2. EFM monitors transaction against fraud rules; generates alert if suspicious</p>
+<p>3. If alert triggered: incident created, fraud team notified, analyst reviews and disposes</p>
+<p>4. Transaction settles daily to institution account (net of all adjustments/traces)</p>
+<p>5. If dispute or error: trace request initiated (peer-to-peer on THE EXCHANGE®, or Central 1-mediated on other networks)</p>
+<p>6. Trace resolution updates settlement via adjustment posting</p>
+<p>7. Reports generated daily (EMCU, EMCD, ECCX for e-Transfer; EFM incident/alert reports for fraud)</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>Banking Host</strong>: Remediation process for timeout errors; response code interpretation</li>
+<li><strong>Interac Systems</strong>: e-Transfer profile management (OAS), limit enforcement, autodeposit logic</li>
+<li><strong>Client Centre</strong>: Access control, fraud analyst roles, trace submission (OAS module)</li>
+<li><strong>Settlement Ledger</strong>: Daily posting of net amounts to institutional accounts</li>
+<li><strong>Card Networks</strong>: Interac, THE EXCHANGE®, ACCULINK® switching and clearing</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>Dual Settlement Model</strong>: ATM deposits and POS transactions settle separately; USD conversion occurs post-transaction, not at posting—design reporting to handle this lag.</li>
+<li><strong>Trace Ownership</strong>: THE EXCHANGE® traces are peer-to-peer (no Central 1 intermediation); other networks require Central 1 involvement. Integration design must route correctly by network.</li>
+<li><strong>Remediation Complexity</strong>: Timeout-triggered retries can create duplicate transactions. Banking host must idempotently handle Central 1 resubmissions; this is a critical failure mode.</li>
+<li><strong>Fraud Incident State Machine</strong>: Incidents have open/closed states; filters and team restrictions apply. Design audit trail for all disposition changes.</li>
+<li><strong>Regulatory Audit Trail</strong>: Card capture, PCMLTFA training logs, and fraud decisions must be immutable and traceable—design for compliance inspection.</li>
+</ul></div>
+    <h2>Document Groups</h2>
+    
+            <div class="group-card">
+              <h3><a href="atm_and_pos/index.html">Atm And Pos</a></h3>
+              <div class="group-count">12 pages</div>
+              <p>ATM and POS Document Group Summary Scope: Central 1's settlement framework for ATM and POS transactions across THE EXCHANGE® and ACCULINK® networks, covering acquirer/issuer procedures, adjustments, traces, and…</p>
+              <a href="atm_and_pos/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="electronic_transactions/index.html">Electronic Transactions</a></h3>
+              <div class="group-count">1 pages</div>
+              <p>Enterprise Fraud Management - Architecture Brief Overview This document group covers Central 1's Enterprise Fraud Management framework for electronic transactions. It establishes terminology, organizational contacts,…</p>
+              <a href="electronic_transactions/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="enterprise_fraud_management_efm/index.html">Enterprise Fraud Management Efm</a></h3>
+              <div class="group-count">11 pages</div>
+              <p>Enterprise Fraud Management (EFM) - Architecture Brief Overview EFM is Central 1's real-time fraud detection and incident management system for member financial institutions. It generates alerts on suspicious…</p>
+              <a href="enterprise_fraud_management_efm/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="interac_etransfer_limits_settlement_tracing_reports/index.html">Interac Etransfer Limits Settlement Tracing Reports</a></h3>
+              <div class="group-count">9 pages</div>
+              <p>Interac e-Transfer: Architecture Brief Purpose This document set governs transaction limits, settlement mechanics, reconciliation, remediation, and reporting for Interac e-Transfer® operations at Central 1 Credit Union.…</p>
+              <a href="interac_etransfer_limits_settlement_tracing_reports/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="interac_etransfer_online_administration_system/index.html">Interac Etransfer Online Administration System</a></h3>
+              <div class="group-count">9 pages</div>
+              <p>Interac eTransfer OAS - Architecture Brief Purpose Central 1's Interac eTransfer Online Administration System (OAS) is a Client Centre-hosted application for managing eTransfer transactions, customer profiles, fraud…</p>
+              <a href="interac_etransfer_online_administration_system/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="international_transfers/index.html">International Transfers</a></h3>
+              <div class="group-count">4 pages</div>
+              <p>International Transfers Architecture Brief Overview International Transfers is a Central 1 payment product enabling customers to send funds globally via online banking and mobile app, powered through an Agility…</p>
+              <a href="international_transfers/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="paymentstream_direct/index.html">Paymentstream Direct</a></h3>
+              <div class="group-count">15 pages</div>
+              <p>PaymentStream Direct – Architecture Brief Overview PaymentStream Direct is Central 1's unified payment platform UI providing access to core payment products, customer profile management, and MemberDirect system support.…</p>
+              <a href="paymentstream_direct/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="wires/index.html">Wires</a></h3>
+              <div class="group-count">29 pages</div>
+              <p>Wires Application - Architectural Summary Overview The Wires application on PaymentStream Direct™ enables domestic and international wire transfers for authorized credit union users. It manages the full lifecycle:…</p>
+              <a href="wires/index.html">View pages →</a>
+            </div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

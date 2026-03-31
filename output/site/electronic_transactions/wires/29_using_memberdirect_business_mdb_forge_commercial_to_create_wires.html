@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>29 Using MemberDirectÂ® Business (MDB) / Forge Commercial to Create Wires — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>29 Using MemberDirectÂ® Business (MDB) / Forge Commercial to Create Wires</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>29 Using MemberDirectÂ® Business (MDB) / Forge Commercial to Create Wires</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.29.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># MemberDirect® Business (MDB) / Forge Commercial Wires Integration Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Enables business customers to initiate domestic and international wire transfers through MDB/Forge Commercial (FX or USD/CAD options), with wires routed to the Wires application for financial institution review and processing</li>
+</ul>
+<ul>
+<li><strong>Proxy Architecture</strong>: Each business customer requires exactly one MTS User ID (formatted as `mdb-businessname`, lowercase, max 20 chars, no spaces) that acts as a proxy/integration point between MDB/Forge Commercial and the Wires application; multiple business users funnel through this single MTS User ID for wire identification and tracing</li>
+</ul>
+<ul>
+<li><strong>Three-Tier Authorization Model</strong>:</li>
+<li>MTS Branch Settings define Level 1 and Level 2 authorization thresholds (recommends $1.00 Level 1 to force review of all business wires)</li>
+<li>BUA manages per-business user limits</li>
+<li>Wires Application enforces approvals; Level 1 threshold amounts bypass approval entirely (critical constraint for compliance)</li>
+</ul>
+<ul>
+<li><strong>Required Setup Dependencies</strong>: User Management Security Officer → MTS Administrator → BUA Administrator chain; business users require 2-Step Security token and two-factor authentication; Wires Application Users must have appropriate permissions and approval limits for the specific transit used</li>
+</ul>
+<ul>
+<li><strong>Fraud Monitoring Integration</strong>: Outgoing wires flagged in Central 1's Enterprise Fraud Management (EFM) system are held silently (no customer notification); architects must understand EFM sits outside the main wire processing workflow</li>
+</ul>
+<ul>
+<li><strong>Transit Isolation Pattern</strong>: Best practice recommends home transit number dedicated to MDB/Forge Commercial business wires (separate from in-branch transit) to enable role-based access control, targeted authorization limits, and reporting segregation without affecting branch operations</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint</strong>: Do not create corresponding Client Centre User IDs for business customers; they authenticate only through MDB/Forge Commercial with 2FA, not Client Centre</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

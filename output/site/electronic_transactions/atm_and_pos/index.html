@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atm And Pos — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <span>Atm And Pos</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
+    <h1>⚡ Atm And Pos</h1>
+    <p class="subtitle">Electronic Transactions › Atm And Pos <span class="badge" style="background:#be185d">12 pages</span></p>
+    <div class="summary-box md-content"><h2>ATM and POS Document Group Summary</h2>
+<p><strong>Scope:</strong> Central 1's settlement framework for ATM and POS transactions across THE EXCHANGE® and ACCULINK® networks, covering acquirer/issuer procedures, adjustments, traces, and settlement.</p>
+<p><strong>Key Architectural Elements:</strong></p>
+<ul>
+<li><strong>Dual Network Architecture:</strong> THE EXCHANGE® and ACCULINK® (debit-only) networks serve different transaction types and participants</li>
+<li><strong>Role-Based Processing:</strong> Acquirer (ATM/POS owner) and Issuer (card issuer) have distinct responsibilities and data flows</li>
+<li><strong>Settlement Model:</strong> Daily net settlement posts to credit unions' Central 1 current accounts; USD converted to CAD</li>
+<li><strong>Adjustment/Trace Workflow:</strong> Network-dependent (direct peer-to-peer vs. Central 1-mediated); routed by transaction type and requester role</li>
+<li><strong>Regulatory Requirements:</strong> PCMLTFA compliance, card capture protocols, audit trails for all adjustments</li>
+</ul>
+<p><strong>Critical Design Constraints:</strong></p>
+<ul>
+<li>Transactions must route correctly based on network and role</li>
+<li>Settlement must be atomic and reconcilable</li>
+<li>Trace requests require bidirectional communication with external networks</li>
+<li>Card capture is mandatory; destruction must be documented</li>
+<li>Multi-currency handling (USD→CAD conversion) at settlement</li>
+</ul>
+<p><strong>Integration Points:</strong> C2C Node, Cooperative Node, external switching suppliers, and interbank networks.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="atm_and_pos.html">ATM and POS</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations.html">3 Legal Considerations</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_atm_and_pos_transactions.html">4 Establishing Policies for ATM and POS Transactions</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_atm_deposits_acquirer_procedures.html">5 ATM Deposits â Acquirer Procedures</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_atm_deposits_issuer_procedures.html">6 ATM Deposits â Issuer Procedures</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_atm_adjustments_and_traces.html">7 ATM Adjustments and Traces</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_pos_adjustments_and_traces.html">8 POS Adjustments and Traces</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_initiating_atm_and_pos_trace_requests.html">9 Initiating ATM and POS Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Defines procedures for initiating and managing trace requests for ATM and POS transactions, with routing logic dependent on network (THE EXCHANGE vs. others) and switch provider (Cardtr</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_atm_and_pos_settlement_process.html">10 ATM and POS Settlement Process</a></div>
+            <div class="page-preview">- **Purpose**: Defines mandatory card capture and destruction procedures for ATMs connected to Interac® or THE EXCHANGE® networks, covering both requested and accidental capture scenarios. - **Request</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_receiving_atm_traces_and_adjustments.html">11 Receiving ATM Traces and Adjustments</a></div>
+            <div class="page-preview">- **Purpose**: Defines mandatory card capture and destruction procedures for ATMs connected to Interac® or THE EXCHANGE® networks, covering both requested and accidental capture scenarios. - **Request</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_card_capture.html">12 Card Capture</a></div>
+            <div class="page-preview">- **Purpose**: Defines mandatory card capture and destruction procedures for ATMs connected to Interac® or THE EXCHANGE® networks, covering both requested and accidental capture scenarios. - **Request</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/atm_and_pos.4.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

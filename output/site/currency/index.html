@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency — PS Manual</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../index.html'>index.html</a> <span class='sep'>›</span> <span>Currency</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to overview</a>
+    <h1>💱 Currency</h1>
+    <p class="subtitle"><span class="badge" style="background:#0891b2">29 pages</span></p>
+    <div class="summary-box md-content"><p># Currency Section Overview</p>
+<h2>Purpose</h2>
+<p>This section documents Central 1's currency management capabilities, encompassing both domestic currency ordering/returns and foreign exchange (FX) services. It covers the operational workflows, system access controls, settlement mechanics, and regulatory compliance requirements for member institutions managing physical currency and precious metals inventories through Central 1's Cash Services and FX Notes platforms.</p>
+<h2>Key Concepts</h2>
+<p>1. <strong>Cash Services System</strong>: Core platform for ordering/returning Canadian and US currency, managing location-based cash limits, and processing standing/contingency orders. Access controlled via Client Centre user provisioning.</p>
+<p>2. <strong>FX Notes Application</strong>: Third-party partnership with Globex 2000 enabling member institutions to buy/sell foreign currency bank notes (coins excluded). Supports multi-currency transactions with configurable retail rate modifiers and transaction fees.</p>
+<p>3. <strong>Location & Limit Management</strong>: Members manage multiple cash locations (branches, ATM sites) in ServiceNow with associated daily limits. Central 1 performs initial setup; members retain operational control thereafter.</p>
+<p>4. <strong>Settlement Architecture</strong>: Currency orders settled on system-advised dispatch date; FX Notes transactions netted and settled in CAD by branch or designated transit number. Charges debited to receiving/responsible branch.</p>
+<p>5. <strong>User Role Segregation</strong>: CPS Admin Security Officers, FX Notes Managers, Auditors, and Standard Users have tiered access. Duty segregation required; administrative access restricted at member discretion.</p>
+<p>6. <strong>Compliance & Authenticity</strong>: Members bear responsibility for regulatory compliance and foreign currency note authenticity verification (manual comparison to FX Notes reference images).</p>
+<h2>How It Works</h2>
+<p>1. Member institution designates authorized users and establishes access policies in Client Centre</p>
+<p>2. Admin users configure cash locations and daily limits in ServiceNow (or request Central 1 modification)</p>
+<p>3. For domestic currency: user creates order in Cash Services specifying denomination, quantity, delivery location; order submitted and settled on dispatch date</p>
+<p>4. For FX transactions: Standard user logs into FX Notes, enters buy/sell order; Globex 2000 processes and ships via courier; member verifies authenticity before accepting</p>
+<p>5. Settlement occurs automatically; charges posted to originating branch; members can generate order history and transaction reports</p>
+<p>6. For non-system submission: Standing/Late/Contingency orders processed via ServiceNow or fax/email fallback</p>
+<h2>Integration Points</h2>
+<ul>
+<li><strong>Client Centre</strong>: Authentication and user provisioning gateway for both Cash Services and FX Notes</li>
+<li><strong>ServiceNow</strong>: Location and limit configuration, Standing/Late/Contingency order submission</li>
+<li><strong>Globex 2000</strong>: Third-party FX provider; manages currency procurement, shipment logistics, exchange rate feeds</li>
+<li><strong>General Ledger/Settlement</strong>: Posting of charges and net settlement amounts by branch</li>
+</ul>
+<h2>Architect Notes</h2>
+<ul>
+<li><strong>No real-time FX rates exposed</strong>: Rate management is admin-configurable via Retail Rate Modifiers; system does not indicate live market feeds</li>
+<li><strong>One order per location per delivery window</strong>: Hard constraint; design must enforce at application layer</li>
+<li><strong>Fallback submission channels required</strong>: ServiceNow unavailability necessitates fax/email procedures—member institutions must maintain parallel processes</li>
+<li><strong>Data retention policy</strong>: FX Notes report data retained for 25 months only; archival/compliance retention requirements must be managed by member institutions</li>
+<li><strong>Currency availability constraints</strong>: Domestic orders limited to specific denominations and multiples; FX limited to bank notes only—no coins, no bullion through FX Notes</li>
+</ul></div>
+    <h2>Document Groups</h2>
+    
+            <div class="group-card">
+              <h3><a href="currency/index.html">Currency</a></h3>
+              <div class="group-count">1 pages</div>
+              <p>Currency Document Group Summary Overview The FX Notes document collection provides foundational guidance on foreign exchange (FX) operations within Central 1's payment solutions ecosystem. It covers FX terminology,…</p>
+              <a href="currency/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="currency_ordering_and_precious_metals/index.html">Currency Ordering And Precious Metals</a></h3>
+              <div class="group-count">14 pages</div>
+              <p>Currency Ordering and Precious Metals – Architecture Brief Overview This document set describes Central 1's end-to-end cash management system, covering currency ordering (CAD/USD/FX), returns, precious metals, and…</p>
+              <a href="currency_ordering_and_precious_metals/index.html">View pages →</a>
+            </div>
+            <div class="group-card">
+              <h3><a href="fx_notes/index.html">Fx Notes</a></h3>
+              <div class="group-count">14 pages</div>
+              <p>FX Notes Architecture Brief Overview FX Notes is a Central 1 platform enabling authorized credit union users to buy/sell foreign currency bank notes (not coins) via partnership with Globex 2000. The system is web-based,…</p>
+              <a href="fx_notes/index.html">View pages →</a>
+            </div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

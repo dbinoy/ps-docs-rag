@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Submitting Bill Payments to Central 1 via a Direct Connection to the eCommSwitch — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/electronic_bill_payments_system/index.html'>Electronic Bill Payments System</a> <span class='sep'>›</span> <span>8 Submitting Bill Payments to Central 1 via a Direct Connection to the eCommSwitch</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Electronic Bill Payments System</a>
+    <h1>8 Submitting Bill Payments to Central 1 via a Direct Connection to the eCommSwitch</h1>
+    <p class="subtitle">Bill Payments › Electronic Bill Payments System</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.08.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Electronic Bill Payment Reversals and Trace Requests – Architecture Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documents procedures for cancelling bill payment transactions (reversals) and initiating payment inquiries/adjustments (trace requests) through Central 1's payment processing system.</li>
+</ul>
+<ul>
+<li><strong>Key Process Rule</strong>: Reversal requests must be submitted same-day before biller-specific deadlines (4:00 PM PT standard, 2:00 PM PT for Community Visa 650); Central 1 can only reverse if it holds the FI's e-bill database or payment is pre-uploaded before deadline. Ontario FIs using batch file uploads cannot use reversal service.</li>
+</ul>
+<ul>
+<li><strong>System Constraints & Exclusions</strong>: Three billers reject reversals (Vancity Visa 28, Vancity Com. Inv. Bank Visa 274, International Transfers 13364); all CRA billers reject same-day reversals (full list external); reversals incur service charges per Form 2725.</li>
+</ul>
+<ul>
+<li><strong>Data Flow Integration</strong>: ServiceNow is primary submission channel for reversal requests (fallback: Form 1793); OLT (Online Tracing System) is primary channel for trace requests and biller-initiated adjustments; financial institutions generate BPCV and BPRE reports to resolve customer inquiries before escalation.</li>
+</ul>
+<ul>
+<li><strong>Critical Dependencies</strong>: Central 1's electronic bill payments database must be current and synchronized; reversal processing depends on payment upload timing relative to deadline; OLT and ServiceNow ticket systems must maintain bidirectional notification of outcomes.</li>
+</ul>
+<ul>
+<li><strong>Architect Must Know</strong>: FI account credit is manual post-reversal and not automatic; reversal success is transaction-level only (Central 1 system); biller-initiated trace requests bypass OLT and are entered directly by Central 1.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/bill_payment_remittance_processing/index.html'>Bill Payment Remittance Processing</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payment Remittance Processing</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">Bill Payments › Bill Payment Remittance Processing</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.02.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: BPRP Data Files</p>
+<p><strong>Overview:</strong> This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments received through Central 1's payment processing system.</p>
+<h2>Key Points for Architecture</h2>
+<ul>
+<li><strong>Scope & Applicability:</strong> BPRP applies to BC and Ontario credit unions plus other Central 1 clients; other provinces handled by respective provincial centrals (implies multi-tenant, region-specific configuration)</li>
+</ul>
+<ul>
+<li><strong>Two Supported File Formats:</strong></li>
+<li><strong>Flat File:</strong> Proprietary Central 1 format requiring custom programming for integration; generated 5 days/week regardless of transaction volume</li>
+<li><strong>EDI Format:</strong> CPA Rule H6 compliant industry standard; compatible with third-party software; generated 5 days/week only when transactions exist (asymmetric behavior vs. Flat File)</li>
+</ul>
+<ul>
+<li><strong>Distribution Channel:</strong> Files delivered via File and Report Exchange (referenced as a separate system component); requires separate documentation/procedures for end-user access (Section 6.8)</li>
+</ul>
+<ul>
+<li><strong>Data Flow:</strong> Central 1 → File and Report Exchange → Corporate Creditor downloads → imports into their internal system for account crediting (offline batch process, not real-time API)</li>
+</ul>
+<ul>
+<li><strong>Operational Considerations:</strong> System outages trigger proactive email notifications via Client Support Services; file format changes require manual request to billers@central1.com or fax 1-855-730-6424 (no self-service configuration)</li>
+</ul>
+<ul>
+<li><strong>Architecture Implications:</strong> Design must account for two distinct file generation rules and handle conditional file delivery; File and Report Exchange is a critical dependency for data retrieval</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

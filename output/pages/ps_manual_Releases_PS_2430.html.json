@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2430.html",
+  "title": "24:30 â August 15, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:30 â August 15, 2024\nUpdate to Introduction to AFT Part\nWe clarified the amount of calendar days the Record Entry Limit can be backdated or future-dated. Depending on the type of AFT transaction, transactions can be backdated up to 30 or 173 calendar days. Depending on the type of AFT transaction, transactions can be future-dated up to 14 or 45 calendar days.\nAFT Volume\nIntroduction to AFT Part\nSection 7.2, Record Entry Limits\nWe clarified that backdated AFT transactions that are PADs can be backdated up to 173 calendar days. Backdated AFT transactions that are direct deposits can be backdated up to 30 calendar days.\nWe also clarified that future-dated PADs that are data entry manual release types can be future-dated up to 14 calendar days. Future-dated direct deposits that are data entry manual release types can be future-dated up to 14 calendar days.\nData entry automatic release types of transactions canât be future-dated as the systems extracts these transactions three business days prior to the due date.\nFuture-dated PADs and direct deposits that are file upload release types can be future-dated up to 45 calendar days.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1244
+}

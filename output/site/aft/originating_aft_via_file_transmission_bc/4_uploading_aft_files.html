@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Uploading AFT Files — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/originating_aft_via_file_transmission_bc/index.html'>Originating Aft Via File Transmission Bc</a> <span class='sep'>›</span> <span>4 Uploading AFT Files</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Originating Aft Via File Transmission Bc</a>
+    <h1>4 Uploading AFT Files</h1>
+    <p class="subtitle">AFT › Originating Aft Via File Transmission Bc</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: AFT File Upload Process & Validation</p>
+<ul>
+<li><strong>Scope</strong>: Defines the procedural and technical requirements for Originators to upload AFT files to Central 1's File and Report Exchange, including business rules, submission deadlines, and validation workflows.</li>
+</ul>
+<ul>
+<li><strong>File Format & Standards</strong>: AFT files must comply with CPA Standard 005 specifications (see Section 2.4); file creation date cannot exceed 7 days before processing; files must be submitted in consecutive sequential order starting at 0001.</li>
+</ul>
+<ul>
+<li><strong>Submission Constraints</strong>: Hard deadline of 2 PM PT, two business days before due date; exceeding this shifts processing to following business day. File value must not exceed Originator's maximum dollar amount limit.</li>
+</ul>
+<ul>
+<li><strong>Dating Rules (Critical Business Logic)</strong>:</li>
+<li>Credit records: post-date limit 45 days (CPA allows 14 days), backdate limit 30 calendar days</li>
+<li>Debit records: post-date limit 45 days from transaction forwarding date (CPA allows 2 days), backdate limit 173 calendar days</li>
+<li>Central 1 warehouses transactions up to 45 days regardless of CPA limits</li>
+</ul>
+<ul>
+<li><strong>Validation & Response Flow</strong>: Three auto-generated response files (.LST, .ERR, .BAK) created within minutes in AFT subdirectory; Originator responsible for checking .LST confirmation file. Initial upload validation differs from mainframe validation—rejects at mainframe stage trigger Central 1 notification; individual transaction rejects (not whole file rejects) reported via Recalled/Rejected PAP Items Report (ICRR/UCRR).</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Requires prior setup of AFT subdirectory by Central 1; depends on separate File Exchange and Report Distribution system for access provisioning and FTP connectivity; links to downstream Processing Direct Clearer for debit transaction forwarding.</li>
+</ul>
+<ul>
+<li><strong>Pre-requisites</strong>: Completed agreements/application forms and sporadic debit authorization required per instance before file submission.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

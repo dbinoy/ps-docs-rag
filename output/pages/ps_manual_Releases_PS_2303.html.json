@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2303.html",
+  "title": "23:03 â February 27, 2023",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "23:03 â February 27, 2023\nUpdate to Wires Data Extract Service File Specifications\nWe made the following changes to the Wires Data Extract Service File Specifications, Form 9327.\nDocument Library\nStatus\nWires Data Extract Service File Specifications\n9327\nChapter 1, Wires Data Extract Service File Content\nâ¢\nWe removed a paragraph that incorrectly stated the extract can contain all wires or only cross-border wires. The extract contains all wires.\nâ¢\nWe added the note âWires with a cross-border status of âVerify Manuallyâ must be reviewed by your financial institutionâs AML team.â\nRevised\nChapter 4, Wires Data Extract Field Specifications\nWe updated the following field specifications:\nâ¢\nMTS Ref No â Format, Length and Example columns\nâ¢\nRemittance Information â Line 1 field length\nâ¢\nSender FI to Receiver â Line 1 field length\nChapter 5, Sample XML and Report File\nWe updated the MTS Ref No sample data to align with the updated format.\nQuestions\nClient Support Services, phone\n1-888-889-7878,\nOption 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1066
+}

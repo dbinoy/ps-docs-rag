@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Posting AFT Service Charges — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_settlement/index.html'>Aft Settlement</a> <span class='sep'>›</span> <span>6 Posting AFT Service Charges</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Settlement</a>
+    <h1>6 Posting AFT Service Charges</h1>
+    <p class="subtitle">AFT › Aft Settlement</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.6.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: 6 Posting AFT Service Charges</p>
+<p><strong>Overview:</strong> This page defines the process for posting three types of AFT charges—transaction fees, service fees, and setup fees—to financial institutions' Central 1 accounts and downstream to originators.</p>
+<p><strong>Key Concepts & Charge Types:</strong></p>
+<ul>
+<li><strong>Outgoing Transaction Charges</strong> (code OF): Posted monthly to Central 1 account; FIs manually post to originator accounts using transaction counts from ICCB/UCCB or ICTV/UCTV reports</li>
+<li><strong>Incoming Transaction Charges</strong> (code DD for credits, code PP for debits): Posted to Central 1 monthly; FIs decide whether to pass through to members (e.g., bundled in account fees)</li>
+<li><strong>AFT Service Fees</strong>: Monthly fee model (automatic file release on PaymentStream AFT) vs. per-file charge model (manual uploads or File and Report Exchange); one-time setup fee per new originator</li>
+</ul>
+<p><strong>Critical Data Structures & Report Dependencies:</strong></p>
+<ul>
+<li>Four primary reports drive billing: AFT Monthly Fee Report (AFTM/UFTM), AFT Clients File Fee Monthly Summary (AFMS/UFMS), AFT Clients Daily Charges Report (AFTD/UFTD), Monthly Customer AFT Billing Report (ICCB/UCCB), and Monthly AFT Transaction Volumes Report (ICTV/UCTV)</li>
+<li>Reports sorted by branch; fee assignments keyed to Originator ID</li>
+<li>Charge codes (OF, DD, PP) used for Central 1 posting and reconciliation</li>
+</ul>
+<p><strong>Integration Points & Manual Process Risk:</strong></p>
+<ul>
+<li>Central 1 account posting is automated, but originator-level billing requires <strong>manual posting</strong> by FI staff using report data—no downstream integration specified</li>
+<li>Regulatory constraint: Class A credit unions in BC/Ontario reference Form 2725 (Payment Services Class A Fee Schedule) for permissible charges</li>
+<li>PaymentStream AFT platform is the primary system generating billable events (automatic vs. manual file handling)</li>
+</ul>
+<p><strong>Architect Must Know:</strong></p>
+<ul>
+<li>This is a <strong>manually-intensive billing process</strong>—reports provide data but posting to originator accounts is not automated; consider this a design gap if modernizing</li>
+<li>Fee recovery strategy is FI-discretionary (pass-through or absorb); no validation rules defined to prevent FI-originator charge disputes</li>
+<li>No mention of reconciliation mechanisms, rejected transaction handling, or audit logging for manual posts</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

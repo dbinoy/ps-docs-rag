@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2137.html",
+  "title": "21:37 â October 15, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:37 â October 15, 2021\nElectronic Bill Payments System Update\nWe added new response codes for ISO 8583 and ISO 20022 integration.\n995 EFM Rejection â Used to notify your financial institution of a rejected transaction based on fraud detection in Central 1âs Enterprise Fraud Management (EFM) system.\n996 EFM Transaction on Hold â Used to notify your financial institution that a suspicious transaction has been put on hold, and a fraud analyst will investigate the transaction shortly.\nDocument Library\nStatus\nResponse Codes ISO 8583 Integration\n9346\nRevised\nResponse Codes ISO 20022 Integration\n9347\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 715
+}

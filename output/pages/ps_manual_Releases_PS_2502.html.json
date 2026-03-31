@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2502.html",
+  "title": "25:02 â January 15, 2025",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "25:02 â January 15, 2025\nUpdate to the Enterprise Fraud Management Part\nWe updated the Enterprise Fraud Management Part to reflect all\nversion 4.7 upgrades\n.\nElectronic Transactions Volume\nEnterprise Fraud Management\nEntire Part\nUpdated many images.\nAdded reminders and instructions regarding how comments are visible on other systems and applications and how comments must be appropriate and descriptive for EFM users and customers.\nSection 7.3, Overview of Incidents on the Incidents Page\nSection 7.5, Using the Filters Sidebar in the Open Incident List\nAdded description for the Highest Score column and filter.\nSection 7.4, Tags\nNew section.\nSection 7.8, Viewing Incidents in the Open List\nUpdated description for the Risk Score column of the Activity timeline.\nSection 8.2, Identifying a Transaction as Fraudulent\nSection 8.7, Revising a Previously Identified Alert\nSection 8.10, Recovery of Funds\nAdded information on how and when to use the Initiate Fund Recovery box.\nSection 8.4, Identifying Alerts in Auto Risk Transactions\nAn update was made to the Auto Risk procedures. All Auto Risk transactions must now be identified as Risk or No-risk.\nSection 8.6, Adding Manual Alerts in Bulk\nAdded a new section with instructions on how to add manual alerts in bulk from the incident page or the Events search results page.\nQuestions\nEFM Support, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1379
+}

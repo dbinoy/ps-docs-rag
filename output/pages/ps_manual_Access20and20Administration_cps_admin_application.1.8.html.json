@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/cps_admin_application.1.8.html",
+  "title": "8 Troubleshooting CPS Admin Problems",
+  "section_path": "ps_manual > Access%20and%20Administration",
+  "breadcrumb": [],
+  "body_text": "8\tTroubleshooting CPS Admin Problems\n8.1\tPassword Login Problems\nAfter seven consecutive, unsuccessful password login attempts, users are locked out for 30 minutes, even if the login attempts are made over several days.\nResetting Passwords for CPS Admin Security Officers\nRequests to change a CPS Admin Security Officerâs password must be submitted in writing to the appropriate provincial central. See Section 4.3, Modifying or Deleting a CPS Admin Security Officer via Central 1. CPS Admin Security Officers canât reset passwords for other CPS Admin Security Officers via the User Management application.\nResetting Passwords for Client Centre Users\nCPS Admin Security Officers reset passwords for Client Centre Users. See Section 5.3, Modifying a Client Centre User.\n8.2\t2-Step Security Token Login Problems\nSee the 2-Step Security Part for information on troubleshooting 2-step security token problems.\n8.3\tApplication Access Problems\nIndividuals who successfully log in to the Client Centre can access the applications they are authorized to use.\nIf an error message occurs when the individual tries to load an application, it may be because of the following:\nThe application also has a user management component and the user either isnât set up on the application or the user wasnât set up correctly.\nAlthough unlikely, the application may be unavailable.\nEND",
+  "links": [],
+  "content_length": 1372
+}

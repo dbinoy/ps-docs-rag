@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Logging in to MTS for MTS Administrators — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>6 Logging in to MTS for MTS Administrators</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>6 Logging in to MTS for MTS Administrators</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.06.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: MTS Administrator Login and Access Control</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the authentication and access flow for MTS (Money Transfer System) administrators to manage Wires User permissions, MTS Administrators, and branch information.</li>
+</ul>
+<ul>
+<li><strong>Authentication Requirements</strong>: Two-factor authentication is mandatory—users must possess a registered 2-step security token and enter the generated code during login; token codes are time-sensitive and validated at the Client Centre layer.</li>
+</ul>
+<ul>
+<li><strong>Access Control Dependencies</strong>: Three prerequisites must be satisfied before MTS login succeeds:</li>
+</ul>
+<p>1. User must be provisioned as a "User Management Security Officer" or "Client Centre User" role in a separate User Management system</p>
+<p>2. Access to the MTS application must be explicitly assigned (application-level permission)</p>
+<p>3. A corresponding MTS Administrator account must exist in the MTS application (separate identity in MTS)</p>
+<ul>
+<li><strong>Integration Points</strong>:</li>
+<li>Client Centre (https://clients.central1.com) acts as the SSO/authentication gateway</li>
+<li>User Management system manages role assignment and application access permissions</li>
+<li>MTS application maintains its own administrator account registry (Section 7.5 reference)</li>
+<li>Applications are grouped by category and support "favorites" caching</li>
+</ul>
+<ul>
+<li><strong>Session Management Constraints</strong>: Users must manually log off and close browsers; no automatic session timeout is documented, presenting a potential security consideration for architect review.</li>
+</ul>
+<ul>
+<li><strong>Data Flow</strong>: Username/Password → Client Centre Authentication → 2-Step Token Validation → Applications List → MTS Selection → MTS Main Menu (only on successful token verification).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

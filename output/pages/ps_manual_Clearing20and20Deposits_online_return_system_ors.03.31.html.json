@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.31.html",
+  "title": "Appendix #A-16 ORS AFT Notice of Change Report Fields",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "Appendix #A-16\tORS AFT Notice of Change Report Fields\nColumn Name\nColumn Description\nFormat\nN\nAFT Notice of Change status of item\nP â Pending\nC â Complete\nType\nType of AFT\nDebit or Credit\nDate\nDate item is charged to financial institution account at Central 1\nMmm dd yyyy, Example: Jan 05 2005\nTransit\nRoute and Transit Number\nExample: 12340809\nAccount\nAccount number\n1â14 digits\nAmount\nDollar amount of item\n1â8 digit dollar amount + â.â + 2 digit cents\nReference #\nReturn Reference #\n1â9 digits\nNOC Tran\nNotice of change transit #\n1-8 digits\nNOC Acct\nNotice of change account #\n1-14 digits\nUser ID\nName of user that created item\n1â8 characters\nO/U\nOnline or Upload\nO â Indicates item was created online via ORS\nU â Indicates item was uploaded to ORS via RTN file",
+  "links": [],
+  "content_length": 784
+}

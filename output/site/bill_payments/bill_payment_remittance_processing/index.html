@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bill Payment Remittance Processing — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <span>Bill Payment Remittance Processing</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
+    <h1>🧾 Bill Payment Remittance Processing</h1>
+    <p class="subtitle">Bill Payments › Bill Payment Remittance Processing <span class="badge" style="background:#059669">11 pages</span></p>
+    <div class="summary-box md-content"><p># BPRP Architecture Brief</p>
+<h2>Overview</h2>
+<p>Bill Payment Remittance Processing (BPRP) is Central 1's electronic payment consolidation system enabling business members (Billers) to aggregate and process payments through a lead financial institution.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<ul>
+<li><strong>Enrollment pipeline</strong>: Business member setup → Biller validation on Electronic Bill Payment System → BPRP arrangement activation</li>
+<li><strong>Service requests</strong>: Non-Central 1 institutions submit via prescribed channels; Central 1 institutions use direct submission</li>
+<li><strong>Settlement & tracing</strong>: BC/Ontario-specific; involves inter-institution fund transfers and reconciliation reporting</li>
+<li><strong>Data outputs</strong>: Two standard BPRP reports + configurable data files for BC/Ontario participants</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<p>1. <strong>Multi-institution architecture</strong>: Lead bank model with provincial central intermediation; non-Central 1 institutions operate under delegation agreements</p>
+<p>2. <strong>Regulatory compliance mandatory</strong>: Financial institutions establish enrollment policies; legal review required per chapter 3</p>
+<p>3. <strong>Provincial variance</strong>: Settlement, tracing, reports, and data file availability differ by province; architecture must support regional branching logic</p>
+<p>4. <strong>AFT dependency</strong>: Relies on Automated Funds Transfer authorization framework for debits/credits</p>
+<h2>Pre-Design Considerations</h2>
+<ul>
+<li>Confirm provincial feature scope before architecture decisions</li>
+<li>Document lead bank vs. member institution role separation</li>
+<li>Plan for CCIN (Corporate Client Identification Number) modification workflows</li>
+<li>Design idempotent service request handling with audit trails for enrollment/modification/cancellation operations</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="bill_payment_remittance_processing_bprp.html">Bill Payment Remittance Processing (BPRP)</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_for_bprp.html">3 Legal Considerations for BPRP</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_bprp.html">4 Establishing Policies for BPRP</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_signing_a_bill_payment_remittance_processing_agreement.html">5 Signing a Bill Payment Remittance Processing Agreement</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_enrolling_in_bprp.html">6 Enrolling in BPRP</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_sending_bprp_service_requests.html">7 Sending BPRP Service Requests</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_modifying_or_canceling_a_bprp_arrangement.html">8 Modifying or Canceling a BPRP Arrangement</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_bprp_settlement_and_tracing.html">9 BPRP Settlement and Tracing</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_bprp_reports.html">10 BPRP Reports</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_bprp_data_files.html">11 BPRP Data Files</a></div>
+            <div class="page-preview">**Overview:** This page documents the Bill Payment Remittance Processing (BPRP) data file formats and delivery mechanisms that enable Corporate Creditors to automatically post customer payments receiv</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/bill_payment_remittance_processing.4.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

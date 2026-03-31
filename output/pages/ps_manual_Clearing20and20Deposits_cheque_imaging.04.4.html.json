@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.4.html",
+  "title": "4 Retrieving Cheque Images",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "4\tRetrieving Cheque Images\n4.1\tOverview of Retrieving Cheque Images\nCredit unions can search for, view, and print Incoming Clearing Items and deposit items via the Online Return System (ORS). If possible, use ORS to resolve inquiries and print copies because it is faster and more cost effective than sending a manual trace request. For Incoming Clearing Items, ORS is also used to\nvalidate cheques drawn on the credit union and on its membersâ accounts,\nNote:\tCredit unions that have a large volume of items can establish a policy to verify items only over a certain dollar value.\nmake return decisions,\nreturn cheques, and\nreinstate cheques (i.e., update incorrect cheque data such as the Transit Number, account number, or cheque number). The correct information would then be included in the Image File for member statements.\nRefer to the Incoming Clearing Items Part and the Deposit Processing Part for more information on incoming clearing and deposit processes. Refer to the Online Return System (ORS) Part for procedures on using ORS.\n4.2\tRetrieving Cheque Images via ORS\nUse ORS to view, print, or download Images of Incoming Clearing Items and items sent on deposit to Central 1. Refer to the Online Return System (ORS) Part for procedures on using ORS. ORS retains a history of cheque Images for seven years.\nEND",
+  "links": [],
+  "content_length": 1325
+}

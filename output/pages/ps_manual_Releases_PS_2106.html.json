@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2106.html",
+  "title": "21:06 â February 8, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:06 â February 8, 2021\nCEBA Forgiveness Refund Update\nWe updated the Type of Payment section on the CEBA Program â Repayment form in ServiceNow.\nDocument Library\nStatus\nCentral 1 Facilitated CEBA Application Procedures â Quick Reference Guide\n9140\nChapter 4, Completing the CEBA Repayment Form in ServiceNow; Step\nâ®\nType of Payment\nWe changed âPrincipal Refund Due to Overpaymentâ to âPrincipal Forgiveness Refund Due to Overpaymentâ to clarify that this data element should only be used if a customer makes a payment more than the non-forgivable portion, not realizing they are entitled to forgiveness. If the customer requests a refund of the applicable forgiveness amount, the amount is entered in this data element.\nThis data element is not to enable refunds or reversals of principal payments in any other case\n.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 2, email\ndigitalbanking_support@central1.com\n.",
+  "links": [],
+  "content_length": 955
+}

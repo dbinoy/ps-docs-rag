@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Account Reconciliation Service — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/central_1_current_accounts_and_high_interest_savings_accounts/index.html'>Central 1 Current Accounts And High Interest Savings Accounts</a> <span class='sep'>›</span> <span>6 Account Reconciliation Service</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Central 1 Current Accounts And High Interest Savings Accounts</a>
+    <h1>6 Account Reconciliation Service</h1>
+    <p class="subtitle">Central 1 Banking Services › Central 1 Current Accounts And High Interest Savings Accounts</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/central_1_current_accounts_and_high_interest_savings_accounts.2.6.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Central 1 High Interest Savings Accounts - Technical Summary</p>
+<ul>
+<li><strong>Overview</strong>: Central 1 HISAs are CAD-denominated, low-risk deposit instruments managed via Treasury Connect with liquidity access and near-real-time transaction visibility (7-year history).</li>
+</ul>
+<ul>
+<li><strong>Account Lifecycle</strong>: HISA creation requires Form 10133 (High Interest Savings Account Agreement) with dual authorized officer signatures submitted to Central 1; closure via direct contact to treasury@central1.com. Central 1 manages provisioning notification.</li>
+</ul>
+<ul>
+<li><strong>Key Constraints</strong>:</li>
+<li>Maximum deposit cap: $10,000,000.00 CAD per contribution</li>
+<li>Redemptions must be scheduled 31-90 calendar days in advance; non-cancellable/non-reversible once scheduled</li>
+<li>Redemptions process business days only (statutory holidays trigger next-day settlement)</li>
+<li>External fund transfers explicitly blocked (HISA transits not registered with Payments Canada)</li>
+</ul>
+<ul>
+<li><strong>Integration Points</strong>:</li>
+<li><strong>Treasury Connect</strong> (Form 6444 governs procedures): Primary user interface for account summary viewing, fund transfers, and transaction export</li>
+<li><strong>Client Centre ID</strong>: Required for Treasury Connect application assignment</li>
+<li><strong>Permissions Model</strong>: Role-based access via "Account Summary" and "Transfer Funds" permissions; intra-bank transfers only between Central 1 CAD accounts</li>
+</ul>
+<ul>
+<li><strong>Data & Settlement</strong>: Account data updated near-real-time throughout business day; opening balances available by 5:30 AM PT (8:30 AM ET). Transits cannot be issued or registered with Payments Canada—critical architectural constraint for payment routing.</li>
+</ul>
+<ul>
+<li><strong>Architect Must Know</strong>: HISA is a segregated account entity (displays separately from CAD current accounts); fund movement is strictly internal to Central 1 ecosystem and subject to rigid scheduling constraints—design integrations anticipating 31-90 day redemption lead times and business-day-only settlement.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

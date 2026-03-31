@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bill Payments — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <span>Bill Payments</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
+    <h1>🧾 Bill Payments</h1>
+    <p class="subtitle">Bill Payments › Bill Payments <span class="badge" style="background:#059669">1 pages</span></p>
+    <div class="summary-box md-content"><p># Bill Payments System Brief</p>
+<h2>Overview</h2>
+<p>The Electronic Bill Payments System enables credit union members to pay bills electronically through Central 1's infrastructure. The document outlines operational frameworks, transaction guardrails, and processing windows.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Transaction Controls:</strong></p>
+<ul>
+<li>Financial Institution (FI) transaction limits—caps on per-member or per-institution transaction volumes</li>
+<li>Biller-specific transaction limits—individual payee constraints to manage risk and operational capacity</li>
+</ul>
+<p><strong>Processing Windows:</strong></p>
+<ul>
+<li>Cut-off times define submission deadlines for same-day/next-day processing</li>
+<li>Critical for scheduling batch jobs, fund settlement, and biller delivery</li>
+</ul>
+<h2>Design Considerations</h2>
+<p><strong>Integration Points:</strong></p>
+<ul>
+<li>Member-facing submission interface</li>
+<li>Biller directory/validation service</li>
+<li>Fund settlement and clearing mechanisms</li>
+<li>Audit/compliance logging for transaction limits</li>
+</ul>
+<p><strong>Data Flows:</strong></p>
+<ul>
+<li>Member payment instruction → validation → queuing → settlement → biller delivery</li>
+<li>Limit-checking must occur pre-submission to prevent rejections</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li>Regulatory compliance requirements around transaction recording</li>
+<li>Idempotency for retries during settlement failures</li>
+<li>Real-time limit validation (lookup performance critical)</li>
+</ul>
+<p><strong>Before Enhancement Planning:</strong></p>
+<p>Confirm current limit enforcement mechanisms, cut-off time handling across time zones, and whether limits are soft (warnings) or hard (blocking).</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="wwparcel_html.html">wwparcel.html</a></div>
+            <div class="page-preview">- **Overview**: Comprehensive documentation covering four interconnected payment processing modules (Electronic Bill Payments System, CRA Business Taxes, Online Tracing System, and Bill Payment Remitt</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Bill%20Payments.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

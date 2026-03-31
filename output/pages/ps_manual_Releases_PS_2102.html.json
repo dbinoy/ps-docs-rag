@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2102.html",
+  "title": "21:02 â January 11, 2021",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "21:02 â January 11, 2021\nCEBA â Processing Forgivable Principal\nWe updated the FAQs in the Central 1 Facilitated CEBA Application Procedures Quick Reference Guide, Form 9140.\nQ: Once 75% or 66% of the loan is repaid, how do we process the forgivable 25% or 33% to close the loan?\nA: When you report payments using the CEBA Repayment form in ServiceNow, you also report the date and amount of the 25% or 33% forgivable amount when you credit your customer. When 75% of $40,000.00 or 66% of $60,000.00 is repaid and 25% or 33% of the forgiven principal is reported, the loan process is complete. ServiceNow will not indicate that a loan is closed/completed as your banking host is the book of record. If your customer wishes to confirm their account status with EDC, they can call the CEBA Call Centre at\n1-888-324-4201\n.\nYour financial institution can email EDC for any program-related questions at\nceba-cuec@edc.ca\n.\nCentral 1 Banking Services Volume\nCEBA Settlement and Reconciliation Part\nChapter 1, Introduction to CEBA Settlement and Reconciliation\nWe updated the Overview section.\nDocument Library\nStatus\nCentral 1 Facilitated CEBA Application Procedures Quick Reference Guide\n9140\nSection 8.1, General\nAdded a new Question and Answer and clarified that the CEBA Call Centre is only available to customers, not financial institutions.\nAdded an email address for financial institutions to contact EDC for program-related questions.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 2, email\ndigitalbanking_support@central1.com\n.",
+  "links": [],
+  "content_length": 1559
+}

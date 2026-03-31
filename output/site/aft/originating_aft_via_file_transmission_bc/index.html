@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Originating Aft Via File Transmission Bc — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Originating Aft Via File Transmission Bc</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Originating Aft Via File Transmission Bc</h1>
+    <p class="subtitle">AFT › Originating Aft Via File Transmission Bc <span class="badge" style="background:#7c3aed">4 pages</span></p>
+    <div class="summary-box md-content"><p># Brief: Originating AFT via File Transmission (BC)</p>
+<h2>Overview</h2>
+<p>This document group covers the end-to-end process for credit union originators to submit AFT (Automated Funds Transfer) transactions to Central 1 via file upload when their software lacks native Central 1 support.</p>
+<h2>Key Architectural Elements</h2>
+<p><strong>Data Flow:</strong></p>
+<ul>
+<li>Originators generate AFT files using in-house or third-party software</li>
+<li>Files are uploaded to Central 1 via defined transmission mechanism</li>
+<li>Central 1 processes transactions following standardized rules</li>
+</ul>
+<p><strong>Process Steps:</strong></p>
+<p>1. Setup phase (originator configuration)</p>
+<p>2. File creation (originator-side)</p>
+<p>3. File upload (transmission to Central 1)</p>
+<p>4. Transaction processing (Central 1-side)</p>
+<p><strong>Critical Design Constraints:</strong></p>
+<ul>
+<li><strong>Unified Processing Rules:</strong> AFT processing logic is identical regardless of creation method or transmission channel—consolidate business rules in a single service layer</li>
+<li><strong>File Format Standards:</strong> Must support originator software variability; validate format strictly at ingestion</li>
+<li><strong>Integration Points:</strong> File upload mechanism, validation pipeline, and core AFT processor must be decoupled</li>
+</ul>
+<h2>Architect Considerations</h2>
+<ul>
+<li>Design for asynchronous file processing with clear status tracking</li>
+<li>Implement robust validation at file intake (format, business rules)</li>
+<li>Plan for error handling and rejection workflows</li>
+<li>Consider scalability for concurrent file uploads from multiple originators</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="originating_aft_via_file_transmission_bc.html">Originating AFT via File Transmission (BC)</a></div>
+            <div class="page-preview">- **Scope**: Defines the procedural and technical requirements for Originators to upload AFT files to Central 1's File and Report Exchange, including business rules, submission deadlines, and validati</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_setting_up_for_aft_file_transmission_service.html">2 Setting Up for AFT File Transmission Service</a></div>
+            <div class="page-preview">- **Scope**: Defines the procedural and technical requirements for Originators to upload AFT files to Central 1's File and Report Exchange, including business rules, submission deadlines, and validati</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_processing_aft_file_transactions.html">3 Processing AFT File Transactions</a></div>
+            <div class="page-preview">- **Scope**: Defines the procedural and technical requirements for Originators to upload AFT files to Central 1's File and Report Exchange, including business rules, submission deadlines, and validati</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_uploading_aft_files.html">4 Uploading AFT Files</a></div>
+            <div class="page-preview">- **Scope**: Defines the procedural and technical requirements for Originators to upload AFT files to Central 1's File and Report Exchange, including business rules, submission deadlines, and validati</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_file_transmission_bc.3.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2043.html",
+  "title": "20:43 â October 30, 2020",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "20:43 â October 30, 2020\nUpdate to Country-Specific Guidelines and Instructions, Form 3597\nWe\nupdated the Description of Warning, Sanction, and Country Advice section in the Country Specific Guidelines and Instructions, Form 3597, for Tax Haven/High-Risk and Prohibited countries. These changes were also made in the Wires application and the Money Transfer System (MTS).\nDocument Library\nStatus\nCountry Specific Guidelines and Instructions\n3597\nWe updated the message wording for Tax Haven and/or High-Risk countries to: âPlease be aware that [Country Name] falls under Tax Haven and/or High-Risk Country List. Financial institutions are encouraged to consider these risks before submitting transactions, and to conduct enhanced due diligence as requiredâ.\nWe updated the message wording for Prohibited countries to: âAs a result of correspondent bank policy and Canadian laws applicable to transactions involving [Country Name], wire transfers to and from this country will be rejected, and the responsible credit union will be notifiedâ.\nWe added a Purpose of Payment message for St. Lucia.\nWe added the following message for United Arab Emirates: âA TTC purpose code consistent with reason for payment is requiredâ.\nRevised\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1338
+}

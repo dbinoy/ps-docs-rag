@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.1.html",
+  "title": "Data Hub",
+  "section_path": "ps_manual > Data%20Hub",
+  "breadcrumb": [],
+  "body_text": "Data Hub\n1\tIntroduction to Data Hub\n1.1\tOverview of Data Hub\nThe Data Hub platform provides interactive analytics capabilities that transform data into clear, actionable visuals. This product helps your financial institution identify key performance indicators, usage behavior, product consumption, and transaction patterns without having to source or analyze data manually.\nThe Payments Dashboard within Data Hub allows authorized users to apply multi-level filtering, view the results as charts or tables, compare your financial institutionâs performance to anonymized peers of similar size and product usage, and export insights into multiple formats. The Payments Dashboard currently includes Interac\ne-Transfer\nÂ®\ntransactions but other payment types, including wires, will be available in future enhancements.\nNote:\tData Hub is provided through Microsoft Power BI, so its appearance and the availability of standard features may change from time to time. As a result, your experience may be slightly different than the documentation provided here.\n1.2\tData Hub Availability\nUsers can access the Data Hub platform at any time. Data is refreshed every business day.\n1.3\tContacts, Websites, and Other Resources\nResources/Services\nContact Information\nContact Central 1, Client Support Services for questions about Data Hub including assistance with setup, access, or system problems.\nClient Support Services\nOnline: ServiceNow (\nhttps://central1.service-now.com\n)\nEmail:\nsupport@central1.com\nPhone:\n1-888-889-7878\n, Option 1\nEND",
+  "links": [],
+  "content_length": 1532
+}

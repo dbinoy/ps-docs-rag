@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>18 Managing Wire Templates — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>18 Managing Wire Templates</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>18 Managing Wire Templates</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.18.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Wire Templates Management - Technical Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Enables creation, management, and reuse of wire transaction templates (Regular and Bank-to-Bank types) to streamline recurring wire transmission workflows within the Wires application.</li>
+</ul>
+<ul>
+<li><strong>Permission Model</strong>: Template access is gated by:</li>
+<li>User role permissions (wire creation capability required to create templates; edit/delete require access to associated sending transit number)</li>
+<li>Authorized user subset can restore/permanently delete templates</li>
+<li>Permissions defined in MTS (Management System) Section 8.6 user profiles</li>
+</ul>
+<ul>
+<li><strong>Template Lifecycle States</strong>: Templates transition through statuses—Active → Pending Deletion → (restorable or permanently deleted)—with audit trail tracking the last editing user; Pending Deletion templates remain queryable but unavailable for wire creation.</li>
+</ul>
+<ul>
+<li><strong>Data Model</strong>: Templates require mandatory field completion (mirrors wire creation schemas per Chapters 16-17); recommended to store external reference spreadsheet mapping template name/ID, ordering customer, and beneficiary for operational tracking.</li>
+</ul>
+<ul>
+<li><strong>Validation Constraint</strong>: Only Active-status templates can be applied to generate outgoing wires; Inactive templates (failed validation) must be edited and corrected before use, creating a validation-repair workflow.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>:</li>
+<li>Dependency on Chapter 10 (Wires authentication/login)</li>
+<li>Dependency on Chapters 16-17 (wire creation field specifications and regulatory compliance requirements)</li>
+<li>MTS system interaction for user permission administration</li>
+</ul>
+<ul>
+<li><strong>Irreversible Operation</strong>: Permanent deletion is one-way; once executed, no restore mechanism exists—requires explicit reason entry and confirmation to prevent accidental data loss.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

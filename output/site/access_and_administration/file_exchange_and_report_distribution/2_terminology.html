@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <a href='../../access_and_administration/file_exchange_and_report_distribution/index.html'>File Exchange And Report Distribution</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to File Exchange And Report Distribution</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">Access and Administration › File Exchange And Report Distribution</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.2.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: File and Report Exchange Folder Structure</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the three-level hierarchical folder structure of Central 1's File and Report Exchange system, defining where reports are stored and how users access them based on authorization.</li>
+</ul>
+<ul>
+<li><strong>Access Control Model</strong>: Users see only folders they are authorized to access; folder visibility is independent of access method (web, API, etc.). Authorization is granular to the folder level, not individual files.</li>
+</ul>
+<ul>
+<li><strong>Consolidated Report Delivery</strong>: Text-format reports (MERGmmdd.DAT, ONDLmmdd.DAT, DAILmmdd, ONBLmmdd.DAT, OMNMmmdd.DAT) combine multiple reports into single files with report codes embedded at position 20 in headers—enables automated downstream processing and archiving without PDF parsing.</li>
+</ul>
+<ul>
+<li><strong>Bidirectional File Exchange</strong>: System supports both inbound (Returns folders, RETP for I&J files BC-only, Agrinvest Activity Files) and outbound (report distribution); financial institutions actively upload files alongside receiving reports.</li>
+</ul>
+<ul>
+<li><strong>Multi-Currency and Product Segregation</strong>: Folder structure partitions by currency (CAD, USD, GBP, EUR) and product domains (AFT, Bill_Pmt, Clearing, ETFR, M2M, IFRS9LL, Trustservices, Securitization)—integration points must respect these boundaries for data routing.</li>
+</ul>
+<ul>
+<li><strong>Report Code Schema</strong>: Four-character codes (e.g., AIBC, CHGS, BPRE, CCMC) identify report types and enable programmatic routing; codes follow naming conventions that encode currency prefix (C/U/N prefix for CAD/USD/NOC) and report category.</li>
+</ul>
+<ul>
+<li><strong>Unqualified Report Handling</strong>: "Report Default" folder is fallback destination for reports without explicit folder association—architects should define exception handling for misrouted or unclassified reports.</li>
+</ul>
+<ul>
+<li><strong>External Dependency</strong>: References Payment Solutions Manual volumes (AFT, Bill Payments, Clearing/Deposits, Electronic Transactions) for detailed report specifications; folder structure is stable but report content definitions live elsewhere.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

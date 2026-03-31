@@ -1,0 +1,17 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/paymentstream_direct.2.01.html",
+  "title": "PaymentStreamâ¢ Direct",
+  "section_path": "ps_manual > Electronic%20Transactions",
+  "breadcrumb": [],
+  "body_text": "PaymentStreamâ¢ Direct\n1\tIntroduction to PaymentStreamâ¢ Direct\n1.1\tOverview of PaymentStream Direct\nPaymentStream\nDirect is a user interface that provides access to Central 1âs Payments products,\nMemberDirect\nÂ®\nsystem support features, and related administration functions via a single sign-on to the Client Centre. The options you see on\nPaymentStream\nDirect are determined by\nthe functions that your financial institution implements, and\nyour personal access rights.\nYour financial institution can implement\nPaymentStream\nDirect to its banking system with or without connectivity. However, some functions are only available if\nPaymentStream\nDirect is connected to your banking system (e.g., customer profile functions and customer alerts).\nImportant\n:\tFor accounts that require two or more signatures,\nPaymentStream\nDirect can\nonly\nbe used to look up information.\nThe procedures and screen prints in this Part may differ from those that users see when logged in to\nPaymentStream\nDirect. This is because your financial institution can implement different functionality and the text on each page is customizable.\nRelated Payment Solutions Manual Parts\nEnterprise Fraud Management\nCPS Admin Application Part\nCRA Business Taxes Part\nElectronic Bill Payments System Part\nFile Exchange and Report Distribution Part\nOnline Tracing System Part\nWires Part\n1.2\tContacts, Websites, and Other Resources\nResources/Services\nContact Information\nSwitch Concierge product page\non the Client Centre\nCRA Payments Business Taxes product page\non the Client Centre\nContact Central 1 for questions about\nPaymentStream\nDirect.\nClient Support Services\nPhone:\n1-888-889-7878\n, Option 1\nOnline: ServiceNow (\nhttps://central1.service-now.com\n)\nEmail:\nsupport@central1.com\nContact Client Support Services for questions about Switch Concierge by ClickSWITCH.\nClient Support Services\nPhone:\n1-888-889-7878\n, Option 1\nOnline: ServiceNow (\nhttps://central1.service-now.com\n)Email:\nsupport@central1.com\n1.3\tPaymentStream Direct Document Library\nName\nNumber\nFormat\nCPS Admin Appointment Certificate\n1918\nPDF\nCPS Admin Modification/Deletion Request\n2035\nPDF\nCentral 1âs AFT File Specifications\n2726\nPDF\nPaymentStream\nAFT â Guide for Automatic Release\n5598\nPDF\nPaymentStream\nAFT â Guide for Manual Release\n5599\nPDF\nPaymentStream\nAFT â Guide for File Upload\n5600\nPDF\nCampaign Manager User Guide\nN/A\nPDF\nEND",
+  "links": [
+    "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/enterprise_fraud_management_efm.1.01.html",
+    "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/cps_admin_application.1.1.html",
+    "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.01.html",
+    "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/electronic_bill_payments_system.1.01.html",
+    "https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/file_exchange_and_report_distribution.4.1.html",
+    "https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/online_tracing_system.3.01.html",
+    "https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.01.html"
+  ],
+  "content_length": 2384
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Posting Incoming AFT Files — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_settlement/index.html'>Aft Settlement</a> <span class='sep'>›</span> <span>5 Posting Incoming AFT Files</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Settlement</a>
+    <h1>5 Posting Incoming AFT Files</h1>
+    <p class="subtitle">AFT › Aft Settlement</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.5.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: 5 Posting Incoming AFT Files</p>
+<ul>
+<li><strong>Overview</strong>: Defines how incoming Automated Funds Transfer (AFT) transactions are posted to financial institutions' Central 1 accounts and member accounts, with different processing rules for Canadian and US dollar transactions across BC and Ontario regions.</li>
+</ul>
+<ul>
+<li><strong>Serviceability Code Framework</strong>: Three-tier compliance model (Codes 0, 1, 2) governed by CPA Rule F1 Section 8 determines funds availability windows—Code 0 requires 2-hour posting of direct deposits from clearing file receipt; Codes 1/2 require posting by start of business on due date. Enrollment requires Form 3571 with dual officer signatures.</li>
+</ul>
+<ul>
+<li><strong>Regional Multi-Run Processing</strong>: BC processes up to 4 CAD AFT runs daily (CR01-CR04) plus 1 USD run (UC01); Ontario processes up to 4 CAD runs (ON01-ON04 + ONRT) plus 2 USD runs (UN01 + UNRT). US dollar settlement follows US business day calendar, not Canadian.</li>
+</ul>
+<ul>
+<li><strong>Net Settlement Posting Logic</strong>: Transactions post to Central 1 account by run/branch/currency as net consolidated entries coded "AS" (AFT Settlement). Zero-balance nets generate no posting; postings appear on Account Activity and Balances Reports (AIBC/AIOC for CAD; AIBU/AIOU for USD) and CAS Online with clearing file references.</li>
+</ul>
+<ul>
+<li><strong>Dual Posting Paths</strong>: Transaction data flows simultaneously to Central 1 account settlement AND to banking system for member account posting; automatic posting via banking system is standard, but manual posting via CCD/UCD reports required if in-house/third-party systems lack automation capability or fail—manual posting responsibility includes CPA Rule compliance verification.</li>
+</ul>
+<ul>
+<li><strong>Critical Integration Dependencies</strong>: File Exchange timing guarantees (CAD: 4 delivery windows per day 8:59 PM to 8:00 PM PT; USD: 9:00 AM PT daily), report distribution (CRF* for CAD, MERG for USD), and banking system download frequencies are key integration touchpoints requiring synchronization between Central 1, banking platforms, and financial institution systems.</li>
+</ul>
+<ul>
+<li><strong>Record Type Classification</strong>: Eight transaction record types (C/D/E/F/I/J/K/L) define posting direction and reversal/return semantics; architects must ensure accurate mapping in transaction processing logic, particularly for reversals (E/F) and returns (I/J) which impact member account balances differently than originals.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

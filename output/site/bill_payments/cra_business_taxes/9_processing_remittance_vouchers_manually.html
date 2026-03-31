@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9 Processing Remittance Vouchers Manually — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #059669; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../bill_payments/index.html'>Bill Payments</a> <span class='sep'>›</span> <a href='../../bill_payments/cra_business_taxes/index.html'>Cra Business Taxes</a> <span class='sep'>›</span> <span>9 Processing Remittance Vouchers Manually</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Cra Business Taxes</a>
+    <h1>9 Processing Remittance Vouchers Manually</h1>
+    <p class="subtitle">Bill Payments › Cra Business Taxes</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Bill%20Payments/cra_business_taxes.2.09.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Processing Remittance Vouchers Manually</p>
+<ul>
+<li><strong>Purpose</strong>: Defines manual processing procedures for CRA remittance vouchers that lack electronic availability, requiring same-day completion by front-line staff upon receipt from customers.</li>
+</ul>
+<ul>
+<li><strong>Core Process Flow</strong>: Account debit/GL credit → physical stamping → stub separation → bundling (max 25 vouchers) → tape listing generation → photocopying → secure storage (12 months) → mail/courier to CRA.</li>
+</ul>
+<ul>
+<li><strong>Key Data Elements</strong>: Form number, tax program identifier, remittance voucher amount, member account identifier, GL account code (tax program-specific), tape listing sequence, grand total draft amount, and dated stamps (legibility requirement is critical).</li>
+</ul>
+<ul>
+<li><strong>Pre-Processing Validation Gate</strong>: Form must pass three checks before manual processing begins: (1) form number matches corresponding tax program, (2) all form fields complete, (3) voucher confirmed unavailable in Business Taxes system—this is a critical integration dependency.</li>
+</ul>
+<ul>
+<li><strong>Physical-to-Financial Reconciliation</strong>: Tape listing serves as the reconciliation control document; voucher ordering must match tape listing sequence exactly to ensure accurate GL posting and CRA matching at destination.</li>
+</ul>
+<ul>
+<li><strong>Constraints & Compliance</strong>: Max 25 vouchers per bundle; photocopies must be retained 12 months in secure storage (audit trail requirement); date stamps on originals and copies must be legible; draft must be payable to "Receiver General" (specific payee requirement).</li>
+</ul>
+<ul>
+<li><strong>External Integration Point</strong>: Process terminates with physical mail/courier delivery to fixed CRA address (875 Heron Road, Ottawa)—no electronic submission pathway; this creates a manual reconciliation dependency between institution records and CRA receipting.</li>
+</ul>
+<ul>
+<li><strong>Architectural Implication</strong>: Manual voucher processing creates a parallel data path outside Business Taxes system; any enhancement should consider automated form validation, GL account mapping, and tape listing generation to reduce human error in the pre-mailing steps.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Data Hub Navigation and Tools — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #4f46e5; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <a href='../../data_hub/data_hub/index.html'>Data Hub</a> <span class='sep'>›</span> <span>6 Data Hub Navigation and Tools</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Data Hub</a>
+    <h1>6 Data Hub Navigation and Tools</h1>
+    <p class="subtitle">Data Hub › Data Hub</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.6.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Data Hub Navigation and Tools - Architecture Brief</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the Data Hub user interface structure and navigation components built on Microsoft Power BI infrastructure for the Payment Solutions platform.</li>
+</ul>
+<ul>
+<li><strong>Platform Dependency</strong>: Data Hub is delivered through Microsoft Power BI; Central 1 provides no official support for standard Power BI features beyond the documented scope, creating a support boundary that architects must account for in enhancement planning.</li>
+</ul>
+<ul>
+<li><strong>UI Architecture</strong>: Four primary structural components—Navigation Pane (limited to Payments Dashboard only), Features menu bar, Filters Menu, and Visuals rendering layer—define the interface contract for any downstream modifications.</li>
+</ul>
+<ul>
+<li><strong>Data Visualization Flexibility</strong>: Visuals support dual rendering modes (chart format as default, table format as alternative), suggesting abstraction between data models and presentation layer that allows format-agnostic querying.</li>
+</ul>
+<ul>
+<li><strong>Filter-Driven Data Access</strong>: Filters Menu acts as the primary data selection control, indicating a filter-based architecture where user selections directly constrain downstream data queries; architects should model access controls and row-level security through this filter mechanism.</li>
+</ul>
+<ul>
+<li><strong>Navigation Constraint</strong>: Payments Dashboard is the sole option in Navigation Pane currently, suggesting either early-stage product maturity or intentional scoping that limits multi-dashboard complexity in the current version.</li>
+</ul>
+<ul>
+<li><strong>Integration Consideration</strong>: Power BI dependency creates external vendor lock-in for UI/analytics layer; any architectural enhancements requiring custom Power BI features or alternative visualization engines will require migration planning.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

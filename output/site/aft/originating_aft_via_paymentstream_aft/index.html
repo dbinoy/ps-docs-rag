@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Originating Aft Via Paymentstream Aft — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <span>Originating Aft Via Paymentstream Aft</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to AFT</a>
+    <h1>💸 Originating Aft Via Paymentstream Aft</h1>
+    <p class="subtitle">AFT › Originating Aft Via Paymentstream Aft <span class="badge" style="background:#7c3aed">15 pages</span></p>
+    <div class="summary-box md-content"><p># PaymentStream AFT - Architectural Brief</p>
+<h2>Overview</h2>
+<p>PaymentStream AFT is Central 1's Automated Funds Transfer origination platform enabling financial institutions and business members to initiate AFT transactions. The system manages the complete lifecycle from enrollment through settlement.</p>
+<h2>Critical Architecture Points</h2>
+<p><strong>Data Flows:</strong></p>
+<ul>
+<li>Dual ingestion: Direct UI data entry OR file uploads (third-party/in-house software)</li>
+<li>Payor/payee records → transaction release → Central 1 settlement</li>
+<li>Downstream reporting from PaymentStream AFT and PaymentStream Direct platforms</li>
+</ul>
+<p><strong>Key Integration Constraints:</strong></p>
+<ul>
+<li>Hard AFT file delivery deadlines (per-transaction timing requirements)</li>
+<li>Record entry limits (Chapter 13 specifics not fully detailed here)</li>
+<li>Mandatory approval workflows (conditional: user-level + originator monthly limits)</li>
+<li>2-step authentication on all platform access</li>
+</ul>
+<p><strong>Governance Requirements:</strong></p>
+<ul>
+<li>User access via CPS Admin Security Officer or Client Centre User roles</li>
+<li>Originator information management and policy compliance</li>
+<li>Risk management: limit enforcement with system alerts</li>
+<li>Data purge schedule (retention policy critical for compliance)</li>
+<li>Audit-grade transaction approval trails</li>
+</ul>
+<p><strong>Design Constraints:</strong></p>
+<ul>
+<li>Compliance-first: identification requirements, record-keeping mandates</li>
+<li>Multi-tenancy: institution + business member originator models</li>
+<li>Approval state management with role-based authorization</li>
+<li>Real-time limit monitoring and enforcement</li>
+</ul>
+<p><strong>Key Gap:</strong> Specific deadline windows, record limits, and purge schedules require review of Chapter 13 detail.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="originating_aft_via_paymentstream_aft.html">Originating AFT via PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology_and_frequently_asked_questions.html">2 Terminology and Frequently Asked Questions</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_for_paymentstream_aft.html">3 Legal Considerations for PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_establishing_policies_for_paymentstream_aft.html">4 Establishing Policies for PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_enrolling_in_paymentstream_aft.html">5 Enrolling in PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_paymentstream_aft_user_management.html">6 PaymentStream AFT User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_logging_in_to_paymentstream_aft.html">7 Logging in to PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_originator_information_on_paymentstream_aft.html">8 Originator Information on PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_managing_payor_payee_records_on_paymentstream_aft.html">9 Managing Payor/Payee Records on PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_releasing_aft_transactions_on_paymentstream_aft.html">10 Releasing AFT Transactions on PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_uploading_aft_files_to_paymentstream_aft.html">11 Uploading AFT Files to PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_approval_of_tasks_transactions.html">12 Approval of Tasks/Transactions</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_aft_deadlines_record_entry_limits_and_paymentstream_aft_data_purge_schedule.html">13 AFT Deadlines, Record Entry Limits, and PaymentStream AFT Data Purge Schedule</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_managing_risk_on_paymentstream_aft.html">14 Managing Risk on PaymentStream AFT</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="15_reports.html">15 Reports</a></div>
+            <div class="page-preview">- **Purpose**: Documents three categories of AFT reports (PaymentStream AFT Reports, PaymentStream Direct Reports, and Central 1 Reports) with access procedures and creation workflows for financial in</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.15.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

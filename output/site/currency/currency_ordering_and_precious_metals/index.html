@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Ordering And Precious Metals — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #0891b2; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../currency/index.html'>Currency</a> <span class='sep'>›</span> <span>Currency Ordering And Precious Metals</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Currency</a>
+    <h1>💱 Currency Ordering And Precious Metals</h1>
+    <p class="subtitle">Currency › Currency Ordering And Precious Metals <span class="badge" style="background:#0891b2">14 pages</span></p>
+    <div class="summary-box md-content"><p># Currency Ordering and Precious Metals – Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document set describes Central 1's end-to-end cash management system, covering currency ordering (CAD/USD/FX), returns, precious metals, and associated settlement processes for member credit unions.</p>
+<h2>Key Architectural Components</h2>
+<p><strong>Access & Authentication:</strong></p>
+<ul>
+<li>Client Centre login via Central 1 (password-based)</li>
+<li>Role-based access: CPS Admin Security Officers, Admin Users, Regular Users</li>
+<li>Duty segregation enforced at policy level</li>
+</ul>
+<p><strong>Core Systems:</strong></p>
+<ul>
+<li><strong>Cash Services application</strong> – order creation, management, reporting</li>
+<li><strong>ServiceNow</strong> – standing orders, late orders, contingency orders (with fallback procedures when unavailable)</li>
+<li><strong>Globex 2000 integration</strong> – third-party FX Notes provider</li>
+</ul>
+<p><strong>Key Data Elements:</strong></p>
+<ul>
+<li>Branch number (5-digit identifier + institution number = transit number)</li>
+<li>Daily ordering limits per location (managed in ServiceNow)</li>
+<li>Denomination/quantity constraints for CAD, USD, FX</li>
+<li>Settlement date = dispatch date (with branch-level charge debiting)</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<ul>
+<li><strong>Maximum order threshold</strong> defined per transaction type</li>
+<li><strong>Fallback mechanisms</strong> required when ServiceNow is unavailable</li>
+<li><strong>Multi-location support</strong> with location-specific limits and access controls</li>
+<li><strong>Third-party dependencies</strong> (Westkey Graphics for return supplies; Globex 2000 for FX)</li>
+<li><strong>Audit trail requirements</strong> via Order History and reports</li>
+</ul>
+<p><strong>Integration Points:</strong> Client Centre authentication, ServiceNow workflows, Globex API, settlement systems.</p></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="currency_ordering_and_precious_metals.html">Currency Ordering and Precious Metals</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.01.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.02.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_establishing_policies_for_ordering_currency.html">3 Establishing Policies for Ordering Currency</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.03.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_managing_cash_locations_and_limits_in_servicenow.html">4 Managing Cash Locations and Limits in ServiceNow</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.04.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_accessing_cash_services.html">5 Accessing Cash Services</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.05.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_cash_services_user_management.html">6 Cash Services User Management</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.06.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_creating_and_managing_currency_orders_in_cash_services.html">7 Creating and Managing Currency Orders in Cash Services</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.07.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="8_generating_reports_in_cash_services.html">8 Generating Reports in Cash Services</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.08.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="9_standing_orders_late_orders_and_contingency_orders.html">9 Standing Orders, Late Orders, and Contingency Orders</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.09.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="10_general_information_on_ordering_currency.html">10 General Information on Ordering Currency</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.10.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="11_returning_canadian_and_us_currency.html">11 Returning Canadian and US Currency</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.11.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="12_placing_foreign_currency_orders_fx_notes.html">12 Placing Foreign Currency Orders â FX Notes</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.12.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="13_currency_settlement_charges_reports_and_trace_requests.html">13 Currency Settlement, Charges, Reports, and Trace Requests</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.13.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="14_precious_metals.html">14 Precious Metals</a></div>
+            <div class="page-preview">- **Purpose**: Documents the end-to-end process for Class A clients (BC/ON only) to purchase and sell back precious metals through Central 1's partnership with Royal Bank of Canada, with armoured car </div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Currency/currency_ordering_and_precious_metals.2.14.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

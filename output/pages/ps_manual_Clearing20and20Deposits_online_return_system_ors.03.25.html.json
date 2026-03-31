@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.25.html",
+  "title": "Appendix #A-10 ORS Transaction Codes",
+  "section_path": "ps_manual > Clearing%20and%20Deposits",
+  "breadcrumb": [],
+  "body_text": "Appendix #A-10\tORS Transaction Codes\nType\nTransaction Code\nDescription\nDeposit\n0000\nNo TranCode\nDeposit\n0001\nCAD Deposit\nDeposit\n0002\nCAD Amex of Bonds\nDeposit\n0025\nCCIN Deposit\nDeposit\n0045\nUSD Debit\nDeposit\n0081\nForeign Funds\nCheque\n0094\nCAD Debit Adjustment\nDeposit\n1401\nMastercard Cash Advance\nDeposit\n1801\nManual Cheque Returns Deposit\nDeposit\n6201\nSterling Deposit\nDeposit\n6401\nUSD Deposit\nCheque\n6402\nUSD Credit Adjustment\nDeposit\n6404\nUSD Debit\nCheque\n6405\nUSD Debit Adjustment\nDeposit\n7777\nMiscellaneous\nDeposit\n9100\nMRDC Mobile CAD Deposit\nDeposit\n9300\nCRDC Corporate CAD Deposit\nDeposit\n9350\nCRDC Corporate USD Deposit\nDeposit\n9400\nBRDC Branch CAD Deposit\nDeposit\n9401\nBRDC Branch CSB Deposit\nDeposit\n9450\nBRDC Branch USD Deposit\nCheque\n0000\nCheque\nCheque\n0028\nChargeback\nCheque\n0033\nBusiness PAD\nCheque\n0044\nCAD Credit Adjustment\nCheque\n0064\nUSD Cheque on CAD Account\nCheque\n0065\nUSD Cheque on USD Account\nCheque\n0077\nMiscellaneous\nCheque\n0082\nCUC Re-qualified\nCheque\n0096\nCCIN Remittance\nCheque\n9100\nMRDC CAD cheque",
+  "links": [],
+  "content_length": 1028
+}

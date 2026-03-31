@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.3.html",
+  "title": "3 Logging in to ServiceNow",
+  "section_path": "ps_manual > Central%201%20Banking%20Services",
+  "breadcrumb": [],
+  "body_text": "3\tLogging in to ServiceNow\n3.1\tLogging in to ServiceNow\nThe forms your financial institution uses for reporting CEBA loan repayments and loan administration fees are in ServiceNow.\nTo access ServiceNow:\nGo to\nhttps://clients.central1.com\n. Enter your username and password, then select\nSign in\n. See Figure 1.\nNote: \tYouâll be prompted to enter your username before this page appears if itâs your first login to the Client Centre, youâve deleted your cookies, or youâre using incognito/private browsing.\nFigure 1: Client Centre Login\nSelect\nApplications\n. See Figure 2.\nFigure 2: Accessing Applications on the Client Centre\nSelect\nServiceNow\n. See Figure 3.\nNote: \tApplications are grouped by type (e.g., Admin & Support, Payments). If needed, scroll down the page to find the application. If youâve saved the application as a favourite, it will also appear under âMy Favouritesâ.\nFigure 3: Accessing ServiceNow\nSelect\nService Catalogue\n. See Figure 4.\nFigure 4: Selecting Service Catalogue\nEND",
+  "links": [],
+  "content_length": 1008
+}

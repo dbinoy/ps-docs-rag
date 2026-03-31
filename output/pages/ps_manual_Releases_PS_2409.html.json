@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2409.html",
+  "title": "24:09 â February 28, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:09 â February 28, 2024\nUpdate to the Enterprise Fraud Management Part\nWe updated the Enterprise Fraud Management Part as described in the table below.\nElectronic Transactions Volume\nEnterprise Fraud Management Part\nWe updated images throughout the Part to reflect the addition of Reports.\nSection 2.2, Frequently Asked Questions\nWe updated Question 20 and added Question 23.\nSection 4.2, EFM User Roles\nWe added the Tenant Report role.\nSection 6.1, Overview of Navigating Enterprise Fraud Management\nWe added a Reports link.\nSection 7.2, Overview of Incidents on the Incidents Page\nWe added instructions on how to expand and hide the sidebar, and how to use the Select None option.\nSection 8.1, Overview of Managing Transaction Alerts\nWe updated all email notification examples and when email notifications are sent (when manual alerts are created by FAS).\nSection 8.4, Identifying Alerts in Auto Risk Transactions\nWe updated processes on how to identify Auto Risk transactions.\nSection 8. 8, Recovery of Funds\nWe clarified the Recovery of Funds process.\nSection 10, Enterprise Fraud Management Reports\nWe added a new section regarding EFM Reports.\nQuestions\nEnterprise Fraud Management, email\nefm@central1.com\n.",
+  "links": [],
+  "content_length": 1217
+}

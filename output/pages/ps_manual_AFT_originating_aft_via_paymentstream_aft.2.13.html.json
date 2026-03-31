@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/AFT/originating_aft_via_paymentstream_aft.2.13.html",
+  "title": "13 AFT Deadlines, Record Entry Limits, and PaymentStream AFT Data Purge Schedule",
+  "section_path": "ps_manual > AFT",
+  "breadcrumb": [],
+  "body_text": "13\tAFT Deadlines, Record Entry Limits, and PaymentStream AFT Data Purge Schedule\n13.1\tAFT File Delivery Deadlines and Record Entry Limits\nAFT transactions/files must be sent to Central 1 before the applicable deadline. The due date of an AFT transaction can be backdated or future dated. For more information on AFT file delivery deadlines and for record entry limits, see the Introduction to AFT Part.\n13.2\tPurge Schedule for PaymentStream AFT Transactions\nAfter a certain time, report data is deleted from\nPaymentStreamâ¢\nAFT. The information is deleted on Sundays between 1:00 am and 3:00 am PT.\nPaymentStream\nAFT isnât available during this time. See the following table for purge details.\nAutomatic Release and Manual Release\nTransaction or Activity Type\nPurge Schedule (after last due date)\nReports and Logs Affected\nAll transactions\n18 months\n18 months\n6 months\nTransaction History Report\nRelease History Report\nPayor/Payee Listing Report\nExpired transactions\n18 months\n18 months\n6 months\nTransaction History Report\nRelease History Report\nPayor/Payee Listing Report\nUpdates, deletions\n(audit trail data)\n18 months\nRecord Change Report\nActivity Log Table information\n3 months\nActivity Log Report\nChanges to Originator information details\n12 months\nOriginator Change Report\nReject history\n120 days\nNot applicable\nFile Upload\nTransaction or Activity Type\nPurge Schedule (after last due date)\nActivity Log Report\n3 months\nFile History Report\n18 months\nTransaction History Report\n18 months\nOriginator Change Report\n12 months\nEND",
+  "links": [],
+  "content_length": 1533
+}

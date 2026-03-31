@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Managing and Deleting Users — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <a href='../../access_and_administration/user_management/index.html'>User Management</a> <span class='sep'>›</span> <span>6 Managing and Deleting Users</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to User Management</a>
+    <h1>6 Managing and Deleting Users</h1>
+    <p class="subtitle">Access and Administration › User Management</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/user_management.2.06.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Troubleshooting and Best Practices for Client Centre Users</p>
+<ul>
+<li><strong>Purpose</strong>: Diagnostic and procedural guide for resolving Client Centre login failures and application access issues, with best practices for secure application bookmarking and favorites management.</li>
+</ul>
+<ul>
+<li><strong>System Synchronization Constraint</strong>: New user accounts require up to 45 minutes for back-end system synchronization before first login attempt; this represents a critical timing dependency in the user provisioning workflow.</li>
+</ul>
+<ul>
+<li><strong>Account Lockout Logic</strong>: Accounts automatically lock for 30 minutes after 7 consecutive failed password attempts, with lockout persistence across multiple days—architects must account for this in authentication retry logic and user support workflows.</li>
+</ul>
+<ul>
+<li><strong>Browser Cookie Dependency</strong>: Client Centre session management relies heavily on persistent browser cookies; cookies can be corrupted or stale when users share computers, requiring private/incognito mode as a diagnostic workaround and indicating potential session state issues.</li>
+</ul>
+<ul>
+<li><strong>Application Access Patterns</strong>: Applications have distinct landing pages (referenced in bookmarking guidance) and require proper session context; bookmarks created mid-session fail, suggesting stateful application architectures with session validation at entry points.</li>
+</ul>
+<ul>
+<li><strong>Integration Point - Password Reset Workflow</strong>: User login troubleshooting integrates with password reset functionality (Section 6.6), indicating a tightly coupled identity management system where password reset is a primary remediation path.</li>
+</ul>
+<ul>
+<li><strong>Two-Step Authentication Integration</strong>: 2-step security token issues are delegated to a separate documentation reference ("2-Step Security Part"), indicating modular authentication architecture with independent troubleshooting procedures.</li>
+</ul>
+<ul>
+<li><strong>Favorites Feature Architecture</strong>: The "My Favourites" functionality requires distinct back-end storage (users check applications, system persists state) separate from browser bookmarking, suggesting user preference persistence in the Client Centre database.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

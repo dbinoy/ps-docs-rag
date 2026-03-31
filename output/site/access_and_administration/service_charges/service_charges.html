@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Charges — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #2563eb; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../access_and_administration/index.html'>Access and Administration</a> <span class='sep'>›</span> <a href='../../access_and_administration/service_charges/index.html'>Service Charges</a> <span class='sep'>›</span> <span>Service Charges</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Service Charges</a>
+    <h1>Service Charges</h1>
+    <p class="subtitle">Access and Administration › Service Charges</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Access%20and%20Administration/service_charges.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Service Charges Documentation Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Documents the fee structure and billing mechanics for Central 1's Payment Services offerings to Class A credit unions in BC and Ontario, governed by Form 2725.</li>
+</ul>
+<ul>
+<li><strong>Billing Model</strong>: Monthly fee collection with currency-specific posting—CAD charges post to CAD current accounts; USD charges post to USD current accounts at month-end, or convert to CAD if no USD account exists.</li>
+</ul>
+<ul>
+<li><strong>Geographic & Membership Constraints</strong>: Form 2725 and associated fees apply exclusively to Class A credit unions in British Columbia and Ontario; other jurisdictions or membership classes are out of scope.</li>
+</ul>
+<ul>
+<li><strong>Dual Support Channels</strong>: Separate escalation paths exist for Payment Services fees (Option 1: support@central1.com) and digital banking fees (Option 2: digitalbanking_support@central1.com)—architects should route billing inquiries accordingly.</li>
+</ul>
+<ul>
+<li><strong>Document Registry</strong>: Form 2725 (PDF format) is the single source of truth for product/service pricing; any system enhancement must reference this form and maintain version alignment.</li>
+</ul>
+<ul>
+<li><strong>Currency Conversion Dependency</strong>: USD-to-CAD conversion logic is triggered when a member institution lacks a USD current account—architects must validate this fallback path in billing engines and reconciliation processes.</li>
+</ul>
+<ul>
+<li><strong>Account Posting Integration</strong>: Billing system must interface with Central 1's current account ledger system to post monthly charges; assumes standardized account coding and month-end cutoff procedures.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

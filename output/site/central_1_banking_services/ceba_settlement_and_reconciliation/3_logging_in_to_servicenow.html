@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 Logging in to ServiceNow — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #d97706; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/index.html'>Central 1 Banking Services</a> <span class='sep'>›</span> <a href='../../central_1_banking_services/ceba_settlement_and_reconciliation/index.html'>Ceba Settlement And Reconciliation</a> <span class='sep'>›</span> <span>3 Logging in to ServiceNow</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Ceba Settlement And Reconciliation</a>
+    <h1>3 Logging in to ServiceNow</h1>
+    <p class="subtitle">Central 1 Banking Services › Ceba Settlement And Reconciliation</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Central%201%20Banking%20Services/ceba_settlement_and_reconciliation.1.3.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># CEBA Settlement and Reconciliation Summary</p>
+<ul>
+<li><strong>Overview</strong>: Documents the end-to-end settlement workflow for Canada Emergency Business Account (CEBA) loan funds, including initial funding, reconciliation, repayments, and administration fee distribution between EDC, Central 1, and member financial institutions.</li>
+</ul>
+<ul>
+<li><strong>Primary Data Flow</strong>: EDC → Central 1 (lump sum posting, same-day) → Member FI current account → Customer accounts. Settlement visibility via CAS Online (Reference ID: "CEBA") and account activity reports (AIBC for BC, AIOC for Ontario) with transaction codes FT (credit) and DM (debit).</li>
+</ul>
+<ul>
+<li><strong>Funding Request Timeline</strong>: 3-4 business day lag from application submission in ServiceNow to funds deposited in FI's Central 1 account; reconciliation key is matching Credit/Debit Memo Slip funding note date to ServiceNow Funding Request Date.</li>
+</ul>
+<ul>
+<li><strong>Critical Integration Points</strong>: ServiceNow (funding request tracking), CAS Online (settlement visibility), CHQ4/ADVC memo slips (settlement notifications for BC/Ontario FIs), and EDC direct wire transfers for returned funds and repayment submissions.</li>
+</ul>
+<ul>
+<li><strong>Repayment Settlement Constraints</strong>: Bi-monthly reporting cycle with hard cutoff dates (15th/22nd and month-end/7th); Central 1 debits FI accounts on fixed dates (8th and 23rd) regardless of actual customer payment timing, creating a 6-23 day settlement float window.</li>
+</ul>
+<ul>
+<li><strong>Administration Fee Distribution</strong>: Quarterly (March, June, September, December); EDC remits to Central 1 on the 15th; Central 1 retains 12.5% fee and credits FI 87.5% of reported amounts—requires upstream FI fee calculation and reporting per Chapter 5.</li>
+</ul>
+<ul>
+<li><strong>Discrepancy Handling</strong>: No automated reconciliation described; manual Client Support Services contact required if funding amounts mismatch—indicates no real-time reconciliation API or exception handling automation currently in place.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

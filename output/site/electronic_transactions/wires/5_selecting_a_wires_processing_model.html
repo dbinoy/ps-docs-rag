@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Selecting a Wires Processing Model — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>5 Selecting a Wires Processing Model</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>5 Selecting a Wires Processing Model</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.05.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Wires Processing Models Selection & Setup</p>
+<ul>
+<li><strong>Purpose</strong>: Documents three configurable wires processing architectures (Centralized, Partially Centralized, Decentralized) for multi-branch and single-branch financial institutions, with setup procedures for users, administrators, and branches in MTS.</li>
+</ul>
+<ul>
+<li><strong>Key Architectural Models</strong>:</li>
+<li>*Centralized*: Single designated branch (head office) sends/receives all wires for organization; all users operate under one home transit number with "Use Linked Transits" permission</li>
+<li>*Partially Centralized*: Designated branch handles specific functions (e.g., incoming only) while other branches manage remaining functions (e.g., outgoing); mixed permission assignments by user role and branch</li>
+<li>*Decentralized*: Each branch independently manages its own wires; no branch linking, no "Use Linked Transits" permission required</li>
+</ul>
+<ul>
+<li><strong>User & Administrator Requirements</strong>:</li>
+<li>Minimum 3 wires users per branch/model (except 1 for incoming-only roles); minimum 2 MTS administrators</li>
+<li>Permission matrix varies by model: Inbox, Outbox (View/Create/Authorize), Template Management, FX Spreads/Fees management</li>
+<li>All outgoing wires require 2-Step security token and at least one authorized approver (Chapter 22 dependency)</li>
+</ul>
+<ul>
+<li><strong>Critical Setup Dependencies</strong>:</li>
+<li>Authorization limits (Level 1 & Level 2) must be configured *before* first outgoing wire creation per branch</li>
+<li>Home transit number assignment determines user/admin access scope and branch linking capability</li>
+<li>"Use Linked Transits" permission is mandatory in centralized/partially centralized models but prohibited in decentralized model</li>
+</ul>
+<ul>
+<li><strong>MTS Integration Points</strong>:</li>
+<li>Wires branch administration, user permissions, and authorization limits managed entirely in MTS</li>
+<li>Branch linking configuration in MTS Section 9.5 controls outgoing wire behavior across models</li>
+<li>Template deletion/restoration and FX spread/fee management reference separate administrative chapters</li>
+</ul>
+<ul>
+<li><strong>Governance Constraint</strong>: Best practice recommendation to designate compliance group for high-value wire review/approval (no enforcement mechanism specified in this section).</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

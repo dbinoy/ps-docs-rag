@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Data%20Hub/data_hub.1.6.html",
+  "title": "6 Data Hub Navigation and Tools",
+  "section_path": "ps_manual > Data%20Hub",
+  "breadcrumb": [],
+  "body_text": "6\tData Hub Navigation and Tools\n6.1\tHome Page Navigation\nThe Data Hub home page is structured as follows. See Figure 1.\nNote:\tData Hub is provided through Microsoft Power BI and includes a range of standard features. Although youâre welcome to explore these features, Central 1 does not support them. A few key features are described below.\nâ\nNavigation Pane\nâ\nThe Payments Dashboard is currently the only option.\nâ¡\nFeatures\nâ Standard features are available along the top menu bar, but a full description is outside the scope of this document.\nâ¢\nFilters Menu\nâ Use this section to select your data filters.\nâ£\nVisuals\nâ View the data in a chart format (default view) or table format.\nFigure 1: Home Page Navigation\nEND",
+  "links": [],
+  "content_length": 735
+}

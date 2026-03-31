@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheque Imaging — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Cheque Imaging</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Cheque Imaging</h1>
+    <p class="subtitle">Clearing and Deposits › Cheque Imaging <span class="badge" style="background:#dc2626">6 pages</span></p>
+    <div class="summary-box md-content"><p># Cheque Imaging System – Architecture Brief</p>
+<h2>Overview</h2>
+<p>Central 1's Cheque Imaging system captures and manages digital images of deposit items, chargebacks, and incoming clearing items. Physical cheques are retained only for Unqualified Items and Chargebacks; all others are imaged.</p>
+<h2>Key Data Flows & Integration Points</h2>
+<ul>
+<li><strong>Retrieval</strong>: Online Return System (ORS) enables search, view, and print of Incoming Clearing Items and deposit items</li>
+<li><strong>Member Delivery</strong>: Image files provided to members via statements (excludes Unqualified Items and Chargebacks)</li>
+<li><strong>MICR Testing</strong>: Validation service for cheque MICR encoding on new/existing accounts</li>
+</ul>
+<h2>Critical Design Constraints</h2>
+<ul>
+<li><strong>Legal Compliance</strong>: System must adhere to applicable financial services legislation and regulations (Chapter 3 details requirements)</li>
+<li><strong>Transit Number Components</strong>: Branch Number (5-digit) + Institution Number = Transit Number (required for clearing operations)</li>
+<li><strong>Physical Retention Rules</strong>: Physical cheques retained only for Unqualified Items and Chargebacks; all others digitized</li>
+<li><strong>ORS as Primary Tool</strong>: Prefer ORS resolution for inquiries before alternative escalation paths</li>
+</ul>
+<h2>Architecture Considerations</h2>
+<ul>
+<li>Separate data retention policies by item type</li>
+<li>MICR validation as upstream quality gate</li>
+<li>Image lifecycle management tied to item classification</li>
+<li>Legal audit trail requirements for regulatory compliance</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="cheque_imaging.html">Cheque Imaging</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_legal_considerations_for_cheque_imaging.html">3 Legal Considerations for Cheque Imaging</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_retrieving_cheque_images.html">4 Retrieving Cheque Images</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_image_files_for_member_statements.html">5 Image Files for Member Statements</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_micr_cheque_testing.html">6 MICR Cheque Testing</a></div>
+            <div class="page-preview">- **Purpose**: Documentation for credit unions to request validation that MICR (Magnetic Ink Character Recognition) encoding on cheques conforms to CPA Standard 006 specifications before production us</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/cheque_imaging.04.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

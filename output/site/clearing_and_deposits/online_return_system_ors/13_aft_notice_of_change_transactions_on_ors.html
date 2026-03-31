@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 AFT Notice of Change Transactions on ORS — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/online_return_system_ors/index.html'>Online Return System Ors</a> <span class='sep'>›</span> <span>13 AFT Notice of Change Transactions on ORS</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Online Return System Ors</a>
+    <h1>13 AFT Notice of Change Transactions on ORS</h1>
+    <p class="subtitle">Clearing and Deposits › Online Return System Ors</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/online_return_system_ors.03.13.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Appendix A-17: ORS Troubleshooting Guide Summary</p>
+<ul>
+<li><strong>Purpose</strong>: Diagnostic reference for Online Return System (ORS) issues affecting cheque clearing, returns, and notices of change workflows within the Central 1 payment infrastructure.</li>
+</ul>
+<ul>
+<li><strong>User Permission Model</strong>: ORS functionality is role-based (ORS User Type); missing menu elements (Summary, Preference, Upload, Reports links) indicate incorrect security configuration managed by User Management Security Officer—architectural implication: RBAC controls feature visibility at UI level.</li>
+</ul>
+<ul>
+<li><strong>Cheque Image Availability Constraints</strong>:</li>
+<li>Status-dependent rendering: yellow status with OOP/OOR (out-of-pocket/out-of-region) indicates cheques not yet arrived at Central 1</li>
+<li>"Image Unavailable" subdocuments are generated when cheques fail to arrive from OOP/OOR or mis-sort; these cannot be processed through ORS and require manual escalation to Tracing Department</li>
+<li>Unclear images require Clearing Department intervention (external fax-based resolution)</li>
+</ul>
+<ul>
+<li><strong>Temporal Business Rules</strong>: E-link availability for cheque returns expires after 6:00 pm PT; AFT returns operate within three processing windows (10:00 am, 3:30 pm, 11:00 pm PT)—architectural requirement: system must enforce time-based link availability and process window gating.</li>
+</ul>
+<ul>
+<li><strong>Return Status State Machine</strong>: RI column (AFT Returns) and N column (AFT Notice of Change) track completion status (C = Complete); once Complete, corresponding action links (E, N) become unavailable because items have been transmitted to originating FI—architectural implication: link/action rendering must respect downstream system state.</li>
+</ul>
+<ul>
+<li><strong>Integration Dependencies</strong>: Central 1 Client Support Services, Clearing Department, and Tracing Department are external escalation points; system design must accommodate manual intervention workflows for image failures and routing exceptions.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

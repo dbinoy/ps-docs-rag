@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>26 Wires Settlement — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #be185d; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../electronic_transactions/index.html'>Electronic Transactions</a> <span class='sep'>›</span> <a href='../../electronic_transactions/wires/index.html'>Wires</a> <span class='sep'>›</span> <span>26 Wires Settlement</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Wires</a>
+    <h1>26 Wires Settlement</h1>
+    <p class="subtitle">Electronic Transactions › Wires</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/Electronic%20Transactions/wires.3.26.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Wires Settlement (Section 26)</p>
+<ul>
+<li><strong>Purpose</strong>: Defines settlement account flows and timing for incoming and outgoing wire transactions across Central 1's payment network, with regional variations for BC/Ontario vs. other provinces.</li>
+</ul>
+<ul>
+<li><strong>Settlement Timing</strong>: Near real-time processing for BC/Ontario institutions to Central 1 current accounts; minutes unless manual compliance review required. Subject to cut-off times defined in Section 14.7.</li>
+</ul>
+<ul>
+<li><strong>Account Routing Logic</strong>:</li>
+<li>Outgoing wires (CAD or foreign) debit Canadian dollar account; US dollar outgoing wires debit US dollar account (if held with provincial central)</li>
+<li>Incoming wires credit matching currency account; non-matching currencies converted to CAD</li>
+<li>Regional split: BC/Ontario route to Central 1 current account; all other provinces route to provincial central account</li>
+</ul>
+<ul>
+<li><strong>Fraud/Sanctions Integration Dependencies</strong>:</li>
+<li>EFM (Enterprise Fraud Management) system flags potential fraud; wires remain "Pending" until resolution—settlement only occurs on "legitimate" confirmation, not on fraud detection</li>
+<li>Sanctioned list matches held at Central 1 pending investigation; funds remain debited but not settled until cleared</li>
+<li>Manual compliance review can delay settlement; no API connection between Wires application and client banking systems</li>
+</ul>
+<ul>
+<li><strong>Fee Structure</strong>: All wires assessed processing fees at month-end; currency of fee posting matches transaction currency and account held (CAD or USD), not uniform billing model.</li>
+</ul>
+<ul>
+<li><strong>Critical Constraint for Architects</strong>: Wires application has no direct banking system integration—institutions must manually reconcile fraud-flagged or legitimized wires through their own internal procedures; this creates a manual handoff gap requiring compensating controls.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

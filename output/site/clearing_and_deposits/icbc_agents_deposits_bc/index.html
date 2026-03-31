@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icbc Agents Deposits Bc — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #dc2626; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../clearing_and_deposits/index.html'>Clearing and Deposits</a> <span class='sep'>›</span> <span>Icbc Agents Deposits Bc</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
+    <h1>📥 Icbc Agents Deposits Bc</h1>
+    <p class="subtitle">Clearing and Deposits › Icbc Agents Deposits Bc <span class="badge" style="background:#dc2626">7 pages</span></p>
+    <div class="summary-box md-content"><p># ICBC Agents Deposits (BC) - Architecture Brief</p>
+<h2>Overview</h2>
+<p>This document group defines the operational and settlement framework for deposit accounts held by ICBC insurance agents at member credit unions. Central 1 acts as the clearing and settlement intermediary.</p>
+<h2>Key Data Flows</h2>
+<p>1. <strong>Deposit Preparation</strong>: Agents separate cheques/cash, stamp cheques (ICBC Agent Stamp, upper right quadrant back)</p>
+<p>2. <strong>Deposit Processing</strong>: Member institutions receive deposits, credit ICBC agent accounts, report details to Central 1</p>
+<p>3. <strong>Settlement</strong>: Central 1 credits member institutions' Central 1 accounts for cheque values; processes via branch capture</p>
+<p>4. <strong>Sweep Mechanism</strong>: Central 1 initiates PADs (pre-authorized debits) against agent accounts to transfer funds</p>
+<h2>Critical Rules & Constraints</h2>
+<ul>
+<li><strong>Account Type</strong>: Deposit-taking only (no overdraft/credit functions)</li>
+<li><strong>Identification</strong>: Transit Number (Institution + 5-digit Branch Number) required for routing</li>
+<li><strong>Chargeback Handling</strong>: Misdirected chargebacks must be managed; dishonoured PADs require exception handling</li>
+<li><strong>Reconciliation</strong>: Account errors and discrepancies must be tracked and resolved</li>
+</ul>
+<h2>Architecture Considerations</h2>
+<ul>
+<li>Design for <strong>dual-ledger reconciliation</strong> (member institution ↔ Central 1)</li>
+<li>PAD failure handling and retry logic critical</li>
+<li>Cheque imaging/capture integration required</li>
+<li>Clear separation between agent deposits and standard deposits in GL</li>
+</ul></div>
+    <h2>Pages in this group</h2>
+    <div class="page-list">
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="icbc_agents_deposits_bc.html">ICBC Agentsâ Deposits (BC)</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.1.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="2_terminology.html">2 Terminology</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.2.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="3_opening_and_operating_an_icbc_agent_s_account.html">3 Opening and Operating an ICBC Agentâs Account</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.3.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="4_preparing_icbc_agents_deposits.html">4 Preparing ICBC Agentsâ Deposits</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.4.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="5_processing_icbc_agents_deposits.html">5 Processing ICBC Agentsâ Deposits</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.5.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="6_managing_icbc_agents_account_dishonoured_pads_account_errors_and_misdirected_chargebacks.html">6 Managing ICBC Agentsâ Account Dishonoured PADs, Account Errors, and Misdirected Chargebacks</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.6.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div>
+        <div class="page-item">
+          <div>
+            <div class="page-title"><a href="7_settlement_of_icbc_agents_accounts.html">7 Settlement of ICBC Agentsâ Accounts</a></div>
+            <div class="page-preview">- **Purpose**: Describes the settlement mechanism for cheques processed through Branch Capture and pre-authorized debits (PAD) for ICBC agent deposit accounts at Central 1. - **Branch Capture Settleme</div>
+          </div>
+          <span class="page-meta"><a href="https://psmanual.secure.central1.com/ps_manual/Clearing%20and%20Deposits/icbc_agents_deposits_bc.08.7.html" target="_blank" class="ext-link">↗ portal</a></span>
+        </div></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

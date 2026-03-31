@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Terminology — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_settlement/index.html'>Aft Settlement</a> <span class='sep'>›</span> <span>2 Terminology</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Settlement</a>
+    <h1>2 Terminology</h1>
+    <p class="subtitle">AFT › Aft Settlement</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.2.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: AFT Terminology & Definitions</p>
+<p><strong>Overview:</strong> Defines core terminology and concepts for Central 1's Automated Funds Transfer (AFT) system, covering transaction types, processing infrastructure, and key operational parameters.</p>
+<h2>Key Concepts & Processes</h2>
+<ul>
+<li><strong>Transaction Types:</strong> AFT encompasses two primary flows—debit transactions (Pre-Authorized Debits/PADs) and credit transactions (Direct Deposits)—both governed by CPA Standard 005 and Rule H1</li>
+<li><strong>Processing Model:</strong> Central 1 operates as originating direct clearer for BC/Ontario institutions; processing occurs in daily runs (up to 4 runs/day for CAD in BC, 3 in Ontario; 1 run/day for USD in both regions)</li>
+<li><strong>Lead Time Constraint:</strong> AFT files must arrive 2 business days before due date (shorter lead times possible with Serviceability Code '0'), creating a hard dependency on submission timing</li>
+<li><strong>Offsetting Entry Mechanism:</strong> System automatically posts offsetting debits/credits to originator accounts; must reconcile against individual transaction totals in outgoing files</li>
+</ul>
+<h2>Data Structures & Field Dependencies</h2>
+<ul>
+<li><strong>Financial Institutions File (FIF):</strong> Payments Canada-maintained directory with serviceability codes indicating business days required to credit payee accounts—critical for SLA calculations</li>
+<li><strong>Serviceability Code:</strong> Variable field on FIF determining credit availability timeline; affects lead time negotiation</li>
+<li><strong>Settlement Date:</strong> Typically equals due date; posted to financial institution by Central 1</li>
+</ul>
+<h2>Integration Points & Dependencies</h2>
+<ul>
+<li><strong>File Exchange:</strong> SFTP or Client Centre web portal for file transmission/receipt; connects to Payments Canada clearing infrastructure</li>
+<li><strong>Return Systems:</strong> Online Return System (ORS) and Batch Return Service handle transaction reversals and Notice of Change creation</li>
+<li><strong>Multi-Currency Support:</strong> USD AFT transactions require separate processing pipeline from CAD transactions</li>
+</ul>
+<h2>Critical Architectural Considerations</h2>
+<ul>
+<li><strong>Run-Based Processing:</strong> System operates on scheduled batch runs, not real-time; design must accommodate discrete processing windows and downstream communication delays</li>
+<li><strong>Recall Constraints:</strong> Only applicable pre-posting; debits recallable only if not yet sent to receiving institution's data centre—requires state tracking per transaction</li>
+<li><strong>Unpostable Transaction Handling:</strong> System must support rejection paths for transactions that cannot be debited/credited; integration with ORS for exception management</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

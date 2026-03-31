@@ -1,0 +1,9 @@
+{
+  "url": "https://psmanual.secure.central1.com/ps_manual/Releases/PS_2425.html",
+  "title": "24:25 â July 15, 2024",
+  "section_path": "ps_manual > Releases",
+  "breadcrumb": [],
+  "body_text": "24:25 â July 15, 2024\nUpdate to the Wires Part\nWe added content to the Wires Part related to outgoing wires now being monitored in âdecision modeâ in the Enterprise Fraud Management (EFM) system.\nElectronic Transactions Volume\nWires Part\nSection 1.1, Overview of Wires\nWe added a note that outgoing wires identified as potential fraud are managed by authorized users in Enterprise Fraud Management (EFM).\nSection 2.1, Definitions\nWe added a definition for Enterprise Fraud Management.\nSection 3.3, Establishing Policies and Procedures for Outgoing Wires Monitored in Enterprise Fraud Management (EFM)\nNew section.\nSection 14.5, Outgoing Wires Monitored in Enterprise Fraud Management (EFM)\nNew section.\nSection 23.1, Overview of Cancelling Outgoing Wires\nWe added information related to the status of outgoing wires in the Wires application for wires identified as potential fraud or fraud in EFM.\nSection 24.2\n,\nRouting Instructions for Incoming Wires\nWe updated the section to note that incoming wires that are missing identifiers will be returned to the sending financial institution.\nSection 26.2, Settlement of Outgoing Wires\nWe added information related to the settlement of wires under investigation for sanction list matches and wires that are identified as potential fraud or fraud in EFM.\nQuestions\nClient Support Services, phone\n1-888-889-7878\n, Option 1, email\nsupport@central1.com\n.",
+  "links": [],
+  "content_length": 1401
+}

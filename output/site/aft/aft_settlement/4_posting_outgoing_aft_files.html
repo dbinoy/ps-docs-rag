@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Posting Outgoing AFT Files — PS Manual</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>:root { --accent: #7c3aed; }</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📚 PS Manual</span>
+    <span class="sep">›</span>
+    <a href='../../index.html'>index.html</a> <span class='sep'>›</span> <a href='../../aft/index.html'>AFT</a> <span class='sep'>›</span> <a href='../../aft/aft_settlement/index.html'>Aft Settlement</a> <span class='sep'>›</span> <span>4 Posting Outgoing AFT Files</span>
+  </div>
+  <div class="container">
+    
+    <a href="../index.html" class="back-btn">← Back to Aft Settlement</a>
+    <h1>4 Posting Outgoing AFT Files</h1>
+    <p class="subtitle">AFT › Aft Settlement</p>
+    <p class='ext-link'><a href='https://psmanual.secure.central1.com/ps_manual/AFT/aft_settlement.6.4.html' target='_blank'>↗ View in PS Manual</a></p>
+    <div class="summary-box md-content"><p># Summary: Posting Outgoing AFT Files</p>
+<ul>
+<li><strong>Scope</strong>: Defines settlement posting rules for outgoing AFT (Automated Funds Transfer) files submitted by financial institutions and business member originators to Central 1, covering both CAD and USD transactions with distinct posting timing based on lead time and business day availability.</li>
+</ul>
+<ul>
+<li><strong>Net Settlement Model</strong>: AFT transactions are netted against offsetting transactions; only non-zero net balances generate postings (coded as AO) to the financial institution's Central 1 account. Zero-balanced nets result in no posting activity.</li>
+</ul>
+<ul>
+<li><strong>Posting Timing Rules (CAD)</strong>:</li>
+<li>Sufficient lead time + business day due date → post on due date</li>
+<li>Sufficient lead time + non-business day due date → post next business day</li>
+<li>Insufficient lead time → post on receipt date or next business day</li>
+<li>Timing directly impacts liquidity and settlement finality</li>
+</ul>
+<ul>
+<li><strong>Offsetting Transaction Handling</strong>: CAD files either include offsetting transactions automatically (posted to originator account on due date) or require manual posting by financial institutions if the net balance is unbalanced; USD files require manual posting by the financial institution (no automatic originator posting).</li>
+</ul>
+<ul>
+<li><strong>Critical Validation/Integration Point</strong>: Settlement Register Report (ICSR/UCSR) is the authoritative source to determine if offsetting transactions were automatically included—absence of entries in both "Due To" and "Due From" sections indicates manual posting obligation.</li>
+</ul>
+<ul>
+<li><strong>Account-Level Segregation</strong>: USD and CAD transactions post to separate Central 1 account types (USD vs. default), requiring parallel ledger management and currency-specific settlement logic.</li>
+</ul>
+<ul>
+<li><strong>Dependency on External Reporting</strong>: Architects must integrate or reference ICSR/UCSR, ICPS/UCPS, and AIBC/AIBU (or AIOC/AIOU) reports to determine posting requirements and verify settlement state; these reports are gating factors for financial institution operational decisions.</li>
+</ul></div>
+
+    <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
+  </div>
+</body>
+</html>

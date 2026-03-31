@@ -1,6 +1,8 @@
 """
 RAG Query CLI — standalone Q&A against the ChromaDB collection.
-Uses Claude (claude-sonnet-4-6) as the answer model with retrieved context.
+Supports two LLM providers selectable via --provider:
+  anthropic  — claude-sonnet-4-6             (requires ANTHROPIC_API_KEY in .env)
+  github     — GPT-4o via GitHub Models API  (requires GITHUB_TOKEN in .env)
 
 Retrieval modes (auto-detected):
   two-stage  — Stage 1: search ps_docs_summaries for relevant pages
@@ -10,8 +12,10 @@ Retrieval modes (auto-detected):
 Usage:
     python -m rag.query ask "What is the EFT settlement process?"
     python -m rag.query ask "What are the card authorization rules?" --top-k 8
-    python -m rag.query search "settlement"       # raw semantic search, no LLM
-    python -m rag.query interactive               # REPL mode
+    python -m rag.query ask "What are the card authorization rules?" --provider github
+    python -m rag.query search "settlement"            # raw semantic search, no LLM
+    python -m rag.query interactive                    # REPL mode (default: anthropic)
+    python -m rag.query interactive --provider github
 """
 
 from __future__ import annotations
@@ -22,6 +26,7 @@ from pathlib import Path
 import anthropic
 import chromadb
 import typer
+from openai import OpenAI
 from dotenv import load_dotenv
 from rich.console import Console
 from rich.markdown import Markdown
@@ -36,7 +41,15 @@ console = Console()
 
 CHROMA_DB_PATH = os.getenv("CHROMA_DB_PATH", "output/chroma_db")
 COLLECTION_NAME = os.getenv("CHROMA_COLLECTION", "ps_docs")
-ANSWER_MODEL = "claude-sonnet-4-6"
+
+# ── LLM provider constants ────────────────────────────────────────────────────
+ANTHROPIC_MODEL        = "claude-sonnet-4-6"
+# GITHUB_MODEL           = "Meta-Llama-3.1-405B-Instruct"   # best available on your GitHub plan
+GITHUB_MODEL = "gpt-4o"
+GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
+
+# typer enum for --provider option
+PROVIDERS = ["anthropic", "github"]
 
 COL_SUMMARIES = "ps_docs_summaries"
 COL_CONTENT   = "ps_docs_content"
@@ -192,33 +205,65 @@ def _format_context(chunks: list[dict]) -> str:
     return "\n\n---\n\n".join(parts)
 
 
-def _answer(question: str, chunks: list[dict]) -> str:
-    api_key = os.getenv("ANTHROPIC_API_KEY", "")
-    if not api_key:
-        return "[red]ANTHROPIC_API_KEY not set. Set it in .env to enable LLM answers.[/red]"
-
-    client = anthropic.Anthropic(api_key=api_key)
+def _answer(question: str, chunks: list[dict], provider: str = "anthropic") -> str:
+    """Generate an answer using either Anthropic (Claude) or GitHub Models (Llama-3.1-405B)."""
     context = _format_context(chunks)
-
-    msg = client.messages.create(
-        model=ANSWER_MODEL,
-        max_tokens=1500,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": (
-                    f"Based on the following Payment Solutions documentation excerpts, "
-                    f"answer this question:\n\n"
-                    f"**Question:** {question}\n\n"
-                    f"**Documentation Context:**\n{context}\n\n"
-                    f"Provide a thorough, accurate answer. "
-                    f"Cite sources by their [Source N] label when referencing specific details."
-                ),
-            }
-        ],
+    user_content = (
+        f"Based on the following Payment Solutions documentation excerpts, "
+        f"answer this question:\n\n"
+        f"**Question:** {question}\n\n"
+        f"**Documentation Context:**\n{context}\n\n"
+        f"Provide a thorough, accurate answer. "
+        f"Cite sources by their [Source N] label when referencing specific details."
     )
-    return msg.content[0].text
+
+    if provider == "github":
+        api_key = os.getenv("GITHUB_TOKEN", "")
+        if not api_key:
+            return (
+                "[red]GITHUB_TOKEN not set.[/red] Add it to your .env file:\n"
+                "  GITHUB_TOKEN=ghp_your_token_here"
+            )
+        try:
+            client = OpenAI(base_url=GITHUB_MODELS_ENDPOINT, api_key=api_key)
+            response = client.chat.completions.create(
+                model=GITHUB_MODEL,
+                max_tokens=1500,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_content},
+                ],
+            )
+            return response.choices[0].message.content or ""
+        except Exception as e:
+            return f"[red]GitHub Models API error:[/red] {e}"
+
+    else:  # provider == "anthropic"
+        api_key = os.getenv("ANTHROPIC_API_KEY", "")
+        if not api_key:
+            return (
+                "[red]ANTHROPIC_API_KEY not set.[/red] Add it to your .env file, "
+                "or use [bold]--provider github[/bold] instead."
+            )
+        try:
+            client = anthropic.Anthropic(api_key=api_key)
+            msg = client.messages.create(
+                model=ANTHROPIC_MODEL,
+                max_tokens=1500,
+                system=SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": user_content}],
+            )
+            return msg.content[0].text
+        except anthropic.APIConnectionError as e:
+            return (
+                f"[red]Connection error reaching Anthropic API.[/red]\n"
+                f"Your corporate network may be blocking api.anthropic.com.\n"
+                f"Try [bold]--provider github[/bold] instead.\n\n[dim]{e}[/dim]"
+            )
+        except anthropic.AuthenticationError:
+            return "[red]Invalid ANTHROPIC_API_KEY. Check your .env file.[/red]"
+        except anthropic.APIStatusError as e:
+            return f"[red]Anthropic API error {e.status_code}:[/red] {e.message}"
 
 
 # ── CLI commands ──────────────────────────────────────────────────────────────
@@ -229,9 +274,19 @@ def ask(
     top_k: int = typer.Option(8, "--top-k", "-k", help="Number of content chunks to retrieve"),
     top_pages: int = typer.Option(5, "--top-pages", help="Number of pages matched in Stage 1 (two-stage only)"),
     show_sources: bool = typer.Option(False, "--show-sources", help="Print retrieved source chunks"),
+    provider: str = typer.Option("anthropic", "--provider", "-p", help="LLM provider: 'anthropic' (Claude, default) or 'github' (GPT-4o)"),
 ):
     """Ask a question and get an LLM-synthesized answer from the docs."""
-    console.print(f"\n[bold cyan]Question:[/bold cyan] {question}\n")
+    if provider not in PROVIDERS:
+        console.print(f"[red]Invalid provider '{provider}'. Choose from: {PROVIDERS}[/red]")
+        raise typer.Exit(1)
+
+    provider_label = (
+        f"[cyan]Llama-3.1-405B[/cyan] via GitHub Models" if provider == "github"
+        else f"[cyan]claude-sonnet-4-6[/cyan] via Anthropic"
+    )
+    console.print(f"\n[bold cyan]Question:[/bold cyan] {question}")
+    console.print(f"[dim]Provider: {provider_label}[/dim]\n")
 
     with console.status("Searching documentation..."):
         matched_pages, chunks, two_stage = _smart_retrieve(question, top_k=top_k, top_pages=top_pages)
@@ -261,7 +316,7 @@ def ask(
         ))
 
     with console.status("Generating answer..."):
-        answer = _answer(question, chunks)
+        answer = _answer(question, chunks, provider=provider)
 
     console.print(Panel(Markdown(answer), title="[bold green]Answer[/bold green]", border_style="green"))
 
@@ -302,12 +357,22 @@ def search(
 
 
 @app.command()
-def interactive():
+def interactive(
+    provider: str = typer.Option("anthropic", "--provider", "-p", help="LLM provider: 'anthropic' (Claude, default) or 'github' (GPT-4o)"),
+):
     """Start an interactive Q&A REPL session."""
+    if provider not in PROVIDERS:
+        console.print(f"[red]Invalid provider '{provider}'. Choose from: {PROVIDERS}[/red]")
+        raise typer.Exit(1)
+
+    provider_label = (
+        f"[cyan]Llama-3.1-405B[/cyan] via GitHub Models" if provider == "github"
+        else f"[cyan]claude-sonnet-4-6[/cyan] via Anthropic"
+    )
     mode_label = "two-stage" if _is_two_stage() else "flat"
     console.print(Panel(
         f"[bold]Payment Solutions Documentation Q&A[/bold]\n"
-        f"Retrieval mode: [cyan]{mode_label}[/cyan]\n"
+        f"Retrieval mode: [cyan]{mode_label}[/cyan]  |  Provider: {provider_label}\n"
         "Type your question and press Enter. Type [bold]quit[/bold] or [bold]exit[/bold] to stop.\n"
         "Prefix with [bold]/search [/bold] for raw retrieval without LLM.",
         border_style="cyan",
@@ -345,7 +410,7 @@ def interactive():
                 continue
             if two_stage:
                 console.print(f"[dim]Matched {len(matched_pages)} pages → {len(chunks)} chunks[/dim]")
-            answer = _answer(question, chunks)
+            answer = _answer(question, chunks, provider=provider)
             console.print(f"\n[bold green]Assistant:[/bold green]")
             console.print(Markdown(answer))
 

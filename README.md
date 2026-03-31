@@ -89,8 +89,10 @@ cd /Users/binoydas/Documents/Code/Central1/ps-docs-rag
 
 ```bash
 cp .env.template .env
-# Edit .env and set ANTHROPIC_API_KEY=sk-ant-...
-# Portal credentials are pre-filled in .env.template
+# Edit .env and fill in:
+#   ANTHROPIC_API_KEY=sk-ant-...        ← for default provider (claude-sonnet-4-6)
+#   GITHUB_TOKEN=ghp_...               ← for --provider github fallback (gpt-4o)
+#   Portal credentials are pre-filled in .env.template
 ```
 
 ---
@@ -113,7 +115,8 @@ python -m summarizer.build_site
 python -m rag.ingest run
 
 # 5. Test Q&A
-python -m rag.query ask "What is the EFT settlement process?"
+python -m rag.query ask "What is the EFT settlement process?"                    # Anthropic (default)
+python -m rag.query ask "What is the EFT settlement process?" --provider github  # GPT-4o fallback
 ```
 
 ### Incremental re-run (after portal updates)
@@ -307,17 +310,47 @@ exist, two-stage retrieval is used automatically. Otherwise falls back to the fl
 1. Stage 1 — embed query → search `ps_docs_summaries` → identify top-N most relevant pages
 2. Stage 2 — search `ps_docs_content` filtered to those pages → return best full-text chunks
 
+#### LLM Providers
+
+The CLI supports two answer-generation backends, selectable via `--provider` / `-p`:
+
+| Provider | Flag | Model | Key Required | When to use |
+|----------|------|-------|-------------|-------------|
+| **`anthropic`** ⬅ default | *(omit flag)* | `claude-sonnet-4-6` | `ANTHROPIC_API_KEY` in `.env` | Best answer quality — use when not on a restricted network |
+| `github` | `--provider github` | `gpt-4o` via GitHub Models API | `GITHUB_TOKEN` in `.env` | Fallback when `api.anthropic.com` is blocked (e.g. corporate network) |
+
+> **Corporate network note:** Cognizant-issued laptops typically block direct
+> access to `api.anthropic.com`. Use `--provider github` in that case — the
+> GitHub Models endpoint (`models.inference.ai.azure.com`) is generally permitted.
+> See [GitHub → Settings → Developer Settings → Personal Access Tokens](https://github.com/settings/tokens)
+> to generate a classic PAT (no scopes required).
+
+#### Commands
+
 ```bash
-# Synthesized answer (retrieves chunks then asks Claude)
+# ── Default provider: Anthropic / claude-sonnet-4-6 ─────────────────────────
+
+# Single question (uses Anthropic by default)
 python -m rag.query ask "How does AFT batch settlement work?"
 python -m rag.query ask "What are EFT reject codes?" --top-k 8 --show-sources
 
-# Raw semantic search — shows Stage 1 matched pages + Stage 2 content chunks
-python -m rag.query search "wire transfer cut-off times"
-
-# Interactive REPL (best for exploration)
+# Interactive REPL (uses Anthropic by default)
 python -m rag.query interactive
 # In REPL: prefix with /search for raw retrieval without LLM synthesis
+
+# ── GitHub Models fallback: gpt-4o ──────────────────────────────────────────
+
+# Single question via GitHub
+python -m rag.query ask "How does AFT batch settlement work?" --provider github
+python -m rag.query ask "How does AFT batch settlement work?" -p github
+
+# Interactive REPL via GitHub
+python -m rag.query interactive --provider github
+
+# ── Raw semantic search (no LLM, provider flag not applicable) ───────────────
+
+# Shows Stage 1 matched pages + Stage 2 content chunks
+python -m rag.query search "wire transfer cut-off times"
 ```
 
 ---

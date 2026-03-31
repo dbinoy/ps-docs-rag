@@ -18,33 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ International Transfers</h1>
     <p class="subtitle">Electronic Transactions › International Transfers <span class="badge" style="background:#be185d">4 pages</span></p>
-    <div class="summary-box md-content"><p># International Transfers Architecture Brief</p>
-<h2>Overview</h2>
-<p>International Transfers is a Central 1 payment product enabling customers to send funds globally via online banking and mobile app, powered through an Agility partnership. Settlement and operational handling align with existing electronic bill payment processes.</p>
-<h2>Key Architectural Components</h2>
-<p><strong>Data Flow & Integration:</strong></p>
-<ul>
-<li>Customer-initiated transfers via digital channels → Agility partner integration</li>
-<li>Settlement process mirrors EBP (electronic bill payment) settlement framework</li>
-<li>Reports and reconciliation use existing EBP infrastructure</li>
-</ul>
-<p><strong>Operational Processes:</strong></p>
-<ul>
-<li><strong>Traces & Reversals:</strong> Managed identically to EBP traces; use BPCV (Bill Payment Confirmation View) and BPRE (Bill Payment Reversal/Error) reports for case management</li>
-<li><strong>Settlement & Reporting:</strong> Leverages established EBP settlement and reconciliation mechanisms</li>
-</ul>
-<h2>Critical Design Constraints</h2>
-<p>1. <strong>Dependency on EBP Architecture:</strong> Any enhancement must maintain compatibility with bill payment settlement and reporting systems</p>
-<p>2. <strong>Partner Integration:</strong> Agility handles international execution; Central 1 manages domestic rails</p>
-<p>3. <strong>Operational Parity:</strong> Trace/reversal workflows should replicate EBP patterns to minimize training and process divergence</p>
-<p>4. <strong>Reporting:</strong> Must output through existing BPCV/BPRE reporting structures</p>
-<h2>Architect Considerations</h2>
-<ul>
-<li>Clarify settlement timing and SLA differences vs. domestic transfers</li>
-<li>Confirm Agility API contracts and failure scenarios</li>
-<li>Define fund flow timing to/from partner</li>
-<li>Map reconciliation gaps at partner handoff points</li>
-</ul></div>
+    <div class="summary-box md-content"><p>International Transfers 1 Introduction to International Transfers 1.1 Overview of International Transfers International Transfers allows customers to transfer funds internationally through online banking and mobile app via a partnership with Agility Forex. International Transfers is available for…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -78,5 +52,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

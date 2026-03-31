@@ -18,25 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ Atm And Pos</h1>
     <p class="subtitle">Electronic Transactions › Atm And Pos <span class="badge" style="background:#be185d">12 pages</span></p>
-    <div class="summary-box md-content"><h2>ATM and POS Document Group Summary</h2>
-<p><strong>Scope:</strong> Central 1's settlement framework for ATM and POS transactions across THE EXCHANGE® and ACCULINK® networks, covering acquirer/issuer procedures, adjustments, traces, and settlement.</p>
-<p><strong>Key Architectural Elements:</strong></p>
-<ul>
-<li><strong>Dual Network Architecture:</strong> THE EXCHANGE® and ACCULINK® (debit-only) networks serve different transaction types and participants</li>
-<li><strong>Role-Based Processing:</strong> Acquirer (ATM/POS owner) and Issuer (card issuer) have distinct responsibilities and data flows</li>
-<li><strong>Settlement Model:</strong> Daily net settlement posts to credit unions' Central 1 current accounts; USD converted to CAD</li>
-<li><strong>Adjustment/Trace Workflow:</strong> Network-dependent (direct peer-to-peer vs. Central 1-mediated); routed by transaction type and requester role</li>
-<li><strong>Regulatory Requirements:</strong> PCMLTFA compliance, card capture protocols, audit trails for all adjustments</li>
-</ul>
-<p><strong>Critical Design Constraints:</strong></p>
-<ul>
-<li>Transactions must route correctly based on network and role</li>
-<li>Settlement must be atomic and reconcilable</li>
-<li>Trace requests require bidirectional communication with external networks</li>
-<li>Card capture is mandatory; destruction must be documented</li>
-<li>Multi-currency handling (USD→CAD conversion) at settlement</li>
-</ul>
-<p><strong>Integration Points:</strong> C2C Node, Cooperative Node, external switching suppliers, and interbank networks.</p></div>
+    <div class="summary-box md-content"><p>ATM and POS 1 Introduction to ATM and POS 1.1 Overview of ATM and POS This Part describes Central 1âs settlement process for ATM and POS transactions between the C2C Node or the Cooperative Node and data processing suppliers providing switching facilities for more than one card-issuing financial…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -126,5 +108,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

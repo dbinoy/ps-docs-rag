@@ -18,37 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to AFT</a>
     <h1>💸 Aft Reports</h1>
     <p class="subtitle">AFT › Aft Reports <span class="badge" style="background:#7c3aed">3 pages</span></p>
-    <div class="summary-box md-content"><p># AFT Reports - Architecture Brief</p>
-<h2>Overview</h2>
-<p>AFT Reports document Automated Funds Transfer (AFT) reporting capabilities provided by Central 1. Reports are distributed via FTP and cover account activity, balances, and transaction details across regional variants (BC: AIBC/AIBU; Ontario: AIOC/AIOU).</p>
-<h2>Key Data Flows</h2>
-<ul>
-<li><strong>Transaction Types</strong>: Debits (PADs - pre-authorized debits) and credits (direct deposits)</li>
-<li><strong>Report Distribution</strong>: FTP-based delivery mechanism</li>
-<li><strong>Regional Variants</strong>: Province-specific report formats and naming conventions</li>
-</ul>
-<h2>Critical Architecture Considerations</h2>
-<p><strong>Integration Points:</strong></p>
-<ul>
-<li>FTP Service for report delivery and retrieval</li>
-<li>File Exchange and Report Distribution subsystem</li>
-<li>Account-level transaction data aggregation</li>
-</ul>
-<p><strong>Design Constraints:</strong></p>
-<ul>
-<li>Must support multi-regional compliance (BC/Ontario variants)</li>
-<li>Preserve existing report nomenclature and format standards</li>
-<li>Maintain AFT transaction classification integrity (debit vs. credit)</li>
-</ul>
-<p><strong>Before Enhancement:</strong></p>
-<ul>
-<li>Confirm report frequency and latency requirements</li>
-<li>Clarify which report variants your credit union members require</li>
-<li>Understand downstream consumers of AFT data (accounting systems, reconciliation, compliance)</li>
-<li>Validate FTP security and failover mechanisms</li>
-<li>Document any custom mapping between internal transaction types and AFT classifications</li>
-</ul>
-<p><strong>Next Steps</strong>: Review full documentation and File Exchange/Report Distribution component specifications.</p></div>
+    <div class="summary-box md-content"><p>AFT Reports 1 Introduction to AFT Reports 1.1 Accessing AFT Reports AFT reports are available from Central 1 as described below. See the File Exchange and Report Distribution Part for more information on the FTP Service. MERG File Financial institutions download the MERG file from Central 1âs…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -75,5 +45,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

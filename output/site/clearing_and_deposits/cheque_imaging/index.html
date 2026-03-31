@@ -18,29 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
     <h1>📥 Cheque Imaging</h1>
     <p class="subtitle">Clearing and Deposits › Cheque Imaging <span class="badge" style="background:#dc2626">6 pages</span></p>
-    <div class="summary-box md-content"><p># Cheque Imaging System – Architecture Brief</p>
-<h2>Overview</h2>
-<p>Central 1's Cheque Imaging system captures and manages digital images of deposit items, chargebacks, and incoming clearing items. Physical cheques are retained only for Unqualified Items and Chargebacks; all others are imaged.</p>
-<h2>Key Data Flows & Integration Points</h2>
-<ul>
-<li><strong>Retrieval</strong>: Online Return System (ORS) enables search, view, and print of Incoming Clearing Items and deposit items</li>
-<li><strong>Member Delivery</strong>: Image files provided to members via statements (excludes Unqualified Items and Chargebacks)</li>
-<li><strong>MICR Testing</strong>: Validation service for cheque MICR encoding on new/existing accounts</li>
-</ul>
-<h2>Critical Design Constraints</h2>
-<ul>
-<li><strong>Legal Compliance</strong>: System must adhere to applicable financial services legislation and regulations (Chapter 3 details requirements)</li>
-<li><strong>Transit Number Components</strong>: Branch Number (5-digit) + Institution Number = Transit Number (required for clearing operations)</li>
-<li><strong>Physical Retention Rules</strong>: Physical cheques retained only for Unqualified Items and Chargebacks; all others digitized</li>
-<li><strong>ORS as Primary Tool</strong>: Prefer ORS resolution for inquiries before alternative escalation paths</li>
-</ul>
-<h2>Architecture Considerations</h2>
-<ul>
-<li>Separate data retention policies by item type</li>
-<li>MICR validation as upstream quality gate</li>
-<li>Image lifecycle management tied to item classification</li>
-<li>Legal audit trail requirements for regulatory compliance</li>
-</ul></div>
+    <div class="summary-box md-content"><p>Cheque Imaging 1 Introduction to Cheque Imaging 1.1 Overview of Cheque Imaging Central 1 uses cheque imaging to capture Images of credit union deposit items, Chargebacks, and Incoming Clearing Items drawn on the credit union. The basic cheque imaging service allows credit union staff to view and…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -88,5 +66,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

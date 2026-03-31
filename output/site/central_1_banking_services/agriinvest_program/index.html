@@ -18,29 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
     <h1>🏦 Agriinvest Program</h1>
     <p class="subtitle">Central 1 Banking Services › Agriinvest Program <span class="badge" style="background:#d97706">7 pages</span></p>
-    <div class="summary-box md-content"><p># AgriInvest Program – Architecture Brief</p>
-<h2>Overview</h2>
-<p>AgriInvest is a government agricultural income-protection program administered by AAFC, with Central 1 Credit Union acting as the hub for member financial institution participation. Member credit unions open and manage AgriInvest accounts for qualified agricultural producers.</p>
-<h2>Key Architectural Data Flows</h2>
-<ul>
-<li><strong>Account Lifecycle</strong>: Member institutions open accounts (subject to AAFC approval); account closure requires AAFC authorization</li>
-<li><strong>Activity Reporting</strong>: All transactions recorded in AgriInvest Activity Files, submitted semi-monthly to Central 1 (reporting periods: 1–15th and 16th–EOM; deadline: 3rd business day of following period)</li>
-<li><strong>Compliance Tracking</strong>: Member institutions choose recordkeeping approach (forms storage or alternative methods)</li>
-</ul>
-<h2>Critical Rules & Constraints</h2>
-<ul>
-<li>Member institutions must execute Participant's Agreement with Central 1 before enrollment</li>
-<li>100% of AgriInvest accounts must be reported; no exceptions</li>
-<li>Semi-monthly cadence is non-negotiable (regulatory requirement)</li>
-<li>AAFC holds approval authority for account openings/closings—member institutions act as service layer only</li>
-</ul>
-<h2>Design Implications</h2>
-<ul>
-<li>Account status transitions depend on external AAFC decisions (async workflows)</li>
-<li>Activity file format and submission mechanism are critical integration points</li>
-<li>Audit trail and recordkeeping flexibility requires configurable storage/metadata strategies</li>
-<li>Plan for reconciliation between member institution records and Central 1 submissions</li>
-</ul></div>
+    <div class="summary-box md-content"><p>AgriInvest Program 1 Introduction to the AgriInvest Program 1.1 Overview of the AgriInvest Program The AgriInvest Program is a government initiative that helps protect qualified agricultural producers from small income declines and that supports investments to help mitigate risks or improve market…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -95,5 +73,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

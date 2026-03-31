@@ -18,31 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ Enterprise Fraud Management Efm</h1>
     <p class="subtitle">Electronic Transactions › Enterprise Fraud Management Efm <span class="badge" style="background:#be185d">11 pages</span></p>
-    <div class="summary-box md-content"><p># Enterprise Fraud Management (EFM) - Architecture Brief</p>
-<h2>Overview</h2>
-<p>EFM is Central 1's real-time fraud detection and incident management system for member financial institutions. It generates alerts on suspicious transactions, enabling fraud teams to investigate and respond.</p>
-<h2>Key Data Flows & Integration Points</h2>
-<ul>
-<li><strong>Transaction input</strong>: Monitored transactions feed into detection rules</li>
-<li><strong>Alert generation</strong>: Suspicious activity triggers alerts grouped within incidents</li>
-<li><strong>Notification</strong>: Email alerts notify configured fraud teams</li>
-<li><strong>Account mapping</strong>: Account Entity ID links customer accounts to FI identifiers (FI ID, Transit #, Account #)</li>
-</ul>
-<h2>Critical Business Rules</h2>
-<ul>
-<li><strong>Limit Groups</strong>: Risk-based transaction limits for Interac® e-Transfer (requires FI risk assessment)</li>
-<li><strong>Incident filtering</strong>: Configurable filters apply across incident lists for triage</li>
-<li><strong>Settlement integration</strong>: e-Transfer and wire settlement flows managed separately (external settlement documents referenced)</li>
-</ul>
-<h2>Architecture Constraints</h2>
-<ul>
-<li><strong>Access control</strong>: Role-based via CPS Admin/User Management; Client Centre authentication required</li>
-<li><strong>Multi-tenant</strong>: Supports multiple FIs with isolated data views</li>
-<li><strong>Reporting</strong>: Multiple report types (transaction alerts, rule triggers, model summaries) for audit/compliance</li>
-<li><strong>User management</strong>: Centralized administration of fraud team access</li>
-</ul>
-<h2>Design Considerations</h2>
-<p>Ensure audit trails on incident status changes, support configurable alert routing, maintain data isolation by FI/Account Entity ID, and plan for high-volume transaction processing at detection layer.</p></div>
+    <div class="summary-box md-content"><p>Enterprise Fraud Management 1 Introduction to Enterprise Fraud Management 1.1 Introduction to Enterprise Fraud Management Central 1âs Enterprise Fraud Management (EFM) system provides alerts for potentially fraudulent transactions. EFM has strong functional fraud monitoring, detection, and…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -125,5 +101,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

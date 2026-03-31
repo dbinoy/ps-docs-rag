@@ -18,33 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
     <h1>🧾 Online Tracing System</h1>
     <p class="subtitle">Bill Payments › Online Tracing System <span class="badge" style="background:#059669">12 pages</span></p>
-    <div class="summary-box md-content"><p># Online Tracing System (OLT) – Architecture Brief</p>
-<h2>Purpose</h2>
-<p>The Online Tracing System enables financial institutions to create and manage trace requests for bill payments processed through Central 1's Electronic Bill Payments System. It supports both member-initiated and biller-initiated trace workflows.</p>
-<h2>Key Data Flows</h2>
-<ul>
-<li><strong>Inbound</strong>: Trace requests from Tracers/SuperTracers; biller-initiated requests from Central 1</li>
-<li><strong>Outbound</strong>: Trace status notifications; settlement postings to Current Account Services (CAS)</li>
-<li><strong>Lifecycle</strong>: Created → Processed → Closed → Auto-archived (7 days) → Settled</li>
-</ul>
-<h2>Critical Rules & Design Constraints</h2>
-<ul>
-<li><strong>User roles</strong>: Tracers and SuperTracers (via Client Centre credentials); CPS Admin Security Officers manage security</li>
-<li><strong>Archival</strong>: Automatic after 7 days; manual initiation permitted</li>
-<li><strong>Settlement</strong>: Adjustments and service charges reconciled against CAS postings</li>
-<li><strong>Reporting</strong>: CSV/PDF exports required; used for daily reconciliation</li>
-<li><strong>Legacy path</strong>: Transactions >1 year old bypass OLT (alternate submission mechanism)</li>
-</ul>
-<h2>Architecture Considerations</h2>
-<ul>
-<li>Multi-environment support (three models offered)</li>
-<li>Email notification integration</li>
-<li>Role-based access control tied to Client Centre User Management</li>
-<li>State-machine workflow (status determines Inbox/Outbox visibility)</li>
-<li>Reporting and archival as critical operational flows</li>
-<li>Integration touchpoint: Current Account Services (CAS) for settlement</li>
-</ul>
-<p><strong>Key integration dependency</strong>: Central 1's Electronic Bill Payments System and CAS.</p></div>
+    <div class="summary-box md-content"><p>Online Tracing System 1 Introduction 1.1 Overview of the Online Tracing System The Online Tracing System (OLT) allows users to create trace requests for bill payments and view biller-initiated trace requests. Tracers and SuperTracers can create and view trace requests, but those created by Tracers…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -134,5 +108,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

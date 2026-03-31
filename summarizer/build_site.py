@@ -127,6 +127,47 @@ def body_preview(body_text: str, chars: int = 400) -> str:
     return textwrap.shorten(text, width=chars, placeholder="…")
 
 
+def load_section_summary(section: str) -> str:
+    """Load a pre-generated section summary if it exists."""
+    path = SUMMARIES_DIR / "sections" / f"{section}.md"
+    if path.exists():
+        text = path.read_text().strip()
+        if len(text) > 50:
+            return text
+    return ""
+
+
+def load_master_summary() -> str:
+    """Load the pre-generated master summary if it exists."""
+    path = SUMMARIES_DIR / "master_summary.md"
+    if path.exists():
+        text = path.read_text().strip()
+        if len(text) > 50:
+            return text
+    return ""
+
+
+def _grp_slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
+
+
+def load_group_summary(section: str, group_name: str) -> str:
+    """Load a cached group summary from disk if it exists."""
+    path = SUMMARIES_DIR / "groups" / _grp_slug(section) / f"{_grp_slug(group_name)}.md"
+    if path.exists():
+        text = path.read_text().strip()
+        if len(text) > 30:
+            return text
+    return ""
+
+
+def save_group_summary(section: str, group_name: str, text: str) -> None:
+    """Persist a group summary to disk for reuse on future builds."""
+    d = SUMMARIES_DIR / "groups" / _grp_slug(section)
+    d.mkdir(parents=True, exist_ok=True)
+    (d / f"{_grp_slug(group_name)}.md").write_text(text, encoding="utf-8")
+
+
 # ── Claude summarization ──────────────────────────────────────────────────────
 
 def _client() -> anthropic.Anthropic:
@@ -312,6 +353,378 @@ footer { margin-top: 48px; padding: 20px 0; border-top: 1px solid #e2e8f0;
 """
 
 
+QA_JS = r"""
+(function () {
+  'use strict';
+
+  /* ── Inject widget CSS ─────────────────────────────────── */
+  var style = document.createElement('style');
+  style.textContent = [
+    '#qa-fab{position:fixed;bottom:24px;right:24px;z-index:9998;width:52px;height:52px;',
+    'border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;',
+    'font-size:22px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:flex;',
+    'align-items:center;justify-content:center;transition:background .2s,transform .15s}',
+    '#qa-fab:hover{background:#1d4ed8;transform:scale(1.08)}',
+    'body{transition:margin-right .25s cubic-bezier(.4,0,.2,1)}',
+    '#qa-resize{position:absolute;left:0;top:0;bottom:0;width:6px;cursor:col-resize;z-index:1}',
+    '#qa-resize:hover{background:rgba(37,99,235,.15)}',
+    '#qa-panel{position:fixed;top:0;right:0;bottom:0;width:380px;max-width:100vw;',
+    'background:#fff;border-left:1px solid #e2e8f0;box-shadow:-4px 0 24px rgba(0,0,0,.12);',
+    'display:flex;flex-direction:column;z-index:9999;',
+    'transform:translateX(100%);transition:transform .25s cubic-bezier(.4,0,.2,1)}',
+    '#qa-panel.qa-open{transform:translateX(0)}',
+    '#qa-header{background:#0f172a;color:#e2e8f0;padding:14px 18px;display:flex;',
+    'align-items:center;justify-content:space-between;font-size:14px;font-weight:600;flex-shrink:0}',
+    '#qa-close,#qa-clear{background:none;border:none;color:#94a3b8;font-size:18px;cursor:pointer;',
+    'line-height:1;padding:2px 6px;border-radius:4px}',
+    '#qa-close:hover,#qa-clear:hover{color:#e2e8f0;background:rgba(255,255,255,.1)}',
+    '#qa-controls{padding:10px 14px;border-bottom:1px solid #e2e8f0;flex-shrink:0;background:#f8fafc;',
+    'display:flex;align-items:center;gap:12px;font-size:12px;color:#64748b;flex-wrap:wrap}',
+    '#qa-provider,#qa-topk{font-size:12px;padding:3px 8px;border-radius:4px;border:1px solid #cbd5e1;',
+    'background:#fff;color:#334155;cursor:pointer}',
+    '#qa-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px}',
+    '.qa-msg{border-radius:8px;padding:10px 13px;font-size:13.5px;line-height:1.55;max-width:95%}',
+    '.qa-msg-user{background:#2563eb;color:#fff;align-self:flex-end;border-bottom-right-radius:2px}',
+    '.qa-msg-bot{background:#f1f5f9;color:#1e293b;align-self:flex-start;',
+    'border-bottom-left-radius:2px}',
+    '.qa-msg-bot h2{font-size:14px;font-weight:700;margin:10px 0 4px}',
+    '.qa-msg-bot h3{font-size:13px;font-weight:700;margin:8px 0 3px}',
+    '.qa-msg-bot p{margin:4px 0}',
+    '.qa-msg-bot ul,.qa-msg-bot ol{margin:4px 0;padding-left:18px}',
+    '.qa-msg-bot li{margin:2px 0}',
+    '.qa-msg-bot code{background:#e2e8f0;border-radius:3px;padding:1px 4px;font-size:12px;font-family:monospace}',
+    '.qa-msg-bot pre{background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px;',
+    'overflow-x:auto;font-size:12px;margin:6px 0}',
+    '.qa-msg-bot pre code{background:none;padding:0;color:inherit}',
+    '.qa-msg-bot strong{font-weight:700}',
+    '.qa-msg-bot em{font-style:italic}',
+    '.qa-msg-bot a{color:#2563eb;text-decoration:none}',
+    '.qa-msg-bot a:hover{text-decoration:underline}',
+    '.qa-msg-err{background:#fef2f2;color:#991b1b;align-self:flex-start;border:1px solid #fecaca}',
+    '.qa-sources{font-size:11.5px;color:#64748b;margin-top:8px;padding-top:8px;',
+    'border-top:1px solid #e2e8f0}',
+    '.qa-sources a{color:#2563eb;text-decoration:none}',
+    '.qa-sources a:hover{text-decoration:underline}',
+    '.qa-spin-wrap{display:flex;align-items:center;gap:8px;font-size:13px;color:#64748b;padding:8px 4px}',
+    '.qa-spinner{width:16px;height:16px;border-radius:50%;border:2px solid #e2e8f0;',
+    'border-top-color:#2563eb;animation:qa-spin .7s linear infinite;flex-shrink:0}',
+    '@keyframes qa-spin{to{transform:rotate(360deg)}}',
+    '#qa-empty{color:#94a3b8;font-size:13px;text-align:center;margin-top:40px;',
+    'line-height:1.7;padding:0 16px}',
+    '#qa-input-row{padding:12px 14px;border-top:1px solid #e2e8f0;',
+    'display:flex;gap:8px;flex-shrink:0;background:#fff}',
+    '#qa-input{flex:1;font-size:13.5px;padding:8px 11px;border:1px solid #cbd5e1;',
+    'border-radius:6px;outline:none;resize:none;font-family:inherit;line-height:1.4;',
+    'max-height:100px;overflow-y:auto}',
+    '#qa-input:focus{border-color:#2563eb;box-shadow:0 0 0 2px rgba(37,99,235,.15)}',
+    '#qa-send{background:#2563eb;color:#fff;border:none;border-radius:6px;',
+    'padding:0 14px;cursor:pointer;font-size:13px;font-weight:600;flex-shrink:0;',
+    'transition:background .15s}',
+    '#qa-send:hover:not(:disabled){background:#1d4ed8}',
+    '#qa-send:disabled{background:#93c5fd;cursor:not-allowed}',
+    '#qa-send.qa-cancelling{background:#dc2626!important}',
+    '#qa-send.qa-cancelling:hover:not(:disabled){background:#b91c1c!important}'
+  ].join('');
+  document.head.appendChild(style);
+
+  /* ── Build DOM ─────────────────────────────────────────── */
+  var fab = document.createElement('button');
+  fab.id = 'qa-fab'; fab.title = 'Ask a question'; fab.textContent = '\uD83D\uDCAC';
+
+  var panel = document.createElement('div');
+  panel.id = 'qa-panel';
+  panel.innerHTML =
+    '<div id="qa-resize"></div>' +
+    '<div id="qa-header">' +
+      '<span>\uD83D\uDCAC\u2002PS Docs Q&amp;A</span>' +
+      '<div style="display:flex;gap:4px">' +
+        '<button id="qa-clear" title="Clear chat history">\uD83D\uDDD1</button>' +
+        '<button id="qa-close" title="Close">\u2715</button>' +
+      '</div>' +
+    '</div>' +
+    '<div id="qa-controls">' +
+      '<label for="qa-provider">Provider:</label>' +
+      '<select id="qa-provider">' +
+        '<option value="anthropic">Anthropic (Claude)</option>' +
+        '<option value="github">GitHub (GPT-4o)</option>' +
+      '</select>' +
+      '<label for="qa-topk" title="Number of document chunks passed to the LLM">Chunks:</label>' +
+      '<select id="qa-topk">' +
+        '<option value="4">4</option>' +
+        '<option value="6">6</option>' +
+        '<option value="8" selected>8</option>' +
+        '<option value="10">10</option>' +
+        '<option value="12">12</option>' +
+        '<option value="16">16</option>' +
+      '</select>' +
+    '</div>' +
+    '<div id="qa-messages">' +
+      '<div id="qa-empty">Ask any question about the<br>Payment Solutions documentation.</div>' +
+    '</div>' +
+    '<div id="qa-input-row">' +
+      '<textarea id="qa-input" placeholder="Ask a question\u2026" rows="1"></textarea>' +
+      '<button id="qa-send">Send</button>' +
+    '</div>';
+
+  document.body.appendChild(fab);
+  document.body.appendChild(panel);
+
+  /* ── Refs & state ──────────────────────────────────────── */
+  var msgs     = panel.querySelector('#qa-messages');
+  var inputEl  = panel.querySelector('#qa-input');
+  var sendBtn  = panel.querySelector('#qa-send');
+  var closeBtn  = panel.querySelector('#qa-close');
+  var clearBtn  = panel.querySelector('#qa-clear');
+  var resizeEl  = panel.querySelector('#qa-resize');
+  var provEl    = panel.querySelector('#qa-provider');
+  var topkEl   = panel.querySelector('#qa-topk');
+  var emptyEl  = panel.querySelector('#qa-empty');
+  var loading    = false;
+  var DEFAULT_W  = 380;
+  var _history   = [];   // [{cls, html, sourcesHtml}] — persisted across navigations
+  var _abortCtrl = null;
+
+  /* ── Helpers ───────────────────────────────────────────── */
+  function open() {
+    var w = parseInt(localStorage.getItem('qa_width'), 10) || DEFAULT_W;
+    panel.style.width = w + 'px';
+    panel.classList.add('qa-open');
+    document.body.style.marginRight = w + 'px';
+    fab.style.display = 'none';
+    localStorage.setItem('qa_open', '1');
+    inputEl.focus();
+  }
+  function close() {
+    panel.classList.remove('qa-open');
+    document.body.style.marginRight = '';
+    fab.style.display = '';
+    localStorage.removeItem('qa_open');
+  }
+
+  function setLoading(on) {
+    loading = on; inputEl.disabled = on;
+    if (on) {
+      sendBtn.textContent = 'Cancel';
+      sendBtn.classList.add('qa-cancelling');
+      sendBtn.disabled = false;
+    } else {
+      sendBtn.textContent = 'Send';
+      sendBtn.classList.remove('qa-cancelling');
+      sendBtn.disabled = false;
+    }
+    var ind = document.getElementById('qa-loading');
+    if (on && !ind) {
+      var d = document.createElement('div');
+      d.id = 'qa-loading'; d.className = 'qa-spin-wrap';
+      d.innerHTML = '<div class="qa-spinner"></div><span>Searching\u2026</span>';
+      msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+    } else if (!on && ind) { ind.remove(); }
+  }
+
+  /* ── Persistence helpers ───────────────────────────────── */
+  function escapeHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function saveHistory() {
+    if (_history.length > 100) _history = _history.slice(-100);
+    try { localStorage.setItem('qa_history', JSON.stringify(_history)); } catch(e) {}
+  }
+  function loadHistory() {
+    try { return JSON.parse(localStorage.getItem('qa_history') || '[]'); } catch(e) { return []; }
+  }
+  function savePending(q, prov, topk) {
+    try { localStorage.setItem('qa_pending', JSON.stringify({q:q, prov:prov, topk:topk, t:Date.now()})); } catch(e) {}
+  }
+  function clearPending() { localStorage.removeItem('qa_pending'); }
+  function loadPending() {
+    try {
+      var p = JSON.parse(localStorage.getItem('qa_pending') || 'null');
+      if (p && (Date.now() - p.t) < 90000) return p;
+    } catch(e) {}
+    clearPending(); return null;
+  }
+
+  /* ── Minimal markdown → HTML ───────────────────────────── */
+  function mdToHtml(md) {
+    var lines = md.split('\n'), out = [], inPre = false, inUl = false, inOl = false;
+    function closeLists() {
+      if (inUl) { out.push('</ul>'); inUl = false; }
+      if (inOl) { out.push('</ol>'); inOl = false; }
+    }
+    function inline(s) {
+      // code spans first to avoid processing their contents
+      s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+      s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      s = s.replace(/_(.+?)_/g, '<em>$1</em>');
+      s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+      return s;
+    }
+    for (var i = 0; i < lines.length; i++) {
+      var l = lines[i];
+      if (/^```/.test(l)) {
+        if (!inPre) { closeLists(); out.push('<pre><code>'); inPre = true; }
+        else { out.push('</code></pre>'); inPre = false; }
+        continue;
+      }
+      if (inPre) { out.push(l.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')); continue; }
+      if (/^## /.test(l))  { closeLists(); out.push('<h2>' + inline(l.slice(3)) + '</h2>'); continue; }
+      if (/^### /.test(l)) { closeLists(); out.push('<h3>' + inline(l.slice(4)) + '</h3>'); continue; }
+      if (/^#### /.test(l)){ closeLists(); out.push('<h4>' + inline(l.slice(5)) + '</h4>'); continue; }
+      if (/^[-*] /.test(l)) {
+        if (inOl) { out.push('</ol>'); inOl = false; }
+        if (!inUl) { out.push('<ul>'); inUl = true; }
+        out.push('<li>' + inline(l.slice(2)) + '</li>'); continue;
+      }
+      if (/^\d+\. /.test(l)) {
+        if (inUl) { out.push('</ul>'); inUl = false; }
+        if (!inOl) { out.push('<ol>'); inOl = true; }
+        out.push('<li>' + inline(l.replace(/^\d+\. /, '')) + '</li>'); continue;
+      }
+      if (l.trim() === '') { closeLists(); out.push(''); continue; }
+      closeLists();
+      out.push('<p>' + inline(l) + '</p>');
+    }
+    if (inPre) out.push('</code></pre>');
+    closeLists();
+    return out.join('\n');
+  }
+
+  function _renderMsg(cls, html, sourcesHtml) {
+    if (emptyEl) { emptyEl.style.display = 'none'; }
+    var d = document.createElement('div');
+    d.className = 'qa-msg ' + cls;
+    d.innerHTML = html;
+    if (sourcesHtml) {
+      var s = document.createElement('div');
+      s.className = 'qa-sources'; s.innerHTML = sourcesHtml; d.appendChild(s);
+    }
+    msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addMsg(text, cls, sourcesHtml) {
+    var html = cls === 'qa-msg-bot' ? mdToHtml(text) : escapeHtml(text);
+    _history.push({cls: cls, html: html, sourcesHtml: sourcesHtml || ''});
+    saveHistory();
+    _renderMsg(cls, html, sourcesHtml);
+  }
+
+  function sources(pages) {
+    if (!pages || !pages.length) return '';
+    var links = pages.filter(function(p){return p.url||p.title;}).map(function(p){
+      var label = p.title || p.url;
+      var pct   = p.relevance ? ' (' + Math.round(p.relevance * 100) + '%)' : '';
+      return '<a href="' + (p.url||'#') + '" target="_blank">' + label + '</a>' + pct;
+    });
+    return links.length ? '<strong>Sources:</strong> ' + links.join(' \u00B7 ') : '';
+  }
+
+  /* ── Send & cancel ─────────────────────────────────────── */
+  function _doFetch(q, prov, topk) {
+    savePending(q, prov, topk);
+    setLoading(true);
+    _abortCtrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var opts = {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, provider: prov, top_k: topk})
+    };
+    if (_abortCtrl) opts.signal = _abortCtrl.signal;
+    fetch('/api/ask', opts)
+    .then(function(r) {
+      if (!r.ok) return r.json().then(function(b){ throw new Error(b.detail||('Error '+r.status)); });
+      return r.json();
+    })
+    .then(function(d) {
+      clearPending(); setLoading(false);
+      addMsg(d.answer, 'qa-msg-bot', sources(d.matched_pages));
+    })
+    .catch(function(e) {
+      if (e.name === 'AbortError') { clearPending(); setLoading(false); return; }
+      clearPending(); setLoading(false);
+      addMsg('Error: ' + e.message, 'qa-msg-err', null);
+    });
+  }
+  function send() {
+    var q = inputEl.value.trim();
+    if (!q || loading) return;
+    addMsg(q, 'qa-msg-user', null);
+    inputEl.value = ''; inputEl.style.height = '';
+    _doFetch(q, provEl.value, Math.max(1, Math.min(20, parseInt(topkEl.value, 10) || 8)));
+  }
+  function cancel() {
+    if (_abortCtrl) { _abortCtrl.abort(); _abortCtrl = null; }
+    clearPending(); setLoading(false);
+  }
+  function clearHistory() {
+    if (loading) cancel();
+    _history = [];
+    try { localStorage.removeItem('qa_history'); } catch(e) {}
+    while (msgs.firstChild) msgs.removeChild(msgs.firstChild);
+    var emp = document.createElement('div');
+    emp.id = 'qa-empty';
+    emp.innerHTML = 'Ask any question about the<br>Payment Solutions documentation.';
+    msgs.appendChild(emp);
+    emptyEl = emp;
+  }
+
+  /* ── Events ────────────────────────────────────────────── */
+  fab.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  clearBtn.addEventListener('click', clearHistory);
+  sendBtn.addEventListener('click', function() { if (loading) cancel(); else send(); });
+  document.addEventListener('keydown', function(e){ if (e.key==='Escape') close(); });
+  inputEl.addEventListener('keydown', function(e){
+    if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+  });
+  inputEl.addEventListener('input', function(){
+    this.style.height = ''; this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+  });
+
+  /* ── Drag-to-resize ────────────────────────────────────── */
+  var _drag = false, _dragX = 0, _dragW = 0;
+  resizeEl.addEventListener('mousedown', function(e) {
+    _drag = true; _dragX = e.clientX; _dragW = panel.offsetWidth;
+    document.body.style.userSelect = 'none';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!_drag) return;
+    var w = Math.max(280, Math.min(Math.round(window.innerWidth * 0.8), _dragW + (_dragX - e.clientX)));
+    panel.style.width = w + 'px';
+    document.body.style.marginRight = w + 'px';
+  });
+  document.addEventListener('mouseup', function() {
+    if (!_drag) return;
+    _drag = false;
+    document.body.style.userSelect = '';
+    localStorage.setItem('qa_width', panel.offsetWidth);
+  });
+
+  /* ── Restore session from previous page ────────────────── */
+  (function initSession() {
+    var hist = loadHistory();
+    if (hist.length) {
+      _history = hist;
+      hist.forEach(function(item) { _renderMsg(item.cls, item.html, item.sourcesHtml || ''); });
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+    var pending = loadPending();
+    if (pending) {
+      if (pending.prov && provEl) provEl.value = pending.prov;
+      _doFetch(pending.q, pending.prov, pending.topk);
+    }
+  })();
+
+  if (localStorage.getItem('qa_open') === '1') open();
+
+  /* ── Load default provider from server config ──────────── */
+  fetch('/api/config').then(function(r){ return r.json(); }).then(function(c){
+    if (c && c.provider) provEl.value = c.provider;
+  }).catch(function(){});
+}());
+"""
+
+
 def _md_to_html(md: str) -> str:
     """Minimal markdown → HTML (headings, bold, bullets, paragraphs)."""
     lines, out, in_ul = md.strip().split("\n"), [], False
@@ -373,6 +786,7 @@ def _html_page(
     {body}
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="{root}assets/qa.js"></script>
 </body>
 </html>"""
 
@@ -549,12 +963,14 @@ def build_index_html(master_summary: str, section_data: dict) -> str:
 @app.command()
 def run(
     no_api: bool = typer.Option(False, "--no-api", help="Skip Claude API calls, use body-text previews only"),
+    force: bool = typer.Option(False, "--force", "-f", help="Rebuild all pages even if they already exist"),
     sections_only: list[str] = typer.Option([], "--section", help="Regenerate specific sections only"),
 ):
     """Build a navigable HTML summary site from crawled PS documentation pages."""
     SITE_DIR.mkdir(parents=True, exist_ok=True)
     (SITE_DIR / "assets").mkdir(exist_ok=True)
     (SITE_DIR / "assets" / "style.css").write_text(CSS)
+    (SITE_DIR / "assets" / "qa.js").write_text(QA_JS)
 
     client = None if no_api else _client()
 
@@ -580,6 +996,7 @@ def run(
     target_sections = [s for s in MAIN_SECTIONS if not sections_only or s in sections_only]
     section_summaries: dict[str, str] = {}
     section_data: dict[str, dict] = {}
+    skipped_pages = 0
 
     with Progress(SpinnerColumn(), TextColumn("{task.description}"), console=console) as progress:
         for section in target_sections:
@@ -597,12 +1014,17 @@ def run(
             for page in sec_pages:
                 groups[get_doc_group(page["url"])].append(page)
 
-            # Generate group summaries
+            # Generate group summaries (load from disk cache unless --force)
             group_summaries: dict[str, str] = {}
             for group_name, group_pages in groups.items():
-                if client and len(groups) > 1:
+                cached = "" if force else load_group_summary(section, group_name)
+                if cached:
+                    group_summaries[group_name] = cached
+                elif client and len(groups) > 1:
                     try:
-                        group_summaries[group_name] = summarize_doc_group(client, group_name, group_pages)
+                        summary = summarize_doc_group(client, group_name, group_pages)
+                        group_summaries[group_name] = summary
+                        save_group_summary(section, group_name, summary)
                     except Exception as e:
                         console.print(f"[yellow]  Group summary failed ({group_name}): {e}[/yellow]")
                         group_summaries[group_name] = body_preview(group_pages[0].get("body_text", ""), 300)
@@ -614,23 +1036,32 @@ def run(
                 g_dir = sec_dir / g_slug
                 g_dir.mkdir(exist_ok=True)
 
-                # Write group index
-                group_html = build_group_html(
-                    section, group_name, group_summaries[group_name],
-                    group_pages, existing_summaries, depth=2
-                )
-                (g_dir / "index.html").write_text(group_html, encoding="utf-8")
+                # Write group index (skip if exists and not forcing)
+                group_index = g_dir / "index.html"
+                if force or not group_index.exists():
+                    group_html = build_group_html(
+                        section, group_name, group_summaries[group_name],
+                        group_pages, existing_summaries, depth=2
+                    )
+                    group_index.write_text(group_html, encoding="utf-8")
 
                 # Write individual page files
                 for page in group_pages:
                     title = page.get("title", "Untitled")
                     page_slug = _slug(title) or _slug(page["url"].split("/")[-1])
+                    page_path = g_dir / f"{page_slug}.html"
+                    if not force and page_path.exists():
+                        skipped_pages += 1
+                        continue
                     summary = existing_summaries.get(page["url"], "")
                     page_html = build_page_html(page, section, group_name, summary, depth=2)
-                    (g_dir / f"{page_slug}.html").write_text(page_html, encoding="utf-8")
+                    page_path.write_text(page_html, encoding="utf-8")
 
-            # Generate section summary
-            if client:
+            # Generate section summary (use stored file if available)
+            stored_sec = load_section_summary(section)
+            if stored_sec:
+                section_summaries[section] = stored_sec
+            elif client:
                 try:
                     section_summaries[section] = summarize_section(client, section, sec_pages)
                 except Exception as e:
@@ -639,11 +1070,13 @@ def run(
             else:
                 section_summaries[section] = f"Section covering {len(sec_pages)} pages related to {section}."
 
-            # Write section index
-            section_html = build_section_html(
-                section, section_summaries[section], dict(groups), group_summaries, depth=1
-            )
-            (sec_dir / "index.html").write_text(section_html, encoding="utf-8")
+            # Write section index (skip if exists and not forcing)
+            sec_index = sec_dir / "index.html"
+            if force or not sec_index.exists():
+                section_html = build_section_html(
+                    section, section_summaries[section], dict(groups), group_summaries, depth=1
+                )
+                sec_index.write_text(section_html, encoding="utf-8")
 
             section_data[section] = {
                 "count": len(sec_pages),
@@ -651,22 +1084,24 @@ def run(
             }
             console.print(f"  [green]✓[/green] {section} ({len(sec_pages)} pages, {len(groups)} groups)")
 
-    # Generate master overview
-    master_summary = ""
-    if client and section_summaries:
+    # Generate master overview (use stored file if available)
+    master_summary = load_master_summary()
+    if not master_summary and client and section_summaries:
         console.print("[cyan]Generating master overview...[/cyan]")
         try:
             master_summary = summarize_master(client, section_summaries)
         except Exception as e:
             console.print(f"[yellow]Master summary failed: {e}[/yellow]")
 
-    # Write master index
-    index_html = build_index_html(master_summary, section_data)
-    (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
+    # Write master index (skip if exists and not forcing)
+    master_index = SITE_DIR / "index.html"
+    if force or not master_index.exists():
+        index_html = build_index_html(master_summary, section_data)
+        master_index.write_text(index_html, encoding="utf-8")
 
     total_files = sum(1 for _ in SITE_DIR.rglob("*.html"))
     console.print(f"\n[bold green]✓ Site built: {SITE_DIR}/[/bold green]")
-    console.print(f"  {total_files} HTML files generated")
+    console.print(f"  {total_files} HTML files total" + (f"  ({skipped_pages} page files unchanged, skipped)" if skipped_pages else ""))
     console.print(f"\nOpen in browser:")
     console.print(f"  open {SITE_DIR.resolve()}/index.html")
 

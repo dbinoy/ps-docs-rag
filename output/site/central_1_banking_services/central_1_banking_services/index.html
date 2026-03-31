@@ -18,37 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
     <h1>🏦 Central 1 Banking Services</h1>
     <p class="subtitle">Central 1 Banking Services › Central 1 Banking Services <span class="badge" style="background:#d97706">1 pages</span></p>
-    <div class="summary-box md-content"><p># CEBA Loan Repayments Architecture Brief</p>
-<h2>Document Scope</h2>
-<p>This document set covers the end-to-end lifecycle for Canada Emergency Business Account (CEBA) loan administration within Central 1's payment infrastructure, specifically addressing repayment processing, fee handling, settlement operations, and reconciliation workflows.</p>
-<h2>Key Architectural Components</h2>
-<p><strong>Core Processes:</strong></p>
-<ul>
-<li>Repayment capture and validation</li>
-<li>Administration fee calculation and application</li>
-<li>Settlement batch processing</li>
-<li>Reconciliation workflows (loan-to-payment matching)</li>
-</ul>
-<p><strong>Data Flow Considerations:</strong></p>
-<ul>
-<li>Repayments flow from member credit unions → Central 1 → originating loan accounts</li>
-<li>Administration fees generated per transaction or batch cycle</li>
-<li>Settlement timing constraints (likely T+1 or batch-dependent)</li>
-<li>Reconciliation requires bidirectional audit trails for dispute resolution</li>
-</ul>
-<h2>Critical Design Constraints</h2>
-<ul>
-<li><strong>Regulatory compliance</strong>: CEBA is government-backed; audit trails and reporting are mandatory</li>
-<li><strong>Multi-party settlement</strong>: Funds flow through Central 1 as intermediary; settlement timing affects liquidity</li>
-<li><strong>Fee application logic</strong>: Must handle variable fee structures across member institutions</li>
-<li><strong>Idempotency</strong>: Repayment reversals/corrections require robust transaction handling</li>
-</ul>
-<h2>Pre-Design Questions</h2>
-<ul>
-<li>Current settlement frequency and SLA?</li>
-<li>Existing reconciliation automation level?</li>
-<li>Fee calculation variability by member?</li>
-</ul></div>
+    <div class="summary-box md-content"><p>CEBA Loan Repayments, Administration Fees, Settlement, and Reconciliation 1 Introduction to CEBA Loan Repayments, Administration Fees, Settlement, and Reconciliation 1.1 Overview of CEBA Loan Repayments, Administration Fees, Settlement, and Reconciliation 1.2 Contacts and Websites 2 Terminology and…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -61,5 +31,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

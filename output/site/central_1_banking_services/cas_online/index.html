@@ -18,37 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Central 1 Banking Services</a>
     <h1>🏦 Cas Online</h1>
     <p class="subtitle">Central 1 Banking Services › Cas Online <span class="badge" style="background:#d97706">9 pages</span></p>
-    <div class="summary-box md-content"><p># CAS Online Architecture Brief</p>
-<h2>Overview</h2>
-<p>CAS Online is Central 1's near real-time account information portal for member financial institutions. It provides visibility into settlement accounts, transaction history, and posting advices for reconciliation purposes.</p>
-<h2>Key Data Flows & Architecture Points</h2>
-<p><strong>Data Refresh Cadence:</strong></p>
-<ul>
-<li>Account Summary: 20-30 minute refresh interval</li>
-<li>Transaction History: 1-year rolling window</li>
-<li>Real-time access model (not batch-driven)</li>
-</ul>
-<p><strong>Integration Touchpoints:</strong></p>
-<ul>
-<li>Direct web link + Client Centre portal integration</li>
-<li>User management isolated to CAS Online (cannot be provisioned via CPS Admin or User Management systems)</li>
-<li>Account grouping controls what data is surfaced per user</li>
-</ul>
-<p><strong>Critical Business Rules:</strong></p>
-<ul>
-<li>Branch/Institution Number (5-digit + transit) identifies accounts</li>
-<li>Business Day definitions apply to transaction dating</li>
-<li>Access control is institution-managed; Central 1 doesn't enforce per-account restrictions</li>
-<li>Reports (posting advices, statements) are non-transactional but support reconciliation workflows</li>
-</ul>
-<h2>Design Constraints</h2>
-<ul>
-<li>Session management requires cookie support</li>
-<li>User provisioning must be handled independently (no SSO integration documented)</li>
-<li>Account grouping logic drives UI filtering, not data isolation</li>
-<li>Must support multi-institution deployments with consistent UX</li>
-</ul>
-<p><strong>Consideration:</strong> Verify whether "near real-time" has formal SLA requirements before proposing caching or API-based enhancements.</p></div>
+    <div class="summary-box md-content"><p>Current Account Services (CAS) Online 1 Introduction to CAS Online 1.1 Overview of CAS Online Current Account Services (CAS) Online allows financial institutions to view their Central 1 account information in near real-time. Account information is available for each currency type the financial…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -117,5 +87,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

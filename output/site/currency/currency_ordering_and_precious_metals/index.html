@@ -18,38 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Currency</a>
     <h1>💱 Currency Ordering And Precious Metals</h1>
     <p class="subtitle">Currency › Currency Ordering And Precious Metals <span class="badge" style="background:#0891b2">14 pages</span></p>
-    <div class="summary-box md-content"><p># Currency Ordering and Precious Metals – Architecture Brief</p>
-<h2>Overview</h2>
-<p>This document set describes Central 1's end-to-end cash management system, covering currency ordering (CAD/USD/FX), returns, precious metals, and associated settlement processes for member credit unions.</p>
-<h2>Key Architectural Components</h2>
-<p><strong>Access & Authentication:</strong></p>
-<ul>
-<li>Client Centre login via Central 1 (password-based)</li>
-<li>Role-based access: CPS Admin Security Officers, Admin Users, Regular Users</li>
-<li>Duty segregation enforced at policy level</li>
-</ul>
-<p><strong>Core Systems:</strong></p>
-<ul>
-<li><strong>Cash Services application</strong> – order creation, management, reporting</li>
-<li><strong>ServiceNow</strong> – standing orders, late orders, contingency orders (with fallback procedures when unavailable)</li>
-<li><strong>Globex 2000 integration</strong> – third-party FX Notes provider</li>
-</ul>
-<p><strong>Key Data Elements:</strong></p>
-<ul>
-<li>Branch number (5-digit identifier + institution number = transit number)</li>
-<li>Daily ordering limits per location (managed in ServiceNow)</li>
-<li>Denomination/quantity constraints for CAD, USD, FX</li>
-<li>Settlement date = dispatch date (with branch-level charge debiting)</li>
-</ul>
-<h2>Critical Design Constraints</h2>
-<ul>
-<li><strong>Maximum order threshold</strong> defined per transaction type</li>
-<li><strong>Fallback mechanisms</strong> required when ServiceNow is unavailable</li>
-<li><strong>Multi-location support</strong> with location-specific limits and access controls</li>
-<li><strong>Third-party dependencies</strong> (Westkey Graphics for return supplies; Globex 2000 for FX)</li>
-<li><strong>Audit trail requirements</strong> via Order History and reports</li>
-</ul>
-<p><strong>Integration Points:</strong> Client Centre authentication, ServiceNow workflows, Globex API, settlement systems.</p></div>
+    <div class="summary-box md-content"><p>Currency Ordering and Precious Metals 1 Introduction to Currency Ordering and Precious Metals 1.1 Overview of Currency Ordering This Part describes the processes associated with ordering and returning currency and provides procedures on how to use the Cash Services system. Cash Services allows…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -153,5 +122,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

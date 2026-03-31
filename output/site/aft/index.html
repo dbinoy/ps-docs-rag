@@ -20,91 +20,93 @@
     <p class="subtitle"><span class="badge" style="background:#7c3aed">54 pages</span></p>
     <div class="summary-box md-content"><p># AFT Section Overview</p>
 <h2>Purpose</h2>
-<p>The AFT section establishes the complete operational framework for Automated Funds Transfer processing within Central 1's payment network. It covers origination, settlement, exception handling, and reporting for both Pre-authorized Debits (PADs) and Direct Deposits—the two primary AFT transaction types. This section is foundational to understanding how electronic credit and debit transactions flow through the payment infrastructure.</p>
+<p>This 53-page section provides comprehensive documentation for Automated Funds Transfer (AFT) operations. It covers the complete lifecycle of AFT transactions—from enrollment and origination through settlement, returns, exception handling, and reporting. The documentation addresses both PaymentStream AFT (web-based interface) and File Transmission (BC) channels, establishing operational procedures, legal requirements, and system constraints.</p>
 <h2>Key Concepts</h2>
-<p>1. <strong>AFT Transaction Types</strong>: PADs (debits) and Direct Deposits (credits), each with distinct processing rules, timelines, and legal constraints.</p>
-<p>2. <strong>Dual Submission Models</strong>: File transmission (batch-based via FTP) and PaymentStream AFT (real-time entry via UI)—both must converge on identical business logic.</p>
-<p>3. <strong>Settlement Architecture</strong>: Separate handling of outgoing transactions (originated by member) and incoming transactions (received from other institutions), with posting rules tied to lead times and due dates.</p>
-<p>4. <strong>Exception Lifecycle</strong>: Rejects (pre-posting validation failures), Recalls (pre-posting reversal requests), Returns (post-posting failures like NSF/invalid account), and NOCs (non-financial notifications of data corrections).</p>
-<p>5. <strong>Service Charge Model</strong>: Transaction-level charges posted at month-end; tiered by institution class and currency (CAD/USD).</p>
-<p>6. <strong>Regulatory Compliance</strong>: CPA rules (H1 for PADs), FINTRAC requirements, dispute/recourse procedures, and provincial variations (BC vs. Ontario reporting requirements).</p>
+<p>1. <strong>AFT Origination Methods</strong>: Two primary channels—PaymentStream AFT (interactive web portal with approval workflows) and File Transmission Service (batch processing for BC). Each has distinct setup, processing, and release mechanisms.</p>
+<p>2. <strong>Payor-Payee Relationships</strong>: AFT requires pre-established records mapping payment originators to recipients. PaymentStream AFT includes dedicated management interfaces; file transmission relies on batch record specifications.</p>
+<p>3. <strong>Exception Handling Taxonomy</strong>: The system categorizes problems into rejects (unpostable transactions), recalls/error corrections, returns (downstream rejections), notices of change, and trace requests—each with distinct processing workflows and recourse periods.</p>
+<p>4. <strong>Settlement Mechanics</strong>: Separate posting processes handle outgoing AFT files (originator's bank), incoming AFT files (receiving bank), and service charges. This enables balanced reconciliation across multi-party transactions.</p>
+<p>5. <strong>Regulatory Compliance Framework</strong>: Business PADs, dishonoured transactions, and recourse periods are governed by legal considerations documented per section, suggesting payment regulation (likely Payments Canada standards).</p>
 <h2>How It Works</h2>
-<p>1. <strong>Enrollment & Setup</strong>: Financial institutions register for AFT service and configure policies (identification, record-keeping, member notifications).</p>
-<p>2. <strong>File Creation & Submission</strong>: Originators create AFT files or use PaymentStream UI; files submitted before strict deadlines (varies by service type: typically 1-3 business days pre-due date).</p>
-<p>3. <strong>Validation & Posting</strong>: Central 1 validates file format and transaction data; rejects defective files/transactions; posts valid outgoing transactions to originator's account and generates offsetting entries.</p>
-<p>4. <strong>Settlement Processing</strong>: Incoming AFT transactions posted to receiving institution's Central 1 account by run, branch, and currency; up to 4 CAD runs daily.</p>
-<p>5. <strong>Exception Handling</strong>: Failed transactions returned with reason codes; originators issue recalls (before posting) or error corrections (after posting); recipients submit NOCs for data updates.</p>
-<p>6. <strong>Reporting & Reconciliation</strong>: MERG and Account Activity/Balance reports distributed via FTP; members reconcile via online channels.</p>
+<p>AFT follows a three-phase model:</p>
+<ul>
+<li><strong>Origination</strong>: Users enroll in the service, establish policies, and input transactions either via PaymentStream portal (with approval gates) or batch files (with validation and upload workflows).</li>
+<li><strong>Transmission & Processing</strong>: Files move through AFT deadlines with record entry limits. The system validates against established payor/payee records and posting rules.</li>
+<li><strong>Settlement & Returns</strong>: Outgoing/incoming files post to respective accounts; returns flow backward through designated exception handling, with dispute/trace mechanisms for unresolved items.</li>
+</ul>
 <h2>Integration Points</h2>
 <ul>
-<li><strong>File Exchange & Report Distribution</strong>: FTP service for file upload/download and report delivery</li>
-<li><strong>Settlement System</strong>: Central 1 GL posting engine for transaction and service charge settlement</li>
-<li><strong>Online Return System (ORS)</strong>: Alternative return submission channel for non-file-transmission institutions</li>
-<li><strong>Batch Return Service (BC)</strong>: Electronic return processing via in-house/third-party systems</li>
-<li><strong>PaymentStream Platform</strong>: Real-time AFT entry and validation interface</li>
-<li><strong>Legal/Compliance Framework</strong>: CPA rules, provincial legislation, dispute/recourse procedures</li>
+<li><strong>Enrollment & Policy Management</strong>: Links to account provisioning and user management systems</li>
+<li><strong>Payor/Payee Database</strong>: Central repository for transaction validation</li>
+<li><strong>Approval Workflows</strong>: Multi-user task approval for PaymentStream AFT transactions</li>
+<li><strong>File Transmission Gateway</strong>: Batch upload/download interface for file-based channels</li>
+<li><strong>General Ledger/Settlement Posting</strong>: Service charges and transaction settlement tie to accounting systems</li>
+<li><strong>Exception Management</strong>: Rejects, returns, and recalls feed into dedicated exception queues with escalation paths</li>
+<li><strong>Reporting Layer</strong>: AFT-specific reports generate from transaction lifecycle data</li>
 </ul>
 <h2>Architect Notes</h2>
+<p><strong>Constraints & Gotchas:</strong></p>
 <ul>
-<li><strong>Deadline Criticality</strong>: AFT deadlines are hard cutoffs tied to clearing cycles; no grace periods. Design submission validation with precise timestamp validation against Pacific Time zone.</li>
-<li><strong>Dual Posting Model</strong>: Outgoing transactions post twice (originator account + offsetting entry); incoming posts once. Settlement logic must account for both patterns without duplication.</li>
-<li><strong>Return Offset Options</strong>: Institutions can elect return-with-offset or return-no-offset; this affects GL posting counts and requires configurable settlement rules.</li>
-<li><strong>Legacy Contingency Paths</strong>: Paper-based and manual entry procedures exist for system outages; architecture must support graceful degradation to non-electronic workflows.</li>
-<li><strong>Provincial Variations</strong>: BC/Ontario reporting and service charge rules differ; ensure configuration flexibility for multi-jurisdictional members.</li>
-<li><strong>Dispute Windows</strong>: PAD recourse periods</li>
+<li><strong>Dual-Channel Complexity</strong>: PaymentStream and File Transmission have parallel but distinct workflows; integration logic must account for channel-specific deadlines and approval models.</li>
+<li><strong>Regulatory Sensitivity</strong>: PAD processing, recourse periods, and dishonour handling carry legal implications. Changes to return/recall logic require compliance review.</li>
+<li><strong>Time-Bound Operations</strong>: AFT deadlines and entry limits are strict; batch processing must enforce cutoff windows—no post-deadline transaction acceptance.</li>
+<li><strong>Data Purge Cycles</strong>: PaymentStream AFT has documented data retention/purge schedules affecting audit trails and historical queries.</li>
+<li><strong>BC-Only Features</strong>: Batch Return Service and some contingency procedures apply only to BC channel, requiring conditional feature logic.</li>
+<li><strong>Exception State Management</strong>: Rejects, recalls, and returns create long-</li>
 </ul></div>
     <h2>Document Groups</h2>
     
             <div class="group-card">
               <h3><a href="aft/index.html">Aft</a></h3>
               <div class="group-count">1 pages</div>
-              <p>AFT Documentation Summary Overview This document group covers Originating Automated Funds Transfer (AFT) operations—the core process for initiating electronic fund transfers within the Canadian Payments Association…</p>
+              <p>Introduction to AFT 1 AFT Overview 1.1 Overview to Originating Automated Funds Transfer (AFT) 1.2 Summary of Originating AFT Processes 1.3 Summary of AFT Re-presentment 1.4 CPA AFT Transaction Codes 1.5 Service Charges…</p>
               <a href="aft/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="aft_rejects_recalls_error_corrections_other_exception_items/index.html">Aft Rejects Recalls Error Corrections Other Exception Items</a></h3>
               <div class="group-count">7 pages</div>
-              <p>AFT Exception Handling – Architect Brief Overview This document set governs the lifecycle management of Automated Funds Transfer (AFT) exceptions at Central 1, covering Pre-authorized Debits (PADs) and Direct Deposits.…</p>
+              <p>AFT Rejects, Recalls, Error Corrections, and Other Exception Items 1 Introduction to AFT Rejects, Recalls, Error Corrections, and Other Exception Items 1.1 Overview of AFT Rejects, Recalls, Error Corrections, and Other…</p>
               <a href="aft_rejects_recalls_error_corrections_other_exception_items/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="aft_reports/index.html">Aft Reports</a></h3>
               <div class="group-count">3 pages</div>
-              <p>AFT Reports - Architecture Brief Overview AFT Reports document Automated Funds Transfer (AFT) reporting capabilities provided by Central 1. Reports are distributed via FTP and cover account activity, balances, and…</p>
+              <p>AFT Reports 1 Introduction to AFT Reports 1.1 Accessing AFT Reports AFT reports are available from Central 1 as described below. See the File Exchange and Report Distribution Part for more information on the FTP…</p>
               <a href="aft_reports/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="aft_returns_and_aft_notice_of_change_transactions/index.html">Aft Returns And Aft Notice Of Change Transactions</a></h3>
               <div class="group-count">10 pages</div>
-              <p>AFT Returns and AFT Notice of Change Transactions – Architecture Brief Overview This document set governs the return and correction workflows for Automated Funds Transfer (AFT) transactions within Central 1's clearing…</p>
+              <p>AFT Returns and AFT Notice of Change Transactions 1 Overview of AFT Returns and AFT Notice of Change Transactions 1.1 Introduction to AFT Returns and AFT Notice of Change Transactions AFT Transactions are returned to…</p>
               <a href="aft_returns_and_aft_notice_of_change_transactions/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="aft_settlement/index.html">Aft Settlement</a></h3>
               <div class="group-count">6 pages</div>
-              <p>AFT Settlement - Architecture Brief Overview This document set defines Automated Funds Transfer (AFT) settlement operations at Central 1, covering both outgoing (PADs/debits and direct deposits/credits) and incoming…</p>
+              <p>AFT Settlement 1 Introduction to AFT Settlement 1.1 Overview of AFT Settlement There are two types of AFT Settlement: Outgoing AFT transactions and Incoming AFT transactions. Outgoing AFT transactions created by a…</p>
               <a href="aft_settlement/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="introduction_to_aft/index.html">Introduction To Aft</a></h3>
               <div class="group-count">8 pages</div>
-              <p>AFT Introduction Summary for Solutions Architects Overview This document group covers Originating Automated Funds Transfers (AFT) — the operational and compliance framework for electronic credit/debit transactions…</p>
+              <p>Introduction to AFT 1 AFT Overview 1.1 Overview to Originating Automated Funds Transfer (AFT) Automated Funds Transfers (AFT) are electronic credit and debit transactions that are authorized by an account holder to…</p>
               <a href="introduction_to_aft/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="originating_aft_via_file_transmission_bc/index.html">Originating Aft Via File Transmission Bc</a></h3>
               <div class="group-count">4 pages</div>
-              <p>Brief: Originating AFT via File Transmission (BC) Overview This document group covers the end-to-end process for credit union originators to submit AFT (Automated Funds Transfer) transactions to Central 1 via file…</p>
+              <p>Originating AFT via File Transmission (BC) 1 AFT File Transmission Overview 1.1 Introduction to AFT File Transmission Service Originators that create AFT transactions on software not supported by Central 1 must submit…</p>
               <a href="originating_aft_via_file_transmission_bc/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="originating_aft_via_paymentstream_aft/index.html">Originating Aft Via Paymentstream Aft</a></h3>
               <div class="group-count">15 pages</div>
-              <p>PaymentStream AFT - Architectural Brief Overview PaymentStream AFT is Central 1's Automated Funds Transfer origination platform enabling financial institutions and business members to initiate AFT transactions. The…</p>
+              <p>Originating AFT via PaymentStream AFT 1 Introduction to Originating AFT via PaymentStream AFT 1.1 Overview of Originating AFT via PaymentStream AFT The information in this Part is provided for financial institutions…</p>
               <a href="originating_aft_via_paymentstream_aft/index.html">View pages →</a>
             </div>
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../assets/qa.js"></script>
 </body>
 </html>

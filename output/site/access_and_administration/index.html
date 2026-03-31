@@ -18,89 +18,85 @@
     <a href="../index.html" class="back-btn">← Back to overview</a>
     <h1>🔐 Access and Administration</h1>
     <p class="subtitle"><span class="badge" style="background:#2563eb">41 pages</span></p>
-    <div class="summary-box md-content"><p># Access and Administration – Section Overview</p>
+    <div class="summary-box md-content"><p># Access and Administration — Section Overview</p>
 <h2>Purpose</h2>
-<p>This section defines the operational framework for user provisioning, authentication, and system access across Central 1's Payment Solutions platform. It covers identity and access management (IAM), multi-factor authentication architecture, file exchange integration points, and administrative governance policies that underpin all downstream payment processing systems.</p>
+<p>This 40-page section documents Central 1's administrative framework for managing user lifecycle, authentication, permissions, and data exchange. It provides operational procedures for security officers, administrators, and Solutions Architects to establish governance policies, configure access controls, and manage secure file/report distribution across the payment solutions ecosystem.</p>
 <h2>Key Concepts</h2>
-<p>1. <strong>Client Centre Portal</strong>: Single entry point for all Central 1 applications; acts as the authentication gateway and session manager for downstream systems (Wires, User Management, File Exchange).</p>
-<p>2. <strong>2-Step Security (Step-Up Authentication)</strong>: RFC 6238-compliant MFA layer protecting high-risk applications and functions. Uses either hardware tokens (ordered via ServiceNow) or soft tokens (Google Authenticator or compatible apps). One-time passwords required at login or for sensitive operations (e.g., wire approvals).</p>
-<p>3. <strong>Role-Based Access Control (RBAC)</strong>: Segregated permissions model with minimum two Security Officers per institution. Distinct roles include CPS Admin Security Officers, User Management Security Officers, and Client Centre Users, each with tiered privileges.</p>
-<p>4. <strong>File and Report Exchange (SFTP + Web UI)</strong>: Bidirectional file transfer mechanism supporting both direct SFTP connections and web-based uploads/downloads. Manages incoming AFT files, clearing files, and outgoing reconciliation/settlement reports.</p>
-<p>5. <strong>Audit and Governance</strong>: Request/approval workflow for privilege changes, 30-minute account lockout after 7 failed login attempts, CSV-format reporting, and Business Continuity Program integration.</p>
+<p>1. <strong>Role-Based Access Control (RBAC)</strong> — Security Officers manage user permissions and application access through the CPS Admin and User Management applications. Policies establish what actions users can perform within Client Centre and connected systems.</p>
+<p>2. <strong>Two-Step Security (2SS)</strong> — Multi-factor authentication via hard tokens (physical devices) or soft tokens (mobile apps). Critical for protecting sensitive operations; includes token lifecycle management (ordering, registration, troubleshooting).</p>
+<p>3. <strong>Client Centre</strong> — Central portal for end-users to access applications, exchange files, and manage credentials. Administrators control user registration templates, login workflows, and permission inheritance.</p>
+<p>4. <strong>File Exchange and Report Distribution</strong> — Dual-mode architecture supporting both programmatic (SFTP direct connection) and web-based (Client Centre UI) file operations with standardized folder structures and file specifications.</p>
+<p>5. <strong>Security Officer Hierarchy</strong> — Delegated administration model where Security Officers manage subsets of users/permissions, enabling decentralized governance while maintaining security boundaries.</p>
 <h2>How It Works</h2>
-<p>1. <strong>User Onboarding</strong>: Institution appoints minimum two Security Officers via ServiceNow. Security Officers create Client Centre Users (individually or via templates) in CPS Admin or User Management.</p>
-<p>2. <strong>Authentication</strong>: Users register passwords in Client Centre. High-security applications (Wires, User Management) enforce 2-step security; users must provision hardware or soft tokens beforehand.</p>
-<p>3. <strong>Access Provisioning</strong>: Security Officers assign application permissions and 2-step tokens via User Management. Changes to user profiles or permissions trigger cross-officer approval workflows.</p>
-<p>4. <strong>File Operations</strong>: Users access File Exchange via Client Centre UI (browser) or SFTP. Incoming files are uploaded to institution-specific folders; Central 1 generates outgoing files (clearing, settlement) posted for download.</p>
+<p>Users are onboarded through a registration process that captures credentials, assigns application permissions, and optionally enrolls 2-Step Security tokens. Administrators define policies in CPS Admin, then use User Management to implement role assignments and access controls. File exchange occurs either through SFTP (machine-to-machine) using registered credentials, or through Client Centre (human-interactive) with role-based folder visibility. Token lifecycle—including ordering, registration, and emergency recovery—is managed to maintain continuous authentication availability.</p>
 <h2>Integration Points</h2>
 <ul>
-<li><strong>ServiceNow</strong>: Hard token ordering and request management.</li>
-<li><strong>Client Centre</strong>: Primary identity provider; session manager for all protected applications.</li>
-<li><strong>User Management Application</strong>: Secondary access control interface; requires 2-step security.</li>
-<li><strong>File and Report Exchange</strong>: SFTP and HTTP protocols; separate access control policies.</li>
-<li><strong>Wires Application</strong>: Enforces step-up 2-step authentication for wire approvals.</li>
-<li><strong>Clearing/Settlement Batch Processes</strong>: Consume outgoing files from File Exchange.</li>
+<li><strong>CPS Admin Application</strong> — Separate administrative console for Client Centre policy configuration and security officer management</li>
+<li><strong>File Specifications</strong> — Technical contracts for incoming/outgoing file formats; integration trigger for downstream processing</li>
+<li><strong>Business Continuity Program</strong> — Disaster recovery and operational resilience considerations for access infrastructure</li>
+<li><strong>Service Charges</strong> — Billing implications of user counts and feature consumption</li>
 </ul>
 <h2>Architect Notes</h2>
 <ul>
-<li><strong>No centralized IdP abstraction</strong>: Client Centre authentication is tightly coupled to downstream applications; consider federation impact if integrating external identity providers.</li>
-<li><strong>Token provisioning latency</strong>: Hard tokens ship to institutions; soft tokens require manual app installation. Plan onboarding timelines accordingly.</li>
-<li><strong>File Exchange dual-protocol support</strong>: SFTP and web UI have different security postures; enforce consistent TLS/encryption standards and audit logging across both.</li>
-<li><strong>Compliance assumption</strong>: BCP references suggest regulatory reporting obligations; validate alignment with PIPEDA, provincial credit union oversight, and ACH/clearing house requirements.</li>
-<li><strong>Account lockout stateless</strong>: 30-minute lockout persists across sessions; no documented override for legitimate access recovery—escalation path to ServiceNow may be required.</li>
+<li><strong>Token dependency risk</strong>: Hard token shortages create onboarding bottlenecks; soft token rollout requires mobile device management strategy</li>
+<li><strong>Policy configuration complexity</strong>: Cascading permission models (templates → users → applications) require careful inheritance testing</li>
+<li><strong>File format rigidity</strong>: Central 1 file specifications are tightly coupled to clearing operations; validation failures break downstream workflows</li>
+<li><strong>Multi-tenancy isolation</strong>: Security Officer scoping must prevent lateral access across distinct client organizations</li>
+<li><strong>Audit trail requirements</strong>: Access/permission changes should be logged for compliance; verify reporting capabilities before deployment</li>
 </ul></div>
     <h2>Document Groups</h2>
     
             <div class="group-card">
               <h3><a href="2_step_security/index.html">2 Step Security</a></h3>
               <div class="group-count">6 pages</div>
-              <p>2-Step Security Brief Overview This document set describes a step-up authentication layer protecting sensitive applications (e.g., User Management) and functionality within Central 1's systems. It's a mandatory second…</p>
+              <p>2-Step Security 1 Introduction to 2-Step Security 1.1 Overview of 2-Step Security 2-step security provides an extra layer of authentication when accessing certain applications (e.g., User Management), or functionality…</p>
               <a href="2_step_security/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="access_and_administration/index.html">Access And Administration</a></h3>
               <div class="group-count">1 pages</div>
-              <p>Access And Administration Document Group - Briefing Summary Overview This document group covers the CPS (Central 1 Payment Solutions) Admin Application—the administrative interface for managing Client Centre operations…</p>
+              <p>CPS Admin Application 1 Client Centre and CPS Admin Introduction 1.1 Overview of the Client Centre and CPS Admin 1.2 Contacts and Websites 1.3 CPS Admin Application Document Library 2 Terminology and Frequently Asked…</p>
               <a href="access_and_administration/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="business_continuity_program/index.html">Business Continuity Program</a></h3>
               <div class="group-count">1 pages</div>
-              <p>Business Continuity Program – Architect Brief Document Scope This 1-page overview introduces Central 1's Business Continuity Program (BCP)—a formal framework encompassing policies, definitions, and governance structures…</p>
+              <p>Business Continuity Program 1 Introduction 1.1 Overview of the Business Continuity Program Central 1 has established a comprehensive Business Continuity Program (BCP) consisting of the following: Policies for business…</p>
               <a href="business_continuity_program/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="central_1_file_specifications/index.html">Central 1  File Specifications</a></h3>
               <div class="group-count">5 pages</div>
-              <p>Central 1 File Specifications - Architecture Brief Document Scope This specification set defines the file format standards and operational procedures for clearing files exchanged between Central 1 and member financial…</p>
+              <p>Central 1âs File Specifications 1 Introduction to Central 1âs File Specifications 1.1 Overview of Central 1âs File Specifications This Part provides information on the available documents that provide format and…</p>
               <a href="central_1_file_specifications/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="cps_admin_application/index.html">Cps Admin Application</a></h3>
               <div class="group-count">8 pages</div>
-              <p>CPS Admin Application - Architecture Brief Overview CPS Admin is Central 1's administrative interface for managing Client Centre user access and authentication. It serves as the control plane for identity and access…</p>
+              <p>CPS Admin Application 1 Client Centre and CPS Admin Introduction 1.1 Overview of the Client Centre and CPS Admin The Client Centre is a digital portal that provides secured access to Central 1âs applications and to…</p>
               <a href="cps_admin_application/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="file_exchange_and_report_distribution/index.html">File Exchange And Report Distribution</a></h3>
               <div class="group-count">7 pages</div>
-              <p>File Exchange and Report Distribution – Architecture Brief Overview This document group describes Central 1's File and Report Exchange platform—a dual-channel system for secure file upload/download operations supporting…</p>
+              <p>File Exchange and Report Distribution 1 Introduction to File Exchange and Report Distribution 1.1 Overview of File Exchange and Report Distribution This Part describes how to upload and download files via Central 1âs…</p>
               <a href="file_exchange_and_report_distribution/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="service_charges/index.html">Service Charges</a></h3>
               <div class="group-count">1 pages</div>
-              <p>Service Charges - Architect Brief Overview This document defines the Payment Services Class A Fee Schedule (Form 2725), which establishes product and service pricing for Central 1's Technology and Payment Services…</p>
+              <p>Service Charges 1 Introduction 1.1 Overview The Payment Services Class A Fee Schedule, Form 2725, identifies product and service pricing for Central 1âs Technology and Payment Services Department. This form is…</p>
               <a href="service_charges/index.html">View pages →</a>
             </div>
             <div class="group-card">
               <h3><a href="user_management/index.html">User Management</a></h3>
               <div class="group-count">12 pages</div>
-              <p>User Management Document Group - Architecture Brief Overview This document group covers the Client Centre's user lifecycle management system, including authentication, authorization, user provisioning/deprovisioning,…</p>
+              <p>User Management 1 Introduction to User Management 1.1 Overview of the Client Centre and User Management The Client Centre is an electronic gateway that provides secured access to Central 1âs applications and to news…</p>
               <a href="user_management/index.html">View pages →</a>
             </div>
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../assets/qa.js"></script>
 </body>
 </html>

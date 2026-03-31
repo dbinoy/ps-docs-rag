@@ -18,28 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
     <h1>🧾 Cra Business Taxes</h1>
     <p class="subtitle">Bill Payments › Cra Business Taxes <span class="badge" style="background:#059669">12 pages</span></p>
-    <div class="summary-box md-content"><p># CRA Business Taxes – Architecture Brief</p>
-<h2>Overview</h2>
-<p>CRA Business Taxes is a PaymentStream Direct application enabling authorized users to submit Canada Revenue Agency remittance vouchers and business tax payments through Central 1. Supports GST/HST, Excise, Taxation, and Customs Programs per CPA Rule G4.</p>
-<h2>Key Architectural Data Flows</h2>
-<p>1. <strong>Dual Workflow Options</strong>: Single workflow (front-line staff only) or multi-stage workflow with segregated roles</p>
-<p>2. <strong>Payment Processing</strong>: Electronic submission of CRA business tax payments and filings; manual processing fallback for unsupported voucher types</p>
-<p>3. <strong>Settlement</strong>: Direct settlement between Central 1 and member FIs (BC/Ontario specific rules; separate handling for other regions)</p>
-<p>4. <strong>Reconciliation & Reporting</strong>: Mandatory reporting and reconciliation outputs for financial institutions</p>
-<h2>Critical Integration Points</h2>
-<ul>
-<li><strong>User Management</strong>: Role-based access control tied to PaymentStream Direct authentication</li>
-<li><strong>Remittance Voucher Validation</strong>: Electronic vs. manual processing determination per voucher type</li>
-<li><strong>CRA File Submission</strong>: Direct integration with CRA acceptance protocols</li>
-<li><strong>Bundle Reconstruction</strong>: Handling for lost/unprocessable voucher bundles (mail/courier fallback)</li>
-</ul>
-<h2>Design Constraints</h2>
-<ul>
-<li>CPA Rule G4 compliance mandatory</li>
-<li>Environment separation (test/production)</li>
-<li>Regional variance (BC/Ontario vs. external FIs)</li>
-<li>Settlement and reconciliation processes are region-dependent</li>
-</ul></div>
+    <div class="summary-box md-content"><p>CRA Business Taxes 1 Introduction to CRA Business Taxes 1.1 Introduction to CRA Business Taxes This Part provides information related to Business Taxes, a product on the PaymentStreamâ¢ Direct platform. For more information about PaymentStream Direct functions, see the PaymentStream Direct Part.…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -129,5 +108,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

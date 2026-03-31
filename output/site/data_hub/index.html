@@ -20,35 +20,39 @@
     <p class="subtitle"><span class="badge" style="background:#4f46e5">9 pages</span></p>
     <div class="summary-box md-content"><p># Data Hub Section Overview</p>
 <h2>Purpose</h2>
-<p>The Data Hub section documents Central 1's analytics platform—a Microsoft Power BI-based dashboard system that enables financial institutions to monitor payment performance, consumption patterns, and KPIs. This section covers platform access, user provisioning, navigation, and data export capabilities. It establishes the foundational architecture for delivering analytics-as-a-service to credit union members.</p>
+<p>The Data Hub section provides comprehensive guidance for implementing and operating a centralized data management and visualization platform within the Payment Solutions ecosystem. It serves as the primary resource for onboarding users, configuring access controls, navigating analytical tools, and extracting actionable insights from payments data through dashboards and export capabilities.</p>
 <h2>Key Concepts</h2>
-<p>1. <strong>Data Hub Platform</strong>: A multi-tenant, cloud-hosted analytics environment accessed through the Client Centre portal. Provides interactive visualization, filtering, and benchmarking against anonymized peer cohorts.</p>
-<p>2. <strong>Payments Dashboard</strong>: The primary analytics interface within Data Hub. Supports multi-level filtering, chart/table views, performance comparison to peers of similar size, and structured data export.</p>
-<p>3. <strong>Client Centre Authentication</strong>: Centralized identity management portal (https://clients.central1.com) serving as the single entry point. First-time users receive username prompts before credential entry.</p>
-<p>4. <strong>User Provisioning Model</strong>: Central 1 owns all user lifecycle management. Member institutions cannot self-serve via CPS Admin or User Management applications; all requests route through ServiceNow.</p>
-<p>5. <strong>Data Export</strong>: Two pathways—static image export to PowerPoint and live data export using dropdown menus. Export scope and format determined by user role and dashboard design.</p>
-<p>6. <strong>Vendor Stack</strong>: Underlying platform is Microsoft Power BI. Standard Power BI features are accessible but unsupported by Central 1 engineering.</p>
+<p>1. <strong>User Management & Access Control</strong> — Role-based access enforcement tied to organizational policies and compliance requirements; foundational for multi-tenant security posture</p>
+<p>2. <strong>Payments Dashboard</strong> — Real-time or near-real-time aggregation of transaction, settlement, and financial metrics; primary visualization layer for operational and strategic monitoring</p>
+<p>3. <strong>Data Export Capabilities</strong> — Structured data extraction mechanisms supporting compliance reporting, reconciliation workflows, and downstream system integrations</p>
+<p>4. <strong>Authentication & Session Management</strong> — Secure login workflows and credential handling as prerequisite for all Data Hub interactions</p>
+<p>5. <strong>Legal/Policy Framework</strong> — Governance guardrails including data residency, retention, audit trails, and compliance obligations</p>
 <h2>How It Works</h2>
-<p>1. User authenticates via Client Centre portal with Central 1-managed credentials.</p>
-<p>2. User navigates to Data Hub application within authenticated session.</p>
-<p>3. User applies multi-level filters to Payments Dashboard (institution-scoped data).</p>
-<p>4. Dashboard renders visualizations with peer benchmarking context.</p>
-<p>5. User exports results via PowerPoint (image) or live data dropdown (raw export).</p>
-<p>6. Central 1 retains analytics data; member institution receives derived insights only.</p>
+<p><strong>User Journey:</strong></p>
+<p>1. Admin provisions user accounts and assigns roles via User Management</p>
+<p>2. User authenticates via Login mechanism; session established</p>
+<p>3. User navigates Data Hub interface; accesses permitted dashboards and tools</p>
+<p>4. User views Payments Dashboard (real-time metrics) or extracts data via Export functionality</p>
+<p>5. Exported data flows to downstream systems or reporting tools</p>
+<p><strong>Data Flow:</strong> Raw payments data → aggregation/transformation pipeline → Payments Dashboard visualization *and/or* → structured export formats (likely CSV, JSON, or similar)</p>
 <h2>Integration Points</h2>
 <ul>
-<li><strong>Client Centre Portal</strong>: Identity provider and application launcher for all Data Hub access.</li>
-<li><strong>ServiceNow</strong>: User provisioning request intake system; Central 1 backend provisioning system.</li>
-<li><strong>Microsoft Power BI</strong>: Underlying visualization and analytics engine; not directly managed by member institutions.</li>
-<li><strong>Payment Transaction Data</strong>: Implicit upstream connection (not detailed in this section); Payments Dashboard consumes aggregated, institution-scoped transaction data.</li>
+<li><strong>Identity & Access Management</strong> — integration with organizational credential systems (LDAP, OAuth, SSO)</li>
+<li><strong>Payments Processing Core</strong> — consumes transactional and settlement data</li>
+<li><strong>Compliance/Audit Systems</strong> — feeds logs and exported datasets for regulatory reporting</li>
+<li><strong>Business Intelligence/Analytics Platforms</strong> — data export destinations for advanced analytics</li>
+<li><strong>Downstream Financial Systems</strong> — reconciliation and reporting workflows</li>
 </ul>
 <h2>Architect Notes</h2>
+<p>⚠️ <strong>Constraints & Considerations:</strong></p>
 <ul>
-<li><strong>User Management Constraint</strong>: No federated identity or self-service provisioning. All requests create operational dependency on Central 1 ServiceNow queue—plan for provisioning lead times.</li>
-<li><strong>Vendor Lock-in</strong>: Power BI is embedded. Custom dashboards or API-driven integrations are not mentioned; confirm Power BI extensibility SLAs before designing downstream analytics pipelines.</li>
-<li><strong>Data Residency & Export Controls</strong>: Section does not specify data residency, encryption in transit/rest, or export audit trails. Clarify compliance posture before handling regulated datasets.</li>
-<li><strong>Unsupported Features</strong>: Power BI's native features are explicitly unsupported. Scope Data Hub as read-only analytics only; avoid custom calculations or advanced Power BI features in production designs.</li>
-</ul></div>
+<li><strong>Access Control Complexity:</strong> Legal and policy enforcement must be embedded in query/export logic; assume fine-grained permission model required</li>
+<li><strong>Data Freshness vs. Performance:</strong> Dashboard refresh cadence and export dataset staleness are critical design parameters—clarify SLAs</li>
+<li><strong>Export Governance:</strong> Uncontrolled data export poses compliance risk; implement audit trails and DLP controls on exported payloads</li>
+<li><strong>Multi-tenancy:</strong> Confirm data isolation strategy across user cohorts and organizational boundaries</li>
+<li><strong>Scalability:</strong> Dashboard query performance degrades with data volume; consider caching, aggregation pre-computation, or time-windowing constraints</li>
+</ul>
+<p><strong>Next Steps:</strong> Review pages 3–4 (Legal & User Management) and 7–8 (Dashboards & Export) for detailed design constraints.</p></div>
     <h2>Pages</h2>
     <div class="page-list">
             <div class="page-item">
@@ -117,5 +121,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../assets/qa.js"></script>
 </body>
 </html>

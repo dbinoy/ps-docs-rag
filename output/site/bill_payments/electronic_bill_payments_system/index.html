@@ -18,30 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Bill Payments</a>
     <h1>🧾 Electronic Bill Payments System</h1>
     <p class="subtitle">Bill Payments › Electronic Bill Payments System <span class="badge" style="background:#059669">12 pages</span></p>
-    <div class="summary-box md-content"><p># Electronic Bill Payments System – Architecture Brief</p>
-<h2>Overview</h2>
-<p>Central 1's Electronic Bill Payments System enables financial institutions to submit customer-initiated bill payments through a shared infrastructure, with settlement and reconciliation managed centrally.</p>
-<h2>Key Data Flows & Integration Points</h2>
-<ul>
-<li><strong>Submission</strong>: Two integration paths—file transmission or direct connection to eCommSwitch</li>
-<li><strong>Settlement</strong>: Posted to institution accounts by 5:30 am PT (8:30 am ET) next business day</li>
-<li><strong>Core Database</strong>: Maintains biller registry (with Biller Identification Numbers), customer biller accounts, and payment records</li>
-</ul>
-<h2>Critical Architecture Elements</h2>
-<ul>
-<li><strong>Biller Onboarding</strong>: Institutions perform enhanced due diligence on restricted entities; BID assignment gates biller participation</li>
-<li><strong>Reconciliation Responsibility</strong>: Institutions must reconcile posted customer charges against Central 1 settlement totals</li>
-<li><strong>Reversals & Trace</strong>: System supports payment cancellations and trace requests for discrepancies (Section 12)</li>
-</ul>
-<h2>Design Constraints</h2>
-<ul>
-<li>Fixed settlement window (overnight batch)</li>
-<li>Multi-institution shared system—isolation and audit trail critical</li>
-<li>Reconciliation logic must handle timing mismatches between customer-facing and settlement systems</li>
-<li>Report generation required for multiple institution types</li>
-</ul>
-<h2>Before Designing Enhancements</h2>
-<p>Clarify: real-time vs. batch settlement requirements, biller onboarding workflow automation scope, and reconciliation exception handling depth.</p></div>
+    <div class="summary-box md-content"><p>Electronic Bill Payments System 1 Introduction to the Electronic Bill Payments System 1.1 Overview of the Electronic Bill Payments System Central 1âs Electronic Bill Payments System allows your financial institution to submit customer-initiated bill payments to Central 1 for further distribution…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -131,5 +108,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

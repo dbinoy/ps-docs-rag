@@ -18,34 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to AFT</a>
     <h1>💸 Aft Rejects Recalls Error Corrections Other Exception Items</h1>
     <p class="subtitle">AFT › Aft Rejects Recalls Error Corrections Other Exception Items <span class="badge" style="background:#7c3aed">7 pages</span></p>
-    <div class="summary-box md-content"><p># AFT Exception Handling – Architect Brief</p>
-<h2>Overview</h2>
-<p>This document set governs the lifecycle management of Automated Funds Transfer (AFT) exceptions at Central 1, covering Pre-authorized Debits (PADs) and Direct Deposits. It defines handling protocols for rejects, recalls, error corrections, trace requests, and stop payments.</p>
-<h2>Key Architectural Concepts</h2>
-<p><strong>Exception Categories:</strong></p>
-<ul>
-<li><strong>Rejects</strong>: File or transaction-level formatting errors; transaction cannot post</li>
-<li><strong>Recalls</strong>: Pre-posting reversal of unposted transactions/files</li>
-<li><strong>Error Corrections</strong>: Post-posting adjustments to posted transactions</li>
-<li><strong>Trace Requests</strong>: Investigation mechanism for non-receipt at receiving institution</li>
-<li><strong>Stop Payments</strong>: Member-initiated PAD cancellation claims</li>
-</ul>
-<h2>Critical Data Flows</h2>
-<ul>
-<li>Inbound AFT files → validation → reject/recall queues vs. posting pipeline</li>
-<li>Posted transactions → error correction audit trail with legal compliance</li>
-<li>Outbound transactions → trace initiation if non-receipt reported by Due Date</li>
-<li>Stop payment claims → reimbursement processing with member notification</li>
-</ul>
-<h2>Design Constraints</h2>
-<ul>
-<li>Regulatory compliance mandatory (statutes referenced in Part 3)</li>
-<li>Clear distinction between pre-posting (recall) and post-posting (error correction) states</li>
-<li>Audit trail requirements for all exception handling</li>
-<li>Member notification/reimbursement workflows required</li>
-<li>Due Date tracking critical for trace request triggering</li>
-</ul>
-<p><strong>Integration Points</strong>: File validation, posting engine, member communication systems, receiving institution coordination.</p></div>
+    <div class="summary-box md-content"><p>AFT Rejects, Recalls, Error Corrections, and Other Exception Items 1 Introduction to AFT Rejects, Recalls, Error Corrections, and Other Exception Items 1.1 Overview of AFT Rejects, Recalls, Error Corrections, and Other Exception Items This Part explains how to: process AFT Rejects, Recalls, Error…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -100,5 +73,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

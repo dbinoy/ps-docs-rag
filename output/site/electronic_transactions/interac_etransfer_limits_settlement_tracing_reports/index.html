@@ -18,37 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ Interac Etransfer Limits Settlement Tracing Reports</h1>
     <p class="subtitle">Electronic Transactions › Interac Etransfer Limits Settlement Tracing Reports <span class="badge" style="background:#be185d">9 pages</span></p>
-    <div class="summary-box md-content"><p># Interac e-Transfer: Architecture Brief</p>
-<h2>Purpose</h2>
-<p>This document set governs transaction limits, settlement mechanics, reconciliation, remediation, and reporting for Interac e-Transfer® operations at Central 1 Credit Union.</p>
-<h2>Key Architectural Elements</h2>
-<p><strong>Limit Framework:</strong></p>
-<ul>
-<li>Per-transaction, 24-hour, and 7-day maximums applied via limit groups</li>
-<li>Autodeposit capability bypasses manual acceptance but subject to compliance controls</li>
-</ul>
-<p><strong>Settlement & Reconciliation:</strong></p>
-<ul>
-<li>All completed transactions post to Central 1's account with separate totals (sends vs. receives)</li>
-<li>Daily reconciliation required; failures trigger remediation workflows</li>
-<li>Timeout errors between Central 1 and banking hosts require asynchronous recovery mechanisms</li>
-</ul>
-<p><strong>Critical Data Flows:</strong></p>
-<p>1. Transaction → Central 1 → Banking Host (with response code mapping)</p>
-<p>2. Settlement batches → Daily reporting (EMCU, EMCD, ECCX)</p>
-<p>3. Failed transactions → Remediation queue → Host retry/reversal</p>
-<p><strong>Compliance Integration:</strong></p>
-<ul>
-<li>PCMLTFA/PCMLTF regulations embedded in transaction validation</li>
-<li>Tracing workflow requires pre-consultation of settlement reports</li>
-</ul>
-<p><strong>Design Constraints:</strong></p>
-<ul>
-<li>Response code translation layer required between Interac and banking systems</li>
-<li>Idempotency critical for timeout recovery</li>
-<li>Daily report generation and monthly billing reconciliation are dependencies</li>
-</ul>
-<p><strong>Key Consideration:</strong> Remediation process is asynchronous; design for eventual consistency with audit trail preservation.</p></div>
+    <div class="summary-box md-content"><p>Interac e-Transfer Â® Limits, Settlement, Tracing, and Reports 1 Introduction to Interac e-Transfer Â® Limits, Settlement, Tracing, and Reports 1.1 Overview of Interac e-Transfer Limits, Settlement, Tracing, and Reports Interac e-Transfer allows your customers to use online banking to send money…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -117,5 +87,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

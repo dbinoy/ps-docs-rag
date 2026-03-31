@@ -18,42 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
     <h1>🔐 User Management</h1>
     <p class="subtitle">Access and Administration › User Management <span class="badge" style="background:#2563eb">12 pages</span></p>
-    <div class="summary-box md-content"><p># User Management Document Group - Architecture Brief</p>
-<h2>Overview</h2>
-<p>This document group covers the Client Centre's user lifecycle management system, including authentication, authorization, user provisioning/deprovisioning, and access control for high-security applications (e.g., Wires).</p>
-<h2>Key Architectural Components</h2>
-<p><strong>Authentication & Security:</strong></p>
-<ul>
-<li>2-step security tokens required for Security Officers; used for accessing high-risk applications</li>
-<li>Password registration integrated with Client Centre login</li>
-<li>Token assignment/management is a critical data flow</li>
-</ul>
-<p><strong>Access Control Model:</strong></p>
-<ul>
-<li>Role-based: Client Centre Users vs. User Management Security Officers (privileged users)</li>
-<li>Application-level permissions assigned by Security Officers</li>
-<li>Policy enforcement restricts access based on application sensitivity</li>
-</ul>
-<p><strong>User Lifecycle:</strong></p>
-<ul>
-<li>Creation, modification, deletion of users by Security Officers only</li>
-<li>Approval workflow required for sensitive changes (name, contact info, permissions)</li>
-<li>2-step token lifecycle management (assignment, reset, revocation)</li>
-</ul>
-<p><strong>Data Flows:</strong></p>
-<ul>
-<li>User provisioning → Permission assignment → Application access</li>
-<li>Audit trail required (CSV reporting capability)</li>
-<li>Request approval gates for high-impact changes</li>
-</ul>
-<h2>Critical Design Constraints</h2>
-<ul>
-<li>All Security Officer actions must be auditable</li>
-<li>2-step security integration is non-negotiable for privileged access</li>
-<li>Approval workflows required for user/permission modifications</li>
-<li>CSV export capability for compliance/reporting</li>
-</ul>
-<p><strong>Key Integration Point:</strong> User Management is upstream to all Client Centre applications.</p></div>
+    <div class="summary-box md-content"><p>User Management 1 Introduction to User Management 1.1 Overview of the Client Centre and User Management The Client Centre is an electronic gateway that provides secured access to Central 1âs applications and to news and information about our products and services. All users must be set up with a…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -143,5 +108,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

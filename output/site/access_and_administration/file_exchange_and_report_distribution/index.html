@@ -18,28 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
     <h1>🔐 File Exchange And Report Distribution</h1>
     <p class="subtitle">Access and Administration › File Exchange And Report Distribution <span class="badge" style="background:#2563eb">7 pages</span></p>
-    <div class="summary-box md-content"><p># File Exchange and Report Distribution – Architecture Brief</p>
-<h2>Overview</h2>
-<p>This document group describes Central 1's File and Report Exchange platform—a dual-channel system for secure file upload/download operations supporting member financial institutions. It encompasses both automated (SFTP/direct connection) and manual (Client Centre portal) exchange mechanisms.</p>
-<h2>Key Architectural Components</h2>
-<p><strong>Access Channels:</strong></p>
-<ul>
-<li>SFTP (direct connection) for automated/scripted integrations</li>
-<li>Client Centre web portal for interactive file management</li>
-<li>User authentication/authorization via CPS Admin or User Management systems</li>
-</ul>
-<p><strong>Critical Design Elements:</strong></p>
-<ul>
-<li>Role-based folder structure with access controls tied to user permissions</li>
-<li>Institutions own responsibility for internal security policies and user management</li>
-<li>No Central 1 support for client-side FTP scripts—implies stateless, standards-compliant SFTP endpoint</li>
-</ul>
-<h2>Architect Considerations</h2>
-<p>1. <strong>Security Boundary:</strong> Each institution manages their own user access policies; Central 1 enforces authentication but trusts institution-level controls</p>
-<p>2. <strong>Integration Pattern:</strong> Asymmetric channels (automated SFTP vs. portal) require consistent authorization logic across both</p>
-<p>3. <strong>Operational Constraint:</strong> Folder structure appears dynamic/role-dependent—likely requires permission-aware directory listing</p>
-<p>4. <strong>Support Scope:</strong> Central 1 doesn't support custom integrations; design for standard SFTP clients only</p>
-<p><strong>Next Steps:</strong> Review sections 4 (user access) and 7 (folder structure) for data model specifics before designing API/portal enhancements.</p></div>
+    <div class="summary-box md-content"><p>File Exchange and Report Distribution 1 Introduction to File Exchange and Report Distribution 1.1 Overview of File Exchange and Report Distribution This Part describes how to upload and download files via Central 1âs File and Report Exchange. The files may be data files or report files that…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -94,5 +73,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

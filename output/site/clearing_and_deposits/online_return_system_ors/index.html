@@ -18,36 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
     <h1>📥 Online Return System Ors</h1>
     <p class="subtitle">Clearing and Deposits › Online Return System Ors <span class="badge" style="background:#dc2626">32 pages</span></p>
-    <div class="summary-box md-content"><p># ORS Brief for Solutions Architect</p>
-<h2>Overview</h2>
-<p>The Online Return System (ORS) is Central 1's platform for processing returns and research of cheques, AFT (Automated Funds Transfer) transactions, and related items (chargebacks, NOCs). It supports both manual entry and file upload workflows.</p>
-<h2>Key Data Flows</h2>
-<ul>
-<li><strong>Inbound</strong>: Clearing items (cheques, AFTs, chargebacks, suspect duplicates, deposits)</li>
-<li><strong>Outbound</strong>: Return transactions (.RI, .RIU, .RTN files), AFT Notice of Change (NOC) transactions, reports</li>
-<li><strong>Search/Research</strong>: Multi-criteria queries across transit, account, item details; image retrieval</li>
-</ul>
-<h2>Critical Business Rules</h2>
-<ul>
-<li>Four user types with role-based access (Research, Return, Upload, Script)</li>
-<li>Return reason codes standardized per item type (cheque vs. AFT); AFT returns have 1-business-day SLA</li>
-<li>Cheque reinstatement allows correction of transit/account/cheque number post-return</li>
-<li>Suspect duplicates, deposits, and related items linkage require audit trails</li>
-</ul>
-<h2>Architecture Constraints</h2>
-<ul>
-<li>Password authentication via Client Centre integration</li>
-<li>File upload validation with specific error handling (Appendix A-11 to A-13)</li>
-<li>Real-time reporting on daily return summaries</li>
-<li>Multi-currency support (CAD, USD)</li>
-<li>Deposit slip + cheque image correlation for research</li>
-</ul>
-<h2>Design Considerations</h2>
-<ul>
-<li>Access control enforcement per user type and authorization level</li>
-<li>File format validation (.RI, .RIU, .RTN, .NOC) with detailed error messages</li>
-<li>Transaction code mapping (Appendix A-10) for clearing item classification</li>
-</ul></div>
+    <div class="summary-box md-content"><p>Online Return System (ORS) 1 Introduction to ORS 1.1 Overview of ORS The Online Return System (ORS) facilitates the return of cheques and AFT transactions. ORS also allows users to view Incoming Clearing Items (including Chargebacks), research deposit items (including deposit adjustments),…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -277,5 +248,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

@@ -18,34 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ Wires</h1>
     <p class="subtitle">Electronic Transactions › Wires <span class="badge" style="background:#be185d">29 pages</span></p>
-    <div class="summary-box md-content"><p># Wires Application - Architectural Summary</p>
-<h2>Overview</h2>
-<p>The <strong>Wires</strong> application on PaymentStream Direct™ enables domestic and international wire transfers for authorized credit union users. It manages the full lifecycle: creation, approval, settlement, and reconciliation of outgoing and incoming wires.</p>
-<h2>Key Data Flows & Integration Points</h2>
-<ul>
-<li><strong>Outgoing wires</strong>: User creation → MTS-based approval workflow (1-2 step) → settlement to Central 1 current account (near real-time)</li>
-<li><strong>Incoming wires</strong>: External FI uploads processed every ~10 minutes; real-time for participating institutions</li>
-<li><strong>FX operations</strong>: Live rate feeds; spreads and fees configurable per user permission</li>
-<li><strong>Settlement</strong>: Processed within minutes of approval to Central 1 current account</li>
-</ul>
-<h2>Critical Business Rules</h2>
-<ul>
-<li>Approval tiers defined by branch settings (amount-based)</li>
-<li>Editable only pre-approval; post-approval requires recall/trace/amend procedures</li>
-<li>IBAN/country-specific validation for international wires</li>
-<li>2-step security authentication required</li>
-<li>Templates support recurring wire patterns</li>
-</ul>
-<h2>Architectural Constraints</h2>
-<ul>
-<li>MTS (Money Transfer System) is the permission/admin control plane—essential dependency</li>
-<li>Three processing models available; selection affects workflow design</li>
-<li>Contingency procedures require designated backup processors</li>
-<li>Inter-branch transfers require currency alignment</li>
-<li>Legal/regulatory compliance mandatory per jurisdiction</li>
-</ul>
-<h2>Key Integration Points</h2>
-<p>Client Centre authentication → MTS admin/permissions → Wires application → Settlement backend</p></div>
+    <div class="summary-box md-content"><p>Wires 1 Introduction to Wires 1.1 Overview of Wires Wires is an application on the PaymentStream Directâ¢ platform enabling authorized users to create and receive domestic and international wires. Wires provides the following key features: An advanced SWIFT search function that populates the…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -254,5 +227,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

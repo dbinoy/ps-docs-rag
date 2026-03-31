@@ -18,36 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Clearing and Deposits</a>
     <h1>📥 Dishonour And Return Of Cheques</h1>
     <p class="subtitle">Clearing and Deposits › Dishonour And Return Of Cheques <span class="badge" style="background:#dc2626">10 pages</span></p>
-    <div class="summary-box md-content"><p># Dishonour and Return of Cheques – Architecture Brief</p>
-<h2>Overview</h2>
-<p>This document group defines Central 1's operational procedures for dishonoring and returning cheques, governed by Payments Canada (CPA) rules. It covers the complete lifecycle from dishonour decision through settlement and reporting.</p>
-<h2>Key Architecture Touchpoints</h2>
-<p><strong>Primary Systems:</strong></p>
-<ul>
-<li><strong>ORS (Online Return System)</strong>: Primary channel for cheque dishonour and return processing</li>
-<li><strong>ServiceNow</strong>: Manual return request entry when ORS unavailable</li>
-<li><strong>Clearing System</strong>: Secondary path for re-entered cheques (with restrictions)</li>
-<li><strong>Settlement Accounts</strong>: CAD/USD segregated credit accounts for return item settlement</li>
-</ul>
-<p><strong>Critical Data Flows:</strong></p>
-<p>1. Dishonour trigger → ORS submission or manual ServiceNow entry</p>
-<p>2. Notice generation to Negotiating Financial Institution (postal notification)</p>
-<p>3. Return item processing through clearing system</p>
-<p>4. Settlement posting to member institution accounts</p>
-<p>5. Reimbursement claims (BC government cheques, fraudulent items)</p>
-<p><strong>Key Rules:</strong></p>
-<ul>
-<li>Cheque re-entry through clearing limited; generally discouraged</li>
-<li>Manual procedures required when ORS/ServiceNow unavailable; escalate to Central 1</li>
-<li>Currency-specific settlement routing</li>
-<li>Government cheque reimbursement requires separate claims process</li>
-</ul>
-<p><strong>Design Constraints:</strong></p>
-<ul>
-<li>Compliance with CPA regulations mandatory</li>
-<li>Dual-system redundancy (ORS + ServiceNow + manual contingency)</li>
-<li>Postal notification requirement for NFI communication</li>
-</ul></div>
+    <div class="summary-box md-content"><p>Dishonour and Return of Cheques 1 Introduction to Dishonour and Return of Cheques 1.1 Overview of Dishonour and Return of Cheques Your financial institution can dishonour a cheque drawn on a memberâs account for several reasons (e.g., insufficient funds). When your financial institution…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -123,5 +94,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

@@ -18,34 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
     <h1>🔐 2 Step Security</h1>
     <p class="subtitle">Access and Administration › 2 Step Security <span class="badge" style="background:#2563eb">6 pages</span></p>
-    <div class="summary-box md-content"><p># 2-Step Security Brief</p>
-<h2>Overview</h2>
-<p>This document set describes a step-up authentication layer protecting sensitive applications (e.g., User Management) and functionality within Central 1's systems. It's a mandatory second factor for access control.</p>
-<h2>Key Architectural Elements</h2>
-<p><strong>Authentication Methods:</strong></p>
-<ul>
-<li>Hard tokens (physical devices) – ordered/managed by financial institutions via User Management</li>
-<li>Soft tokens (RFC 6238 compliant authenticator apps) – user-installed on mobile devices</li>
-</ul>
-<p><strong>Data Flow:</strong></p>
-<ul>
-<li>Users must have a 2-step security token assigned to their Client Centre User ID</li>
-<li>Authentication occurs at login or functionality access points</li>
-<li>Token validation is required before granting access</li>
-</ul>
-<p><strong>Business Rules:</strong></p>
-<ul>
-<li>Security Officers manage hard token ordering and replacement</li>
-<li>Soft token registration requires app installation + registration process</li>
-<li>Token assignment is prerequisite for protected resource access</li>
-<li>Troubleshooting assumes token-to-user matching validation</li>
-</ul>
-<h2>Design Constraints for Architects</h2>
-<p>1. <strong>Integration Points:</strong> User Management system handles token assignment and ordering workflows</p>
-<p>2. <strong>Standards Compliance:</strong> Soft tokens must be RFC 6238 compliant (TOTP-based)</p>
-<p>3. <strong>Operational Dependency:</strong> Hard token supply chain involves third parties</p>
-<p>4. <strong>User Friction:</strong> Step-up authentication adds login friction—consider UX in enhanced designs</p>
-<p><strong>Critical Gap:</strong> Document lacks technical details on token generation, validation logic, session management, and API contracts needed for system integration.</p></div>
+    <div class="summary-box md-content"><p>2-Step Security 1 Introduction to 2-Step Security 1.1 Overview of 2-Step Security 2-step security provides an extra layer of authentication when accessing certain applications (e.g., User Management), or functionality within an application (e.g., approving outgoing wires in the Wires application).…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -93,5 +66,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

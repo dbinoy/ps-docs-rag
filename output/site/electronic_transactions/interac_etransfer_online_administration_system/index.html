@@ -18,31 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Electronic Transactions</a>
     <h1>⚡ Interac Etransfer Online Administration System</h1>
     <p class="subtitle">Electronic Transactions › Interac Etransfer Online Administration System <span class="badge" style="background:#be185d">9 pages</span></p>
-    <div class="summary-box md-content"><p># Interac eTransfer OAS - Architecture Brief</p>
-<h2>Purpose</h2>
-<p>Central 1's Interac eTransfer Online Administration System (OAS) is a Client Centre-hosted application for managing eTransfer transactions, customer profiles, fraud incidents, and transaction tracing across a 2-year lookback window.</p>
-<h2>Key Integration Points & Data Flows</h2>
-<ul>
-<li><strong>ANR (Account Number Routing)</strong>: Enables direct ACH-style payments using Institution Number + Transit + Account details vs. email-based transfers</li>
-<li><strong>Customer Profile Management</strong>: Track enabled/disabled states, scrubbed email addresses, and transaction eligibility</li>
-<li><strong>Tracing & Recovery</strong>: Query historical transactions; recover misdirected funds (critical for ANR implementations)</li>
-<li><strong>Fraud Workflows</strong>: Dedicated analyst role for incident management with search/view capabilities</li>
-</ul>
-<h2>Critical Business Rules</h2>
-<ul>
-<li>Two-level access control required (Client Centre User ID + OAS-specific permissions)</li>
-<li>Scrubbed email revocation process prevents legitimate addresses from being permanently blocked</li>
-<li>Profile status (enabled/disabled) gates send/receive capability</li>
-<li>ANR creates misdirection risk requiring recovery procedures</li>
-</ul>
-<h2>Architectural Constraints</h2>
-<ul>
-<li>2-year transaction data retention window</li>
-<li>Client Centre dependency (not standalone system)</li>
-<li>Role-based access (CSR, Fraud Analyst)</li>
-<li>Interac-maintained scrubbed email list integration</li>
-</ul>
-<p><strong>Design Consideration</strong>: Any enhancement touching ANR, profile state changes, or fraud workflows requires careful audit logging and approval workflows.</p></div>
+    <div class="summary-box md-content"><p>Interac eâTransfer Â® Online Administration System (OAS) 1 Introduction to Interac eâTransfer Online Administration System (OAS) 1.1 Overview of the Interac eâTransfer Online Administration System (OAS) The Interac e-Transfer Â® Online Administration System (OAS) allows financial-institution-…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -111,5 +87,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

@@ -18,35 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to AFT</a>
     <h1>💸 Aft Settlement</h1>
     <p class="subtitle">AFT › Aft Settlement <span class="badge" style="background:#7c3aed">6 pages</span></p>
-    <div class="summary-box md-content"><p># AFT Settlement - Architecture Brief</p>
-<h2>Overview</h2>
-<p>This document set defines Automated Funds Transfer (AFT) settlement operations at Central 1, covering both <strong>outgoing</strong> (PADs/debits and direct deposits/credits) and <strong>incoming</strong> transaction flows.</p>
-<h2>Key Architectural Elements</h2>
-<p><strong>Transaction Types:</strong></p>
-<ul>
-<li>Outgoing: Pre-authorized debits (PADs) and direct deposits initiated by institutions/businesses</li>
-<li>Incoming: Transactions received and posted to Central 1 accounts</li>
-</ul>
-<p><strong>Settlement Processing:</strong></p>
-<ul>
-<li>Outgoing files posted per lead time and due date; offsetting transactions applied as applicable</li>
-<li>Incoming transactions posted by: run, net settlement, branch, and currency</li>
-<li>Service charges assessed separately on outgoing transactions (CAD/USD)</li>
-</ul>
-<p><strong>Critical Data Flows:</strong></p>
-<ul>
-<li>File submission → validation → posting to Central 1 accounts</li>
-<li>Multi-dimensional posting logic (branch, currency, settlement method)</li>
-<li>Charge calculation and application</li>
-</ul>
-<h2>Design Constraints</h2>
-<ul>
-<li>Regulatory compliance required (legal chapter references statutes/regulations—review before building)</li>
-<li>Currency-specific handling (CAD/USD minimum)</li>
-<li>Settlement timing tied to lead times and due dates</li>
-<li>Net settlement calculations required</li>
-</ul>
-<p><strong>Pre-Design Actions:</strong> Review section 3 (Legal Considerations) for regulatory obligations affecting validation, posting, and audit requirements.</p></div>
+    <div class="summary-box md-content"><p>AFT Settlement 1 Introduction to AFT Settlement 1.1 Overview of AFT Settlement There are two types of AFT Settlement: Outgoing AFT transactions and Incoming AFT transactions. Outgoing AFT transactions created by a financial institution or business member originator are posted to both the financial…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -94,5 +66,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

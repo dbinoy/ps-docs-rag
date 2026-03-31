@@ -18,38 +18,7 @@
     <a href="../index.html" class="back-btn">← Back to Access and Administration</a>
     <h1>🔐 Cps Admin Application</h1>
     <p class="subtitle">Access and Administration › Cps Admin Application <span class="badge" style="background:#2563eb">8 pages</span></p>
-    <div class="summary-box md-content"><p># CPS Admin Application - Architecture Brief</p>
-<h2>Overview</h2>
-<p>CPS Admin is Central 1's administrative interface for managing Client Centre user access and authentication. It serves as the control plane for identity and access management across high-security applications (e.g., Wires).</p>
-<h2>Key Architectural Components</h2>
-<p><strong>User Management Flow:</strong></p>
-<ul>
-<li>CPS Admin Security Officers (minimum 2 per institution) create, modify, and delete Client Centre users</li>
-<li>Users authenticate via 2-step security (step-up authentication)</li>
-<li>Template-based user provisioning supported for bulk operations</li>
-<li>Users self-register passwords through Client Centre login portal</li>
-</ul>
-<p><strong>Security Constraints:</strong></p>
-<ul>
-<li>Account lockout: 7 consecutive failed login attempts → 30-minute lock (persistent across sessions)</li>
-<li>2-step authentication mandatory for high-security application access</li>
-<li>Security Officer role requires separate management policies</li>
-<li>Access policies restrict application availability based on institution-level rules</li>
-</ul>
-<p><strong>Integration Points:</strong></p>
-<ul>
-<li>Client Centre (digital portal gateway)</li>
-<li>User Management Application (parallel user administration)</li>
-<li>Wires application (downstream consumer of access policies)</li>
-</ul>
-<h2>Design Considerations</h2>
-<ul>
-<li><strong>State management</strong>: Track failed login attempts across distributed sessions</li>
-<li><strong>Audit trail</strong>: Security Officer actions (create/modify/delete) require logging</li>
-<li><strong>Policy engine</strong>: Institution-level access restriction enforcement</li>
-<li><strong>Redundancy</strong>: Dual Security Officer requirement demands high availability for user management</li>
-</ul>
-<p><strong>Critical gap</strong>: Document lacks technical details on user data schema, API contracts, and inter-system communication protocols.</p></div>
+    <div class="summary-box md-content"><p>CPS Admin Application 1 Client Centre and CPS Admin Introduction 1.1 Overview of the Client Centre and CPS Admin The Client Centre is a digital portal that provides secured access to Central 1âs applications and to information and news about our products and services. All users must be set up…</p></div>
     <h2>Pages in this group</h2>
     <div class="page-list">
         <div class="page-item">
@@ -111,5 +80,6 @@
 
     <footer>Payment Solutions Documentation · Central 1 Credit Union</footer>
   </div>
+  <script src="../../assets/qa.js"></script>
 </body>
 </html>

@@ -86,6 +86,18 @@ source /Users/binoydas/Documents/Code/Central1/psend/bin/activate
 cd /Users/binoydas/Documents/Code/Central1/ps-docs-rag
 ```
 
+### Install / sync dependencies
+
+Run this once after cloning, and again after any `git pull` that updates `pyproject.toml`:
+
+```bash
+pip install -e .
+```
+
+This installs all required packages (`anthropic`, `fastapi`, `uvicorn`, `chromadb`, etc.)
+into the active virtual environment. Safe to re-run — existing packages are only
+upgraded if the version constraint changed.
+
 ### Configure credentials
 
 ```bash
@@ -546,6 +558,14 @@ These are multi-command apps and do need the subcommand:
 ```bash
 python -m summarizer.summarize run       # correct
 python -m crawler.crawl run             # correct
+```
+
+**`ModuleNotFoundError: No module named 'fastapi'` (or any other package) after `git pull`:**
+The virtual environment is not committed to git. After pulling changes that update
+`pyproject.toml`, re-sync the venv:
+```bash
+source /Users/binoydas/Documents/Code/Central1/psend/bin/activate
+pip install -e .
 ```
 
 **MCP server uses wrong Python / missing packages:**
